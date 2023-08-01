@@ -1,0 +1,197 @@
+.NavBarMain__container { 
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    background: #a67c00;
+    align-items: center;
+      
+}
+
+.NavBarMain__container-top { 
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: #a67c00;
+    width: 99.85%;
+    height: 40px;
+    z-index: 0;
+    border: 1px solid #a67c00 !important;   
+
+}
+
+.NavBarMain__container-top::before { 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.NavBarMain-lang { 
+    margin-left: 10% !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.NavBarMain__container-top a { 
+    width: 3rem;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    border-right: 1px solid #a67c00 !important;   
+    z-index: 1;
+    padding: 0 1rem;
+    font-size: 14px;
+}
+
+
+#mne { 
+    border-left: 1px solid #a67c00 !important; 
+
+}
+
+.NavBarMain__container-bottom { 
+    width: 80%;
+    height: 145px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.NavBarMain__logo-container { 
+    display: flex;
+    flex: 4;
+    width: 200px;
+    height: 60%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.NavBarMain__logo-container h1 { 
+    height: fit-content;
+    margin: 0;
+    letter-spacing: 2px;
+    color: white;
+    font-size: 30px;
+}
+
+.NavBarMain__logo-container p { 
+    height: fit-content;
+    margin: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.NavBarMain__logo-container img { 
+    width: 300px;
+    height: 100%;
+}
+
+.NavBarMain__login-container { 
+    display: flex;
+    flex: 1;
+    height: 60%;
+    justify-content: flex-end;
+}
+
+.NavBarMain__login-container a { 
+    width: 70%;
+    height: 40%;
+    border: 1.5px solid white;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    margin: auto 0;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    transition: all .1s ease-out;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.NavBarMain__login-container a:hover { 
+    color: #a67c00;
+    background-color: white;
+    
+}
+
+
+@media screen and  (max-width: 767px) {
+
+    .NavBarMain__container-bottom { 
+        flex-direction: column;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+
+
+    .NavBarMain__logo-container { 
+        width: 100%;
+        text-align: center;
+    }
+
+    .NavBarMain__login-container { 
+        width: 100%;
+        justify-content: center;
+        margin: 1rem 0;
+        margin-bottom: 1rem;
+        height: 40px !important;
+    }
+    .NavBarMain__login-container a { 
+        height: 100%;
+        width: 100%;
+        height: 40px !important;
+
+    }
+
+    .NavBarMain__container-top { 
+        width: 99% !important;
+        margin: 0 auto;
+    }
+
+    .NavBarMain-lang { 
+        display: flex;
+        width: 100% !important;
+        margin: 0 !important;
+        /* border: 3px solid green !important; */
+        justify-content: center !important;
+    }
+  }
+
+@media screen and  (min-width: 768px) and (max-width: 991px) {
+
+    .NavBarMain__login-container a { 
+        width: 100%;
+        background-color: aqua;
+    }
+
+  }
+
+  @media screen and  (min-width: 992px)  {
+    
+    .NavBarMain__login-container a { 
+        width: 100%;
+    }
+
+
+  }

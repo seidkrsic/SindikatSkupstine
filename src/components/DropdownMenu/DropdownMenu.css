@@ -1,0 +1,141 @@
+.dropdown-menu {
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  width: fit-content;
+  justify-content: flex-start;
+  cursor: pointer;
+
+
+}
+
+
+.dropdown-menu a:hover { 
+    background-color: #a67c00;
+    color: white;
+}
+
+.dropdown-menu a {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  padding: 0 1rem;
+  letter-spacing: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important;
+  color: black;
+  border: none;
+ 
+  
+}
+.box {
+    width: 200px;
+    height: 100px;
+    background-color: #f0f0f0; /* Set the background color */
+    border-radius: 8px; /* Add some border-radius for a smoother look */
+    box-shadow: 0 0 3px 1px lightgray; /* Horizontal-offset, Vertical-offset, Blur-radius, Spread-radius, Color */
+  }
+  
+
+.menu-items {
+    position: absolute;
+    top: 44px;
+    left: 0px;
+    min-width: 200px;
+    height: 50px;
+    z-index: 2 !important;
+    width: fit-content;
+    background-color: #f0f0f0;
+    display: none;
+    list-style: none;
+    padding-left: 0; 
+    text-align: start;
+}
+
+
+.menu-items li.first-menu-item {
+    background-color: white;
+    color: inherit; /* Reset the color to inherit from parent (overrides default styles) */
+    text-decoration: none; /* Reset the text decoration */
+    display: flex; /* Ensures the first item's styles don't affect layout */
+    /* border-bottom: 1px solid gainsboro; */
+    justify-content: flex-start;
+
+} 
+
+.menu-items li.first-menu-item:hover .dropdown-menu { 
+    background-color: #a67c00;
+}
+
+.menu-items li {
+  height: 50px;
+  background-color: white;
+  border-bottom: 1px solid gainsboro;
+  border-left: 1px solid gainsboro;
+  border-right: 1px solid gainsboro;
+  display: flex;
+  font-size: 13px;
+  padding: 1rem;
+  margin: 0;
+  justify-content: center;
+  text-transform: capitalize;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.menu-items li:hover {
+  background-color: #a67c00;
+  color: white;
+}
+
+
+
+.dropdown-menu:hover .menu-items {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  border-top: 1px solid gainsboro;
+}
+
+
+
+@media screen and  (max-width: 767px) { 
+    
+    .dropdown-menu a { 
+        font-size: 12px;
+        justify-content: center !important;
+        align-items: center;
+        height: 50px;
+    }
+
+    .dropdown-menu a:hover { 
+        background-color: white;
+        color: #a67c00;
+        
+    }
+
+    .dropdown-menu { 
+        min-width: 130px;
+        height: 50px;
+
+        
+    }
+    
+}
+
+@media screen and  (min-width: 768px) and (max-width: 991px) { 
+    .dropdown-menu a { 
+        font-size: 12px;
+        min-width: 100px;
+        justify-content: center !important;
+        align-items: center;
+        /* height: 50px; */
+    }
+}
