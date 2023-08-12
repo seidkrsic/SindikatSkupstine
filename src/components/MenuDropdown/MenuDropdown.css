@@ -1,0 +1,116 @@
+.MenuDropdown__menuItems { 
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 104%;
+    left: 0;
+    /* width: fit-content !important; */
+    /* border: 1px solid  #d4ae37; */
+    border-top: none;
+    width: 192px;
+
+
+
+}
+
+ul li { 
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    border-width: 100px 0 0 100px;
+}
+
+li  a { 
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    font-weight: 550;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2 ease-in-out;
+}
+
+.helperDiv:hover, li  a:hover { 
+    background-color: #AB0707;
+    cursor: pointer;
+    color: white !important;
+   
+}
+
+
+
+
+.MenuDropdown__menuItems  a { 
+    display: flex;
+    width: 200px;
+    position: relative;
+    height: 100%;
+    justify-content: space-between;
+    font-size: 13px;
+    color: black;
+    /* background-color:  #F1E5AC; */
+    background-color: rgb(243, 235, 211, .4);
+}
+
+.helperDiv { 
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: black;
+    background-color:  #f1e5acb6;
+
+}
+
+.MenuDropdown__menuItems  a { 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(212, 174, 55, .3);
+    background-color: transparent;
+
+}
+
+.MenuDropdown__menuItems  a:hover  { 
+    /* color:  #F1E5AC !important; */
+    color: white !important; 
+}
+
+
+.MenuDropdown__menuItems  a:hover.MenuDropdown__menuItems  a span { 
+    color: white !important;
+}
+
+.MenuDropdown__menuItems  a span { 
+    font-size: 25px;
+    position: absolute;
+    font-weight: 550;
+    left: 10px;
+    top: 7.5px;
+    /* color:  #F1E5AC; */
+    color: rgb(243, 235, 211, .4);
+
+}
+
+
+@media screen and (max-width: 991px) {
+    .MenuDropdown__menuItems { 
+        display: none;
+    }
+    
+}
+

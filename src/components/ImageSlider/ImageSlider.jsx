@@ -31,6 +31,18 @@ const ImageSlider = ({slides}) => {
         setCurrentIndex(newIndex)
     }
 
+    useEffect(() => {
+        // Auto slide every 5 seconds
+        const intervalId = setInterval(() => {
+            onToNext();
+        }, 5000);
+
+        // Clear the interval when the component unmounts
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, [currentIndex]); // Make sure to add currentIndex as a dependency
+
 
 
   return (
@@ -63,14 +75,9 @@ const ImageSlider = ({slides}) => {
 
                     <img src={`${slides[currentIndex].url}`} alt="slideImg" />
                     <Link className='NewInfo'>
-                        <h1>{slides[currentIndex].title.length>50? slides[currentIndex].title.slice(0,50)+"...": slides[currentIndex].title}</h1>
-                        {document.documentElement.clientWidth>767? 
-
-                        <p>{slides[currentIndex].info.length>200? slides[currentIndex].info.slice(0,200)+"..." : slides[currentIndex].info }</p>
-                            :
-                        <p>{slides[currentIndex].info.length>80? slides[currentIndex].info.slice(0,80)+"..." : slides[currentIndex].info }</p>
-
-                        }
+                        <h1>{slides[currentIndex].title}</h1>
+                        <p>{slides[currentIndex].info}</p>
+    
                     </Link>
                   
         </motion.div>

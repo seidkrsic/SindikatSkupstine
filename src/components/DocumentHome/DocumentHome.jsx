@@ -9,9 +9,14 @@ const DocumentHome = ({document}) => {
   return (
     <div className='Document__container'>
         <img src={document.image} alt="" />
-        <Link to={document.download}>
-            {document.title.length > 30? document.title.slice(0,30)+"..." : document.title }
-        </Link>
+        
+        <div className='Document__container-info'>
+          <Link to={document.download}>
+              {document.title}  
+          </Link>
+          <p>{document.date}</p>
+        </div>
+        
     </div>
   )
 }

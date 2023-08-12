@@ -23,7 +23,7 @@
     margin: 0 auto;
     flex-direction: column;
     width: 80%;
-    border: 1px  solid gainsboro;
+    /* border: 1px  solid gainsboro; */
     border-top: none;
     border-bottom: none;
     height: fit-content;

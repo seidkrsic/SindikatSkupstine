@@ -1,12 +1,14 @@
 
 .ImageSlider__container { 
     display: flex;
-    height: 70vh;
+    height: 81vh;
     width: 100%;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
     z-index: 0;
+
+  
  
 }
 
@@ -38,6 +40,7 @@
     color: rgba(0, 0, 0, 0.7);
     z-index: 1;
     cursor: pointer;
+    display: none !important;
 
 }
 
@@ -55,6 +58,7 @@
     color: rgba(0, 0, 0, 0.7);
     z-index: 1;
     cursor: pointer;
+    display: none !important;
 
 }
 
@@ -83,11 +87,12 @@
     margin: 0rem 1rem 1rem 1rem;
 }
 
-@media screen and  (max-width: 767px) { 
+@media screen and (max-width: 767px) { 
 
     .ImageSlider__container { 
         height: 30vh;
-        width: 100vw;
+        width: 100%;
+        
     }
 
     .rightArrow { 
@@ -105,15 +110,16 @@
     .NewInfo { 
         width: 90%;
         left: 5%;
-        
+        min-height: 40% !important;
+        height: 50% !important;
     }
 
     .NewInfo p { 
-        text-align: justify;
+        font-size: 14px;
     }
 
     .NewInfo h1 { 
-        font-size: 20px;
+        font-size: 16px;
     }
 
     
@@ -124,13 +130,27 @@
 
 @media screen and  (min-width: 768px) and (max-width: 991px) { 
     .ImageSlider__container { 
-        height: 60vh;
+        height: 40vh;
     }
     .rightArrow { 
         opacity: 1 !important;
     }
     .leftArrow { 
         opacity: 1 !important;
+    }
+
+    .NewInfo { 
+        width: 95%;
+        left: 2.5%;
+        
+    }
+
+    .NewInfo p { 
+        font-size: 13px;
+    }
+
+    .NewInfo h1 { 
+        font-size: 16px;
     }
 
 

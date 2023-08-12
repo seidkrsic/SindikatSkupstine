@@ -1,0 +1,113 @@
+.StaffSinglePage__container-main { 
+    width: 100%;
+    /* margin-top: 181px; */
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+
+.StaffSinglePage__container { 
+    width: 80%;
+    margin: 0rem auto;
+    /* border: 1px solid gainsboro; */
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.StaffSinglePage__container-left { 
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    min-height: 70vh;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    
+}
+
+.StaffSinglePage__container-left h2 { 
+    width: 90%;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.StaffSinglePage__container-left p { 
+    height: fit-content;
+    min-height: 40vh;
+    max-height: 90%;
+    width: 90%;
+    text-align: justify;
+    height: 90%;
+    line-height: 1.5;
+    /* border: 1px solid violet; */
+   
+}
+.StaffSinglePage__container-right { 
+    margin-top: 2rem;
+    width: 30%;
+    height: fit-content;
+    min-height: 70vh;
+    /* border: 1px solid gainsboro; */
+}
+
+
+.StaffSinglePage__card-container { 
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid violet; */
+    height: fit-content;
+}
+
+.StaffSinglePage__card-info__container { 
+    width: 84%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border: 1px solid gainsboro;
+
+}
+
+.StaffSinglePage__card-info__container p { 
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    padding: 1rem 0;
+
+}
+
+.border-bottom__onlyOneElement { 
+    border-bottom: 1px solid gainsboro;
+}
+
+
+.StaffSinglePage__card-info__container a { 
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: rgb(194, 10, 10);
+}
+
+.StaffSinglePage__container .Categories__main-container { 
+    width: 76% !important;
+    margin: 2rem auto;
+
+}
+
+.StaffSinglePage__container .Categories__main-container h1 { 
+    font-size: 20px;
+}
