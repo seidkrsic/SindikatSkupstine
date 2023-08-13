@@ -8,6 +8,7 @@
     align-items: center;
     z-index: 0;
 
+
   
  
 }
@@ -40,7 +41,7 @@
     color: rgba(0, 0, 0, 0.7);
     z-index: 1;
     cursor: pointer;
-    display: none !important;
+    /* display: none !important; */
 
 }
 
@@ -58,7 +59,7 @@
     color: rgba(0, 0, 0, 0.7);
     z-index: 1;
     cursor: pointer;
-    display: none !important;
+    /* display: none !important; */
 
 }
 
@@ -90,8 +91,10 @@
 @media screen and (max-width: 767px) { 
 
     .ImageSlider__container { 
-        height: 30vh;
+        height: 40vh;
         width: 100%;
+        margin: 0 auto;
+        /* margin-top: 2%; */
         
     }
 
@@ -115,11 +118,12 @@
     }
 
     .NewInfo p { 
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .NewInfo h1 { 
-        font-size: 16px;
+        font-size: 20px;
+        text-decoration: underline;
     }
 
     

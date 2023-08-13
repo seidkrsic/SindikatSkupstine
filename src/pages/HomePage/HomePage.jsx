@@ -13,20 +13,20 @@ import Timeline from '../../components/Timeline/Timeline'
 
 const HomePage = () => {
 
-  const [ButtonHovered, setButtonHovered] = useState(false)
-  const [ButtonHovered1, setButtonHovered1] = useState(false)
+  // const [ButtonHovered, setButtonHovered] = useState(false)
+  // const [ButtonHovered1, setButtonHovered1] = useState(false)
 
-  const ToggleButtonHovered = (boolean) => { 
-    setButtonHovered(boolean)
-  }
-  const ToggleButtonHovered1 = (boolean) => { 
-    setButtonHovered1(boolean)
-  }
+  // const ToggleButtonHovered = (boolean) => { 
+  //   setButtonHovered(boolean)
+  // }
+  // const ToggleButtonHovered1 = (boolean) => { 
+  //   setButtonHovered1(boolean)
+  // }
 
   const slides = [ 
     {
       url: 'https://themes.wplook.com/html/benevolence/images/slider/slider1.jpg',
-      title: "We’re Family that is really happy and we are all hard-working persons!",
+      title: "We’re Family that is really happy and we are all hard-working persons! We’re Family that! ",
       info: "No matter where you are in life, there is a place for you at our church.No matter where you are in life, there is a place for you at our churchNo matter where you are in life, there is a place for you at our churchNo matter where you are in life, there is a place for you at our churchNo matter where you are in life, there is a place for you at our church",
     },
     {
@@ -36,6 +36,23 @@ const HomePage = () => {
     },
    
   ]
+  for (let i in slides) { 
+      if (window.innerWidth<767) {
+          slides[i].title = slides[i].title.slice(0,65)  
+          slides[i].info = slides[i].info.slice(0,85)  
+         
+      } 
+      else if (768<window.innerWidth<991) { 
+          
+          slides[i].title = slides[i].title.slice(0,80)
+          slides[i].info = slides[i].info.slice(0,320)   
+      }
+      else if (window.innerWidth > 991) { 
+          
+          slides[i].title = slides[i].title.slice(0,80)
+          slides[i].info = slides[i].info.slice(0,320)   
+      }
+  }
 
   const cards = [
       {
@@ -60,20 +77,19 @@ const HomePage = () => {
   ]
 
   for (let i in cards) { 
-      if (window.innerWidth<767) {
-          cards[i].title = cards[i].title.slice(0,100)  
-         
-      } 
-      else if (768<window.innerWidth<991) { 
-          
-          cards[i].title = cards[i].title.slice(0,50)
-      }
-      else if (window.innerWidth>=991) { 
-          
-          cards[i].title = cards[i].title.slice(0,75)
-      }
-  }
-
+    if (window.innerWidth<767) {
+        cards[i].title = cards[i].title.slice(0,100)  
+       
+    } 
+    else if (768<window.innerWidth<991) { 
+        
+        cards[i].title = cards[i].title.slice(0,61)
+    }
+    else if (window.innerWidth > 991) { 
+        
+        cards[i].title = cards[i].title.slice(0,81)
+    }
+}
   
   const DocInfo = [ 
     {
@@ -104,11 +120,14 @@ const HomePage = () => {
   ]
 
   for (let i in DocInfo) { 
-    if (document.documentElement.clientWidth<767) {
-      DocInfo[i].title = DocInfo[i].title.slice(0,40)  
+    if (window.innerWidth<767) {
+      DocInfo[i].title = DocInfo[i].title.slice(0,42)
   } 
-  else if (768<document.documentElement.clientWidth<991) { 
+  else if (768<window.innerWidth<991) { 
       DocInfo[i].title = DocInfo[i].title.slice(0,20)
+  }
+  else { 
+      DocInfo[i].title = DocInfo[i].title.slice(0,36)
   }
   }
 
@@ -128,91 +147,48 @@ const HomePage = () => {
 
   useEffect(()=> { 
 
-    for (let i in cards) { 
-        if (document.documentElement.clientWidth<767) {
-            cards[i].title = cards[i].title.slice(0,100)  
+  //   for (let i in cards) { 
+  //       if (document.documentElement.clientWidth<767) {
+  //           cards[i].title = cards[i].title.slice(0,100)  
            
-        } 
-        else if (768<document.documentElement.clientWidth<991) { 
+  //       } 
+  //       else if (768<document.documentElement.clientWidth<991) { 
             
-            cards[i].title = cards[i].title.slice(0,100)
-        }
-        else if (document.documentElement.clientWidth > 991) { 
+  //           cards[i].title = cards[i].title.slice(0,100)
+  //       }
+  //       else if (document.documentElement.clientWidth > 991) { 
             
-            cards[i].title = cards[i].title.slice(0,100)
-        }
-    }
+  //           cards[i].title = cards[i].title.slice(0,100)
+  //       }
+  //   }
 
-    for (let i in slides) { 
-      if (document.documentElement.clientWidth<767) {
-          slides[i].title = slides[i].title.slice(0,40)  
-          slides[i].info = slides[i].info.slice(0,100)  
+  //   for (let i in slides) { 
+  //     if (document.documentElement.clientWidth<767) {
+  //         slides[i].title = slides[i].title.slice(0,100)  
+  //         slides[i].info = slides[i].info.slice(0,60)  
          
-      } 
-      else if (768<document.documentElement.clientWidth<991) { 
+  //     } 
+  //     else if (768<document.documentElement.clientWidth<991) { 
           
-          slides[i].title = slides[i].title.slice(0,80)
-          slides[i].info = slides[i].info.slice(0,320)   
-      }
-      else if (document.documentElement.clientWidth > 991) { 
+  //         slides[i].title = slides[i].title.slice(0,80)
+  //         slides[i].info = slides[i].info.slice(0,320)   
+  //     }
+  //     else if (document.documentElement.clientWidth > 991) { 
           
-          slides[i].title = slides[i].title.slice(0,80)
-          slides[i].info = slides[i].info.slice(0,320)   
-      }
-  }
+  //         slides[i].title = slides[i].title.slice(0,80)
+  //         slides[i].info = slides[i].info.slice(0,320)   
+  //     }
+  // }
   
-    
-    const DocInfo = [ 
-      {
-        download: 'https://themes.wplook.com/html/benevolence/images/slider/slider1.jpg',
-        title: "Statut Sindikata SKupstine Crne Gore",
-        image: pdfdownload,
-        date: "19.02.2023",
-      },
-      {
-        download: 'https://themes.wplook.com/html/benevolence/images/slider/slider1.jpg',
-        title: "Pravilnik o organizaciji izbora za predsjednika SKupstine, Izvrsnog Odbora i Generalnog sekretara.",
-        image: pdfdownload,
-        date: "19.02.2023",
-      },
-      {
-        download: 'https://themes.wplook.com/html/benevolence/images/slider/slider1.jpg',
-        title: "Statut Skupstine Crne Gore, preciscena verzija",
-        image: pdfdownload,
-        date: "19.02.2023",
-      },
-      {
-        download: 'https://themes.wplook.com/html/benevolence/images/slider/slider1.jpg',
-        title: "Ustav Crne Gore",
-        image: pdfdownload,
-        date: "19.02.2023",
-      },
+  //   for (let i in DocInfo) { 
+  //     if (document.documentElement.clientWidth<767) {
+  //       DocInfo[i].title = DocInfo[i].title.slice(0,10)  
+  //   } 
+  //   else if (768<document.documentElement.clientWidth<991) { 
+  //       DocInfo[i].title = DocInfo[i].title.slice(0,20)
+  //   }
+  //   }
   
-    ]
-  
-    for (let i in DocInfo) { 
-      if (document.documentElement.clientWidth<767) {
-        DocInfo[i].title = DocInfo[i].title.slice(0,40)  
-    } 
-    else if (768<document.documentElement.clientWidth<991) { 
-        DocInfo[i].title = DocInfo[i].title.slice(0,20)
-    }
-    }
-  
-    const StaffInfo = [ 
-      {
-        image: "https://themes.wplook.com/html/benevolence/images/staff-4.jpg", 
-        name: "Seid Krsic", 
-        role: "president"
-      }, 
-      {
-       image: "https://themes.wplook.com/html/benevolence/images/staff-4.jpg", 
-        name: "Aleksandar Plamenac", 
-        role: "vice president"
-      }, 
-  
-    ]
-
 
   }, [])
 
