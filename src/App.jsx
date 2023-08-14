@@ -6,6 +6,8 @@ import Footer from './components/Footer/Footer';
 import MainMenuCopy from './components/MainMenuCopy/MainMenuCopy';
 import StaffPage from './pages/StaffPage/StaffPage';
 import StaffSinglePage from './pages/StaffSinglePage/StaffSinglePage';
+import NewsPage from './pages/NewsPage/NewsPage';
+import NewsSinglePage from './pages/NewsSinglePage/NewsSinglePage';
 
 
 function App() {
@@ -16,11 +18,14 @@ function App() {
 
                     <Routes>
                         <Route path="/" exact element={<HomePage />} />
-                        <Route path="/staff" exact element={<StaffPage />} />
-                        <Route path="/staff/:id" exact element={<StaffSinglePage />} />
+                        <Route path="/news" element={<NewsPage />} />
+                        <Route path="/news/:id" element={<NewsSinglePage />} />
+                        <Route path="/staff" element={<StaffPage />} />
+                        <Route path="/staff/:id" element={<StaffSinglePage />} />
                         {/* <Route path="*" element={<NoMatch />} /> */}
 
                     </Routes>
+                    
                   <Footer />
                 </Router>
         

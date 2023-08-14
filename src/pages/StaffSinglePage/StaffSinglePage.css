@@ -8,7 +8,7 @@
 
 
 .StaffSinglePage__container { 
-    width: 80%;
+    width: 75%;
     margin: 0rem auto;
     /* border: 1px solid gainsboro; */
     height: fit-content;
@@ -48,12 +48,12 @@
     /* border: 1px solid violet; */
    
 }
+
 .StaffSinglePage__container-right { 
     margin-top: 2rem;
     width: 30%;
     height: fit-content;
     min-height: 70vh;
-    /* border: 1px solid gainsboro; */
 }
 
 
@@ -69,7 +69,7 @@
 }
 
 .StaffSinglePage__card-info__container { 
-    width: 84%;
+    width: 89%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -103,11 +103,61 @@
 }
 
 .StaffSinglePage__container .Categories__main-container { 
-    width: 76% !important;
+    width: 80% !important;
     margin: 2rem auto;
 
+}
+
+.StaffSinglePage__container .Categories__main-container p { 
+    width: 93%;
 }
 
 .StaffSinglePage__container .Categories__main-container h1 { 
     font-size: 20px;
 }
+
+
+@media screen and (max-width: 767px) {
+
+    .StaffSinglePage__container-main { 
+        margin-top: 80px;
+    }
+
+    .StaffSinglePage__container { 
+        flex-direction: column;
+    }
+
+    .StaffSinglePage__container-right { 
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+
+    .StaffSinglePage__container-left { 
+        width: 100%;
+    } 
+    .StaffSinglePage__card-info__container { 
+        width: 100%;
+    }
+    .StaffSinglePage__card-info__container p { 
+        width: 90%;
+    }
+
+
+    .StaffSinglePage__container .Categories__main-container { 
+        width: 90% !important;
+        margin: 2rem auto;
+    
+    }
+    
+    .StaffSinglePage__container .Categories__main-container p { 
+        width: 93%;
+    }
+    
+    .StaffSinglePage__container .Categories__main-container h1 { 
+        font-size: 20px;
+    }
+
+    
+}   

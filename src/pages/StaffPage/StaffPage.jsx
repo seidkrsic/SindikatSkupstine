@@ -1,13 +1,13 @@
 import React from 'react'
 import "../StaffPage/StaffPage.css"
-import { useLocation } from 'react-router-dom'
 import StaffCard from '../../components/StaffCard/StaffCard'
 import HeaderPhoto from '../../components/HeaderPhoto/HeaderPhoto'
 import Categories from '../../components/Categories/Categories'
+import { useParams } from 'react-router-dom'
 
 
 const StaffPage = () => {
-    const page_name = useLocation().state
+   
 
     const StaffInfo = [ 
         {
@@ -53,7 +53,7 @@ const StaffPage = () => {
 
     <div className='StaffPage__container-Big'>
 
-        <HeaderPhoto />
+        <HeaderPhoto page_name={"Članovi Sindikata"} />
    
 
         <div className='StaffPage__container'>
@@ -66,7 +66,7 @@ const StaffPage = () => {
                 </div>
                 <div className='StaffPage__staff-right'>
                     
-                    <Categories categories={CategoriesInfo} />
+                    <Categories categories={CategoriesInfo} title={"Kategorije"} />
                 
                 </div>
 

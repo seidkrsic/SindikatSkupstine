@@ -5,10 +5,8 @@ import { useLocation } from 'react-router-dom'
 
 
 
-const HeaderPhoto = () => {
+const HeaderPhoto = ({page_name}) => {
 
-    const page_name = useLocation().state
-    
   return (
     <div className='HeaderPhoto__container'> 
         <img src={rainbow_bridge} alt="logo" />

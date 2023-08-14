@@ -39,3 +39,22 @@
     font-size: 25px;
     letter-spacing: 2px;
 }
+
+
+@media  screen and (max-width: 767px) {
+
+    .HeaderPhoto__view-name__container { 
+        top: 180px;
+        width: 85%;
+    }
+    
+}
+
+@media  screen and (min-width: 767px) and (max-width: 991px) {
+
+    .HeaderPhoto__view-name__container { 
+        top: 180px;
+        width: 85%;
+    }
+    
+}

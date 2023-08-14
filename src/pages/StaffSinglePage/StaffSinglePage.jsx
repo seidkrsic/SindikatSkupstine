@@ -4,8 +4,13 @@ import "../StaffSinglePage/StaffSinglePage.css"
 import { Link } from 'react-router-dom'
 import StaffCard from '../../components/StaffCard/StaffCard'
 import Categories from '../../components/Categories/Categories'
+import { useParams } from 'react-router-dom'
 
 const StaffSinglePage = () => {
+
+    const page_name = useParams()
+    console.log(page_name)
+
 
     const CategoriesInfo = [ 
         {id: 101, 

@@ -65,6 +65,7 @@
     padding: 0;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .StaffPage__staff-left { 
@@ -90,41 +91,81 @@
     align-items: flex-start;
 }
 
-/* .StaffPage__staff-right h1 { 
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 100%;
-}
-.StaffPage__categories-container { 
-    width: 100%;
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    height: fit-content;
-    cursor: pointer;
-} */
+@media screen and (max-width: 767px) {
+    .StaffPage__container-Big { 
+        margin: 0 auto;
+        margin-top: 80px;
+        
+    }
 
-/* .StaffPage__staff-right p { 
-    width: 80% !important;
-    margin: 0;
-    padding: 0.5rem .5rem;
-    margin-bottom: .5rem;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-    border: 1px solid white;
-    font-size: 13px;
-    border-bottom: 1px solid gainsboro;
-}
+    .StaffPage__staff-right { 
+        width: 100%;
+        margin: 0 auto;
+        height: fit-content;
+        /* border: 1px solid violet; */
+        min-height: fit-content;
+        margin-bottom: 2rem;
+    }
 
-.StaffPage__staff-right p:hover { 
-    color: white;
-    background-color: #ffbf00;
-    border: 1px solid #ffbf00;
-    font-size: 13px;
+    .StaffPage__staff-left { 
+        width: 100%;
+        margin: 2rem auto;
+
+    } 
     
-} */
+    .StaffPage__container .Categories__main-container p { 
+        width: 95%;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .StaffPage__container-Big { 
+        margin: 0 auto;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: fit-content;
+        
+    }
+
+    .StaffPage__staff-main { 
+        min-height: fit-content;
+    }
+
+    .StaffPage__staff-right { 
+        width: 100%;
+        margin: 0 auto;
+        height: fit-content;
+        /* border: 1px solid violet; */
+        min-height: fit-content;
+        margin-bottom: 2rem;
+    }
+
+    .StaffPage__staff-left { 
+        width: 100%;
+        margin: 2rem auto;
+
+    } 
+
+    .StaffPage__staff-right { 
+        display: flex;
+        margin: 0 auto;
+        /* border: 1px solid violet; */
+        flex-direction: row;
+        justify-content: flex-end;
+        min-height: fit-content;
+    }
+
+    .StaffPage__container .Categories__main-container { 
+        width: 50%;
+        margin: 2rem auto;
+    }
+    
+    .StaffPage__container .Categories__main-container p { 
+        width: 95%;
+    }
+    
+}
