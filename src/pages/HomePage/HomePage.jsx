@@ -8,20 +8,13 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import StaffCard from '../../components/StaffCard/StaffCard'
 import Timeline from '../../components/Timeline/Timeline'
+import MainMenuCopy from '../../components/MainMenuCopy/MainMenuCopy'
 
 
 
 const HomePage = () => {
 
-  // const [ButtonHovered, setButtonHovered] = useState(false)
-  // const [ButtonHovered1, setButtonHovered1] = useState(false)
-
-  // const ToggleButtonHovered = (boolean) => { 
-  //   setButtonHovered(boolean)
-  // }
-  // const ToggleButtonHovered1 = (boolean) => { 
-  //   setButtonHovered1(boolean)
-  // }
+ 
 
   const slides = [ 
     {
@@ -60,18 +53,21 @@ const HomePage = () => {
         title: "We cant always see where the road leads, We cant always see where the road leads We cant always see where the road leads",
         info: "No matter where you are in life, there is a place for you at our church.No matter where you are in life, there is a place for you at our churchNo matter where you are in life, there is a place for you at our churchNo matter where you are in life, there is a place for you at our churchNo matter where you are in life, there is a place for you at our church",
         date: "19.02.2023",
+        id: 543,
       },
       {
         url: "https://static.vecteezy.com/system/resources/previews/022/875/505/original/smart-city-and-big-data-concept-futuristic-cityscape-at-night-with-neon-colors-city-infrastructure-hologram-created-with-generative-ai-free-photo.jpg",
         title: "We cant always see where the road leads We cant always see where the road leads, We cant always see where the road leads We cant always see where the road leads  ",
         info: "but god promises theres something better up ahead we just have to trust him",
         date: "19.02.2023",
+        id: 3434,
       },
       {
         url: "https://wallpaperaccess.com/full/4983594.jpg",
         title: "We cant always see where the road leadsasfsfs",
         info: "but god promises theres something better up ahead we just have to trust him",
         date: "19.02.2023",
+        id: 343433,
       },
 
   ]
@@ -196,8 +192,7 @@ const HomePage = () => {
 
   return (
     <div className='HomePage__container'>
-
-        <ImageSlider slides={slides} />
+        <ImageSlider slides={slides} noTextBoolean={true} />
         <div className='PageContainerGrid-main'>
             <div className='PageContainerGrid'>
                 <div className='PageContainerGrid__bigger'>
@@ -210,6 +205,7 @@ const HomePage = () => {
                                                   url={card.url} 
                                                   title={card.title}
                                                   date={card.date} 
+                                                  id={card.id}
                                 />
                               
                             )}
@@ -232,7 +228,7 @@ const HomePage = () => {
                                   )}
                                   
                                       
-                                  <Link>Vidi više...</Link>
+                                  {/* <Link>Vidi više...</Link> */}
                                   
                             </div>
 

@@ -16,7 +16,7 @@
     height: 80%;
     width: 100%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -71,24 +71,29 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: center;
+    width: 70%;
 }
 
 .Footer__container-top__col { 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start !important;
+    justify-content: flex-start;
     align-items: flex-start;
     width: fit-content;
     margin: 0;
-    margin-right: 4rem;
+    width: 40%;
     min-height: 60%;
     height: 100%;
 }
 
 .footer_center { 
-    justify-content: center !important;
+    justify-content: center;
     align-items: flex-start;
     scale: .8;
+    width: 100%;
+    left: 5%;
+    position: relative;
     text-transform: none;
 }
 
@@ -107,6 +112,8 @@
 }
 
 
+
+
 @media screen and (max-width: 767px) {
 
     .Footer__container { 
@@ -117,6 +124,10 @@
     .Footer__container-top { 
         flex-direction: column-reverse;
         align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
         
     }
 
@@ -124,20 +135,41 @@
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        justify-content: center;
-        width: 100% !important;
+        justify-content: space-between;
+        /* padding: 0 1rem; */
         /* border: 1px solid violet; */
-        margin: 1rem auto !important;
+        margin: 1rem 0;
+        width: 80%;
+
     }
 
     .Footer__container-top__col { 
+       display: flex;
+       flex-direction: column;
        justify-content: center !important;
-       align-items: flex-start;
-       margin: 0 1rem;
+       align-items: center !important;
+       margin: 0 1.5rem !important;
+       width: 100% !important;
+       /* border: 1px solid green; */
+       
+    }
+
+    .Footer__container-top__col h1 { 
+        width: 100%;
+    }
+
+    .Footer__container-top__col a { 
+        width: 100%;
     }
 
     .footer_center { 
+        justify-content: center;
+        align-items: flex-start;
+        scale: .8;
         width: 100%;
+        left: 0%;
+        position: relative;
+        text-transform: none;
     }
 
     .Footer__container-bottom { 
@@ -149,6 +181,15 @@
     .Footer__container-bottom p { 
         font-size: 12px;
         margin: .5rem 0;
+    }
+
+    .Footer__image-container { 
+        display: flex;
+        align-items: center;
+        margin: 0 auto !important;
+        width: 100%;
+        justify-content: center;
+        /* border: 1px solid violet; */
     }
   
 }

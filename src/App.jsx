@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import './App.css'
 import Footer from './components/Footer/Footer';
@@ -8,24 +8,28 @@ import StaffPage from './pages/StaffPage/StaffPage';
 import StaffSinglePage from './pages/StaffSinglePage/StaffSinglePage';
 import NewsPage from './pages/NewsPage/NewsPage';
 import NewsSinglePage from './pages/NewsSinglePage/NewsSinglePage';
+import LoginPage from './pages/LoginPage/LoginPage';
+import { useEffect, useState } from 'react';
 
 
 function App() {
+
+
   return (
         <div className="App">
-                <Router>             
-                <MainMenuCopy />
-
+                <Router>  
+                    <MainMenuCopy />       
                     <Routes>
                         <Route path="/" exact element={<HomePage />} />
                         <Route path="/news" element={<NewsPage />} />
                         <Route path="/news/:id" element={<NewsSinglePage />} />
                         <Route path="/staff" element={<StaffPage />} />
+                        <Route path="/login" element={<LoginPage />} />
                         <Route path="/staff/:id" element={<StaffSinglePage />} />
                         {/* <Route path="*" element={<NoMatch />} /> */}
 
                     </Routes>
-                    
+
                   <Footer />
                 </Router>
         

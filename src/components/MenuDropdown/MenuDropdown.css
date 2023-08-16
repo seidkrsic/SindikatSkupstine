@@ -2,12 +2,10 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 104%;
+    top: 105%;
     left: 0;
-    /* width: fit-content !important; */
-    /* border: 1px solid  #d4ae37; */
     border-top: none;
-    width: 192px;
+    width: 150%;
 
 
 
@@ -15,23 +13,27 @@
 
 ul li { 
     list-style: none;
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    min-width: 150px;
+    height: 30px;
     display: flex;
+    margin: 0;
     align-items: center;
     justify-content: center;
     color: white;
     text-transform: uppercase;
     font-weight: 500;
     position: relative;
-    border-width: 100px 0 0 100px;
+    
 }
 
 li  a { 
     color: white;
     text-decoration: none;
     height: 100%;
-    width: 100%;
+    width: 150px;
+    margin: 0;
+    padding: 0;
     font-weight: 550;
     display: flex;
     align-items: center;
@@ -51,14 +53,14 @@ li  a {
 
 .MenuDropdown__menuItems  a { 
     display: flex;
-    width: 200px;
     position: relative;
     height: 100%;
     justify-content: space-between;
     font-size: 13px;
     color: black;
-    /* background-color:  #F1E5AC; */
-    background-color: rgb(243, 235, 211, .4);
+    background-color: #f4f2ec;
+    /* background-color: rgb(243, 235, 211, .4); */
+
 }
 
 .helperDiv { 
@@ -66,22 +68,25 @@ li  a {
     width: 100%;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 40px;
     color: black;
-    background-color:  #f1e5acb6;
+    border-top: 1px solid gainsboro;
+}
 
+.helperDiv:first-child { 
+    border: none;
 }
 
 .MenuDropdown__menuItems  a { 
     width: 100%;
+    width: 400px;
     height: 100%;
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0 2rem;
-    text-transform: uppercase;
-    border-bottom: 1px solid rgb(212, 174, 55, .3);
-    background-color: transparent;
+    text-transform: none;
+    background-color: #f4f2ec;
 
 }
 
@@ -96,13 +101,13 @@ li  a {
 }
 
 .MenuDropdown__menuItems  a span { 
-    font-size: 25px;
+    font-size: 20px;
     position: absolute;
     font-weight: 550;
     left: 10px;
-    top: 7.5px;
-    /* color:  #F1E5AC; */
-    color: rgb(243, 235, 211, .4);
+    top: 6px;
+    color: #d4ae37;
+
 
 }
 

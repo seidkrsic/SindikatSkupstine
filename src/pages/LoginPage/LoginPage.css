@@ -1,0 +1,97 @@
+.LoginPage__container { 
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 0;
+}
+
+.LoginPage__img-container { 
+    display: flex;
+    width: 7%;
+    height: 100px;
+    margin: 0rem auto;
+    margin-top: 2rem;
+}
+
+.LoginPage__img-container img { 
+    height: 100%;
+    width: 100%;
+}
+
+.LoginPage__container form { 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+    margin: 4rem auto;
+    margin-top: .5rem;
+    border-radius: 5px;
+    height: fit-content;
+    background-color: #f4f2ec;
+}
+.LoginPage__container form p { 
+    width: 95%;
+    margin: 1rem auto;
+    /* margin-top: 1rem; */
+}
+
+#LoginPage-input, #LoginPage-input2   { 
+    display: flex;
+    position: static;
+    left: -15px;
+    height: 20px;
+    width: 90%;
+    margin: 0rem auto !important;
+    padding: .5rem;
+    font-size: 15px;
+}
+
+#LoginPage-input_button { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    margin: 2rem auto;
+    height: 40px;
+    width: 95%;
+    margin: 1rem auto;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 550;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+
+}
+
+#LoginPage-input_button:hover { 
+    background-color: #d4ae37;
+    color: #AB0707;
+}
+
+
+@media screen and (max-width: 767px)  {
+
+    .LoginPage__container { 
+        margin-top: 80px;
+    }
+
+    .LoginPage__img-container { 
+        width: 30%;
+        scale: .8;
+    }
+
+
+    .LoginPage__container form  { 
+        width: 80%;
+    }
+
+
+
+}

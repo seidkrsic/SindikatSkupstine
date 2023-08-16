@@ -24,18 +24,21 @@ const NewsPage = () => {
         title: "We cant always see where the road leads, We cant always see where the road leads We cant always see where the road leads",
         info: "No matter where you are in life, there is a place for you at our church.No matter where you are in life, there is a place for you at our churchNo matter where you are in life, there is a place for you at our churchNo matter where you are in life, there is a place for you at our churchNo matter where you are in life, there is a place for you at our church",
         date: "19.02.2023",
+        id: 1123,
       },
       {
         url: "https://static.vecteezy.com/system/resources/previews/022/875/505/original/smart-city-and-big-data-concept-futuristic-cityscape-at-night-with-neon-colors-city-infrastructure-hologram-created-with-generative-ai-free-photo.jpg",
         title: "We cant always see where the road leads We cant always see where the road leads, We cant always see where the road leads We cant always see where the road leads  ",
         info: "but god promises theres something better up ahead we just have to trust him",
         date: "19.02.2023",
+        id: 3434,
       },
       {
         url: "https://wallpaperaccess.com/full/4983594.jpg",
         title: "We cant always see where the road leadsasfsfs",
         info: "but god promises theres something better up ahead we just have to trust him",
         date: "19.02.2023",
+        id: 12121212,
       },
 
     ]
@@ -68,6 +71,7 @@ const NewsPage = () => {
                                       url={card.url} 
                                       title={card.title}
                                       date={card.date} 
+                                      id={card.id}
                     />
                                   
                     )}

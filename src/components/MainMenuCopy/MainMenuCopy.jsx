@@ -1,26 +1,39 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef} from 'react'
 import "./MainMenuCopy.css"
 import logo from "../../images/Artboard.png"
 import { motion} from 'framer-motion'
 import { Link } from 'react-router-dom'
 import MenuDropdown from '../MenuDropdown/MenuDropdown'
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu'
+import search from "../../images/search.png"
+
 
 
 const MainMenuCopy = () => {
 
     const [isFixed, setIsFixed] = useState(false);
     const FixedStyle = {position: isFixed? "fixed": "relative", 
-                        height: isFixed ? "50px" : "25%", 
+                        height: isFixed ? "30px" : "30px", 
                         borderBottom: isFixed? "1.5px solid #AB0707" : "",
                       }
+    const [IsSearched, setIsSearched] = useState(true)
+    const HandleSearchClick = () => { 
+        if (inputRef.current) {
+          inputRef.current.focus();
+        }
+     
+      setIsSearched(!IsSearched) 
+    };
+    
+    
+    
     const handleScroll = () => {
-      if (window.scrollY <= 130) {
-        setIsFixed(false);
-      } 
-      else {
-        setIsFixed(true);
-      }
+        if (window.scrollY <= 130) {
+          setIsFixed(false);
+        } 
+        else {
+          setIsFixed(true);
+        }
     };
 
     useEffect(() => {
@@ -45,52 +58,49 @@ const MainMenuCopy = () => {
 
     ];
 
-
-    
-    const [IsHovered, setIsHovered] = useState(false);
-
-    const toggleHovered = (state) => { 
-        setIsHovered(state)
-    }
-
-    const [IsHovered1, setIsHovered1] = useState(false);
-
-    const toggleHovered1 = (state) => { 
-        setIsHovered1(state)
-    }
-
-    const [IsHovered2, setIsHovered2] = useState(false);
-
-    const toggleHovered2 = (state) => { 
-        setIsHovered2(state)
-    }
-
-
+    const inputRef = useRef(null);
 
 
 
   return (
-    <div className='menuCopy__container'>
+    <div className={'menuCopy__container'}>
 
         <div className='menuCopy__logo-icon__container'>
             <div className='menuCopy__img-container'>
-                <img src={logo} alt="" />
+              <Link to={"/"}>
+                  <img src={logo} alt="" />
+              </Link>
+                
             </div>
             
             <div className='menuCopy__lang-icons__container'>
                 <Link>Latinica</Link>
-                <Link>Uloguj se</Link>
+                <Link to={"/login"}>Uloguj se</Link>
             </div>
             <HamburgerMenu />
         </div>
         <div style={FixedStyle} className='menuCopy__container-inner'>
           <ul>
-            <MenuDropdown buttonName="Aktuelnosti"   />
-            <MenuDropdown buttonName="Sindikat" menuItems={button1Items} />
-            <MenuDropdown buttonName="Sjednice" menuItems={button2Items}  />
-            <MenuDropdown buttonName="Zakoni" />
-            <MenuDropdown buttonName="Pogodnosti"/>
-            <MenuDropdown buttonName="Kontakt"/>
+              <MenuDropdown buttonName="Aktuelnosti" path="/news" />
+              <MenuDropdown buttonName="Sindikat" menuItems={button1Items} path="/staff" />
+              <MenuDropdown buttonName="Sjednice" menuItems={button2Items}  />
+              <MenuDropdown buttonName="Zakoni" />
+              <MenuDropdown buttonName="Pogodnosti"/>
+              <MenuDropdown buttonName="Kontakt"/>
+            <div className='search-relative__container'>
+                <input type="text" autoFocus  
+                          ref={inputRef}
+                          placeholder='Search news'
+                          className={ IsSearched ? 'search-hide' : "" }
+                          
+                  />
+                  <img onClick={HandleSearchClick} 
+                        className="search-button"
+                        src={search} alt="search-icon" />
+            </div>
+             
+             
+       
           </ul>
           
      

@@ -3,7 +3,6 @@
     width: 100%;
     border-bottom: 1.5px solid #AB0707;
     display: flex;
-    /* position: fixed; */
     top: 0px;
     z-index: 1;
     align-items: flex-end;
@@ -14,6 +13,11 @@
     transition: all .2s ease-in-out;
     
     
+    
+}
+
+.hideMenu { 
+    opacity: 0 !important;
 }
 
 .menuCopy__logo-icon__container { 
@@ -46,13 +50,13 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .menuCopy__lang-icons__container a { 
     text-decoration: none;
     color: #202020;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     margin: 0 1rem;
     height: fit-content;
@@ -71,7 +75,7 @@
 
 .menuCopy__container-inner { 
     width: 100%;
-    height: 25%;
+    height: 50px;
     border: none;
     display: flex;
     margin: 0 auto;
@@ -89,7 +93,56 @@ ul {
     height: 100%;
     width: 80%;
     margin: 0 auto;
+    flex-direction: row; 
+    justify-content: flex-start;
 }
+
+
+.search-button { 
+    width: 30px;
+    height: 100%;
+    cursor: pointer;
+  
+}
+.search-relative__container { 
+    display: flex;
+    position: absolute;
+    right: 10%;
+}
+
+.search-hide { 
+    display: none !important;
+}
+
+input[type="text"],input[type="password"] { 
+    position: absolute;
+    top: 120%;
+    right: 27%;
+    width: 200px;
+    border: none;
+    outline: 1px solid #AB0707;
+    border-radius: 3px;
+    height: 100%;
+    margin: auto 0;
+}
+
+input[type="text"]:focus, input[type="password"]:focus { 
+    outline: 1px solid #AB0707;
+    border-radius: 3px;
+}
+
+input[type=text], input[type=password] {
+    padding:0 .5rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: gray;
+}
+
+input[type="text"]::placeholder { 
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 0 .1rem;
+}
+
+
 
 
 
@@ -112,6 +165,28 @@ ul {
         width: 42px;
     }
 
+    .search-relative__container { 
+        display: none;
+    }
+
 
    
 }
+
+@media  screen and (max-width: 1138px) and (min-width: 1001px) { 
+
+    .menuCopy__container-inner { 
+        width: 100%;
+    }
+
+    ul { 
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .search-relative__container { 
+        position: absolute;
+        right: 1%;
+    }
+}
+

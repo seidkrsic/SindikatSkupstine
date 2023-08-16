@@ -1,7 +1,7 @@
 @import 'react-vertical-timeline-component/style.min.css'; 
 
 .Timeline__container { 
-    background-color: rgb(202, 157, 17, .1);
+    background-color: #f4f2ec;
     width: 95%;
 }
 

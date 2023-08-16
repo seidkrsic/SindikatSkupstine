@@ -2,13 +2,15 @@ import React from 'react'
 import "./Footer.css" 
 import { Link } from 'react-router-dom'
 import logo from "../../images/Artboard.png"
+import fullscreen from "../../components/NewsGallery/NewsGallery.jsx"
 
 
 const Footer = () => {
+
   return (
     <div className='Footer__container'>
         <div className='Footer__container-top'>
-            <div className='Footer__container-top__col footer_center'>
+            <div className={'Footer__container-top__col footer_center' }>
                 <div className='Footer__image-container'>
                   <img src={logo} alt="" />
                   <div className='Footer__info-container'>

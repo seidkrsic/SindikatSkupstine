@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-const MenuDropdown = ({buttonName, menuItems }) => {
+const MenuDropdown = ({buttonName, menuItems, path }) => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [ishovered, setIshovered] = useState(false)
@@ -31,11 +31,11 @@ const MenuDropdown = ({buttonName, menuItems }) => {
   return (
     <>
         <li>
-            <Link className='MenuDropdown__main-links' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>{buttonName}</Link>
+            <Link to={path} className='MenuDropdown__main-links' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>{buttonName}</Link>
             <div style={ishovered && CompView ? showItem : hideItem } className="MenuDropdown__menuItems">
-                {menuItems?.map(item => ( 
-                    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='helperDiv'>
-                        <Link> <span>|</span>{item.name}</Link>
+                {menuItems?.map((item, index) => ( 
+                    <div key={index*123} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='helperDiv'>
+                        <Link to={item.path}> <span>|</span>{item.name}</Link>
                     </div>
                 ))}
             </div>

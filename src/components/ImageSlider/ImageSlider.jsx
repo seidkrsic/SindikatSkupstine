@@ -49,7 +49,7 @@ const ImageSlider = ({slides}) => {
   
     <motion.div onMouseEnter={showArrows} onMouseLeave={hideArrows}  className='ImageSlider__container'>
         
-        <motion.div className='ImageSlider__container-Image' 
+        <motion.div className={'ImageSlider__container-Image'}
                     key={currentIndex}
                     initial={{ offsetX: currentIndex % 2 === 0 ? -100 : 100, opacity: .8}}
                     animate={{ x: 0, opacity: 1, animationDuration: 2}}
@@ -73,11 +73,14 @@ const ImageSlider = ({slides}) => {
 
 
                     <img src={`${slides[currentIndex].url}`} alt="slideImg" />
+                    
+                   
                     <Link className='NewInfo'>
                         <h1>{slides[currentIndex].title}</h1>
                         <p>{slides[currentIndex].info}</p>
-    
-                    </Link>
+                    </Link> 
+                    
+                    
                   
         </motion.div>
 
