@@ -83,10 +83,10 @@ const MainMenuCopy = () => {
           <ul>
               <MenuDropdown buttonName="Aktuelnosti" path="/news" />
               <MenuDropdown buttonName="Sindikat" menuItems={button1Items} path="/staff" />
-              <MenuDropdown buttonName="Sjednice" menuItems={button2Items}  />
-              <MenuDropdown buttonName="Zakoni" />
+              <MenuDropdown buttonName="Sjednice" menuItems={button2Items} path="/session"  />
+              <MenuDropdown buttonName="Zakoni" path={"/documents"}/>
               <MenuDropdown buttonName="Pogodnosti"/>
-              <MenuDropdown buttonName="Kontakt"/>
+              <MenuDropdown buttonName="Kontakt" path="/contact"/>
             <div className='search-relative__container'>
                 <input type="text" autoFocus  
                           ref={inputRef}

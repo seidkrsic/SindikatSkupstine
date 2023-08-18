@@ -1,0 +1,118 @@
+.ListDocumentsPage__container-main { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+
+
+.ListDocumentsPage__container { 
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 4rem auto;
+    /* border: 1px solid rgb(212, 174, 55, .5); */
+    background-color: rgb(244, 242, 236, .3);
+    overflow-y: scroll;
+    max-height: 50vh;
+}
+
+.ListDocumentsPage__document-container { 
+        display: flex;
+        flex-direction: row; 
+        min-height: fit-content;
+        height: fit-content;
+        width: 70%;
+        margin: 0.5rem auto;
+        align-items: center;
+        text-decoration: none;
+        background-color: #f4f2ec;
+
+
+}
+
+.ListDocumentsPage__document-container:first-child { 
+    margin-top: 1rem;
+}
+
+.ListDocumentsPage__document-container:last-child { 
+    margin-bottom: 1rem;
+}
+
+.ListDocumentsPage__text-container { 
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+    
+
+}
+
+.ListDocumentsPage__text-container p { 
+    display: flex;
+    margin: .5rem !important;
+    color: black;
+    height: 90%;
+    font-size: 15px;
+    text-decoration: underline;
+    padding: 0 !important;
+
+}
+
+.ListDocumentsPage__text-container p:hover { 
+    color: #AB0707;
+}
+
+.dateFont { 
+    font-size: 13px !important;
+    text-decoration: none !important;
+}
+.dateFont:hover { 
+    color: black !important;
+}
+
+.ListDocumentsPage__document-container img { 
+    width: 5%;
+    height: 100%;
+    max-height: 50px;
+    margin: auto;
+}
+
+.ListDocumentsPage__document-container a { 
+    text-decoration: none !important;
+    height: fit-content;
+    
+
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .ListDocumentsPage__container-main { 
+        margin-top: 80px;
+    }
+
+    .ListDocumentsPage__container { 
+        width: 80%;
+    }
+
+    .ListDocumentsPage__document-container img { 
+        width: 20% !important;
+        height: 100%;
+        max-height: 50px;
+        
+    }
+
+    .ListDocumentsPage__document-container { 
+        width: 90%;
+    }
+    
+}   
+
+@media screen and (min-width: 767px) and (max-width: 991px) { 
+
+    .ListDocumentsPage__container-main { 
+        margin-top: 80px;
+    }
+
+}

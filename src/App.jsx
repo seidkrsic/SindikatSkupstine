@@ -11,6 +11,8 @@ import NewsSinglePage from './pages/NewsSinglePage/NewsSinglePage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import { useEffect, useState } from 'react';
 import Session from './pages/Session/Session';
+import ContactPage from './pages/ContactPage/ContactPage';
+import ListDocumentsPage from './pages/ListDocumentsPage/ListDocumentsPage';
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
                         <Route path="/news/:id" element={<NewsSinglePage />} />
                         <Route path="/staff" element={<StaffPage />} />
                         <Route path="/login" element={<LoginPage />} />
+                        <Route path="/documents" element={<ListDocumentsPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
                         <Route path="/session" element={<Session />} />
                         <Route path="/staff/:id" element={<StaffSinglePage />} />
 

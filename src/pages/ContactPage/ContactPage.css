@@ -1,0 +1,92 @@
+.Contact__container-main { 
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: fit-content;
+
+}
+
+
+.Contact__container { 
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    height: fit-content;
+    min-height: 50vh;
+    /* border: 1px solid gainsboro; */
+
+}
+
+.Contact__info-container { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    /* border: 1px solid violet; */
+    margin: 2rem;
+    padding: 2rem;
+    background-color: #f4f2ec;
+    border: 1px solid rgb(212, 174, 55, .5);
+}
+
+.Contact__info-container p { 
+    font-size: 15px;
+    margin: 0;
+    margin-bottom: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.Contact__info-container p a { 
+    color: #AB0707;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0 !important;
+    height: 100%;
+    cursor: auto;
+    margin: 0 !important;
+    margin-left: .5rem !important;
+}
+
+.Contact__info-container h5 { 
+    margin: 0;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width: 767px) { 
+
+    .Contact__container-main { 
+        margin-top: 80px;
+    }
+
+    .Contact__container { 
+        min-height: 30vh;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    .Contact__info-container { 
+        margin-bottom: 0;
+    }
+}
+
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+
+    .Contact__container-main { 
+        margin-top: 80px;
+    }
+
+    .Contact__container { 
+        min-height: 30vh;
+    }
+    
+}
