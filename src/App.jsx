@@ -10,6 +10,7 @@ import NewsPage from './pages/NewsPage/NewsPage';
 import NewsSinglePage from './pages/NewsSinglePage/NewsSinglePage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import { useEffect, useState } from 'react';
+import Session from './pages/Session/Session';
 
 
 function App() {
@@ -25,7 +26,9 @@ function App() {
                         <Route path="/news/:id" element={<NewsSinglePage />} />
                         <Route path="/staff" element={<StaffPage />} />
                         <Route path="/login" element={<LoginPage />} />
+                        <Route path="/session" element={<Session />} />
                         <Route path="/staff/:id" element={<StaffSinglePage />} />
+
                         {/* <Route path="*" element={<NoMatch />} /> */}
 
                     </Routes>

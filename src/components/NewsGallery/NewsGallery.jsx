@@ -22,12 +22,14 @@ const NewsGallery = ({slides}) => {
         if (fullScreen) { 
             document.querySelector("body").style.overflow = "hidden";
             document.querySelector('.menuCopy__container').style.display = "none"; 
+            document.querySelector(".footer_center").style.zIndex = -1; 
             document.addEventListener('touchmove', preventScroll, { passive: false });
 
         }
         else { 
             document.querySelector("body").style.overflow = "auto";
             document.querySelector('.menuCopy__container').style.display = "flex";
+            document.querySelector(".footer_center").style.zIndex = 0; 
           
 
         }

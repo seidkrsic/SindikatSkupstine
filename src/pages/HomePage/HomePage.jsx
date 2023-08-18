@@ -192,7 +192,7 @@ const HomePage = () => {
 
   return (
     <div className='HomePage__container'>
-        <ImageSlider slides={slides} noTextBoolean={true} />
+        <ImageSlider slides={slides} />
         <div className='PageContainerGrid-main'>
             <div className='PageContainerGrid'>
                 <div className='PageContainerGrid__bigger'>

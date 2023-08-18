@@ -54,7 +54,7 @@ const MainMenuCopy = () => {
 
     const button2Items = [ 
       {name: 'Sjednice Skupštine', path: "/sjednice/1"},
-      {name: 'Generalni sekretar', path: "/staff/5"},
+      {name: 'Sjednice Izvršnog Odbora', path: "/staff/5"},
 
     ];
 
