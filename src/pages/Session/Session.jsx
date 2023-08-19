@@ -3,7 +3,7 @@ import "./Session.css"
 import HeaderPhoto from '../../components/HeaderPhoto/HeaderPhoto'
 import { Link } from 'react-router-dom'
 import pdfdownload from "../../images/pdf.png"
-
+import { useEffect } from 'react'
 
 
 
@@ -167,7 +167,13 @@ const Session = () => {
             },
         ]
 
-        }
+    }
+
+    useEffect(() => {
+        
+        window.scrollTo(0, 0); 
+
+    }, []);
 
   return (
     <div className='Session__container-main'>

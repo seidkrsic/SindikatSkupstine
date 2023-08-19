@@ -56,6 +56,7 @@
 
 .Contact__info-container h5 { 
     margin: 0;
+    font-size: 15px;
     text-transform: uppercase;
     margin-bottom: 1rem;
 }
@@ -69,6 +70,7 @@
 
     .Contact__container { 
         min-height: 30vh;
+        width: 90%;
         flex-direction: column;
         margin-bottom: 2rem;
     }
@@ -87,6 +89,9 @@
 
     .Contact__container { 
         min-height: 30vh;
+       
     }
+
+    
     
 }

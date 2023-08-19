@@ -14,7 +14,7 @@ import MainMenuCopy from '../../components/MainMenuCopy/MainMenuCopy'
 
 const HomePage = () => {
 
- 
+  
 
   const slides = [ 
     {
@@ -141,52 +141,11 @@ const HomePage = () => {
 
   ]
 
-  useEffect(()=> { 
+  useEffect(() => {
+        
+    window.scrollTo(0, 0); 
 
-  //   for (let i in cards) { 
-  //       if (document.documentElement.clientWidth<767) {
-  //           cards[i].title = cards[i].title.slice(0,100)  
-           
-  //       } 
-  //       else if (768<document.documentElement.clientWidth<991) { 
-            
-  //           cards[i].title = cards[i].title.slice(0,100)
-  //       }
-  //       else if (document.documentElement.clientWidth > 991) { 
-            
-  //           cards[i].title = cards[i].title.slice(0,100)
-  //       }
-  //   }
-
-  //   for (let i in slides) { 
-  //     if (document.documentElement.clientWidth<767) {
-  //         slides[i].title = slides[i].title.slice(0,100)  
-  //         slides[i].info = slides[i].info.slice(0,60)  
-         
-  //     } 
-  //     else if (768<document.documentElement.clientWidth<991) { 
-          
-  //         slides[i].title = slides[i].title.slice(0,80)
-  //         slides[i].info = slides[i].info.slice(0,320)   
-  //     }
-  //     else if (document.documentElement.clientWidth > 991) { 
-          
-  //         slides[i].title = slides[i].title.slice(0,80)
-  //         slides[i].info = slides[i].info.slice(0,320)   
-  //     }
-  // }
-  
-  //   for (let i in DocInfo) { 
-  //     if (document.documentElement.clientWidth<767) {
-  //       DocInfo[i].title = DocInfo[i].title.slice(0,10)  
-  //   } 
-  //   else if (768<document.documentElement.clientWidth<991) { 
-  //       DocInfo[i].title = DocInfo[i].title.slice(0,20)
-  //   }
-  //   }
-  
-
-  }, [])
+  }, []);
 
 
 

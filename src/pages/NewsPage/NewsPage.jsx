@@ -3,6 +3,7 @@ import "../NewsPage/NewsPage.css"
 import HeaderPhoto from '../../components/HeaderPhoto/HeaderPhoto'
 import Categories from '../../components/Categories/Categories'
 import FeaturedNewsCard from '../../components/FeaturedNewsCard/FeaturedNewsCard'
+import { useEffect } from 'react'
 
 const NewsPage = () => {
 
@@ -57,6 +58,12 @@ const NewsPage = () => {
         cards[i].title = cards[i].title.slice(0,81)
     }
     }
+
+    useEffect(() => {
+        
+      window.scrollTo(0, 0); 
+
+    }, []);
 
 
 

@@ -3,6 +3,7 @@ import HeaderPhoto from '../../components/HeaderPhoto/HeaderPhoto'
 import "./ListDocumentsPage.css" 
 import pdfdownload from "../../images/pdf.png"
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 
@@ -90,6 +91,12 @@ const ListDocumentsPage = () => {
                 created: "20.12.2022",
             },
         ]
+
+    useEffect(() => {
+    
+        window.scrollTo(0, 0); 
+
+    }, []);
 
 
   return (

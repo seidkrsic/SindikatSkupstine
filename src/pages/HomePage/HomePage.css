@@ -88,7 +88,7 @@
 }
 
 
-.PageBreaker { 
+/* .PageBreaker { 
     height: 1px;
     width: 97.5%;
     margin: 3rem auto;
@@ -96,7 +96,7 @@
     background-color: rgb(150, 0, 24, .3);
     font-size: 10px;
     position: relative;
-}
+} */
 /* .PageBreakerDoubleLine { 
     position: relative;
     background-color: #960018;

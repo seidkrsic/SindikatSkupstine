@@ -2,6 +2,7 @@ import React from 'react'
 import "./ContactPage.css"
 import { Link } from 'react-router-dom'
 import HeaderPhoto from '../../components/HeaderPhoto/HeaderPhoto'
+import { useEffect } from 'react'
 
 
 const ContactPage = () => {
@@ -11,6 +12,12 @@ const ContactPage = () => {
         email: "sindikat@skupstina.me", 
         title: "Odjeljenje za odnose sa Javnošću",
     }
+
+    useEffect(() => {
+        
+        window.scrollTo(0, 0); 
+
+    }, []);
 
 
   return (

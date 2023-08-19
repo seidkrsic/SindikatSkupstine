@@ -52,11 +52,15 @@
     height: 50px;
     margin: 0;
     color: #323232;
-    border-bottom: 1px solid #d4ae37;
     border-bottom: 1px solid gainsboro;
     font-size: 12px;
     /* border-bottom: 1px solid brown; */
 
+}
+
+.HamburgerMenu__links-container a:hover { 
+    color: black;
+    background-color: white;
 }
 
 .hidden { 
@@ -68,7 +72,6 @@
 }
 
 .HamburgerMenu__container-bg__color { 
-    /* background-color: rgb(241, 229, 172, .95); */
     background-color: white;
 }
 

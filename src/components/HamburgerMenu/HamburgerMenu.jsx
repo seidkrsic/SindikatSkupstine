@@ -18,25 +18,28 @@ const HamburgerMenu = () => {
             <img src={ !isMenuOpen? openMenu : closeMenu} alt="" />
         </div>
         <motion.ul 
-            animate={{height: isMenuOpen? "300px" : 0, transition: 2, animationDelay: 1}}
+            animate={{height: isMenuOpen? "350px" : 0, transition: 1, animationDelay: 5}}
             className={ isMenuOpen ? 'HamburgerMenu__links-container HamburgerMenu__container-bg__color' : 'HamburgerMenu__links-container hidden'}>
-            <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0, transition: 2, animationDelay: 2}}>
-                <Link>Aktuelnosti</Link>
+            <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0}}>
+                <Link to="/news">Aktuelnosti</Link>
             </motion.li>
-            <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0, transition: 2, animationDelay: 3}}>
-                <Link>Sindikat</Link>
+            <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0}}>
+                <Link to="/staff">Sindikat</Link>
             </motion.li>
-            <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0, transition: 2, animationDelay: 4}}>
-                <Link>Sjednice</Link>
+            <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0}}>
+                <Link to="/session">Sjednice</Link>
             </motion.li>
-            <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0, transition: 2, animationDelay: 5}}>
-                <Link>Zakoni</Link>
+            <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0}}>
+                <Link to="/documents">Zakoni</Link>
             </motion.li>
-            <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0, transition: 2, animationDelay: 6}}>
-                <Link>Pogodnosti</Link>
+            <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0}}>
+                <Link to="">Pogodnosti</Link>
             </motion.li>
-            <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0, transition: 2}}>
-                <Link>Kontakt</Link>
+            <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0}}>
+                <Link to="/contact">Kontakt</Link>
+            </motion.li>
+            <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0}}>
+                <Link to="/login">Uloguj se</Link>
             </motion.li>
         </motion.ul>
              

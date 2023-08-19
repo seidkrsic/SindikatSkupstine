@@ -3,7 +3,7 @@ import "../StaffPage/StaffPage.css"
 import StaffCard from '../../components/StaffCard/StaffCard'
 import HeaderPhoto from '../../components/HeaderPhoto/HeaderPhoto'
 import Categories from '../../components/Categories/Categories'
-import { useParams } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 const StaffPage = () => {
@@ -48,6 +48,12 @@ const StaffPage = () => {
             name: "Statutarna Komisija",
         },
     ]
+
+    useEffect(() => {
+        
+        window.scrollTo(0, 0); 
+
+    }, []);
 
   return (
 

@@ -2,8 +2,8 @@ import {React, useState} from 'react'
 import "../NewsSinglePage/NewsSinglePage.css"
 import HeaderPhoto from '../../components/HeaderPhoto/HeaderPhoto'
 import Categories from '../../components/Categories/Categories'
-import ImageSlider from '../../components/ImageSlider/ImageSlider'
 import NewsGallery from '../../components/NewsGallery/NewsGallery'
+import { useEffect } from 'react'
 
 
 const NewsSinglePage = () => {
@@ -17,7 +17,7 @@ const NewsSinglePage = () => {
           url: "https://e0.pxfuel.com/wallpapers/856/284/desktop-wallpaper-new-york-city-wide-8k-laptop-full-background-and-new-york-1920x1080.jpg",
         },
        
-      ]
+    ]
 
     const CategoriesInfo = [ 
         {id: 101, 
@@ -29,17 +29,22 @@ const NewsSinglePage = () => {
         {id: 103, 
             name: "Generalni Sekretar",
         },
-      ]
+    ]
 
-      const News = {
+    const News = {
           url: 'https://themes.wplook.com/html/benevolence/images/slider/slider1.jpg',
           info: " It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.  The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).", 
           title: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ", 
           date: "19.02.2023",
           category: "Predsjednik",
           photo_archive: slides1, 
-        }
+    }
+
+    useEffect(() => {
     
+        window.scrollTo(0, 0); 
+
+    }, []);
     
 
     
