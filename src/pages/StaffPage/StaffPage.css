@@ -155,17 +155,16 @@
         margin: 0 auto;
         /* border: 1px solid violet; */
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: center;
         min-height: fit-content;
     }
 
-    .StaffPage__container .Categories__main-container { 
+    .StaffPage__staff-right .Categories__main-container { 
         width: 50%;
-        margin: 2rem auto;
+        margin-bottom: 2rem;
+        
     }
     
-    .StaffPage__container .Categories__main-container p { 
-        width: 95%;
-    }
+
     
 }

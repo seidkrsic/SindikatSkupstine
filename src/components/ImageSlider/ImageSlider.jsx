@@ -1,12 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import "./ImageSlider.css"
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import parse from 'html-react-parser'
+import AuthContext from '../../Context/AuthContext'
 
 const ImageSlider = ({slides}) => {
 
+    
+
     const [currentIndex, setCurrentIndex] = useState(0)
     const [isHovered, setIsHovered] = useState(false)
+    const {lang} = useContext(AuthContext)
+
 
     const showArrows = () => { 
         setIsHovered(true)
@@ -41,7 +47,7 @@ const ImageSlider = ({slides}) => {
         return () => {
             clearInterval(intervalId);
         };
-    }, [currentIndex]); // Make sure to add currentIndex as a dependency
+    }, [currentIndex]); 
 
 
 
@@ -72,12 +78,12 @@ const ImageSlider = ({slides}) => {
 
 
 
-                    <img src={`${slides[currentIndex].url}`} alt="slideImg" />
+                    <img src={`${slides[currentIndex]?.image_url}`} alt="slideImg" />
                     
                    
-                    <Link className='NewInfo'>
-                        <h1>{slides[currentIndex].title}</h1>
-                        <p>{slides[currentIndex].info}</p>
+                    <Link to={"/news/"+slides[currentIndex]?.id} className='NewInfo'>
+                        <h1>{ lang === "latin" ? slides[currentIndex]?.title : slides[currentIndex]?.title_cyrillic  }</h1> 
+                        { lang === "latin" ? parse(String(slides[currentIndex]?.content)): parse(String(slides[currentIndex]?.content_cyrillic)) }
                     </Link> 
                     
                     

@@ -26,6 +26,7 @@
 .FeaturesNewsCard__img-container { 
     height: 60%;
     max-height: 60%;
+    min-height: 60%;
     /* background-color: blueviolet; */
     width: 100%;
     display: flex;
@@ -48,8 +49,9 @@
     display: flex;
     width: 100%;
     flex-direction: column;
-    height: 45%;
-    min-height: 45%;
+    height: 40%;
+    min-height: 40%;
+    max-height: 40%;
     margin: 0 auto !important;
     padding: 0;
     justify-content: space-between;
@@ -129,9 +131,20 @@
 
 }
 
-@media screen and (min-width: 991px) { 
+@media screen and (max-width: 767px) { 
     .FeaturesNewsCard__container { 
         width: 30%;
         margin: .5rem !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) { 
+    .FeaturesNewsCard__container { 
+        width: 30%;
+        margin: .5rem !important;
+    }
+
+    .FeaturesNewsCard__container { 
+        margin-bottom: 1rem !important;
     }
 }

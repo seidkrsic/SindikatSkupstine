@@ -9,35 +9,71 @@ import StaffSinglePage from './pages/StaffSinglePage/StaffSinglePage';
 import NewsPage from './pages/NewsPage/NewsPage';
 import NewsSinglePage from './pages/NewsSinglePage/NewsSinglePage';
 import LoginPage from './pages/LoginPage/LoginPage';
-import { useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import Session from './pages/Session/Session';
 import ContactPage from './pages/ContactPage/ContactPage';
 import ListDocumentsPage from './pages/ListDocumentsPage/ListDocumentsPage';
+import LogoOnly from './components/LogoOnly/LogoOnly';
+import PrivateRoutes from './components/PrivateRoutes/PrivateRoutes';
+import AuthContext, { AuthProvider } from './Context/AuthContext';
+import SearchPage from './pages/SearchPage/SearchPage';
+
 
 
 function App() {
+
+  const [ShowLogo, setShowLogo] = useState(true)
+
+  useEffect(() => {
+    // After 3 seconds, switch to showing the actual site content
+    const timeout = setTimeout(() => {
+      setShowLogo(false);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeout); // Clear the timeout if component unmounts
+    };
+  }, []);
+
+
 
 
   return (
         <div className="App">
                 <Router>  
-                    <MainMenuCopy />       
+                  <AuthProvider>
+                    <MainMenuCopy />  
+                    {ShowLogo? <LogoOnly /> : <> </>  } 
                     <Routes>
                         <Route path="/" exact element={<HomePage />} />
+                        <Route path="/search" element={<SearchPage />} />
                         <Route path="/news" element={<NewsPage />} />
+                        <Route path="/news/predsjednik" element={<NewsPage />} />
+                        <Route path="/news/zamjenikPredsjednika" element={<NewsPage />} />
+                        <Route path="/news/sekretar" element={<NewsPage />} />
                         <Route path="/news/:id" element={<NewsSinglePage />} />
                         <Route path="/staff" element={<StaffPage />} />
+                        <Route path="/staff/izvrsniodbor" element={<StaffPage />} />
+                        <Route path="/staff/komisija" element={<StaffPage />} />
+                        <Route path="/staff/predsjednici" element={<StaffPage />} />
                         <Route path="/login" element={<LoginPage />} />
-                        <Route path="/documents" element={<ListDocumentsPage />} />
+                        <Route element={<PrivateRoutes />} >
+                            <Route path="/documents" element={<ListDocumentsPage />} />
+                        </Route>
                         <Route path="/contact" element={<ContactPage />} />
-                        <Route path="/session" element={<Session />} />
+                        <Route path="/session/" element={<Session />} />
+                        <Route path="/session/:id" element={<Session />} />
                         <Route path="/staff/:id" element={<StaffSinglePage />} />
+                        <Route path="/staff/predsjednik" element={<StaffSinglePage />} />
+                        <Route path="/staff/zamjenikPredsjednika" element={<StaffSinglePage />} />
+                        <Route path="/staff/generalniSekretar" element={<StaffSinglePage />} />
 
-                        {/* <Route path="*" element={<NoMatch />} /> */}
+                        
 
                     </Routes>
 
                   <Footer />
+                </AuthProvider>
                 </Router>
         
         </div>

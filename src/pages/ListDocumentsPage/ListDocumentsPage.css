@@ -5,6 +5,13 @@
     height: fit-content;
 }
 
+.heading__scroll_div { 
+    width: 70%;
+    text-transform: uppercase;
+    font-size: 25px !important;
+    margin: 2rem auto;
+    margin-bottom: 0;
+}
 
 .ListDocumentsPage__container { 
     display: flex;

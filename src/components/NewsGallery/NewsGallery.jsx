@@ -9,6 +9,7 @@ const NewsGallery = ({slides}) => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [isHovered, setIsHovered] = useState(false)
     const [fullScreen, setfullScreen] = useState(false)
+  
 
     const HandleFullScreen = () => setfullScreen(!fullScreen)
     
@@ -112,14 +113,17 @@ const NewsGallery = ({slides}) => {
                     {fullScreen ? 
                             <img  onClick={HandleFullScreen} className='CloseIcon' src={closeMenu} alt="x" /> : <></>
                     }
-                    
 
+                
                     <img className={fullScreen ? "full-screen1" : "" }
-                         src={`${slides[currentIndex].url}`} alt="slideImg" />
+                        src={`${slides[currentIndex]?.image_url}`} alt="slide-img" />
+                
+                    <div className='NewsGallery__NewInfo'>
+                        <h1>{ fullScreen? "" : "+" + slides.length}</h1>
+                    </div> 
+                   
+                     
                     
-                        <div className='NewsGallery__NewInfo'>
-                            <h1>{ fullScreen? "" : "+"+slides.length}</h1>
-                        </div> 
               
                     
                   

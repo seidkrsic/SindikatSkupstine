@@ -1,0 +1,27 @@
+.SearchPage__container-main { 
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.SearchPage__container { 
+    display: flex; 
+    width: 70%;
+    min-height: 100vh;
+    height: fit-content;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.SearchPage__heading { 
+    border-bottom: 1px solid gainsboro;
+}
+
+.SearchPage__container-left { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

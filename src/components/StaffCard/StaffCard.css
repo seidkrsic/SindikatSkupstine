@@ -68,12 +68,20 @@
     .Staff__img-container { 
         width: 100%;
     }
+
+    .Staff__info-container p { 
+        font-size: 13px;
+    }
 }
 
 @media screen and  (min-width: 768px) and (max-width: 991px) { 
     .Staff__container { 
         margin: 0 1rem !important;
         margin-bottom: 2rem !important;
+    }
+
+    .Staff__info-container p { 
+        font-size: 13px;
     }
 }
 

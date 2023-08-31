@@ -22,6 +22,8 @@
     right: 10%;
     width: 50px !important;
     height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
     z-index: 2001;
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.748);
@@ -32,10 +34,13 @@
 .NewsGallery__container-Image { 
     height: 100%;
     width: 100%;
+    min-height: 30vh;
+    min-width: 30vh;
     display: flex;
     position: relative;
-    object-fit: cover;
-    object-position: center top;
+    object-fit: contain;
+    object-position: center;
+    
 
 
 }
@@ -43,6 +48,7 @@
 .NewsGallery__container-Image img { 
     width: 100%;
     height: 100%;
+
 }
 
 .NewsGallery__leftArrow { 
@@ -120,6 +126,8 @@
     z-index: 2000;
     justify-content: center;
     align-items: center;
+    object-fit: contain;
+    object-position: center;
 }
 
 .NewsGallery__NewInfo { 

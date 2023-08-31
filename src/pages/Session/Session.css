@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: row;
     width: 80%;
-    margin: 0 auto;
+    margin: 1rem auto;
     height: fit-content;
     min-height: 60vh;
 }
@@ -25,6 +25,10 @@
     min-height: 60vh;
     /* border: 1px solid gainsboro; */
 
+}
+
+.Session__container-left h1 { 
+    font-size: 20px !important;
 }
 
 .Session__container-right { 
@@ -43,14 +47,15 @@
     margin: 1rem auto;
     margin-top: 0;
     text-transform: uppercase;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .Session__links-container { 
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 30vh;
+    height: 50vh;
+    min-height: 50vh;
     margin: 0 auto;
     overflow-y: scroll;
     border: 1px solid #d4ad376b;
@@ -59,20 +64,27 @@
 
 .Session__links-container a { 
     display: flex;
-    width: 95%;
-    justify-content: center;
-    align-items: center;
+    width: 92%;
+    /* justify-content: center !important;
+    align-items: center !important; */
     text-decoration: none;
     color: black;
-    margin: .3rem auto;
-    margin-bottom: 0;
-    padding: .3rem 0;
+    font-weight: 500;
+    text-align: start !important;
+    margin: .5rem auto !important;
+    padding: .3rem !important;
+    height: fit-content;
     font-size: 14px;
     border-bottom: 1px solid gainsboro;
 }
+.Session__links-container a:first-child { 
+    margin-bottom: 0 !important;
+}
 
 .Session__links-container a:hover { 
-    background-color: #d4ae37;
+    background-color: #AB0707;
+    color: white;
+    font-weight: 500;
     
 }
 
@@ -81,6 +93,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+
 
 }
 
@@ -104,23 +117,27 @@
     display: flex;
     flex-direction: column;
     width: 90%;
+    min-height: fit-content;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: space-between;
     
 }
 
 
 .Session__document-info__container h5 { 
     width: 99%;
+    height: 70%;
+    min-height: fit-content;
     margin: .5rem 0;
     color: black;
     border-bottom: 1px solid gainsboro;
 }
 
 .Session__document-info__container p { 
-    margin: .5rem 0;
+    margin: .5rem 0 !important;
     width: 100% !important;
-    font-size: 12px;
+    height: fit-content;
+    font-size: 12px !important;
     color: black;
 }
 
@@ -148,8 +165,14 @@
     font-size: 14px;
 }
 
+
+.Session__document-container__documentHeader { 
+    text-transform: none !important;
+}
+
 .border-Bottom { 
     border-bottom: 1px solid gainsboro;
+   
 } 
 
 
@@ -178,11 +201,11 @@
     }
 
     .Session__container-left h1 { 
-        font-size: 15px;
+        font-size: 15px !important;
     }
 
     .Session__container-left h3 { 
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .Session__container-right { 
@@ -192,12 +215,22 @@
     }
 
     .Session__container-right h1 { 
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .Session__documents-container { 
         margin: 0;
         min-height: none;
+        font-size: 14px;
+    }
+    .Session__documents-container p { 
+        font-size: 13px !important;
     }
     
+}
+
+@media  screen and (min-width: 768px) and (max-width: 991px) { 
+    .Session__container-main { 
+        margin-top: 80px;
+    }
 }

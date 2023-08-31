@@ -185,6 +185,9 @@
     justify-content: space-between;
 }
 
+.Section__heading { 
+    margin: 4rem auto !important;
+}
 
 @media screen and  (max-width: 767px) { 
 
@@ -299,6 +302,7 @@
         text-align: center !important;
         font-size: 18px !important;
         text-transform: uppercase !important;
+        
     }
 
     

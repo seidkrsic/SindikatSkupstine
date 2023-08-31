@@ -28,9 +28,11 @@
     height: 100%;
 }
 
-.Categories__container p { 
+.Categories__container a { 
     width: 80%;
     display: flex;
+    text-decoration: none; 
+    color: black;
     margin: 0;
     padding: 0.5rem .5rem;
     margin-bottom: .5rem;
@@ -38,13 +40,14 @@
     transition: all .1s ease-in-out;
     border: 1px solid white;
     font-size: 13px;
+    font-weight: 500;
     border-bottom: 1px solid gainsboro;
 }
 
-.Categories__container p:hover { 
+.Categories__container a:hover { 
     color: white;
-    background-color: #d4ae37;
-    border: 1px solid #d4ae37;
+    background-color: #AB0707;
+    border: 1px solid #AB0707;
     font-size: 13px;
     
 }

@@ -1,120 +1,61 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import HeaderPhoto from '../../components/HeaderPhoto/HeaderPhoto'
 import "./ListDocumentsPage.css" 
 import pdfdownload from "../../images/pdf.png"
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
+import AuthContext from '../../Context/AuthContext'
 
 
 
 const ListDocumentsPage = () => {
 
-    const documents =  [
-            {
-                id: 22212, 
-                title: "Statut Sindikata Skupstine", 
-                created: "20.12.2022",
-            }, 
-            {
-                id: 244212, 
-                title: "Izvjestaj za 2023 godinu / FInansijski izvjestaj za organizaciju poslova za Izvrsni odbor i ambasade Crne Gore po svijetu.", 
-                created: "20.12.2022",
-            },
-            {
-                id: 22212, 
-                title: "Statut Sindikata Skupstine", 
-                created: "20.12.2022",
-            }, 
-            {
-                id: 244212, 
-                title: "Izvjestaj za 2023 godinu / FInansijski izvjestaj za organizaciju poslova za Izvrsni odbor i ambasade Crne Gore po svijetu.", 
-                created: "20.12.2022",
-            },
-            {
-                id: 22212, 
-                title: "Statut Sindikata Skupstine", 
-                created: "20.12.2022",
-            }, 
-            {
-                id: 244212, 
-                title: "Izvjestaj za 2023 godinu / FInansijski izvjestaj za organizaciju poslova za Izvrsni odbor i ambasade Crne Gore po svijetu.", 
-                created: "20.12.2022",
-            },
-            {
-                id: 22212, 
-                title: "Statut Sindikata Skupstine", 
-                created: "20.12.2022",
-            }, 
-            {
-                id: 244212, 
-                title: "Izvjestaj za 2023 godinu / FInansijski izvjestaj za organizaciju poslova za Izvrsni odbor i ambasade Crne Gore po svijetu.", 
-                created: "20.12.2022",
-            },
-            {
-                id: 22212, 
-                title: "Statut Sindikata Skupstine", 
-                created: "20.12.2022",
-            }, 
-            {
-                id: 244212, 
-                title: "Izvjestaj za 2023 godinu / FInansijski izvjestaj za organizaciju poslova za Izvrsni odbor i ambasade Crne Gore po svijetu.", 
-                created: "20.12.2022",
-            },
-            {
-                id: 22212, 
-                title: "Statut Sindikata Skupstine", 
-                created: "20.12.2022",
-            }, 
-            {
-                id: 244212, 
-                title: "Izvjestaj za 2023 godinu / FInansijski izvjestaj za organizaciju poslova za Izvrsni odbor i ambasade Crne Gore po svijetu.", 
-                created: "20.12.2022",
-            },
-            {
-                id: 22212, 
-                title: "Statut Sindikata Skupstine", 
-                created: "20.12.2022",
-            }, 
-            {
-                id: 244212, 
-                title: "Izvjestaj za 2023 godinu / FInansijski izvjestaj za organizaciju poslova za Izvrsni odbor i ambasade Crne Gore po svijetu.", 
-                created: "20.12.2022",
-            },
-            {
-                id: 22212, 
-                title: "Statut Sindikata Skupstine", 
-                created: "20.12.2022",
-            }, 
-            {
-                id: 244212, 
-                title: "Izvjestaj za 2023 godinu / FInansijski izvjestaj za organizaciju poslova za Izvrsni odbor i ambasade Crne Gore po svijetu.", 
-                created: "20.12.2022",
-            },
-        ]
+    const {authToken} = useContext(AuthContext)
+    const {lang} = useContext(AuthContext)
+
+    const [documents, setDocuments] = useState([])
+
+    const getDocs = async () => { 
+        let response = await fetch("http://127.0.0.1:8000/api/important/", { 
+            method: "GET", 
+            headers: {
+                "Content-Type" : "application/json", 
+                "Authorization" : "Bearer " + String(authToken?.access)
+            }
+
+        })
+        let data = await response.json() 
+        console.log(data)
+        setDocuments(data)
+
+    }
+      
+
 
     useEffect(() => {
-    
         window.scrollTo(0, 0); 
+        getDocs()
 
     }, []);
 
 
   return (
+ 
     <div className='ListDocumentsPage__container-main'>
-        <HeaderPhoto page_name={"Izvještaji i dokumenta"} />
+        <HeaderPhoto page_name={lang === "latin" ? "Izvještaji i dokumenta" : "Извјештаји и Документа"} />
+        <h1 className='heading__scroll_div'>{lang === "latin" ? "Važna Dokumenta" : "Важна Документа"}</h1>
         <div className='ListDocumentsPage__container'>
-            {
-            documents.map((item, index) => 
-                <Link key={index} className='ListDocumentsPage__document-container'>
-                    <img src={pdfdownload} alt="pdf" />
-                    <div className='ListDocumentsPage__text-container'>
-                        <p>{item.title}</p>
-                        <p className='dateFont'>{item.created}</p>
-                    </div>
-                    
-                </Link>
-            
-            )}
+            { documents.map((item) => (
+                    <a href={item.download_link} key={item?.id} className='ListDocumentsPage__document-container'>
+                        <img src={pdfdownload} alt="pdf" />
+                        <div className='ListDocumentsPage__text-container'>
+                            <p>{lang === "latin" ? item?.title : item?.title_cyrillic}</p>
+                            <p className='dateFont'>{item?.created_eu_time}</p>
+                        </div>
+                        
+                    </a>
+                
+                ))}
           
         </div>
 
