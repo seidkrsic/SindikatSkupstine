@@ -114,7 +114,7 @@ const StaffPage = () => {
 
         }
         
-        
+        window.scrollTo(0, 0); 
 
     }, [location_id]);
 

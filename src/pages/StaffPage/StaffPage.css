@@ -92,6 +92,10 @@
 }
 
 @media screen and (max-width: 767px) {
+    .StaffPage__container { 
+        width: 90%;
+    }
+
     .StaffPage__container-Big { 
         margin: 0 auto;
         margin-top: 80px;
@@ -99,7 +103,7 @@
     }
 
     .StaffPage__staff-right { 
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         height: fit-content;
         /* border: 1px solid violet; */
@@ -108,12 +112,12 @@
     }
 
     .StaffPage__staff-left { 
-        width: 100%;
+        width: 90%;
         margin: 2rem auto;
 
     } 
     
-    .StaffPage__container .Categories__main-container p { 
+    .StaffPage__container .Categories__main-container a { 
         width: 95%;
     }
     

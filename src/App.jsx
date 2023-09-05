@@ -17,6 +17,7 @@ import LogoOnly from './components/LogoOnly/LogoOnly';
 import PrivateRoutes from './components/PrivateRoutes/PrivateRoutes';
 import AuthContext, { AuthProvider } from './Context/AuthContext';
 import SearchPage from './pages/SearchPage/SearchPage';
+import Company from './pages/Company/Company';
 
 
 
@@ -60,9 +61,12 @@ function App() {
                         <Route element={<PrivateRoutes />} >
                             <Route path="/documents" element={<ListDocumentsPage />} />
                         </Route>
+                        <Route path="/pogodnosti" element={<Company />} />
                         <Route path="/contact" element={<ContactPage />} />
-                        <Route path="/session/" element={<Session />} />
-                        <Route path="/session/:id" element={<Session />} />
+                        <Route path="/session/skupstina" element={<Session />} />
+                        <Route path="/session/izvrsni_odbor" element={<Session />} />
+                        <Route path="/session/skupstina/:id" element={<Session />} />
+                        <Route path="/session/izvrsni_odbor/:id" element={<Session />} />
                         <Route path="/staff/:id" element={<StaffSinglePage />} />
                         <Route path="/staff/predsjednik" element={<StaffSinglePage />} />
                         <Route path="/staff/zamjenikPredsjednika" element={<StaffSinglePage />} />

@@ -155,11 +155,11 @@ const MainMenuCopy = () => {
           <ul>
               <MenuDropdown buttonName={ lang==="latin" ? "Aktuelnosti": "Актуелности"} path="/news" />
               <MenuDropdown buttonName={lang==="latin" ? "Sindikat" : "Синдикат"} menuItems={button1Items} path="/staff" />
-              <MenuDropdown buttonName={lang==="latin" ? "Sjednice" : "Сједнице"} menuItems={button2Items} path="/session"  />
+              <MenuDropdown buttonName={lang==="latin" ? "Sjednice" : "Сједнице"} menuItems={button2Items} path="/session/skupstina"  />
               { user && boardMember ? <MenuDropdown buttonName={ lang === "latin" ? "Dokumenta": "Документа"} path={"/documents"}/> : <></>}
            
-              <MenuDropdown buttonName={lang==="latin" ? "Pogodnosti" : "Погодности"}/>
-              <MenuDropdown buttonName={lang==="latin" ? "Kontakt" : "Контакт"} path="/contact"/>
+              <MenuDropdown buttonName={lang==="latin" ? "Pogodnosti" : "Погодности"} path="/pogodnosti" />
+              <MenuDropdown buttonName={lang==="latin" ? "Kontakt" : "Контакт"} path="/contact" />
             <div className='search-relative__container'>
               <form>
                   <input type="text"  

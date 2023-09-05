@@ -32,21 +32,6 @@ const HomePage = () => {
 
         })
         let data = await response.json() 
-        let titleSize; 
-        for (const item in data){ 
-          if (window.innerWidth < 767) { 
-            titleSize = 90
-        } else if (767 < window.innerWidth < 991) { 
-            titleSize = 35
-        } else { 
-            titleSize = 200
-        }
-            data[item].title = data[item].title.slice(0,titleSize)+"..."
-            data[item].title_cyrillic = data[item].title_cyrillic.slice(0,titleSize)+"..."
-            
-
-        }
-    
         setCards(data)
         
     } 
@@ -74,25 +59,6 @@ const HomePage = () => {
 
     })
     let data = await response.json() 
-    let titleSizeSlide; 
-    let contentSizeSlide;
-    for (const item in data) { 
-          if (window.innerWidth < 767) { 
-              titleSizeSlide = 50
-              contentSizeSlide = 40
-          } else if (767<window.innerWidth < 991) { 
-              titleSizeSlide = 350
-              contentSizeSlide = 350
-          } else { 
-              titleSizeSlide = 150
-              contentSizeSlide = 350
-          }
-          data[item].title =  data[item].title.slice(0,titleSizeSlide) + "..."
-          data[item].title_cyrillic =  data[item].title_cyrillic.slice(0,titleSizeSlide) + "..."
-          data[item].content = data[item].content.slice(0,contentSizeSlide) + "..."
-          data[item].content_cyrillic = data[item].content_cyrillic.slice(0,contentSizeSlide) + "..."
-
-    }
     setSlides(data)
     
 } 

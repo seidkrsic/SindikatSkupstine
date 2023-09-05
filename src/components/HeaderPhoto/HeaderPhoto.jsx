@@ -1,6 +1,7 @@
 import React from 'react'
 import "../HeaderPhoto/HeaderPhoto.css"
 import rainbow_bridge from "../../images/rainbow-bridge.jpg"
+import template from "../../images/template.png"
 import { useLocation } from 'react-router-dom'
 
 

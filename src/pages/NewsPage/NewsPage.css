@@ -19,11 +19,21 @@
     display: flex;
     flex-direction: column;
     width: 70%;
-    height: 100%;
+    height: fit-content;
     min-height: 50vh;
     align-items: center;
     /* border: 1px solid violet; */
     margin: 2rem auto;
+}
+
+.NewsPage__news-container { 
+   /* border: 1px solid violet; */
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   min-height: 60vh;
+   height: fit-content;
+   width: 100%;
 }
 
 .NewsPage__container-right { 
@@ -35,7 +45,7 @@
     /* border: 1px solid green; */
 }
 
-.NewsPage__container  .FeaturesNewsCard__container { 
+/* .NewsPage__container  .FeaturesNewsCard__container { 
     width: 85% !important;
     height: 160px !important;
     max-width: none;
@@ -43,20 +53,20 @@
     margin-bottom: 1rem;
     flex-direction: row;
     max-height: none !important;
-}
+} */
 
-.NewsPage__container .FeaturesNewsCard__img-container { 
+/* .NewsPage__container .FeaturesNewsCard__img-container { 
     height: 100%;
     min-height: 100%;
     width: 50%;
     border: none;
     position: relative;
     top: .5px;
-}
+} */
 
 
 
-.NewsPage__container .FeaturesNewsCard__info-container { 
+/* .NewsPage__container .FeaturesNewsCard__info-container { 
     justify-content: center;
     min-height: 80% !important;
     max-height: none !important;
@@ -68,7 +78,7 @@
     height: fit-content !important;
     min-height: fit-content !important;
     max-height: none !important;
-}
+} */
 
 
 
@@ -107,6 +117,7 @@
 
     .NewsPage__container-main { 
         margin-top: 80px;
+        width: 100%;
     }
 
     .NewsPage__container-left { 
@@ -115,20 +126,20 @@
 
     .NewsPage__container { 
         flex-direction: column;
-        width: 80%;
+        width: 90% !important;
     }
-    .NewsPage__container  .FeaturesNewsCard__container { 
+    /* .NewsPage__container  .FeaturesNewsCard__container { 
         width: 100% !important;
         min-width: none !important;
         margin-bottom: 1rem;
         height: 20vh !important;
-    }
+    } */
 
     .NewsPage__container-right { 
         width: 100%;
     }
 
-    .NewsPage__container .FeaturesNewsCard__img-container { 
+    /* .NewsPage__container .FeaturesNewsCard__img-container { 
         width: 60% !important;
     }
 
@@ -144,7 +155,7 @@
 
     .NewsPage__container .FeaturesNewsCard__info-container h1 { 
         font-size: 13px !important;
-    }
+    } */
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {

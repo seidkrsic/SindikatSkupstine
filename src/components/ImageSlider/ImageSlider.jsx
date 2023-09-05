@@ -7,6 +7,31 @@ import AuthContext from '../../Context/AuthContext'
 
 const ImageSlider = ({slides}) => {
 
+    const sliceTitle = (title) => {
+        const screenWidth = window.innerWidth;
+    
+        if (screenWidth < 768) {
+          return title?.slice(0, 45)+"..."; // Slice to 20 characters on mobile screens
+        } else if (screenWidth >= 768 && screenWidth < 1024) {
+          return title?.slice(0, 35)+"..."; // Slice to 40 characters on tablet screens
+        } else {
+          return title?.slice(0,50)+"..."; // Display the full title on desktop screens
+        }
+      }
+
+      const sliceContent = (title) => {
+        const screenWidth = window.innerWidth;
+    
+        if (screenWidth < 768) {
+          return title?.slice(0, 65) + "..."; // Slice to 20 characters on mobile screens
+        } else if (screenWidth >= 768 && screenWidth < 1024) {
+          return title?.slice(0, 400)+"..."; // Slice to 40 characters on tablet screens
+        } else {
+          return title?.slice(0,400)+"..."; // Display the full title on desktop screens
+        }
+      }
+    
+      
     
 
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -82,8 +107,8 @@ const ImageSlider = ({slides}) => {
                     
                    
                     <Link to={"/news/"+slides[currentIndex]?.id} className='NewInfo'>
-                        <h1>{ lang === "latin" ? slides[currentIndex]?.title : slides[currentIndex]?.title_cyrillic  }</h1> 
-                        { lang === "latin" ? parse(String(slides[currentIndex]?.content)): parse(String(slides[currentIndex]?.content_cyrillic)) }
+                        <h1>{ lang === "latin" ? sliceTitle(slides[currentIndex]?.title) : sliceTitle(slides[currentIndex]?.title_cyrillic) }</h1> 
+                        { lang === "latin" ? parse(String(sliceContent(slides[currentIndex]?.content))): parse(String(sliceContent(slides[currentIndex]?.content_cyrillic))) }
                     </Link> 
                     
                     

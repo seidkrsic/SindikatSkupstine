@@ -4,7 +4,7 @@
     flex-direction: column;
     height: fit-content;
     min-height: 100vh;
-    max-height: fit-content;
+  
 
 }
 
@@ -30,24 +30,23 @@
 .Contact__info-container { 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: fit-content;
-    /* border: 1px solid violet; */
+    justify-content: flex-start;
+    width: 40%;
     margin: 2rem;
-    padding: 2rem;
-    background-color: rgb(244, 242, 236, .3);
-    border: 1px solid rgb(212, 174, 55, .2);
+    height: 50vh;
+    /* background-color: rgb(244, 242, 236, .3);
+    border: 1px solid rgb(212, 174, 55, .2); */
 }
 
 .Contact__info-container-right { 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: fit-content;
-    background-color: rgb(244, 242, 236, .3);
-    border: 1px solid rgb(212, 174, 55, .2);
+    height: 50vh;
+    /* background-color: rgb(244, 242, 236, .3);
+    border: 1px solid rgb(212, 174, 55, .2); */
     margin-top: 2rem;
-    padding: 2rem;
+    width: 25%;
 
 }
 
@@ -69,35 +68,99 @@
     font-size: 14px;
     padding: 0 !important;
     height: 100%;
+    width: 100% !important;
     cursor: auto;
     margin: 0 !important;
     margin-left: .5rem !important;
 }
 
-.Contact__info-container h5 { 
-    margin: 0;
-    font-size: 15px;
+.Contact__info-container-right div { 
+    width: 80%;
+    margin: 0 auto;
+}
+
+.Contact__info-container-right img { 
+    margin: auto;
+}
+
+
+
+.Contact__info-container-right h5 { 
+    margin: 0 auto;
+    font-size: 12px;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    width: 80%;
+}
+
+.Contact__info-container h1 { 
+    font-size: 20px;
+    width: 90%;
+    margin: 1rem auto;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.Contact__info-container iframe { 
+    border:  1px solid rgb(212, 174, 55, .3);
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
 }
 
 
 @media screen and (max-width: 767px) { 
 
     .Contact__container-main { 
-        margin-top: 80px;
+        margin-top: 80px !important;
+        margin: 0 auto;
     }
 
     .Contact__container { 
-        min-height: 30vh;
+        min-height: fit-content;
         width: 90%;
         flex-direction: column;
         margin-bottom: 2rem;
     }
 
     .Contact__info-container { 
-        margin-bottom: 0;
+        margin: 0.5rem auto;
+        display: flex;
+        width: 90%;
+    
     }
+    .Contact__info-container h1 { 
+        margin: 1rem 0;
+        font-size: 15px;
+    }
+
+    .Contact__info-container-right img { 
+        width: 80%;
+        
+    }
+
+    .Contact__info-container-right h5 { 
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .Contact__info-container-right { 
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        width: 90%;
+        margin: 2rem auto;
+    }
+
+
+
+    .Contact__info-container iframe { 
+        width: 100% !important;
+
+    }
+
+
 }
 
 

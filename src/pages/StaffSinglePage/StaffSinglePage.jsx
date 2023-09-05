@@ -125,7 +125,7 @@ const StaffSinglePage = () => {
             <div className='StaffSinglePage__container-left'>
                 <h2>{ lang === "latin" ? "Biografija": "Биографија"}</h2>
                 <p>{lang === "latin" ? staff?.bio : staff?.bio_cyrillic}</p>
-                <div>
+                <div className='StaffSinglePage__contact-info'>
                     <div>{lang === "latin" ? "Telefon:" : "Телефон:"}<Link>{staff?.phone}</Link></div>
                     <div>{lang === "latin" ? "Mejl:" : "Мејл:"} <Link>{staff?.email}</Link></div>
                 </div>

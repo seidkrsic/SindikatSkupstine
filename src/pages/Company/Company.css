@@ -1,0 +1,97 @@
+table { 
+    width: 80%;
+    margin: 2rem auto;
+    font-size: 13px;
+    cursor: auto;
+    /* border: 1px solid #AB0707; */
+    border: 1px solid rgb(212, 174, 55, .3);
+}
+th { 
+    text-transform: uppercase;
+}
+
+tr { 
+    width: 80%;
+}
+
+td { 
+    flex-direction: row;
+    padding: .5rem;
+    text-align: start;
+    
+}
+
+.special__column {
+    text-align: center !important;
+    width: fit-content;
+}
+
+.Company__container a { 
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.Company__container a:hover { 
+    color: #AB0707;
+    font-weight: 500;
+
+}
+
+
+
+.gold-table {
+    border-collapse: collapse;
+    width: 70%;
+  }
+  
+  .gold-light-opacity {
+    background-color: rgba(255, 223, 186, 0.4);
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .gold-medium-opacity {
+    background-color: rgba(255, 204, 92, 0.6);
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .gold-dark-opacity {
+    background-color: rgba(255, 184, 0, 0.7);
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .gold-darkest-opacity {
+    background-color: rgba(255, 184, 0, .8);
+    text-align: left;
+    padding: 8px;
+  }
+
+  .pdf_image { 
+    width: 30px !important;
+    height: 30px !important;
+    /* display: flex; */
+    margin: auto;
+
+}
+
+
+@media screen and (max-width: 767px) {
+    .Company__container { 
+        margin-top: 80px;
+    }
+    
+}
+
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .Company__container { 
+        margin-top: 80px;
+    }
+    
+}

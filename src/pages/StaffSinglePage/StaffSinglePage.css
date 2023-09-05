@@ -169,6 +169,7 @@
 
     .StaffSinglePage__container { 
         flex-direction: column-reverse;
+        width: 90%;
     }
 
     .StaffSinglePage__container-right { 
@@ -185,11 +186,20 @@
         width: 100%;
     }
     .StaffSinglePage__card-info__container p { 
-        width: 90%;
+        width: 80% !important;
     }
 
     .StaffSinglePage__container-main .Categories__container { 
         width: 100% !important;
+    }
+    .StaffSinglePage__container-main .Categories__container a { 
+        width: 100% !important;
+    }
+    
+
+    .StaffSinglePage__contact-info { 
+        display: flex;
+        flex-direction: column !important;
     }
 
    

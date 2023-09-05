@@ -6,6 +6,7 @@ import pdfdownload from "../../images/pdf.png"
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import AuthContext from '../../Context/AuthContext'
+import Categories from '../../components/Categories/Categories'
 
 
 
@@ -14,33 +15,43 @@ const Session = () => {
 
 
     const location_id = useParams().id 
-    const location = useLocation().pathname
+    const location = useLocation().pathname 
+    const skupstina = location.includes("skupstina")
+
     
     let [sessionInfo, setSessionInfo] = useState({})
     let [sessionsInfo, setSessionsInfo] = useState([])
     const {user} = useContext(AuthContext)
     const {lang} = useContext(AuthContext)
 
-    const getSessions = async () => { 
-        let response = await fetch("http://127.0.0.1:8000/api/sessions/")
-        let data = await response.json()
-        setSessionsInfo(data) 
-        if (location_id === null || location_id === undefined ) { 
-            for (const item in data){ 
-                data[item].created = data[item].created.slice(0,10)
-                for (const i in data[item].documents) { 
-                    data[item].documents[i].created = data[item].documents[i].created.slice(0,10)
-                   
-                }
-    
-            }
+    let CategoriesInfo;
 
-            setSessionInfo(data[0])
+
+    if (lang === "latin") { 
+      CategoriesInfo = [ 
+       
+        { 
+            name: "Sjednice Skupštine",
+            path: "/session/skupstina"
+        },
+        {
+            name: "Sjednice Izvršnog Odbora",
+            path: "/session/izvrsni_odbor"
+        },
+      ]
+    } else { 
+      CategoriesInfo = [
+        {
+            name: "Сједнице Скупштине",
+            path: "/session/skupstina"
+        },
+        {
+            name: "Сједнице Извршног Одбора",
+            path: "/session/izvrsni_odbor"
         }
-    
-        
- 
-    }  
+    ];
+    }
+     
 
     const getSession = async () => { 
         let response = await fetch(`http://127.0.0.1:8000/api/sessions/${location_id}/`)
@@ -60,12 +71,52 @@ const Session = () => {
 
    
 
+ 
+        const getSessions = async () => { 
+            let fetch_url; 
+            let category;
+            if (skupstina) { 
+                fetch_url = "http://127.0.0.1:8000/api/categorySessions/?name=skupstina"
+                category = "skupstina"
+            } else { 
+                fetch_url = "http://127.0.0.1:8000/api/categorySessions/?name=izvrsni_odbor"
+                category = "izvrsni_odbor"
+            }
+            let response = await fetch(fetch_url , { 
+                method: "GET", 
+                headers: {"Content-Type" : "application/json"},
+            })
+            let data = await response.json()
+            console.log(data);
+            setSessionsInfo(data) 
+            if (location_id === null || location_id === undefined) { 
+                for (const item in data) { 
+                    data[item].created = data[item].created.slice(0,10)
+                    for (const i in data[item].documents) { 
+                        data[item].documents[i].created = data[item].documents[i].created.slice(0,10)
+                        
+                    }
+            
+    
+            
+            
+                setSessionInfo(data[0])
+            } 
+        }
+
+            
+    } 
+    
+       
+
+   
+
     useEffect(() => {
-      
+
         getSessions()
         window.scrollTo(0, 0); 
 
-    }, []);
+    }, [skupstina]);
 
     useEffect(() => {
 
@@ -73,47 +124,23 @@ const Session = () => {
             getSession();
         }
 
-        // if (location.includes("skupstina")) { 
-        //     const getSessions = async () => { 
-        //         let response = await fetch("http://127.0.0.1:8000/api/sessions/?name=skupstina/", { 
-        //             method: "GET", 
-        //             headers: {"Content-Type" : "application/json"},
-        //             body:  JSON.stringify({"category" : "skupstina"})
-        //         })
-        //         let data = await response.json()
-        //         setSessionsInfo(data) 
-        //         if (location_id === null || location_id === undefined ) { 
-        //             for (const item in data){ 
-        //                 data[item].created = data[item].created.slice(0,10)
-        //                 for (const i in data[item].documents) { 
-        //                     data[item].documents[i].created = data[item].documents[i].created.slice(0,10)
-                           
-        //                 }
-            
-        //             }
-        
-        //             setSessionInfo(data[0])
-        //         }
-
-        //         getSessions()
-                
-            
-                
-         
-        //     } 
-        // }
+       
     
      
 
       
         
 
-    }, [location_id, location]);
+    }, [location_id]);
 
   return (
 
     <div className='Session__container-main'>
-        <HeaderPhoto page_name={lang === "latin" ? "Sjednice" : "Сједнице"} />
+        { skupstina ? <HeaderPhoto page_name={lang === "latin" ? "Skupština" : "Скупштинa"} />  : 
+                      <HeaderPhoto page_name={lang === "latin" ? "Izvršni Odbor" : "Извршни Одбор"} /> 
+        }
+
+
         <div className='Session__container'>
         <div className='Session__container-left'>
     
@@ -150,12 +177,20 @@ const Session = () => {
 
 
             <div className='Session__container-right'>
-                    <h1>{lang === "latin" ? "Sjednice Skupštine" : "Сједнице Скупштине"}</h1>
+                { skupstina ? 
+                    <h1>{lang === "latin" ? "Skupština" : "Скупштинa"}</h1> 
+                    : 
+                    <h1>{lang === "latin" ? "Izvršni Odbor" : "Извршни Одбор"}</h1> 
+                }
+                    
                     <div className='Session__links-container'>
                         {sessionsInfo?.map( item => (
-                            <Link to={"/session/"+item.id} key={item.id}>{lang === "latin" ? item.title: item.title_cyrillic}</Link>
+                            <Link to={skupstina ? "/session/skupstina/"+item.id : "/session/izvrsni_odbor/"+item.id } key={item.id}>{lang === "latin" ? item.title: item.title_cyrillic}</Link>
                         ))}
                     </div>
+
+                    <Categories categories={CategoriesInfo} title={lang === "latin" ? "Kategorije": "Категорије"} />
+
             </div>
 
         </div>

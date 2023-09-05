@@ -15,7 +15,7 @@
     filter: blur(0px);
     object-fit: cover;
     object-position: top center;
-    /* background-color: rgb(0, 0, 0, 1); */
+
 }
 
 .HeaderPhoto__view-name__container {
@@ -46,7 +46,7 @@
 
     .HeaderPhoto__view-name__container { 
         top: 180px;
-        width: 85%;
+        width: 90%;
     }
     .HeaderPhoto__view-name__container h1 { 
         font-size: 17px;

@@ -8,7 +8,7 @@ import "./SearchPage.css"
 
 const SearchPage = () => {
     const {searchResults} = useContext(AuthContext) 
-    
+    const {lang} = useContext(AuthContext)    
     
 
  
@@ -30,7 +30,7 @@ const SearchPage = () => {
                             />
                         ))
                     ) : (
-                        <p className='SearchPage__no-results'>Nema Rezultata</p>
+                        <p className='SearchPage__no-results'>{ lang === "latin" ? "Nema Rezultata" : "Нема Резултата"}</p>
             )}
             </div>
 

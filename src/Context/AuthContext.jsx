@@ -85,51 +85,73 @@ export const AuthProvider = ({children}) => {
 
     }
 
-    const searchNews = async (e) => { 
-        e.preventDefault()
-        let input_value = document.querySelector("#search").value 
-        if (input_value != "" ){ 
-
-        
-        const response = await fetch("http://127.0.0.1:8000/api/filteredNews/", { 
-              method: "POST", 
+    const searchNews = async (e) => {
+        e.preventDefault();
+        let input_value = document.querySelector("#search").value;
+      
+        if (input_value !== "") {
+          try {
+            const response = await fetch("http://127.0.0.1:8000/api/filteredNews/", {
+              method: "POST",
               headers: {
-                "Content-Type" : "application/json"
+                "Content-Type": "application/json",
               },
-              body: JSON.stringify({"search" : input_value })
-              
-          })
-          let data = await response.json() 
-          let titleSize; 
-          if (data.length > 1) { 
-            for (const item in data){ 
-                if (window.innerWidth < 767) { 
-                    titleSize = 90
-                } else if (767 < window.innerWidth < 991) { 
-                    titleSize = 35
-                } else { 
-                    titleSize = 200
-                }
-                if (titleSize<data[item].title.length) { 
-                    data[item].title = data[item].title.slice(0,titleSize) + "..."
-                    data[item].title_cyrillic = data[item].title_cyrillic.slice(0,titleSize)+"..."
-                }
-             
-                 
-          
-             
-
-                }
-            } else { 
-
+              body: JSON.stringify({ search: input_value }),
+            });
+      
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
             }
-            
-          setSearchResults(data)
-          console.log(data)
-          navigate("/search")
+      
+            const data = await response.json();
+      
+            let titleSize;
+      
+            if (data.length > 1) {
+              for (const item in data) {
+                if (window.innerWidth < 767) {
+                  titleSize = 90;
+                } else if (767 < window.innerWidth < 991) {
+                  titleSize = 35;
+                } else {
+                  titleSize = 35;
+                }
+                if (titleSize < data[item].title.length) {
+                  data[item].title = data[item].title.slice(0, titleSize) + "...";
+                  data[item].title_cyrillic = data[item].title_cyrillic.slice(
+                    0,
+                    titleSize
+                  ) + "...";
+                }
+              }
+            } else {
+              if (window.innerWidth < 767) {
+                titleSize = 90;
+              } else if (767 < window.innerWidth < 991) {
+                titleSize = 35;
+              } else {
+                titleSize = 35;
+              }
+              if (titleSize < data[0].title.length) {
+                data[0].title = data[0].title.slice(0, titleSize) + "...";
+                data[0].title_cyrillic = data[0].title_cyrillic.slice(0, titleSize) + "...";
+              }
+            }
+      
+            setSearchResults(data);
+            console.log(data);
+            navigate("/search");
+          } catch (error) {
+            // Handle the error here
+            console.error("An error occurred:", error);
+            setSearchResults([])
+            navigate("/search")
+            // Optionally, set an error message in your state or display it to the user
+            // setErrorState(error.message);
+          }
         }
-          
-      }
+      };
+      
   
     const debounce = (func, delay) => {
     let timeout;

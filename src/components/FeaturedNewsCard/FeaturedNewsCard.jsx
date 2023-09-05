@@ -13,7 +13,29 @@ const FeaturedNewsCard = ({url, title, date, id, title_cyrillic}) => {
         setIsHovered(boolean)
     }
 
-   
+    const sliceTitle = () => {
+        const screenWidth = window.innerWidth;
+    
+        if (screenWidth < 768) {
+          return title.slice(0, 90)+"..."; // Slice to 20 characters on mobile screens
+        } else if (screenWidth >= 768 && screenWidth < 1024) {
+          return title.slice(0, 30)+"..."; // Slice to 40 characters on tablet screens
+        } else {
+          return title.slice(0,50)+"..."; // Display the full title on desktop screens
+        }
+      }
+    
+      const sliceTitleCyrillic = () => {
+        const screenWidth = window.innerWidth;
+    
+        if (screenWidth < 768) {
+          return title_cyrillic.slice(0, 90) + "..."; // Slice to 20 characters on mobile screens
+        } else if (screenWidth >= 768 && screenWidth < 1024) {
+          return title_cyrillic.slice(0, 30) + "..."; // Slice to 40 characters on tablet screens
+        } else {
+          return title_cyrillic.slice(0,50)+"..."; // Display the full title on desktop screens
+        }
+      }
 
     
 
@@ -27,8 +49,8 @@ const FeaturedNewsCard = ({url, title, date, id, title_cyrillic}) => {
                 <div className='FeaturesNewsCard__img-container'>
                     <motion.img animate={{scale: IsHovered? 1.008 : 1}} src={url} alt="img" />
                 </div>
-                <div className='FeaturesNewsCard__info-container'>
-                    <h1>{lang === "latin" ? title: title_cyrillic}</h1>
+                <div id="title" className='FeaturesNewsCard__info-container'>
+                    <h1>{lang === "latin" ? sliceTitle() : sliceTitleCyrillic()}</h1>
                     <p>{date}</p>
                 </div>
                 
