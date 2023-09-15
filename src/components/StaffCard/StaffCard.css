@@ -28,8 +28,22 @@
 
 .Staff__info-container { 
     height: 100%;
+    position: relative;
     
 }
+
+
+.Staff__info-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: #d4ae37;
+    z-index: 1;
+  }
+
 
 .Staff__container h1 {
     display: flex;
@@ -37,9 +51,11 @@
     justify-content: center;
     width: 100%;
     margin: auto;
+    margin-top: .4rem;
     height: 50%;
    
     font-size: 15px;
+
    
 }
 

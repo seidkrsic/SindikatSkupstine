@@ -17,38 +17,47 @@ const NewsSinglePage = () => {
     const {lang} = useContext(AuthContext)
 
     const location_id = useParams().id
-
+    const mobileScreen = window.innerWidth < 768
     let CategoriesInfo;
 
     if (lang === "latin") { 
       CategoriesInfo = [ 
-        { 
-          name: "Predsjednik",
-          path: "/news/predsjednik"
-        },
-        { 
-            name: "Zamjenik Predsjednika",
-            path: "/news/zamjenikPredsjednika"
-        },
-        {
-            name: "Generalni Sekretar",
-            path: "/news/sekretar"
-        },
+          {
+            name: "Sve Vijesti",
+            path: "/news/"
+          }
+        // { 
+        //   name: "Predsjednik",
+        //   path: "/news/predsjednik"
+        // },
+        // { 
+        //     name: "Zamjenik Predsjednika",
+        //     path: "/news/zamjenikPredsjednika"
+        // },
+        // {
+        //     name: "Generalni Sekretar",
+        //     path: "/news/sekretar"
+        // },
       ]
     } else { 
       CategoriesInfo = [
+        // {
+        //     name: "Предсједник",
+        //     path: "/news/predsjednik"
+        // },
+        // {
+        //     name: "Замјеник Предсједника",
+        //     path: "/news/zamjenikPredsjednika"
+        // },
+        // {
+        //     name: "Генерални Секретар",
+        //     path: "/news/sekretar"
+        // },
         {
-            name: "Предсједник",
-            path: "/news/predsjednik"
-        },
-        {
-            name: "Замјеник Предсједника",
-            path: "/news/zamjenikPredsjednika"
-        },
-        {
-            name: "Генерални Секретар",
-            path: "/news/sekretar"
-        },
+            name: "Све Вијести",
+            path: "/news/"
+        }
+          
     ];
     }
 
@@ -66,6 +75,7 @@ const NewsSinglePage = () => {
         let data = await response.json() 
         data.created = data.created.slice(0,10)
         setNews(data)
+        console.log(data)
         setNoGallery(data.gallery.length > 0) 
 
 
@@ -108,7 +118,22 @@ const NewsSinglePage = () => {
                                 {noGallery ?
                                     <>
                                         <h1 className='GalleryFont-header'>{lang === "latin" ? "Galerija" : "Галерија"}</h1>
-                                        <NewsGallery slides={News.gallery} />
+
+                                        <div className='Gallery__container-singleStaff__page'>
+                                            { News["gallery"].length <= 2 ? 
+                                                <>  
+                                                    <img src={News["gallery"][0]?.image_url} alt="galery_photo" /> 
+                                                    <img src={News["gallery"][1]?.image_url} alt="galery_photo" /> 
+                                                </>                                           
+                                                : 
+                                                <> 
+                                                    <img src={News["gallery"][0]?.image_url} alt="galery_photo" /> 
+                                                    <NewsGallery slides={News.gallery} />   
+                                                </>
+                                                
+
+                                            }
+                                        </div>
                                     </>
                                     
                                     : <> </>

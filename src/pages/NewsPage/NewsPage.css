@@ -164,7 +164,17 @@
         margin-top: 80px;
     }
 
-  
+    .NewsPage__container, .NewsPage__container-left { 
+        min-width: 90% !important;
+    }
+
+    .NewsPage__news-container { 
+        display: flex; 
+        flex-direction: row; 
+        flex-wrap: wrap;
+        min-width: 100% !important;
+        max-width: 100% !important;
+    }
 
 
     

@@ -56,6 +56,8 @@ const StaffSinglePage = () => {
 
     useEffect(() => {
 
+        window.scrollTo(0,0)
+
         if (location.includes("predsjednik")) { 
 
             const getProfile = async () => { 
@@ -122,26 +124,31 @@ const StaffSinglePage = () => {
         <HeaderPhoto page_name={lang === "latin" ? staff?.name : staff?.name_cyrillic} />
         <div className='StaffSinglePage__container'>
 
+        <div className='StaffSinglePage__categories-container'>
+            <Categories categories={CategoriesInfo} title={"KATEGORIJE"} />
+        </div>
+            
             <div className='StaffSinglePage__container-left'>
                 <h2>{ lang === "latin" ? "Biografija": "Биографија"}</h2>
                 <p>{lang === "latin" ? staff?.bio : staff?.bio_cyrillic}</p>
-                <div className='StaffSinglePage__contact-info'>
-                    <div>{lang === "latin" ? "Telefon:" : "Телефон:"}<Link>{staff?.phone}</Link></div>
-                    <div>{lang === "latin" ? "Mejl:" : "Мејл:"} <Link>{staff?.email}</Link></div>
-                </div>
-             
+                
+
             </div>
             <div className='StaffSinglePage__container-right'>
                 <div className='StaffSinglePage__card-container'>
                     {staff.active_role  && <StaffCard staff={staff} role={lang === "latin" ? staff.active_role[0] :  staff.active_role[1] } />}
                   
                 </div>
-                
+                <div className='StaffSinglePage__contact-info'>
+                    <div>{lang === "latin" ? "Telefon:" : "Телефон:"}<Link>{staff?.phone}</Link></div>
+                    <div>{lang === "latin" ? "Mejl:" : "Мејл:"} <Link>{staff?.email}</Link></div>
+                </div>
             </div>
+           
 
         </div>
-        <h1 className='StaffSinglePage__categorier-headerSpecial'>{lang === "latin" ? "Kategorije" : "Категорије"}</h1>
-        <Categories categories={CategoriesInfo} />
+         
+        
         
     </div>
   )

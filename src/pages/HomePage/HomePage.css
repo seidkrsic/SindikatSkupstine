@@ -9,6 +9,7 @@
 }
 
 
+
 .PageContainerGrid__bigger { 
     display: flex;
     flex-direction: column;
@@ -18,6 +19,29 @@
     height: 90%;
     margin: auto 1rem;
     /* border: 1px solid violet; */
+}
+
+.HomePage__special-doc { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    top: -25px;
+    left: 100%;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 1);
+    background-color: rgb(171, 7, 7, .5);
+
+}
+
+.HomePage__special-doc a { 
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+
 }
 
 .PageContainerGrid__smaller { 
@@ -190,6 +214,14 @@
 }
 
 @media screen and  (max-width: 767px) { 
+
+    .HomePage__special-doc { 
+        position: relative;
+        left: 20%;
+        top: 10px;
+        box-shadow: none;
+        background-color: #AB0707;
+    }
 
     .HomePage__container { 
         margin-top: 81px;

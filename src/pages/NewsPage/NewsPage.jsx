@@ -26,6 +26,7 @@ const NewsPage = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0,0)
     getNews();
   }, [currentPage]);
 

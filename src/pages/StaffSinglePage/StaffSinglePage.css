@@ -17,32 +17,33 @@
 
 
 .StaffSinglePage__container { 
-    width: 75%;
+    width: 90%;
     margin: 0rem auto;
     /* border: 1px solid gainsboro; */
     height: fit-content;
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
 
 }
 
 .StaffSinglePage__container-left { 
-    width: 70%;
+    width: 40%;
     display: flex;
     flex-direction: row;
     min-height: 70vh;
     height: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin-top: 2rem;
     
 }
 
 .StaffSinglePage__container-left h2 { 
     width: 90%;
-    margin: 0 auto;
+    margin: 0;
     text-transform: uppercase;
 }
 
@@ -62,7 +63,7 @@
     width: 88%;
     display: flex;
     flex-direction: row;
-    margin: .5rem auto;
+    margin: .5rem 0;
     align-items: center;
     font-size: 15px;
     text-transform: uppercase;
@@ -70,6 +71,9 @@
     background-color: #f4f2ec;
     padding: .5rem;
 }
+
+
+
 .StaffSinglePage__container-left div a { 
     font-size: 13px; 
     font-weight: 500; 
@@ -91,6 +95,15 @@
     height: fit-content;
     min-height: 70vh;
 }
+
+.StaffSinglePage__categories-container { 
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
 
 
 .StaffSinglePage__card-container { 
@@ -146,7 +159,39 @@
     color: rgb(194, 10, 10);
 }
 
-.StaffSinglePage__container-main .Categories__main-container { 
+.StaffSinglePage__contact-info { 
+    width: 70%;
+    margin: 0 auto;
+}
+
+.StaffSinglePage__contact-info div { 
+    text-transform: none;
+    width: 91%;
+    display: flex;
+    flex-direction: row;
+    margin: .5rem auto;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #f4f2ec;
+    padding: .5rem;
+}
+
+.StaffSinglePage__contact-info div a { 
+    font-size: 11px; 
+    font-weight: 500; 
+    text-transform: none !important;
+    text-decoration: none; 
+    color: #AB0707;
+    cursor: auto;
+    height: 100% !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center; 
+    margin: auto .5rem;
+}
+
+/* .StaffSinglePage__container-main .Categories__main-container { 
     width: 80% !important;
     max-width: 70% !important;
     margin: 2rem auto !important;
@@ -155,6 +200,19 @@
 
 .StaffSinglePage__container-main .Categories__container { 
     width: 30% !important;
+} */
+
+.StaffSinglePage__categories-container .Categories__main-container { 
+    width: 100% !important;
+    margin-top: 2rem;
+}
+
+.StaffSinglePage__categories-container .Categories__container { 
+    width: 100% !important;
+}
+
+.StaffSinglePage__categories-container .Categories__main-container a { 
+    width: 80% !important;
 }
 
 
@@ -163,13 +221,44 @@
 
 @media screen and (max-width: 767px) {
 
+    .StaffSinglePage__categories-container { 
+        width: 95% !important;
+    }
+
+    .StaffSinglePage__categories-container .Categories__container { 
+        width: 85% !important;
+    }
+
+    .StaffSinglePage__categories-container .Categories__main-container a { 
+        width: 20% !important;
+    }
+
+    .StaffSinglePage__container-left { 
+        width: 90%;
+    }
+
+    .StaffSinglePage__container-left h2  { 
+        width: 95% !important;
+        margin: 0 auto;
+    }
+
+    .StaffSinglePage__container-left  p { 
+        width: 95% !important;
+        margin: 1rem auto;
+
+    }
+
+    .StaffSinglePage__contact-info { 
+        width: 94%;
+    }
+
     .StaffSinglePage__container-main { 
         margin-top: 80px;
     }
 
     .StaffSinglePage__container { 
         flex-direction: column-reverse;
-        width: 90%;
+        width: 95%;
     }
 
     .StaffSinglePage__container-right { 
@@ -208,13 +297,58 @@
 }   
 
 @media screen and (min-width: 768px) and (max-width: 991px) { 
+
+    .StaffSinglePage__categories-container { 
+        width: 95% !important;
+    }
+
+    .StaffSinglePage__categories-container .Categories__container { 
+        width: 85% !important;
+    }
+
+    .StaffSinglePage__categories-container .Categories__main-container a { 
+        width: 20% !important;
+    }
+
+    .StaffSinglePage__container-left { 
+        width: 100%;
+        max-width: none !important;
+        min-width: 90% !important;
+        display: flex; 
+        flex-direction: column;
+    }
+    .StaffSinglePage__container-right { 
+        width: 90%;
+        display: flex; 
+        margin: 2rem auto;
+
+        flex-direction: column;
+    }
+
+    .StaffSinglePage__container-left h2  { 
+        width: 95% !important;
+        margin: 0 auto;
+    }
+
+    .StaffSinglePage__container-left  p { 
+        width: 95% !important;
+        margin: 1rem auto;
+
+    }
+
+    .StaffSinglePage__contact-info { 
+        width: 94%;
+    }
+
+
+
     .StaffSinglePage__container-main { 
         margin-top: 80px;
     }
 
 
     .StaffSinglePage__container { 
-        flex-direction: row;
+        flex-direction: column-reverse;
         width: 85%;
     }
 

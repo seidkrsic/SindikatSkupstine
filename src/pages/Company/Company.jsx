@@ -6,6 +6,7 @@ import pdfdownload from "../../images/pdf.png"
 
 
 import { useState, useEffect } from 'react'
+import Footer from '../../components/Footer/Footer'
 
 
 
@@ -41,7 +42,7 @@ const Company = () => {
 
   return (
     <div className='Company__container'>
-        <HeaderPhoto page_name={"Ugovori sa Firmama"} />
+        <HeaderPhoto page_name={lang === "latin" ? "Ugovori sa Firmama" : "Уговори са Фирмама"} />
         <table border="1" className="gold-table">
             <thead>
                 <tr>
@@ -57,12 +58,12 @@ const Company = () => {
                     <td>{lang === "latin" ? item?.company_name : item?.company_name_cyrillic}</td>
                     <td>{lang === "latin" ? item?.company_address : item?.company_address_cyrillic}</td>
                     <td>{item?.rates}</td>
-                    {user && <td className='special__column'><img className='pdf_image' src={pdfdownload} alt="pdf" /><a href={item?.document.download_link}>Ugovor</a></td>}
+                    {user && <td className='special__column'><img className='pdf_image' src={pdfdownload} alt="pdf" /><a href={item?.document.download_link}>{lang === "latin" ? "Ugovor" : "Уговор"}</a></td>}
                 </tr>
                 ))}
             </tbody>
         </table>
-
+       
 
     </div>
   )

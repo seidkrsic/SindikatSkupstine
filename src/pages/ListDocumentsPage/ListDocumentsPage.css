@@ -99,6 +99,20 @@
         margin-top: 80px;
     }
 
+    .ListDocumentsPage__container-main .HeaderPhoto__view-name__container h1 { 
+        font-size: 20px !important;
+        margin: 0 auto;
+    }
+
+    .ListDocumentsPage__container-main h1 { 
+        font-size: 20px !important;
+        width: 90%;
+        margin: 0rem auto;
+        margin-top: 1rem;
+
+        text-align: center;
+    }
+
     .ListDocumentsPage__container { 
         width: 90%;
     }

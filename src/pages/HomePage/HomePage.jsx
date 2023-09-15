@@ -53,7 +53,7 @@ const HomePage = () => {
 } 
 
     const getNewsForSlides = async () => { 
-      const response = await fetch("http://127.0.0.1:8000/api/news/", { 
+      const response = await fetch("http://127.0.0.1:8000/api/slides/", { 
         method: "GET", 
         headers: {"Content-Type" : "application/json"}
 
@@ -83,6 +83,9 @@ const HomePage = () => {
             <div className='PageContainerGrid'>
                 <div className='PageContainerGrid__bigger'>
                     <div className='flex-col'>
+                        <div className='HomePage__special-doc'>
+                            <a href="http://127.0.0.1:8000/api/importantDocuments/6207c607-c5fa-4e97-8d45-48776d031c4a/download/">{lang === 'latin' ? "Pristupnica" : "Приступница"}</a>
+                        </div>
                         <h1 className='additional-margin__left'>{ lang==="latin" ? "NAJNOVIJE VIJESTI" : "НАЈНОВИЈЕ ВИЈЕСТИ" }</h1>
                         <div className='flex-row'>
 

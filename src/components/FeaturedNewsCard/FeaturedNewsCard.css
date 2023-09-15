@@ -49,6 +49,7 @@
     display: flex;
     width: 100%;
     flex-direction: column;
+    position: relative;
     height: 40%;
     min-height: 40%;
     max-height: 40%;
@@ -58,6 +59,8 @@
     /* border: 1px solid violet; */
 
 }
+
+
 
 .FeaturesNewsCard__info-container h1 { 
     width: 95%;

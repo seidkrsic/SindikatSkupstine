@@ -67,18 +67,6 @@ const NewsGallery = ({slides}) => {
 
     
 
-    // useEffect(() => {
-    //     // Auto slide every 5 seconds
-    //     const intervalId = setInterval(() => {
-    //         onToNext();
-    //     }, 5000);
-
-    //     // Clear the interval when the component unmounts
-    //     return () => {
-    //         clearInterval(intervalId);
-    //     };
-    // }, [currentIndex]); // Make sure to add currentIndex as a dependency
-
 
 
   return (
@@ -119,7 +107,7 @@ const NewsGallery = ({slides}) => {
                         src={`${slides[currentIndex]?.image_url}`} alt="slide-img" />
                 
                     <div className='NewsGallery__NewInfo'>
-                        <h1>{ fullScreen? "" : "+" + slides.length}</h1>
+                        <h1>{ fullScreen? "" : "+" + (slides.length-1)}</h1>
                     </div> 
                    
                      

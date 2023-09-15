@@ -45,8 +45,8 @@ const ListDocumentsPage = () => {
         <HeaderPhoto page_name={lang === "latin" ? "Izvještaji i dokumenta" : "Извјештаји и Документа"} />
         <h1 className='heading__scroll_div'>{lang === "latin" ? "Važna Dokumenta" : "Важна Документа"}</h1>
         <div className='ListDocumentsPage__container'>
-            { documents.map((item) => (
-                    <a href={item.download_link} key={item?.id} className='ListDocumentsPage__document-container'>
+            { documents?.map((item) => (
+                    <a href={item?.download_link} key={item?.id} className='ListDocumentsPage__document-container'>
                         <img src={pdfdownload} alt="pdf" />
                         <div className='ListDocumentsPage__text-container'>
                             <p>{lang === "latin" ? item?.title : item?.title_cyrillic}</p>

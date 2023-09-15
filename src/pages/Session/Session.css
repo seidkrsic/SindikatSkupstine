@@ -54,11 +54,12 @@
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 50vh;
-    min-height: 50vh;
+    height: fit-content;
+    max-height: 50vh;
     margin: 0 auto;
     overflow-y: scroll;
-    border: 1px solid #d4ad376b;
+    /* border: 1px solid #d4ad376b; */
+    background-color: #f4f2ec;
 
 }
 

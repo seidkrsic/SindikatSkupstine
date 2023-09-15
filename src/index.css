@@ -11,7 +11,6 @@ body {
   flex-direction: column;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 
 }
 
@@ -26,4 +25,5 @@ code {
 
 * { 
     /* border: 1px solid black; */
+    scroll-behavior: smooth !important;
 }

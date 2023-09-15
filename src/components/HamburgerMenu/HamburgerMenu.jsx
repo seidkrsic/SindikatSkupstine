@@ -6,6 +6,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import AuthContext from '../../Context/AuthContext'
+import userIcon from "../../images/user.png"
+
 
 
 const HamburgerMenu = () => {
@@ -22,7 +24,7 @@ const HamburgerMenu = () => {
             <img src={ !isMenuOpen? openMenu : closeMenu} alt="" />
         </div>
         <motion.ul 
-            animate={{height: isMenuOpen? "350px" : 0, transition: 1, animationDelay: 5}}
+            animate={{height: isMenuOpen? "400px" : 0, transition: 1, animationDelay: 5}}
             className={ isMenuOpen ? 'HamburgerMenu__links-container HamburgerMenu__container-bg__color' : 'HamburgerMenu__links-container hidden'}>
             <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0}}>
                 <Link to="/news">Aktuelnosti</Link>
@@ -43,7 +45,16 @@ const HamburgerMenu = () => {
                 <Link to="/contact">Kontakt</Link>
             </motion.li>
             <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0}}>
-                {user ?  <Link onClick={userLogout}>{lang === "latin" ? "Izloguj se" : "Korisnik: " + user.username + ", Излогуј се? "}</Link> : <Link to={"/login"}>{lang === "latin" ? "Uloguj se" : "Улогуј се"}</Link>  }
+                {user ?  <Link onClick={userLogout}>{lang === "latin" ? "Izloguj se" : "Излогуј се"}</Link> : <Link to={"/login"}>{lang === "latin" ? "Uloguj se" : "Улогуј се"}</Link>  }
+            </motion.li>
+            <motion.li onClick={handleisMenuOpen} animate={{height: isMenuOpen? "50px" : 0}}>
+                        <Link className=''> 
+                           
+                           <img src={userIcon} alt="user" />
+                        
+                           <p id='userLogin-name'>{user?.username} </p>
+                        
+                        </Link>
             </motion.li>
         </motion.ul>
              
