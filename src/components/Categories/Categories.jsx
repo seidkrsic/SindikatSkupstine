@@ -1,23 +1,21 @@
-import React from 'react'
-import "../Categories/Categories.css"
-import { Link } from 'react-router-dom'
+import React from "react";
+import "../Categories/Categories.css";
+import { Link } from "react-router-dom";
 
-
-
-const Categories = ({categories, title}) => {
-
-        console.log(categories)
+const Categories = ({ categories, title }) => {
+  console.log(categories);
   return (
-    <div className='Categories__main-container'>
-        <h1 className='Categories__heading'>{title}</h1>
-        <div className='Categories__container'>
-            {categories.map(category => (
-                <Link to={category.path} key={category.path}>{category.name}</Link>
-            ))}
-         
-        </div>
+    <div className="Categories__main-container">
+      <h1 className="Categories__heading">{title}</h1>
+      <div className="Categories__container">
+        {categories.map((category) => (
+          <Link to={category.path} key={category.path}>
+            {category.name}
+          </Link>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Categories
+export default Categories;

@@ -1,10 +1,10 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from "react";
 import "../NewsPage/NewsPage.css";
-import HeaderPhoto from '../../components/HeaderPhoto/HeaderPhoto';
-import Categories from '../../components/Categories/Categories';
-import FeaturedNewsCard from '../../components/FeaturedNewsCard/FeaturedNewsCard';
-import { useLocation } from 'react-router-dom';
-import AuthContext from '../../Context/AuthContext';
+import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
+import Categories from "../../components/Categories/Categories";
+import FeaturedNewsCard from "../../components/FeaturedNewsCard/FeaturedNewsCard";
+import { useLocation } from "react-router-dom";
+import AuthContext from "../../Context/AuthContext";
 
 const NewsPage = () => {
   const { lang } = useContext(AuthContext);
@@ -14,10 +14,13 @@ const NewsPage = () => {
   const location_id = useLocation().pathname;
 
   const getNews = async () => {
-    const response = await fetch(`http://127.0.0.1:8000/api/paginationNews/?page=${currentPage}`, {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-    });
+    const response = await fetch(
+      `http://127.0.0.1:8000/api/paginationNews/?page=${currentPage}`,
+      {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      }
+    );
     const Data = await response.json();
     const data = Data.results;
     setCards(data);
@@ -26,7 +29,7 @@ const NewsPage = () => {
   };
 
   useEffect(() => {
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0);
     getNews();
   }, [currentPage]);
 
@@ -35,12 +38,14 @@ const NewsPage = () => {
   };
 
   return (
-    <div className='NewsPage__container-main'>
-      <HeaderPhoto page_name={lang === "latin" ? "Aktuelnosti" : "Актуелности"} />
-      <div className='NewsPage__container'>
-        <div className='NewsPage__container-left'>
-          <div className='NewsPage__news-container'>
-            {cards?.map(card => (
+    <div className="NewsPage__container-main">
+      <HeaderPhoto
+        page_name={lang === "latin" ? "Aktuelnosti" : "Актуелности"}
+      />
+      <div className="NewsPage__container">
+        <div className="NewsPage__container-left">
+          <div className="NewsPage__news-container">
+            {cards?.map((card) => (
               <FeaturedNewsCard
                 key={card?.id}
                 url={card?.image_url}
@@ -53,25 +58,33 @@ const NewsPage = () => {
           </div>
           <div className="NewsPage__pagination">
             <button
-              className={`NewsPage__page-number ${currentPage === 1 ? 'disabled' : ''}`}
+              className={`NewsPage__page-number ${
+                currentPage === 1 ? "disabled" : ""
+              }`}
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
             >
               {lang === "latin" ? "Prethodna" : "Претходна"}
             </button>
 
-            {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
-              <button
-                key={page}
-                className={`NewsPage__page-number ${currentPage === page ? 'active' : ''}`}
-                onClick={() => handlePageChange(page)}
-              >
-                {page}
-              </button>
-            ))}
+            {Array.from({ length: totalPages }, (_, index) => index + 1).map(
+              (page) => (
+                <button
+                  key={page}
+                  className={`NewsPage__page-number ${
+                    currentPage === page ? "active" : ""
+                  }`}
+                  onClick={() => handlePageChange(page)}
+                >
+                  {page}
+                </button>
+              )
+            )}
 
             <button
-              className={`NewsPage__page-number ${currentPage === totalPages ? 'disabled' : ''}`}
+              className={`NewsPage__page-number ${
+                currentPage === totalPages ? "disabled" : ""
+              }`}
               onClick={() => handlePageChange(currentPage + 1)}
               disabled={currentPage === totalPages}
             >
