@@ -1,5 +1,5 @@
-import React, { createContext, useState, useEffect } from "react";
 import jwt_decode from "jwt-decode";
+import React, { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
@@ -11,24 +11,24 @@ export const AuthProvider = ({ children }) => {
 
   let [loading, setLoading] = useState(true);
   let [user, setUser] = useState(() =>
-    localStorage.getItem("authToken")
-      ? jwt_decode(localStorage.getItem("authToken"))
+    localStorage?.getItem("authToken")
+      ? jwt_decode(localStorage?.getItem("authToken"))
       : null
   );
   let [authToken, setAuthToken] = useState(() =>
-    localStorage.getItem("authToken")
-      ? JSON.parse(localStorage.getItem("authToken"))
+    localStorage?.getItem("authToken")
+      ? JSON.parse(localStorage?.getItem("authToken"))
       : null
   );
   let [searchResults, setSearchResults] = useState([]);
   let [lang, setLang] = useState(
-    localStorage.getItem("lang") === null
+    localStorage?.getItem("lang") === null
       ? "latin"
-      : localStorage.getItem("lang")
+      : localStorage?.getItem("lang")
   );
 
-  if (!localStorage.getItem("lang") === null) {
-    localStorage.setItem("lang", "latin");
+  if (!localStorage?.getItem("lang") === null) {
+    localStorage?.setItem("lang", "latin");
   }
 
   const updateLang = (value) => setLang(value);
