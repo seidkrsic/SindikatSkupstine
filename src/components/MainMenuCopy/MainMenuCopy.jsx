@@ -1,13 +1,12 @@
-import React, { useState, useEffect, useRef, useContext } from "react";
-import "./MainMenuCopy.css";
-import logo from "../../images/Artboard.png";
-import { motion } from "framer-motion";
-import { Link, Navigate } from "react-router-dom";
-import MenuDropdown from "../MenuDropdown/MenuDropdown";
-import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
-import search from "../../images/search.png";
+import React, { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
+import logo from "../../images/Artboard.png";
+import search from "../../images/search.png";
 import userIcon from "../../images/user.png";
+import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
+import MenuDropdown from "../MenuDropdown/MenuDropdown";
+import "./MainMenuCopy.css";
 
 const MainMenuCopy = () => {
   const { user } = useContext(AuthContext);

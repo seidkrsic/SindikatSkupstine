@@ -1,15 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
+import DocumentHome from "../../components/DocumentHome/DocumentHome";
 import FeaturedNewsCard from "../../components/FeaturedNewsCard/FeaturedNewsCard";
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
-import "./HomePage.css";
-import DocumentHome from "../../components/DocumentHome/DocumentHome";
-import pdfdownload from "../../images/pdf.png";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import StaffCard from "../../components/StaffCard/StaffCard";
 import Timeline from "../../components/Timeline/Timeline";
-import MainMenuCopy from "../../components/MainMenuCopy/MainMenuCopy";
 import AuthContext from "../../Context/AuthContext";
+import "./HomePage.css";
 
 const HomePage = () => {
   let [cards, setCards] = useState([]);
@@ -18,7 +13,7 @@ const HomePage = () => {
   const { lang } = useContext(AuthContext);
 
   const getNews = async () => {
-    const response = await fetch("http://127.0.0.1:8000/api/news/", {
+    const response = await fetch("http://sindikat.skupstina.me/api/news/", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
@@ -27,7 +22,7 @@ const HomePage = () => {
   };
 
   const getDocs = async () => {
-    const response = await fetch("http://127.0.0.1:8000/api/documents/", {
+    const response = await fetch("http://sindikat.skupstina.me/api/documents/", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
@@ -40,7 +35,7 @@ const HomePage = () => {
   };
 
   const getNewsForSlides = async () => {
-    const response = await fetch("http://127.0.0.1:8000/api/slides/", {
+    const response = await fetch("http://sindikat.skupstina.me/api/slides/", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
@@ -63,7 +58,7 @@ const HomePage = () => {
           <div className="PageContainerGrid__bigger">
             <div className="flex-col">
               <div className="HomePage__special-doc">
-                <a href="http://127.0.0.1:8000/api/importantDocuments/6207c607-c5fa-4e97-8d45-48776d031c4a/download/">
+                <a href="http://sindikat.skupstina.me/api/importantDocuments/6207c607-c5fa-4e97-8d45-48776d031c4a/download/">
                   {lang === "latin" ? "Pristupnica" : "Приступница"}
                 </a>
               </div>

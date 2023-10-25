@@ -1,12 +1,11 @@
-import React, { useContext } from "react";
-import "../HamburgerMenu/HamburgerMenu.css";
-import openMenu from "../../images/openMenu.png";
-import closeMenu from "../../images/closeMenu.png";
-import { useState } from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
+import closeMenu from "../../images/closeMenu.png";
+import openMenu from "../../images/openMenu.png";
 import userIcon from "../../images/user.png";
+import "../HamburgerMenu/HamburgerMenu.css";
 
 const HamburgerMenu = () => {
   const [isMenuOpen, setisMenuOpen] = useState(false);

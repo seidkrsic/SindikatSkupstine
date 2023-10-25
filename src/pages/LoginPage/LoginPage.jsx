@@ -1,8 +1,8 @@
 import { React, useContext, useEffect } from "react";
-import "../LoginPage/LoginPage.css";
-import logo from "../../images/Artboard.png";
 import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
+import logo from "../../images/Artboard.png";
+import "../LoginPage/LoginPage.css";
 
 const LoginPage = () => {
   useEffect(() => {

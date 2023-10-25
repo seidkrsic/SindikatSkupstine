@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
-import "./ContactPage.css";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
-import { useEffect } from "react";
-import logo from "../../images/Artboard.png";
 import AuthContext from "../../Context/AuthContext";
+import logo from "../../images/Artboard.png";
+import "./ContactPage.css";
 
 const ContactPage = () => {
   const { lang } = useContext(AuthContext);

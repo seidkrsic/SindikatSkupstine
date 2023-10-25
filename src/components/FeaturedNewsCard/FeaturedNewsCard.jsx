@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
-import "./FeaturedNewsCard.css";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
+import "./FeaturedNewsCard.css";
 
 const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
   const { lang } = useContext(AuthContext);

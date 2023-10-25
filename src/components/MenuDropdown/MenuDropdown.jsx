@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-import "../MenuDropdown/MenuDropdown.css";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "../MenuDropdown/MenuDropdown.css";
 
 const MenuDropdown = ({ buttonName, menuItems, path }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

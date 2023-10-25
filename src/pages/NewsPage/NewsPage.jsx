@@ -1,10 +1,9 @@
-import React, { useContext, useState, useEffect } from "react";
-import "../NewsPage/NewsPage.css";
-import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
-import Categories from "../../components/Categories/Categories";
-import FeaturedNewsCard from "../../components/FeaturedNewsCard/FeaturedNewsCard";
+import React, { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import FeaturedNewsCard from "../../components/FeaturedNewsCard/FeaturedNewsCard";
+import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
+import "../NewsPage/NewsPage.css";
 
 const NewsPage = () => {
   const { lang } = useContext(AuthContext);
@@ -15,7 +14,7 @@ const NewsPage = () => {
 
   const getNews = async () => {
     const response = await fetch(
-      `http://127.0.0.1:8000/api/paginationNews/?page=${currentPage}`,
+      `http://sindikat.skupstina.me/api/paginationNews/?page=${currentPage}`,
       {
         method: "GET",
         headers: { "Content-Type": "application/json" },

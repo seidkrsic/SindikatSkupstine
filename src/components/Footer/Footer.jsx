@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
-import "./Footer.css";
 import { Link } from "react-router-dom";
-import logo from "../../images/Artboard.png";
-import fullscreen from "../../components/NewsGallery/NewsGallery.jsx";
 import AuthContext from "../../Context/AuthContext";
+import logo from "../../images/Artboard.png";
+import "./Footer.css";
 
 const Footer = () => {
   const { lang } = useContext(AuthContext);

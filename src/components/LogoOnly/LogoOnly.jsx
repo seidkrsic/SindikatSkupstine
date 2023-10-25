@@ -1,6 +1,6 @@
 import React from "react";
-import "./LogoOnly.css";
 import logo from "../../images/Artboard.png";
+import "./LogoOnly.css";
 
 const LogoOnly = () => {
   return (

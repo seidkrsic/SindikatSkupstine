@@ -1,10 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
-import "./ListDocumentsPage.css";
-import pdfdownload from "../../images/pdf.png";
-import { Link } from "react-router-dom";
-import { useEffect } from "react";
 import AuthContext from "../../Context/AuthContext";
+import pdfdownload from "../../images/pdf.png";
+import "./ListDocumentsPage.css";
 
 const ListDocumentsPage = () => {
   const { authToken } = useContext(AuthContext);
@@ -13,7 +11,7 @@ const ListDocumentsPage = () => {
   const [documents, setDocuments] = useState([]);
 
   const getDocs = async () => {
-    let response = await fetch("http://127.0.0.1:8000/api/important/", {
+    let response = await fetch("http://sindikat.skupstina.me/api/important/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

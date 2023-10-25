@@ -1,11 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
-import "../Company/Company.css";
 import pdfdownload from "../../images/pdf.png";
+import "../Company/Company.css";
 
-import { useState, useEffect } from "react";
-import Footer from "../../components/Footer/Footer";
 
 const Company = () => {
   const { user } = useContext(AuthContext);
@@ -16,7 +14,7 @@ const Company = () => {
     window.scrollTo(0, 0);
     const fetchData = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/companies/");
+        const response = await fetch("http://sindikat.skupstina.me/api/companies/");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }

@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
-import "./StaffCard.css";
 import { motion } from "framer-motion";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
+import "./StaffCard.css";
 
 const StaffCard = ({ staff, role }) => {
   const { lang } = useContext(AuthContext);

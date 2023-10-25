@@ -52,7 +52,7 @@ const StaffSinglePage = () => {
     if (location.includes("predsjednik")) {
       const getProfile = async () => {
         const response = await fetch(
-          `http://127.0.0.1:8000/api/getPresident/`,
+          `http://sindikat.skupstina.me/api/getPresident/`,
           {
             method: "GET",
             headers: { "Content-Type": "application/json" },
@@ -65,7 +65,7 @@ const StaffSinglePage = () => {
     } else if (location.includes("zamjenik")) {
       const getProfile = async () => {
         const response = await fetch(
-          `http://127.0.0.1:8000/api/getVicePresident/`,
+          `http://sindikat.skupstina.me/api/getVicePresident/`,
           {
             method: "GET",
             headers: { "Content-Type": "application/json" },
@@ -78,7 +78,7 @@ const StaffSinglePage = () => {
     } else if (location.includes("Sekretar")) {
       const getProfile = async () => {
         const response = await fetch(
-          `http://127.0.0.1:8000/api/getSecretary/`,
+          `http://sindikat.skupstina.me/api/getSecretary/`,
           {
             method: "GET",
             headers: { "Content-Type": "application/json" },
@@ -91,7 +91,7 @@ const StaffSinglePage = () => {
     } else {
       const getProfile = async () => {
         const response = await fetch(
-          `http://127.0.0.1:8000/api/getProfile/${location_id}/`,
+          `http://sindikat.skupstina.me/api/getProfile/${location_id}/`,
           {
             method: "GET",
             headers: { "Content-Type": "application/json" },

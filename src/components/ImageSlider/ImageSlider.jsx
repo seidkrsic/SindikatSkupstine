@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useContext } from "react";
-import "./ImageSlider.css";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import parse from "html-react-parser";
+import React, { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
+import "./ImageSlider.css";
 
 const ImageSlider = ({ slides }) => {
   const sliceTitle = (title) => {

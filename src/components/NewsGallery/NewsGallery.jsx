@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import "../NewsGallery/NewsGallery.css";
-import closeMenu from "../../images/closeMenu.png";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import closeMenu from "../../images/closeMenu.png";
+import "../NewsGallery/NewsGallery.css";
 
 const NewsGallery = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

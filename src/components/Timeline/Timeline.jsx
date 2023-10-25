@@ -1,14 +1,12 @@
 import React from "react";
-import "../Timeline/Timeline.css";
-
-import { ReactComponent as WorkIcon } from "../../images/work.svg";
-import { ReactComponent as SchoolIcon } from "../../images/school.svg";
-import { ReactComponent as MneIcon } from "../../images/mneLogo.svg";
-
 import {
   VerticalTimeline,
-  VerticalTimelineElement,
+  VerticalTimelineElement
 } from "react-vertical-timeline-component";
+import { ReactComponent as MneIcon } from "../../images/mneLogo.svg";
+import "../Timeline/Timeline.css";
+
+
 
 const Timeline = () => {
   let workIconStyles = { background: "#d4ae37" };
