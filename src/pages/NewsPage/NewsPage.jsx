@@ -14,7 +14,7 @@ const NewsPage = () => {
 
   const getNews = async () => {
     const response = await fetch(
-      `http://sindikat.skupstina.me/api/paginationNews/?page=${currentPage}`,
+      `http://apisindikat.skupstina.me/api/paginationNews/?page=${currentPage}`,
       {
         method: "GET",
         headers: { "Content-Type": "application/json" },

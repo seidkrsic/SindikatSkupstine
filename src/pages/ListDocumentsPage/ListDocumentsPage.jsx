@@ -11,7 +11,7 @@ const ListDocumentsPage = () => {
   const [documents, setDocuments] = useState([]);
 
   const getDocs = async () => {
-    let response = await fetch("http://sindikat.skupstina.me/api/important/", {
+    let response = await fetch("http://apisindikat.skupstina.me/api/important/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

@@ -14,7 +14,7 @@ const Company = () => {
     window.scrollTo(0, 0);
     const fetchData = async () => {
       try {
-        const response = await fetch("http://sindikat.skupstina.me/api/companies/");
+        const response = await fetch("http://apisindikat.skupstina.me/api/companies/");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }

@@ -13,7 +13,7 @@ const HomePage = () => {
   const { lang } = useContext(AuthContext);
 
   const getNews = async () => {
-    const response = await fetch("http://sindikat.skupstina.me/api/news/", {
+    const response = await fetch("http://apisindikat.skupstina.me/api/news/", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
@@ -22,7 +22,7 @@ const HomePage = () => {
   };
 
   const getDocs = async () => {
-    const response = await fetch("http://sindikat.skupstina.me/api/documents/", {
+    const response = await fetch("http://apisindikat.skupstina.me/api/documents/", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
@@ -35,7 +35,7 @@ const HomePage = () => {
   };
 
   const getNewsForSlides = async () => {
-    const response = await fetch("http://sindikat.skupstina.me/api/slides/", {
+    const response = await fetch("http://apisindikat.skupstina.me/api/slides/", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
@@ -58,7 +58,7 @@ const HomePage = () => {
           <div className="PageContainerGrid__bigger">
             <div className="flex-col">
               <div className="HomePage__special-doc">
-                <a href="http://sindikat.skupstina.me/api/importantDocuments/6207c607-c5fa-4e97-8d45-48776d031c4a/download/">
+                <a href="http://apisindikat.skupstina.me/api/importantDocuments/6207c607-c5fa-4e97-8d45-48776d031c4a/download/">
                   {lang === "latin" ? "Pristupnica" : "Приступница"}
                 </a>
               </div>
