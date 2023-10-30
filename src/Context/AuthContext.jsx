@@ -65,27 +65,36 @@ export const AuthProvider = ({ children }) => {
   };
 
   const updateToken = async () => {
-    const response = await fetch("http://apisindikat.skupstina.me/api/token/refresh/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ refresh: authToken?.refresh }),
-    });
-
-    const data = await response.json();
-    if (response.status === 200) {
-      setAuthToken(data);
-      setUser(jwt_decode(data.access));
-      localStorage.setItem("authToken", JSON.stringify(data));
-    } else {
-      userLogout();
-    }
-
-    if (loading) {
-      setLoading(false);
+    try {
+      const response = await fetch("http://apisindikat.skupstina.me/api/token/refresh/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ refresh: authToken?.refresh }),
+      });
+  
+      if (response.status === 200) {
+        const data = await response.json();
+        setAuthToken(data);
+        setUser(jwt_decode(data.access));
+        localStorage.setItem("authToken", JSON.stringify(data));
+      } else if (response.status === 404) {
+        // Handle the 404 error here
+        // For example, display an error message or perform a specific action
+      } else {
+        userLogout();
+      }
+  
+      if (loading) {
+        setLoading(false);
+      }
+    } catch (error) {
+      // Handle any other errors that may occur during the fetch
+      console.error("An error occurred:", error);
     }
   };
+  
 
   const searchNews = async (e) => {
     e.preventDefault();
