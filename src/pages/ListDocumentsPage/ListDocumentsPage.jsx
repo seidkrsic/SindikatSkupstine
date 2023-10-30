@@ -7,7 +7,7 @@ import "./ListDocumentsPage.css";
 const ListDocumentsPage = () => {
   const { authToken } = useContext(AuthContext);
   const { lang } = useContext(AuthContext);
-
+  console.log(authToken.access)
   const [documents, setDocuments] = useState([]);
 
   const getDocs = async () => {
