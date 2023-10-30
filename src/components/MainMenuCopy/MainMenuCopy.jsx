@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
-import logo from "../../images/Artboard.png";
+import logo from "../../images/Artboard_2.png";
 import search from "../../images/search.png";
 import userIcon from "../../images/user.png";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";

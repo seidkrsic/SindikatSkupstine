@@ -20,7 +20,13 @@ const ListDocumentsPage = () => {
     });
     let data = await response.json();
     console.log(data);
-    setDocuments(data);
+    if (data.lentgh == 0) { 
+      setDocuments([])
+    }
+    else { 
+      setDocuments(data);
+    }
+   
   };
 
   useEffect(() => {
