@@ -45,7 +45,7 @@ const ListDocumentsPage = () => {
         {lang === "latin" ? "Važna Dokumenta" : "Важна Документа"}
       </h1>
       <div className="ListDocumentsPage__container">
-        {documents?.map((item) => (
+        {documents.length !== 0 && documents?.map((item) => (
           <a
             href={item?.download_link}
             key={item?.id}
