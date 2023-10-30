@@ -100,7 +100,7 @@ const ImageSlider = ({ slides }) => {
           ❯
         </motion.div>
 
-        <img src={`${slides[currentIndex]?.image_url}`} alt="slideImg" />
+        <img src={`${slides[currentIndex]?.image_url}`} alt="" />
 
         <Link to={"/news/" + slides[currentIndex]?.id} className="NewInfo">
           <h1>

@@ -24,25 +24,25 @@ import StaffSinglePage from "./pages/StaffSinglePage/StaffSinglePage";
 
 
 function App() {
-  // const [ShowLogo, setShowLogo] = useState(true);
+  const [ShowLogo, setShowLogo] = useState(true);
 
-  // useEffect(() => {
-  //   // After 3 seconds, switch to showing the actual site content
-  //   const timeout = setTimeout(() => {
-  //     setShowLogo(false);
-  //   }, 1000);
+  useEffect(() => {
+    // After 3 seconds, switch to showing the actual site content
+    const timeout = setTimeout(() => {
+      setShowLogo(false);
+    }, 1000);
 
-  //   return () => {
-  //     clearTimeout(timeout); // Clear the timeout if component unmounts
-  //   };
-  // }, []);
+    return () => {
+      clearTimeout(timeout); // Clear the timeout if component unmounts
+    };
+  }, []);
 
   return (
     <div className="App">
       <Router>
         <AuthProvider>
           <MainMenuCopy />
-          {/* {ShowLogo ? <LogoOnly /> : <> </>} */}
+          {ShowLogo ? <LogoOnly /> : <> </>}
           <Layout>
             <Routes>
               <Route path="/" exact element={<HomePage />} />
