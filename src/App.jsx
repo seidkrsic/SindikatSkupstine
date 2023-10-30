@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import {
   BrowserRouter as Router, Route, Routes
 } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Layout from "./components/Layout/Layout";
@@ -20,6 +21,7 @@ import SearchPage from "./pages/SearchPage/SearchPage";
 import Session from "./pages/Session/Session";
 import StaffPage from "./pages/StaffPage/StaffPage";
 import StaffSinglePage from "./pages/StaffSinglePage/StaffSinglePage";
+
 
 function App() {
   const [ShowLogo, setShowLogo] = useState(true);
@@ -74,6 +76,7 @@ function App() {
                 path="/staff/generalniSekretar"
                 element={<StaffSinglePage />}
               />
+              <Route path="/*" element={<Navigate to="/" />} />
             </Routes>
 
             <Footer />
