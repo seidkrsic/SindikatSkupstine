@@ -7,26 +7,33 @@ import "./ListDocumentsPage.css";
 const ListDocumentsPage = () => {
   const { authToken } = useContext(AuthContext);
   const { lang } = useContext(AuthContext);
-  console.log(authToken.access)
+
   const [documents, setDocuments] = useState([]);
 
   const getDocs = async () => {
-    let response = await fetch("http://apisindikat.skupstina.me/api/important/", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + String(authToken?.access),
-      },
-    });
-    let data = await response.json();
-    console.log(data);
-    if (data.lentgh == 0) { 
-      setDocuments([])
+    try {
+      let response = await fetch("http://apisindikat.skupstina.me/api/important/", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + String(authToken?.access),
+        },
+      });
+
+      if (response.ok) {
+        let data = await response.json();
+        console.log(data);
+        if (data.length === 0) { 
+          setDocuments([]);
+        } else { 
+          setDocuments(data);
+        }
+      } else {
+        console.error("Greška pri dohvatanju dokumenata");
+      }
+    } catch (error) {
+      console.error("Greška pri dohvatanju dokumenata:", error);
     }
-    else { 
-      setDocuments(data);
-    }
-   
   };
 
   useEffect(() => {
@@ -45,16 +52,16 @@ const ListDocumentsPage = () => {
         {lang === "latin" ? "Važna Dokumenta" : "Важна Документа"}
       </h1>
       <div className="ListDocumentsPage__container">
-        {documents?.map((item) => (
+        {documents.map((item) => (
           <a
-            href={item?.download_link}
-            key={item?.id}
+            href={item.download_link}
+            key={item.id}
             className="ListDocumentsPage__document-container"
           >
             <img src={pdfdownload} alt="pdf" />
             <div className="ListDocumentsPage__text-container">
-              <p>{lang === "latin" ? item?.title : item?.title_cyrillic}</p>
-              <p className="dateFont">{item?.created_eu_time}</p>
+              <p>{lang === "latin" ? item.title : item.title_cyrillic}</p>
+              <p className="dateFont">{item.created_eu_time}</p>
             </div>
           </a>
         ))}
