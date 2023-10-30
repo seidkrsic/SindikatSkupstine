@@ -80,8 +80,7 @@ export const AuthProvider = ({ children }) => {
         setUser(jwt_decode(data.access));
         localStorage.setItem("authToken", JSON.stringify(data));
       } else if (response.status === 404) {
-        // Handle the 404 error here
-        // For example, display an error message or perform a specific action
+          console.error("An error occurred:", error);
       } else {
         userLogout();
       }
