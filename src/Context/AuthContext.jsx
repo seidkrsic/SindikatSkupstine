@@ -64,8 +64,9 @@ export const AuthProvider = ({ children }) => {
     navigate("/");
   };
 
-  const updateToken = async () => {
-    try {
+  const updateToken = async () => { 
+    if(authToken !== null) { 
+
       const response = await fetch("http://apisindikat.skupstina.me/api/token/refresh/", {
         method: "POST",
         headers: {
@@ -73,26 +74,21 @@ export const AuthProvider = ({ children }) => {
         },
         body: JSON.stringify({ refresh: authToken?.refresh }),
       });
-  
-      if (response.status === 200) {
-        const data = await response.json();
-        setAuthToken(data);
-        setUser(jwt_decode(data.access));
-        localStorage.setItem("authToken", JSON.stringify(data));
-      } else if (response.status === 404) {
-          console.error("An error occurred");
-      } else {
-        userLogout();
-      }
-  
-      if (loading) {
-        setLoading(false);
-      }
-    } catch (error) {
-      // Handle any other errors that may occur during the fetch
-      console.error("An error occurred:", error);
+
+    const data = await response.json();
+    if (response.status === 200) {
+      setAuthToken(data);
+      setUser(jwt_decode(data.access));
+      localStorage.setItem("authToken", JSON.stringify(data));
+    } else {
+      userLogout();
     }
-  };
+    }
+
+    if (loading) {
+      setLoading(false);
+    }
+  }; 
   
 
   const searchNews = async (e) => {
