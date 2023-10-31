@@ -63,7 +63,7 @@ const NewsSinglePage = () => {
 
   return (
     <div className="SingleNewsPage__container-main">
-      <HeaderPhoto page_name={lang === "latin" ? "Vijesti" : "Вијести"} />
+      <HeaderPhoto page_name={lang === "latin" ? "AKTUELNOSTI" : "АКТУЕЛНОСТИ"} />
       {News && (
         <div className="SingleNewsPage__container">
           <div className="SingleNewsPage__container-left">
@@ -125,7 +125,7 @@ const NewsSinglePage = () => {
             <Categories
               categories={CategoriesInfo}
               title={
-                lang === "latin" ? "Kategorije Vijesti" : "КАТЕГОРИЈЕ ВИЈЕСТИ"
+                lang === "latin" ? "KATEGORIJE AKTUELNOSTI" : "КАТЕГОРИЈЕ АКТУЕЛНОСТИ"
               }
             />
           </div>

@@ -66,7 +66,7 @@ const MainMenuCopy = () => {
     button1Items = [
       { name: "Predsjednik", path: "/staff/predsjednik" },
       { name: "Zamjenik Predsjednika", path: "/staff/zamjenikPredsjednika" },
-      { name: "Generalni sekretar", path: "/staff/generalniSekretar" },
+      // { name: "Generalni sekretar", path: "/staff/generalniSekretar" },
       { name: "Bivši Predsjednici", path: "/staff/predsjednici" },
       { name: "Izvršni odbor", path: "/staff/izvrsniodbor" },
       { name: "Statutarna Komisija", path: "/staff/komisija" },
@@ -80,7 +80,7 @@ const MainMenuCopy = () => {
     button1Items = [
       { name: "Предсједник", path: "/staff/predsjednik" },
       { name: "Замјеник Предсједника", path: "/staff/zamjenikPredsjednika" },
-      { name: "Генерални секретар", path: "/staff/generalniSekretar" },
+      // { name: "Генерални секретар", path: "/staff/generalniSekretar" },
       { name: "Бивши Предсједници", path: "/staff/predsjednici" },
       { name: "Извршни одбор", path: "/staff/izvrsniodbor" },
       { name: "Статутарна Комисија", path: "/staff/komisija" },
