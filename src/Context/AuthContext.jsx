@@ -80,7 +80,7 @@ export const AuthProvider = ({ children }) => {
         setUser(jwt_decode(data.access));
         localStorage.setItem("authToken", JSON.stringify(data));
       } else if (response.status === 404) {
-          console.error("An error occurred:", error);
+          console.error("An error occurred");
       } else {
         userLogout();
       }
