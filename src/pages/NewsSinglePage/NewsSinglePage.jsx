@@ -19,7 +19,7 @@ const NewsSinglePage = () => {
   if (lang === "latin") {
     CategoriesInfo = [
       {
-        name: "Sve Vijesti",
+        name: "Sve Aktuelnosti",
         path: "/news/",
       },
      
@@ -39,7 +39,7 @@ const NewsSinglePage = () => {
       //     path: "/news/sekretar"
       // },
       {
-        name: "Све Вијести",
+        name: "Све Актуелности",
         path: "/news/",
       },
     ];
@@ -125,7 +125,7 @@ const NewsSinglePage = () => {
             <Categories
               categories={CategoriesInfo}
               title={
-                lang === "latin" ? "KATEGORIJE AKTUELNOSTI" : "КАТЕГОРИЈЕ АКТУЕЛНОСТИ"
+                lang === "latin" ? "KATEGORIJE" : "КАТЕГОРИЈЕ"
               }
             />
           </div>
