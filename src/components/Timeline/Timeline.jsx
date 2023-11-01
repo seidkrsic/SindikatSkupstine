@@ -18,63 +18,58 @@ const Timeline = () => {
   let timelineElements = [
     {
       id: 1,
-      title: "Frontend Developer",
-      location: "Dragontail, Ascana",
-      description:
-        "Converting data to a graphical interface, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that data.",
-      buttonText: "View Frontend Projects",
-      date: "August 2016 - present",
+      title: "Potpisan Kolektivni ugovor ",
+      location: "Podgorica, Crna Gora",
+      description: "U saradnji sa Poslodavcem potpisan je Kolektivni ugovor , kao krovni dokument kojim se uređuju prava i obaveze zaposlenih u Službi Skupštine.", 
+      // buttonText: "View Frontend Projects",
+      date: "",
       icon: "work",
     },
     {
       id: 2,
-      title: "Backend Developer",
-      location: "Skystead, Craonia",
-      description:
-        "Working hand-in-hand with front-end developers by providing the outward facing web application elements server-side logic. Creating the logic to make the web app function properly, and accomplishing this through the use of server-side scripting languages.",
-      buttonText: "View Backend Projects",
-      date: "June 2013 - August 2016",
+      title: "Sastavni dio društvenih tokova ",
+      location: "Podgorica, Crna Gora",
+      description: "Kao ozbiljan član društvene zajednice Sindikalna organizacija Skupštine Crne Gore učesnica je mnogih humanitarnih i sportskih akcija.",
+      // buttonText: "View Backend Projects",
+      date: "",
       icon: "not",
     },
     {
       id: 3,
-      title: "Quality Assurance Engineer",
-      location: "South Warren, Geshington",
-      description:
-        "Assessing the quality of specifications and technical design documents in order to ensure timely, relevant and meaningful feedback.",
-      buttonText: "Company Website",
-      date: "September 2011 - June 2013",
+      title: "Zdravlje na prvom mjestu",
+      location: "Podgorica, Crna Gora",
+      description: "Zahvaljujući požrtvovanosti i incijativnosti rukovodstva Sindikata obezbijeđene su redovne zimnice za sve zaposlene Službi, kao i redovni sistematski pregledi, kako bi se podigla svijest zaposlenih o značaju preventivnih pregleda. ",
+      // buttonText: "Company Website",
+      date: "",
       icon: "work",
     },
     {
       id: 4,
-      title: "Oak Ridge College",
-      location: "South Warren, Geshington",
-      description:
-        "Online Course in Magical Beasts and Wonders of the World - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.",
+      title: "Borba za bolja prava zaposlenih ",
+      location: "Podgorica, Crna Gora",
+      description: "Karatkeristično za rad Sindikata jeste da je 2011. godine zalagajući se za bolja prava zaposlenih, organizovao štrajk u Parlamentu, koji je na kraju rezultirao uvećanjem zarada zaposlenih u Službi Skupštine.",
       buttonText: "Course Certificate",
-      date: "September 2011",
+      date: "",
       icon: "not",
     },
     {
       id: 5,
-      title: "Hawking College",
-      location: "Skystead, Craonia",
-      description:
-        "College - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.",
-      buttonText: "College Projects",
-      date: "2007 - 2011",
+      title: "Osnovan 1992. godine",
+      location: "Podgorica, Crna Gora",
+      description: "Sindikalna organizacija Skupštine Crne Gore, sa preko 30 godina svog kontinuiranog, predstavlja jedan od najstarijih sindikalnih organizacija u Crnoj Gori. ",
+      // buttonText: "College Projects",
+      date: "",
       icon: "work",
     },
-    {
-      id: 6,
-      title: "Marble Hills Grammar School",
-      location: "Dragontail, Ascana",
-      description:
-        "Highschool - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.",
-      date: "2003 - 2007",
-      icon: "not",
-    },
+    // {
+    //   id: 6,
+    //   title: "Marble Hills Grammar School",
+    //   location: "Podgorica, Crna Gora",
+    //   description:
+    //     "Highschool - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.",
+    //   date: "",
+    //   icon: "not",
+    // },
   ];
 
   return (
