@@ -14,7 +14,7 @@ const DocumentHome = ({ document }) => {
         <a href={document.download_link}>
           {lang === "latin" ? document.title : document.title_cyrillic}
         </a>
-        <p>{document.created_eu_time}</p>
+        {/* <p>{document.created_eu_time}</p> */}
       </div>
     </div>
   );

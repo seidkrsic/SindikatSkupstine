@@ -155,12 +155,14 @@ const MainMenuCopy = () => {
           <MenuDropdown
             buttonName={lang === "latin" ? "Sindikat" : "Синдикат"}
             menuItems={button1Items}
-            path="/staff"
+            // path="/staff"
+            path=""
           />
           <MenuDropdown
             buttonName={lang === "latin" ? "Sjednice" : "Сједнице"}
             menuItems={button2Items}
-            path="/session/skupstina"
+            path=""
+            // path="/session/skupstina"
           />
           {user && boardMember ? (
             <MenuDropdown

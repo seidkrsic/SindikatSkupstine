@@ -16,8 +16,8 @@ const Footer = () => {
             <div className="Footer__info-container">
               <p>
                 {lang === "latin"
-                  ? "©2023 Sindikat Skupštine Crne Gore"
-                  : "©2023 Синдикат Скупштине Црне Горе"}
+                  ? "©2023 Sindikalna organizacija Crne Gore"
+                  : "©2023 Синдикална организација Црне Горе"}
               </p>
               <p>
                 {lang === "latin"
@@ -31,13 +31,13 @@ const Footer = () => {
           <div className="Footer__container-top__col">
             <h1>{lang === "latin" ? "Dokumenta" : "Документа"}</h1>
             <Link>
-              {lang === "latin" ? "Statut Sindikata" : "Статут Синдиката"}
-            </Link>
-            <Link>
-              {lang === "latin" ? "Poslovnik o Radu" : "Пословник о Раду"}
-            </Link>
-            <Link>
               {lang === "latin" ? "Ustav Crne Gore" : "Устав Црне Горе"}
+            </Link>
+            <Link>
+              {lang === "latin" ? "Poslovnik Skupštine Crne Gore" : "Пословник Скупштине Црне Горе"}
+            </Link>
+            <Link>
+              {lang === "latin" ? "Statut" : "Статут"}
             </Link>
           </div>
           <div className="Footer__container-top__col">
@@ -55,8 +55,8 @@ const Footer = () => {
         </p>
         <p>
           {lang === "latin"
-            ? "tel: +382 20 404 513 email: press@skupstina.me"
-            : "тел: +382 20 404 513 емаил: press@skupstina.me"}
+            ? "e-mail: sindikat@skupstina.me"
+            : "е-маил: sindikat@skupstina.me"}
         </p>
       </div>
     </div>
