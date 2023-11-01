@@ -129,8 +129,7 @@ const StaffSinglePage = () => {
               />
             )}
           </div>
-          { staff?.active_role && (staff?.active_role[0] === "Bivši predsjednik" || staff?.active_role[1] === "Бивши предсједник" ?
-            <></> :
+          { (staff?.active_role[0] !== "Bivši predsjednik" || staff?.active_role[1] !== "Бивши предсједник") && (
             <div className="StaffSinglePage__contact-info">
             
                 <div>
@@ -139,9 +138,7 @@ const StaffSinglePage = () => {
                 </div>
                 <div>
                   {lang === "latin" ? "Mejl:" : "Мејл:"} <Link>{staff?.email}</Link>
-                </div> : 
-              
-              
+                </div>
             </div> )
           }
         </div>
