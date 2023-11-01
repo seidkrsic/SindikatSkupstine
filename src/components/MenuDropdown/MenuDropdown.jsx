@@ -6,6 +6,7 @@ const MenuDropdown = ({ buttonName, menuItems, path }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [ishovered, setIshovered] = useState(false);
   const [ishoveredLine, setIshoveredLine] = useState(false);
+  let PATH = path;
 
   const handleToggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const handleMouseEnter = () => {
@@ -26,8 +27,8 @@ const MenuDropdown = ({ buttonName, menuItems, path }) => {
   return (
     <>
       <li>
-        <Link
-          to={path}
+        <Link 
+          to={path === "" ? null : path}
           className="MenuDropdown__main-links"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
