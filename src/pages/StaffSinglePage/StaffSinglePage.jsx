@@ -5,6 +5,8 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import StaffCard from "../../components/StaffCard/StaffCard";
 import AuthContext from "../../Context/AuthContext";
 import "../StaffSinglePage/StaffSinglePage.css";
+import parse from "html-react-parser";
+
 
 const StaffSinglePage = () => {
   let CategoriesInfo;
