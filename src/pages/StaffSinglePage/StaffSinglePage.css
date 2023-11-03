@@ -49,15 +49,13 @@
 
 .StaffSinglePage__container-left p { 
     height: fit-content;
-    min-height: 40vh;
+    /* min-height: 40vh; */
     max-height: 90%;
     width: 90%;
     text-align: justify;
     height: 90%;
     line-height: 1.5;
-    margin: 0 !important;
-    border: 1px solid violet;
-    padding: 0 !important;
+   
    
 }
 
