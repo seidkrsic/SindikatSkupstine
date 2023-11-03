@@ -18,15 +18,15 @@ const ImageSlider = ({ slides }) => {
       }
 
     } else if (screenWidth >= 768 && screenWidth < 1024) {
-      if (title?.length > 35) { 
-        return title?.slice(0, 35) + "..."; // Slice to 40 characters on tablet screens
+      if (title?.length > 50) { 
+        return title?.slice(0, 50) + "..."; // Slice to 40 characters on tablet screens
 
       } else {  
         return title 
       }
     } else {
-      if(title?.length > 50) { 
-        return title?.slice(0, 50) + "..."; // Display the full title on desktop screens
+      if(title?.length > 80) { 
+        return title?.slice(0, 80) + "..."; // Display the full title on desktop screens
 
       } else { 
         return title 
