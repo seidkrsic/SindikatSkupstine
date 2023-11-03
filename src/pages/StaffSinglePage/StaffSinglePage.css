@@ -55,8 +55,9 @@
     text-align: justify;
     height: 90%;
     line-height: 1.5;
-    margin-bottom: 0 !important;
-    /* border: 1px solid violet; */
+    margin: 0 !important;
+    border: 1px solid violet;
+    padding: 0 !important;
    
 }
 
