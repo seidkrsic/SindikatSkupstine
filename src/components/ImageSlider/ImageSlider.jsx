@@ -10,7 +10,7 @@ const ImageSlider = ({ slides }) => {
     const screenWidth = window.innerWidth;
 
     if (screenWidth < 768) {
-      if (title.length > 45) { 
+      if (title?.length > 45) { 
         return title?.slice(0, 45) + "..."; // Slice to 20 characters on mobile screens
 
       } else { 
@@ -18,14 +18,14 @@ const ImageSlider = ({ slides }) => {
       }
 
     } else if (screenWidth >= 768 && screenWidth < 1024) {
-      if (title.length > 35) { 
+      if (title?.length > 35) { 
         return title?.slice(0, 35) + "..."; // Slice to 40 characters on tablet screens
 
       } else {  
         return title 
       }
     } else {
-      if(title.length > 50) { 
+      if(title?.length > 50) { 
         return title?.slice(0, 50) + "..."; // Display the full title on desktop screens
 
       } else { 
@@ -38,7 +38,7 @@ const ImageSlider = ({ slides }) => {
     const screenWidth = window.innerWidth;
 
     if (screenWidth < 768) {
-      if (title.length > 65) { 
+      if (title?.length > 65) { 
         return title?.slice(0, 65) + "..."; // Slice to 20 characters on mobile screens
       }
       else { 
@@ -46,7 +46,7 @@ const ImageSlider = ({ slides }) => {
       }
 
     } else if (screenWidth >= 768 && screenWidth < 1024) {
-      if (title.length > 200) { 
+      if (title?.length > 200) { 
         return title?.slice(0, 200) + "..."; // Slice to 40 characters on tablet screens
       } 
       else { 
@@ -54,7 +54,7 @@ const ImageSlider = ({ slides }) => {
       }
 
     } else {
-      if (title.length > 200) { 
+      if (title?.length > 200) { 
         return title?.slice(0, 200) + "..."; // Display the full title on desktop screens
       }
       else { 
