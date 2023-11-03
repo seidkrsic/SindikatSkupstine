@@ -17,13 +17,13 @@ const ListDocumentsPage = () => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${authToken?.access}`,
+          Authorization: `Bearer ${authToken.access}`,
         },
       });
-
+      console.log(response.ok)
       if (response.ok) {
         let data = await response.json();
-        console.log(data);
+        
         if (data.length === 0) { 
           setDocuments([]);
         } else { 
