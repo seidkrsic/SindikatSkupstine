@@ -78,6 +78,7 @@
 .noBottom-margin { 
     padding-bottom: 0;
     display: flex;
+    margin-top: 4rem;
 }
 
 .additional-margin__left { 
