@@ -6,6 +6,7 @@ import AuthContext from "../../Context/AuthContext";
 import "./ImageSlider.css";
 
 const ImageSlider = ({ slides }) => {
+  
   const sliceTitle = (title) => {
     const screenWidth = window.innerWidth;
 
@@ -25,8 +26,8 @@ const ImageSlider = ({ slides }) => {
         return title 
       }
     } else {
-      if(title?.length > 80) { 
-        return title?.slice(0, 80) + "..."; // Display the full title on desktop screens
+      if(title?.length > 60) { 
+        return title?.slice(0, 60) + "..."; // Display the full title on desktop screens
 
       } else { 
         return title 
@@ -54,8 +55,8 @@ const ImageSlider = ({ slides }) => {
       }
 
     } else {
-      if (title?.length > 200) { 
-        return title?.slice(0, 200) + "..."; // Display the full title on desktop screens
+      if (title?.length > 180) { 
+        return title?.slice(0, 180) + "..."; // Display the full title on desktop screens
       }
       else { 
         return title // Display the full title on desktop screens

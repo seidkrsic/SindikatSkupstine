@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useLayoutEffect } from "react";
 import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import pdfdownload from "../../images/pdf.png";
@@ -38,8 +38,14 @@ const ListDocumentsPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+  }, []);
+
+  useLayoutEffect(() => {
     getDocs();
   }, []);
+
+
 
   return (
     <div className="ListDocumentsPage__container-main">
