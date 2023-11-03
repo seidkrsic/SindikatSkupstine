@@ -12,12 +12,12 @@ const ListDocumentsPage = () => {
 
   const getDocs = async () => {
     try {
-      console.log(`Bearer ${String(authToken?.access)}`)
+      console.log(`Bearer ${authToken?.access}`)
       let response = await fetch("http://apisindikat.skupstina.me/api/important/", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${String(authToken?.access)}`,
+          Authorization: `Bearer ${authToken?.access}`,
         },
       });
 
