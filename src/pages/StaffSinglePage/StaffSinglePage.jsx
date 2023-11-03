@@ -118,12 +118,12 @@ const StaffSinglePage = () => {
 
         <div className="StaffSinglePage__container-left">
           <h2>{lang === "latin" ? "Biografija" : "Биографија"}</h2>
-          <p>{parse(
+          {parse(
                   String(
                     lang === "latin" ? staff?.bio : staff?.bio_cyrillic
                   )
                 )}
-          </p>
+          
         </div>
         <div className="StaffSinglePage__container-right">
           <div className="StaffSinglePage__card-container">
