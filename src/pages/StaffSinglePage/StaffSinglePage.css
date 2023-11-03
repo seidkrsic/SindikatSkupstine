@@ -55,6 +55,7 @@
     text-align: justify;
     height: 90%;
     line-height: 1.5;
+    margin-bottom: 0 !important;
     /* border: 1px solid violet; */
    
 }
@@ -137,10 +138,7 @@
 
 }
 
-.StaffSinglePage__container-left p { 
-    padding: 0 !important; 
-    margin: 0 !important;
-}
+
 
 
 
