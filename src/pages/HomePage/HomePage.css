@@ -91,7 +91,8 @@
 .HomePage__doc-container { 
     width: 100%;
     height: fit-content;
-    margin-top: 2rem;
+    margin-top: 8rem;
+    border: 1px solid brown;
 }
 
 /* .HomePage__doc-container a { 
