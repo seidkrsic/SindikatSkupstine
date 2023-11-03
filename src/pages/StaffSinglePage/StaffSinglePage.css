@@ -137,6 +137,13 @@
 
 }
 
+.StaffSinglePage__container-left p { 
+    padding: 0; 
+    margin: 0;
+}
+
+
+
 .border-bottom__onlyOneElement { 
     border-bottom: 1px solid gainsboro;
 }
