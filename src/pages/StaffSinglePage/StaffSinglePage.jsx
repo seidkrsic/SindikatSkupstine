@@ -120,7 +120,7 @@ const StaffSinglePage = () => {
           <h2>{lang === "latin" ? "Biografija" : "Биографија"}</h2>
           {parse(
                   String(
-                    lang === "latin" ? staff?.bio : staff?.bio_cyrillic
+                    lang === "latin" ? staff?.nice_bio : staff?.bio_cyrillic
                   )
                 )}
           

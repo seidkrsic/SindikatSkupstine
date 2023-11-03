@@ -91,6 +91,7 @@
 .HomePage__doc-container { 
     width: 100%;
     height: fit-content;
+    margin-top: 2rem;
 }
 
 /* .HomePage__doc-container a { 
