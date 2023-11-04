@@ -93,15 +93,24 @@ const NewsSinglePage = () => {
 
                     <div className="Gallery__container-singleStaff__page">
                       {News["gallery"].length <= 2 ? (
-                        <>
+                        <> 
+                        {News["gallery"].length == 2 ?  
+                        <div>
                           <img
                             src={News["gallery"][0]?.image_url}
                             alt="galery_photo"
-                          />
+                          /> 
                           <img
                             src={News["gallery"][1]?.image_url}
                             alt="galery_photo"
                           />
+                        </div> : 
+                        <img
+                          src={News["gallery"][0]?.image_url}
+                          alt="galery_photo"
+                          /> 
+
+                        }
                         </>
                       ) : (
                         <>
