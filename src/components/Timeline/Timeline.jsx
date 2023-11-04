@@ -49,7 +49,7 @@ const Timeline = () => {
       location: "Podgorica, Crna Gora",
       location_cyrillic: "Подгорица, Црна Гора",
       description: "Zahvaljujući požrtvovanosti i incijativnosti rukovodstva Sindikata obezbijeđene su redovne zimnice za sve zaposlene Službi, kao i redovni sistematski pregledi, kako bi se podigla svijest zaposlenih o značaju preventivnih pregleda.",
-      description_cyrillic: "Захваљујуuћи пожртвованости и инцијативности руководства Синдиката обезбијеђене су редовне зимнице за све запослене Служби, као и редовни систематски прегледи, како би се подигла свијест запослених о значају превентивних pregleda.",
+      description_cyrillic: "Захваљуjући пожртвованости и инцијативности руководства Синдиката обезбијеђене су редовне зимнице за све запослене Служби, као и редовни систематски прегледи, како би се подигла свијест запослених о значају превентивних pregleda.",
       date: "",
       icon: "work",
     },
@@ -71,7 +71,13 @@ const Timeline = () => {
       title_cyrillic: "Основан 1992. године",
       location: "Podgorica, Crna Gora",
       location_cyrillic: "Подгорица, Црна Гора",
-      description: "Sindikalna organizacija Skupštine Crne Gore, sa preko 30
+      description: "Sindikalna organizacija Skupštine Crne Gore, sa preko 30 godina svog kontinuiranog, predstavlja jedan od najstarijih sindikalnih organizacija u Crnoj Gori.",
+      description_cyrillic: "Синдикална организација Скупштине Црне Горе, са преко 30 година свог континуираног, представља један од најстаријих синдикалних организација у Црној Гори.",
+      date: "",
+      icon: "work",
+    },
+  ];
+
   
   
 
@@ -90,10 +96,10 @@ const Timeline = () => {
               icon={<MneIcon />}
             >
               <h3 className="vertical-timeline-element-title">
-                { lang === "latin" ? element.title : element.title_cyrillic}
+                { lang === "latin" ? element.title : element.title_cyrillic }
               </h3>
               <h5 className="vertical-timeline-element-subtitle">
-                { lang === "latin" ? element.location : element.location_cyrillic}
+                {lang === "latin" ? element.location : element.location_cyrillic}
               </h5>
               <p id="description">{ lang === "latin" ? element.description : element.description_cyrillic}</p>
             </VerticalTimelineElement>
