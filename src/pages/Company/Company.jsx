@@ -59,9 +59,10 @@ const Company = () => {
             companies.map((item, index) => (
               <tr key={index}>
                 <td>
-                  {lang === "latin"
+                  {/* {lang === "latin"
                     ? item?.company_name
-                    : item?.company_name_cyrillic}
+                    : item?.company_name_cyrillic} */}
+                    {item?.company_name}
                 </td>
                 <td>
                   {lang === "latin"
