@@ -149,6 +149,9 @@
     /* border: 1px solid violet; */
  
 }
+.SinglePageNews__photoGallery-container img  { 
+    margin-left: 1rem !important;
+}
 
 .GalleryFont-header { 
     text-transform: uppercase;
