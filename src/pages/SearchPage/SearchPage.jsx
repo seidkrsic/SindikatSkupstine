@@ -19,7 +19,7 @@ const SearchPage = () => {
               <FeaturedNewsCard
                 key={result?.id}
                 url={result?.image_url}
-                title={result?.title}
+                title={result?.nice_title}
                 title_cyrillic={result?.title_cyrillic}
                 date={result?.created_eu_time}
                 id={result?.id}

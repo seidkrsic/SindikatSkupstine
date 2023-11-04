@@ -76,10 +76,10 @@ const NewsSinglePage = () => {
                 </div>
               </div>
               <div className="SingleNewsPage__info-container">
-                <h1>{lang === "latin" ? News.title : News.title_cyrillic}</h1>
+                <h1>{lang === "latin" ? News.nice_title : News.title_cyrillic}</h1>
                 {parse(
                   String(
-                    lang === "latin" ? News.content : News.content_cyrillic
+                    lang === "latin" ? News.nice_content : News.content_cyrillic
                   )
                 )}
               </div>

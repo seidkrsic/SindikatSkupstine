@@ -6,7 +6,7 @@ import AuthContext from "../../Context/AuthContext";
 import "./ImageSlider.css";
 
 const ImageSlider = ({ slides }) => {
-  
+
   const sliceTitle = (title) => {
     const screenWidth = window.innerWidth;
 
@@ -140,11 +140,11 @@ const ImageSlider = ({ slides }) => {
         <Link to={"/news/" + slides[currentIndex]?.id} className="NewInfo">
           <h1>
             {lang === "latin"
-              ? sliceTitle(slides[currentIndex]?.title)
+              ? sliceTitle(slides[currentIndex]?.nice_title)
               : sliceTitle(slides[currentIndex]?.title_cyrillic)}
           </h1>
           {lang === "latin"
-            ? parse(String(sliceContent(slides[currentIndex]?.content)))
+            ? parse(String(sliceContent(slides[currentIndex]?.nice_content)))
             : parse(
                 String(sliceContent(slides[currentIndex]?.content_cyrillic))
               )}

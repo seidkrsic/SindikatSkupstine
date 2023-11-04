@@ -48,7 +48,7 @@ const NewsPage = () => {
               <FeaturedNewsCard
                 key={card?.id}
                 url={card?.image_url}
-                title={card?.title}
+                title={card?.nice_title}
                 title_cyrillic={card?.title_cyrillic}
                 date={card?.created_eu_time}
                 id={card?.id}
