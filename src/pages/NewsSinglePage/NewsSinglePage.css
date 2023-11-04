@@ -88,6 +88,7 @@
 .SingleNewsPage__info-container p { 
     text-align: justify;
     line-height: 150%;
+    font-size: 20px;
 }
 
 
