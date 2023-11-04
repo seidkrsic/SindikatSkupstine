@@ -151,6 +151,7 @@
 }
 .SinglePageNews__photoGallery-container img  { 
     margin-right: 1rem !important;
+    object-fit: cover;
 }
 
 .GalleryFont-header { 
