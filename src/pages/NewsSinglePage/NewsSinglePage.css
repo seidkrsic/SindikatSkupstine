@@ -80,7 +80,7 @@
     width: 100%;
     text-align: justify;
     margin-bottom: 1rem;
-    font-size: 25px;
+    font-size: 28px;
     color: darkred;
  
 }
@@ -88,7 +88,7 @@
 .SingleNewsPage__info-container p { 
     text-align: justify;
     line-height: 150%;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 
