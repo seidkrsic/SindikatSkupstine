@@ -19,11 +19,11 @@ const StaffSinglePage = () => {
         path: "/staff/izvrsniodbor",
       },
       {
-        name: "Bivši Predsjednici",
+        name: "Bivši predsjednici",
         path: "/staff/predsjednici",
       },
       {
-        name: "Statutarna Komisija",
+        name: "Statutarna komisija",
         path: "/staff/komisija",
       },
     ];
@@ -34,11 +34,11 @@ const StaffSinglePage = () => {
         path: "/staff/izvrsniodbor",
       },
       {
-        name: "Бивши Предсједници",
+        name: "Бивши предсједници",
         path: "/staff/predsjednici",
       },
       {
-        name: "Статутарна Комисија",
+        name: "Статутарна комисија",
         path: "/staff/komisija",
       },
     ];
