@@ -19,7 +19,7 @@ const NewsSinglePage = () => {
   if (lang === "latin") {
     CategoriesInfo = [
       {
-        name: "Sve Aktuelnosti",
+        name: "Sve aktuelnosti",
         path: "/news/",
       },
      
@@ -39,7 +39,7 @@ const NewsSinglePage = () => {
       //     path: "/news/sekretar"
       // },
       {
-        name: "Све Актуелности",
+        name: "Све актуелности",
         path: "/news/",
       },
     ];
