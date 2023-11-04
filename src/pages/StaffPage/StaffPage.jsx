@@ -22,11 +22,11 @@ const StaffPage = () => {
         path: "/staff/izvrsniodbor",
       },
       {
-        name: "Bivši Predsjednici",
+        name: "Bivši predsjednici",
         path: "/staff/predsjednici",
       },
       {
-        name: "Statutarna Komisija",
+        name: "Statutarna komisija",
         path: "/staff/komisija",
       },
     ];
@@ -37,11 +37,11 @@ const StaffPage = () => {
         path: "/staff/izvrsniodbor",
       },
       {
-        name: "Бивши Предсједници",
+        name: "Бивши предсједници",
         path: "/staff/predsjednici",
       },
-      {
-        name: "Статутарна Комисија",
+      {  
+        name: "Статутарна комисија",
         path: "/staff/komisija",
       },
     ];
@@ -62,8 +62,8 @@ const StaffPage = () => {
           }
         );
         let data = await response.json();
-        setRole(lang === "latin" ? "Izvršni Odbor" : "Извршни Одбор");
-        setRoleHeader(lang === "latin" ? "Izvršni Odbor" : "Извршни Одбор");
+        setRole(lang === "latin" ? "Izvršni odbor" : "Извршни oдбор");
+        setRoleHeader(lang === "latin" ? "Izvršni odbor" : "Извршни oдбор");
 
         setStaff(data);
       };
@@ -79,10 +79,10 @@ const StaffPage = () => {
         );
         let data = await response.json();
         setRole(
-          lang === "latin" ? "Statutarna Komisija" : "Статутарна Комисија"
+          lang === "latin" ? "Statutarna komisija" : "Статутарна комисија"
         );
         setRoleHeader(
-          lang === "latin" ? "Statutarna Komisija" : "Статутарна Комисија"
+          lang === "latin" ? "Statutarna komisija" : "Статутарна комисија"
         );
         setStaff(data);
       };
@@ -97,9 +97,9 @@ const StaffPage = () => {
           }
         );
         let data = await response.json();
-        setRole(lang === "latin" ? "Bivši Predsjednik" : "Бивши Предсједник");
+        setRole(lang === "latin" ? "Bivši predsjednik" : "Бивши предсједник");
         setRoleHeader(
-          lang === "latin" ? "Bivši Predsjednici" : "Бивши Предсједници"
+          lang === "latin" ? "Bivši predsjednici" : "Бивши предсједници"
         );
         setStaff(data);
       };
