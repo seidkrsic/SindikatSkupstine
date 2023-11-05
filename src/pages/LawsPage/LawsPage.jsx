@@ -77,7 +77,7 @@ const LawsPage = () => {
     window.scrollTo(0, 0);
     getDocuments()
     
-  }, []);
+  }, [location]);
 
   return (
     <div className='LawsPage__main-container'>
