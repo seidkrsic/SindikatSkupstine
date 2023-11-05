@@ -224,6 +224,7 @@
         top: 10px;
         box-shadow: none;
         background-color: #AB0707;
+        
     }
 
     
@@ -283,7 +284,7 @@
 
     .HomePage__doc-container { 
         width: 100% !important;
-        /* margin: 0 1rem; */
+        margin: 1rem 0 !important;
    
     }
 
@@ -347,9 +348,7 @@
         
     }
 
-    .noBottom-margin { 
-        margin-top: 2rem !important;
-    }
+    
 
     
 }   
