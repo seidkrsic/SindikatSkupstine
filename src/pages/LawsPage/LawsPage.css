@@ -29,7 +29,7 @@
     height: fit-content;
     display: flex;
     width: 90%;
-    min-height: 2rem;
+    min-height: 4rem;
     flex-direction: row;
     background-color: #f4f2ec;
     margin: .5rem auto;
