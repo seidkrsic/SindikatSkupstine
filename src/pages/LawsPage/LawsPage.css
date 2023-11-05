@@ -67,6 +67,13 @@
     height: 80%;
 }
 
+.LawsPage__document-containerdocument-container img { 
+    width: 5%;
+    height: 100%;
+    max-height: 50px;
+    margin: auto;
+}
+
 .LawsPage__text-container p { 
     display: flex;
     margin: .5rem !important;
@@ -76,4 +83,8 @@
     text-decoration: underline;
     padding: 0 !important;
 
+}
+
+.LawsPage__text-container p:hover { 
+    color: #AB0707;
 }
