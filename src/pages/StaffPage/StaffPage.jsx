@@ -5,6 +5,7 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import StaffCard from "../../components/StaffCard/StaffCard";
 import AuthContext from "../../Context/AuthContext";
 import "../StaffPage/StaffPage.css";
+import salon from "../../images/salon5.jpg"
 
 const StaffPage = () => {
   const [staff, setStaff] = useState([]);
@@ -137,7 +138,7 @@ const StaffPage = () => {
 
   return (
     <div className="StaffPage__container-Big">
-      <HeaderPhoto image_url={null} page_name={roleHeader} />
+      <HeaderPhoto image_url={salon} page_name={roleHeader} />
 
       <div className="StaffPage__container">
         <div className="StaffPage__staff-main">

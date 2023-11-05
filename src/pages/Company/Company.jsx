@@ -3,7 +3,7 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import pdfdownload from "../../images/pdf.png";
 import "../Company/Company.css";
-
+import salon from "../../images/salon1.jpg"
 
 const Company = () => {
   const { user } = useContext(AuthContext);
@@ -34,7 +34,7 @@ const Company = () => {
         page_name={
           lang === "latin" ? "Ugovori sa Firmama" : "Уговори са Фирмама"
         }
-        image_url={null}
+        image_url={salon}
       />
       <table border="1" className="gold-table">
         <thead>

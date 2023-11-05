@@ -4,6 +4,9 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import logo from "../../images/Artboard.png";
 import "./ContactPage.css";
+import salon from "../../images/salon1.jpg"
+
+
 
 const ContactPage = () => {
   const { lang } = useContext(AuthContext);
@@ -30,7 +33,7 @@ const ContactPage = () => {
 
   return (
     <div className="Contact__container-main">
-      <HeaderPhoto page_name={lang === "latin" ? "Kontakt" : "Контакт"} image_url={null} />
+      <HeaderPhoto page_name={lang === "latin" ? "Kontakt" : "Контакт"} image_url={salon} />
       <div className="Contact__container">
         <div className="Contact__info-container">
           <h1>{lang === "latin" ? "Naša Lokacija" : "Наша Локација"}</h1>

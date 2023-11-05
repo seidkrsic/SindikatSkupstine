@@ -6,7 +6,7 @@ import StaffCard from "../../components/StaffCard/StaffCard";
 import AuthContext from "../../Context/AuthContext";
 import "../StaffSinglePage/StaffSinglePage.css";
 import parse from "html-react-parser";
-
+import salon from "../../images/salon5.jpg"
 
 const StaffSinglePage = () => {
   let CategoriesInfo;
@@ -116,7 +116,7 @@ const StaffSinglePage = () => {
 
   return (
     <div className="StaffSinglePage__container-main">
-      <HeaderPhoto image_url={null}
+      <HeaderPhoto image_url={salon}
         page_name={lang === "latin" ? staff?.name : staff?.name_cyrillic}
       />
       <div className="StaffSinglePage__container">
