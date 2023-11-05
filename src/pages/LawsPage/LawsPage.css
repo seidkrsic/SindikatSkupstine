@@ -22,10 +22,56 @@
     
 }
 
+
+
+.LawsPage__left-container a { 
+    text-decoration: none !important;
+    height: fit-content;
+}
+
+.LawsPage__document-container { 
+    display: flex;
+    flex-direction: row; 
+    min-height: fit-content;
+    height: fit-content;
+    width: 70%;
+    margin: 0.5rem auto;
+    align-items: center;
+    text-decoration: none;
+    background-color: #f4f2ec;
+}
+
+.LawsPage__document-container:first-child { 
+    margin-top: 1rem;
+}
+
+.LawsPage__document-container:last-child { 
+    margin-bottom: 1rem;
+}
+
+
 .LawsPage__right-container { 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     margin: 1rem auto;
     min-height: 40vh;
+}
+
+.LawsPage__text-container { 
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+}
+
+.LawsPage__text-container p { 
+    display: flex;
+    margin: .5rem !important;
+    color: black;
+    height: 90%;
+    font-size: 15px;
+    text-decoration: underline;
+    padding: 0 !important;
+
 }

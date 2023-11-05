@@ -95,27 +95,28 @@ const LawsPage = () => {
         image_url={null}
       />
     <div className='LawsPage__container'>
+        <h1>{filter}</h1>
         <div className='LawsPage__left-container'>
-            <h1>{filter}</h1>
-            <div> 
+            <div className='LawsPage__document-container'>
             {
                 documents.map( (item) => 
                 <a
-                    href={item.download_link}
-                    key={item.id}
+                    href={item?.download_link}
+                    key={item?.id}
                     className=""
                     >
                     <img src={pdfdownload} alt="pdf" />
-                    <div className="">
-                    <p>{lang === "latin" ? item.title : item.title_cyrillic}</p>
-                    <p className="">{item.created_eu_time}</p>
+                    <div className="LawsPage__text-container">
+                    <p>{lang === "latin" ? item?.title : item?.title_cyrillic}</p>
+                    <p className="">{item?.created_eu_time}</p>
                     </div>
                 </a>
                 )
                 
             }
-
             </div>
+
+            
         </div>
 
         <div className='LawsPage__right-container'>
