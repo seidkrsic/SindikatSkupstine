@@ -1,5 +1,5 @@
 import React from 'react'
-import "../LawsPage.css" 
+import "./LawsPage.css" 
 
 const LawsPage = () => {
   return (
