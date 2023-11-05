@@ -3,7 +3,7 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import pdfdownload from "../../images/pdf.png";
 import "../Company/Company.css";
-import salon from "../../images/salon1.jpg"
+import salon from "../../images/salon3.jpg"
 
 const Company = () => {
   const { user } = useContext(AuthContext);

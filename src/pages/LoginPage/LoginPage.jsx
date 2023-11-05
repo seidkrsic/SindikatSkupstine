@@ -3,6 +3,8 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import logo from "../../images/Artboard.png";
 import "../LoginPage/LoginPage.css";
+import salon from "../../images/salon3.jpg"
+
 
 const LoginPage = () => {
   useEffect(() => {
@@ -13,7 +15,7 @@ const LoginPage = () => {
 
   return (
     <div className="LoginPage__container">
-      <HeaderPhoto page_name={"PRIJAVA KORISNIKA"} image_url={null} />
+      <HeaderPhoto page_name={"PRIJAVA KORISNIKA"} image_url={salon} />
       <div className="LoginPage__img-container">
         <img src={logo} alt="" />
       </div>

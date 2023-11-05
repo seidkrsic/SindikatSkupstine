@@ -5,6 +5,7 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import pdfdownload from "../../images/pdf.png";
 import "./Session.css";
+import salon from "../../images/salon3.jpg"
 
 const Session = () => {
   const location_id = useParams().id;
@@ -103,9 +104,9 @@ const Session = () => {
   return (
     <div className="Session__container-main">
       {skupstina ? (
-        <HeaderPhoto image_url={null} page_name={lang === "latin" ? "Skupština" : "Скупштинa"} />
+        <HeaderPhoto image_url={salon} page_name={lang === "latin" ? "Skupština" : "Скупштинa"} />
       ) : (
-        <HeaderPhoto image_url={null}
+        <HeaderPhoto image_url={salon}
           page_name={lang === "latin" ? "Izvršni Odbor" : "Извршни Одбор"}
         />
       )}

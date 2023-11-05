@@ -6,6 +6,7 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import NewsGallery from "../../components/NewsGallery/NewsGallery";
 import AuthContext from "../../Context/AuthContext";
 import "../NewsSinglePage/NewsSinglePage.css";
+import salon from "../../images/salon3.jpg"
 
 const NewsSinglePage = () => {
   let [News, setNews] = useState({});
@@ -60,7 +61,7 @@ const NewsSinglePage = () => {
 
   return (
     <div className="SingleNewsPage__container-main">
-      <HeaderPhoto image_url={null} page_name={lang === "latin" ? "AKTUELNOSTI" : "АКТУЕЛНОСТИ"} />
+      <HeaderPhoto image_url={salon} page_name={lang === "latin" ? "AKTUELNOSTI" : "АКТУЕЛНОСТИ"} />
       {News && (
         <div className="SingleNewsPage__container">
           <div className="SingleNewsPage__container-left">

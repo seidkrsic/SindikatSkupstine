@@ -3,6 +3,7 @@ import FeaturedNewsCard from "../../components/FeaturedNewsCard/FeaturedNewsCard
 import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import "./SearchPage.css";
+import salon from "../../images/salon3.jpg"
 
 const SearchPage = () => {
   const { searchResults } = useContext(AuthContext);
@@ -10,7 +11,7 @@ const SearchPage = () => {
 
   return (
     <div className="SearchPage__container-main">
-      <HeaderPhoto image_url={null} page_name={lang === "latin" ? "Rezultati Pretrage" : "Резултати Претраге"} />
+      <HeaderPhoto image_url={salon} page_name={lang === "latin" ? "Rezultati Pretrage" : "Резултати Претраге"} />
       <div className="SearchPage__container">
         <h1 className="SearchPage__heading">{ lang === "latin" ? "Rezultati:" : "Резултати:" }</h1>
         <div className="SearchPage__container-left">

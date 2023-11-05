@@ -3,6 +3,9 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import pdfdownload from "../../images/pdf.png";
 import "./ListDocumentsPage.css";
+import salon from "../../images/salon3.jpg"
+
+
 
 const ListDocumentsPage = () => {
   const { authToken } = useContext(AuthContext);
@@ -51,7 +54,7 @@ const ListDocumentsPage = () => {
   return (
     <div className="ListDocumentsPage__container-main">
       <HeaderPhoto
-        image_url={null}
+        image_url={salon}
         page_name={
           lang === "latin" ? "Izvještaji i dokumenta" : "Извјештаји и Документа"
         }
