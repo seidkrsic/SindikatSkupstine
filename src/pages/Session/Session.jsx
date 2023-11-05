@@ -25,7 +25,7 @@ const Session = () => {
         path: "/session/skupstina",
       },
       {
-        name: "Sjednice Izvršnog Odbora",
+        name: "Sjednice Izvršnog odbora",
         path: "/session/izvrsni_odbor",
       },
     ];
@@ -36,7 +36,7 @@ const Session = () => {
         path: "/session/skupstina",
       },
       {
-        name: "Сједнице Извршног Одбора",
+        name: "Сједнице Извршног oдбора",
         path: "/session/izvrsni_odbor",
       },
     ];

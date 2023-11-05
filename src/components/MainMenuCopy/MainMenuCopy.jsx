@@ -62,6 +62,7 @@ const MainMenuCopy = () => {
 
   let button1Items;
   let button2Items;
+  let button3Items;
   if (lang === "latin") {
     button1Items = [
       { name: "Predsjednik", path: "/saziv/predsjednik" },
@@ -75,6 +76,13 @@ const MainMenuCopy = () => {
     button2Items = [
       { name: "Sjednice Skupštine", path: "/session/skupstina" },
       { name: "Sjednice Izvršnog odbora", path: "/session/izvrsni_odbor" },
+    ];
+
+    button3Items = [
+      { name: "Akti SOSCG", path: "/zakoni/akti" },
+      { name: "Zakoni i drugi akti", path: "/zakoni/opsti_akti"},
+      { name: "Formulari i obrasci", path: "/zakoni/formulari"},
+      
     ];
   } else {
     button1Items = [
@@ -90,6 +98,13 @@ const MainMenuCopy = () => {
       { name: "Сједнице Скупштине", path: "/session/skupstina" },
       { name: "Сједнице Извршног oдбора", path: "/session/izvrsni_odbor" },
     ];
+
+    button3Items = [
+      { name: "Акти СОСЦГ", path: "/zakoni/akti" },
+      { name: "Закони и други акти", path: "/zakoni/opsti_akti" },
+      { name: "Формулари и обрасци", path: "/zakoni/formulari" },
+    ];
+    
   }
 
   const setLatin = () => {
@@ -172,6 +187,12 @@ const MainMenuCopy = () => {
           ) : (
             <></>
           )}
+
+          <MenuDropdown
+            buttonName={lang === "latin" ? "Zakoni" : "Закони"}
+            path="/zakoni"
+            menuItems={button3Items}
+          />
 
           <MenuDropdown
             buttonName={lang === "latin" ? "Pogodnosti" : "Погодности"}

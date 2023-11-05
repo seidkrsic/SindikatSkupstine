@@ -51,7 +51,7 @@ function App() {
               <Route path="/news/predsjednik" element={<NewsPage />} />
               <Route path="/news/zamjenikPredsjednika" element={<NewsPage />} />
               <Route path="/news/:id" element={<NewsSinglePage />} />
-              {/* <Route path="/staff" element={<StaffPage />} /> */}
+              <Route path="/zakoni" element={<LawsPage />} />
               <Route path="/saziv/izvrsniodbor" element={<StaffPage />} />
               <Route path="/saziv/nadzorniodbor" element={<StaffPage />} />
               <Route path="/saziv/komisija" element={<StaffPage />} />
