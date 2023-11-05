@@ -4,7 +4,7 @@ import FeaturedNewsCard from "../../components/FeaturedNewsCard/FeaturedNewsCard
 import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import "../NewsPage/NewsPage.css";
-import salon from "../../images/salon1.jpg"
+import salon from "../../images/salon1.jpeg"
 
 const NewsPage = () => {
   const { lang } = useContext(AuthContext);
