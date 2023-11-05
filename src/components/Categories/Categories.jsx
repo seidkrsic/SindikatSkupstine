@@ -3,7 +3,7 @@ import "../Categories/Categories.css";
 import { Link } from "react-router-dom";
 
 const Categories = ({ categories, title }) => {
-  console.log(categories);
+
   return (
     <div className="Categories__main-container">
       <h1 className="Categories__heading">{title}</h1>

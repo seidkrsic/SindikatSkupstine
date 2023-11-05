@@ -26,6 +26,11 @@ const StaffPage = () => {
         path: "/staff/predsjednici",
       },
       {
+        name: "Nadzorni odbor",
+        path: "/staff/nadzorni odbor",
+      },
+
+      {
         name: "Statutarna komisija",
         path: "/staff/komisija",
       },
@@ -39,6 +44,10 @@ const StaffPage = () => {
       {
         name: "Бивши предсједници",
         path: "/staff/predsjednici",
+      },
+      {
+        name: "Надзорни одбор",
+        path: "/staff/nadzorni odbor",
       },
       {  
         name: "Статутарна комисија",
@@ -87,7 +96,7 @@ const StaffPage = () => {
         setStaff(data);
       };
       getStaff();
-    } else {
+    } else if (location_id.includes("predsjednici"))  {
       const getStaff = async () => {
         const response = await fetch(
           `http://apisindikat.skupstina.me/api/getPresidents/`,
@@ -100,6 +109,23 @@ const StaffPage = () => {
         setRole(lang === "latin" ? "Bivši predsjednik" : "Бивши предсједник");
         setRoleHeader(
           lang === "latin" ? "Bivši predsjednici" : "Бивши предсједници"
+        );
+        setStaff(data);
+      };
+      getStaff();
+    } else { 
+      const getStaff = async () => {
+        const response = await fetch(
+          `http://apisindikat.skupstina.me/api/getMainBoardMembers/`,
+          {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+          }
+        );
+        let data = await response.json();
+        setRole(lang === "latin" ? "Nadzorni odbor" : "Надзорни одбор");
+        setRoleHeader(
+          lang === "latin" ? "Nadzorni odbor" : "Надзорни одбор"
         );
         setStaff(data);
       };

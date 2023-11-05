@@ -34,10 +34,7 @@ const NewsSinglePage = () => {
       //     name: "Замјеник Предсједника",
       //     path: "/news/zamjenikPredsjednika"
       // },
-      // {
-      //     name: "Генерални Секретар",
-      //     path: "/news/sekretar"
-      // },
+     
       {
         name: "Све актуелности",
         path: "/news/",
