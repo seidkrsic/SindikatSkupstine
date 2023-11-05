@@ -12,7 +12,7 @@ const SearchPage = () => {
     <div className="SearchPage__container-main">
       <HeaderPhoto page_name={"Rezultati Pretrage"} />
       <div className="SearchPage__container">
-        <h1 className="SearchPage__heading">Rezultati: </h1>
+        <h1 className="SearchPage__heading">{ lang === "latin" ? "Rezultati:" : "Резултати:" }</h1>
         <div className="SearchPage__container-left">
           {searchResults && searchResults.length > 0 ? (
             searchResults.map((result) => (

@@ -14,13 +14,13 @@ const ContactPage = () => {
     sector = {
       phone: "+382 68 111-222",
       email: "sindikat@skupstina.me",
-      title: "Odjeljenje za odnose sa Javnošću",
+      title: "Sindikat Skupštine Crne Gore",
     };
   } else {
     sector = {
       phone: "+382 68 111-222",
-      email: "синдикат@скупштина.ме",
-      title: "Одељење за односе са Јавношћу",
+      email: "sindikat@skupstina.me",
+      title: "Синдикат Скупштине Црне Горе",
     };
   }
 
@@ -46,10 +46,10 @@ const ContactPage = () => {
           <img src={logo} alt="" />
           <h5>{sector.title}</h5>
           <div>
-            <p>
+            {/* <p>
               {lang === "latin" ? "Telefon:" : "Телефон:"}{" "}
               <Link>{sector.phone}</Link>
-            </p>
+            </p> */}
             <p>
               {lang === "latin" ? "Mejl:" : "Мејл:"} <Link>{sector.email}</Link>
             </p>
