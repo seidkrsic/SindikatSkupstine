@@ -27,7 +27,7 @@ const StaffPage = () => {
       },
       {
         name: "Nadzorni odbor",
-        path: "/saziv/nadzorni odbor",
+        path: "/saziv/nadzorniodbor",
       },
 
       {
