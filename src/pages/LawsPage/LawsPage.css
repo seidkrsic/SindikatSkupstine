@@ -8,7 +8,7 @@
 .LawsPage__container { 
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 70%;
     align-items: flex-start;
     margin: 1rem auto;
     height: fit-content;
@@ -23,7 +23,10 @@
     
 }
 
-
+.LawsPage__left-container h1 { 
+    margin: 1rem 0;
+    font-size: 30px;
+}
 
 .LawsPage__left-container a { 
     text-decoration: none !important;
