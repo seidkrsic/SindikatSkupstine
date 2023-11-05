@@ -226,9 +226,7 @@
         background-color: #AB0707;
     }
 
-    .HomePage__special-doc h1:first-child { 
-        margin-top: 4rem !important;
-    }
+    
 
     .HomePage__special-doc h1 { 
         margin: 2rem 0 !important;
@@ -250,6 +248,7 @@
 
     .additional-margin__left { 
         margin-left: 1rem;
+        margin-top: 4rem;
     }
 
     .PageContainerGrid__bigger { 
