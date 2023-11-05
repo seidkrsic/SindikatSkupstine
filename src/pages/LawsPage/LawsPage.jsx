@@ -108,7 +108,7 @@ const LawsPage = () => {
                     <img src={pdfdownload} alt="pdf" />
                     <div className="LawsPage__text-container">
                         <p>{lang === "latin" ? item?.title : item?.title_cyrillic}</p>
-                        <p className="">{item?.created_eu_time}</p>
+                        {/* <p className="">{item?.created_eu_time}</p> */}
                     </div>
                 </a>
                 )

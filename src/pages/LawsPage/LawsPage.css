@@ -29,6 +29,7 @@
     height: fit-content;
     display: flex;
     flex-direction: row;
+    background-color: #f4f2ec;
 }
 
 .LawsPage__document-container { 
