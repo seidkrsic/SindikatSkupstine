@@ -27,6 +27,8 @@
 .LawsPage__left-container a { 
     text-decoration: none !important;
     height: fit-content;
+    display: flex;
+    flex-direction: row;
 }
 
 .LawsPage__document-container { 
