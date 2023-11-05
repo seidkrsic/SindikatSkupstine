@@ -24,9 +24,11 @@
 }
 
 .LawsPage__left-container h1 { 
-    margin: 1rem 0;
+    margin: 1rem auto;
     margin-top: 0;
     font-size: 25px;
+    width: 80%;
+
 }
 
 .LawsPage__left-container a { 
