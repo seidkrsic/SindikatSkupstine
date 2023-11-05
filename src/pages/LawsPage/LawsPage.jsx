@@ -90,12 +90,12 @@ const LawsPage = () => {
         <div className='LawsPage__left-container'>
             <h1>DOKUMENTA</h1>
             <div>
-        
+
             </div>
         </div>
 
         <div className='LawsPage__right-container'>
-            <Categories />
+            {/* <Categories /> */}
         </div>
     </div>
 
