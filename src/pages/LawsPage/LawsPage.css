@@ -45,7 +45,7 @@
     display: flex;
     flex-direction: column;
     width: 80%;
-    margin: 4rem auto;
+    margin: 2rem auto;
     /* border: 1px solid rgb(212, 174, 55, .5); */
     background-color: rgb(244, 242, 236, .3);
     overflow-y: scroll;
@@ -55,7 +55,7 @@
 }
 
 .LawsPage__document-container:first-child { 
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .LawsPage__document-container:last-child { 
