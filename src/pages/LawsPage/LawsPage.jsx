@@ -10,7 +10,7 @@ const LawsPage = () => {
   
   const { lang } = useContext(AuthContext);
   const location = useLocation().pathname;
-  let filter;
+  let filter= "";
 
   const [documents, setDocuments] = useState([]);
   let CategoriesInfo;
@@ -72,7 +72,7 @@ const LawsPage = () => {
     <div className='LawsPage__main-container'>
         <HeaderPhoto
         page_name={
-          lang === "latin" ? "Zakoni i propisi" : "Zakoni i propisi"
+          lang === "latin" ? filter : filter
         }
         image_url={null}
       />
