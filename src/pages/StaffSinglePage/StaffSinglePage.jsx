@@ -23,6 +23,10 @@ const StaffSinglePage = () => {
         path: "/saziv/predsjednici",
       },
       {
+        name: "Nadzorni odbor",
+        path: "/saziv/nadzorniodbor",
+      },
+      {
         name: "Statutarna komisija",
         path: "/saziv/komisija",
       },
@@ -36,6 +40,10 @@ const StaffSinglePage = () => {
       {
         name: "Бивши предсједници",
         path: "/saziv/predsjednici",
+      },
+      {
+        name: "Надзорни одбор",
+        path: "/saziv/nadzorniodbor",
       },
       {
         name: "Статутарна комисија",
