@@ -33,14 +33,13 @@
 
 .LawsPage__document-container { 
     display: flex;
-    flex-direction: row; 
-    min-height: fit-content;
-    height: fit-content;
+    flex-direction: column;
     width: 70%;
-    margin: 0.5rem auto;
-    align-items: center;
-    text-decoration: none;
-    background-color: #f4f2ec;
+    margin: 4rem auto;
+    /* border: 1px solid rgb(212, 174, 55, .5); */
+    background-color: rgb(244, 242, 236, .3);
+    overflow-y: scroll;
+    max-height: 50vh;
 }
 
 .LawsPage__document-container:first-child { 
@@ -67,7 +66,7 @@
     height: 80%;
 }
 
-.LawsPage__document-containerdocument-container img { 
+.LawsPage__document-container img { 
     width: 5%;
     height: 100%;
     max-height: 50px;
