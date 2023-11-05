@@ -226,8 +226,12 @@
         background-color: #AB0707;
     }
 
+    .HomePage__special-doc h1:first-child { 
+        margin-top: 4rem !important;
+    }
+
     .HomePage__special-doc h1 { 
-        margin-top: 2rem;
+        margin: 2rem 0 !important;
     }
 
     .HomePage__container { 
