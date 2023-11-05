@@ -46,10 +46,10 @@ const ContactPage = () => {
           <img src={logo} alt="" />
           <h5>{sector.title}</h5>
           <div>
-            {/* <p>
+            <p>
               {lang === "latin" ? "Telefon:" : "Телефон:"}{" "}
               <Link>{sector.phone}</Link>
-            </p> */}
+            </p>
             <p>
               {lang === "latin" ? "Mejl:" : "Мејл:"} <Link>{sector.email}</Link>
             </p>
