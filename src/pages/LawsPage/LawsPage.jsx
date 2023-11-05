@@ -1,8 +1,9 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import Categories from '../../components/Categories/Categories'
 import AuthContext from '../../Context/AuthContext';
 import "./LawsPage.css" 
 import { useLocation } from 'react-router-dom';
+import HeaderPhoto from '../../components/HeaderPhoto/HeaderPhoto';
 
 const LawsPage = () => {
   
@@ -50,11 +51,11 @@ const LawsPage = () => {
 
   const getDocuments = async () => { 
         let filter;
-        if (location_id.includes("akti_sindikata")) { 
+        if (location.includes("akti_sindikata")) { 
             filter = "legislation"
-        } else if (location_id.includes("opsti_akti")) { 
+        } else if (location.includes("opsti_akti")) { 
             filter = "laws"
-        } else if (location_id.includes("formulari")) { 
+        } else if (location.includes("formulari")) { 
             filter = "regulations"
         }
 
@@ -66,6 +67,7 @@ const LawsPage = () => {
             }
           );
           let data = await response.json();
+          console.log(data);
 
 
   }
@@ -81,14 +83,14 @@ const LawsPage = () => {
     <div className='LawsPage__main-container'>
         <HeaderPhoto
         page_name={
-          lang === "latin" ? "Izvještaji i dokumenta" : "Извјештаји и Документа"
+          lang === "latin" ? "Zakoni i propisi" : "Zakoni i propisi"
         }
       />
     <div className='LawsPage__container'>
         <div className='LawsPage__left-container'>
             <h1>DOKUMENTA</h1>
             <div>
-
+        
             </div>
         </div>
 
