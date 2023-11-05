@@ -57,11 +57,11 @@
 }
 
 .LawsPage__document-container:first-child { 
-    margin-top: 2rem;
+    margin-top: 2rem !important;
 }
 
 .LawsPage__document-container:last-child { 
-    margin-bottom: 1rem;
+    margin-bottom: 2rem !important;
 }
 
 
