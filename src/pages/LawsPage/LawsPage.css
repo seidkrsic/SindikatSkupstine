@@ -25,7 +25,8 @@
 
 .LawsPage__left-container h1 { 
     margin: 1rem 0;
-    font-size: 30px;
+    margin-top: 0;
+    font-size: 25px;
 }
 
 .LawsPage__left-container a { 
@@ -43,7 +44,7 @@
 .LawsPage__document-container { 
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 80%;
     margin: 4rem auto;
     /* border: 1px solid rgb(212, 174, 55, .5); */
     background-color: rgb(244, 242, 236, .3);
