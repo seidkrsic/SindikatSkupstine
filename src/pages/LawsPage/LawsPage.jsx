@@ -10,7 +10,17 @@ const LawsPage = () => {
   
   const { lang } = useContext(AuthContext);
   const location = useLocation().pathname;
-  let filter= "";
+  let filter;
+  let LawsHeader;
+  if (location.includes("akti_sindikata")) { 
+        LawsHeader = "Akti SOSCG"
+  } else if (location.includes("opsti_akti")) { 
+        LawsHeader = "Zakoni i drugi akti"
+  } else if (location.includes("formulari")) { 
+        LawsHeader = "Formulari i obrasci"
+  } else { 
+        LawsHeader = "Zakoni"
+  }
 
   const [documents, setDocuments] = useState([]);
   let CategoriesInfo;
@@ -72,12 +82,12 @@ const LawsPage = () => {
     <div className='LawsPage__main-container'>
         <HeaderPhoto
         page_name={
-          lang === "latin" ? filter : filter
+          lang === "latin" ? LawsHeader : LawsHeader
         }
         image_url={null}
       />
     <div className='LawsPage__container'>
-        <h1>{filter}</h1>
+        <h1>{LawsHeader}</h1>
         <div className='LawsPage__left-container'>
             <div className='LawsPage__document-container'>
             {
