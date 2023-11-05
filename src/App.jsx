@@ -50,10 +50,10 @@ function App() {
               <Route path="/news" element={<NewsPage />} />
               <Route path="/news/predsjednik" element={<NewsPage />} />
               <Route path="/news/zamjenikPredsjednika" element={<NewsPage />} />
-              <Route path="/news/sekretar" element={<NewsPage />} />
               <Route path="/news/:id" element={<NewsSinglePage />} />
               <Route path="/staff" element={<StaffPage />} />
               <Route path="/staff/izvrsniodbor" element={<StaffPage />} />
+              <Route path="/staff/nadzorniodbor" element={<StaffPage />} />
               <Route path="/staff/komisija" element={<StaffPage />} />
               <Route path="/staff/predsjednici" element={<StaffPage />} />
               <Route path="/login" element={<LoginPage />} />
