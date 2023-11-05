@@ -4,6 +4,7 @@ import FeaturedNewsCard from "../../components/FeaturedNewsCard/FeaturedNewsCard
 import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import "../NewsPage/NewsPage.css";
+import salon from "../../images/salon1.jpg"
 
 const NewsPage = () => {
   const { lang } = useContext(AuthContext);
@@ -39,7 +40,7 @@ const NewsPage = () => {
   return (
     <div className="NewsPage__container-main">
       <HeaderPhoto
-        image_url={null}
+        image_url={salon}
         page_name={lang === "latin" ? "Aktuelnosti" : "Актуелности"}
       />
       <div className="NewsPage__container">
