@@ -46,7 +46,7 @@
 .LawsPage__document-container { 
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
     margin: 2rem auto;
     /* border: 1px solid rgb(212, 174, 55, .5); */
     background-color: rgb(244, 242, 236, .3);
