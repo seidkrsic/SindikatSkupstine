@@ -17,8 +17,9 @@
 .LawsPage__left-container { 
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 65%;
     height: fit-content;
+    margin: 1rem;
     
 }
 

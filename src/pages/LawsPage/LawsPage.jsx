@@ -87,8 +87,8 @@ const LawsPage = () => {
         image_url={null}
       />
     <div className='LawsPage__container'>
-        <h1>{LawsHeader}</h1>
         <div className='LawsPage__left-container'>
+            <h1>{LawsHeader}</h1>
             <div className='LawsPage__document-container'>
             {
                 documents.map( (item) => 
