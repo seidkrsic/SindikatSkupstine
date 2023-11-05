@@ -19,39 +19,39 @@ const StaffPage = () => {
     CategoriesInfo = [
       {
         name: "Izvršni odbor",
-        path: "/staff/izvrsniodbor",
+        path: "/saziv/izvrsniodbor",
       },
       {
         name: "Bivši predsjednici",
-        path: "/staff/predsjednici",
+        path: "/saziv/predsjednici",
       },
       {
         name: "Nadzorni odbor",
-        path: "/staff/nadzorni odbor",
+        path: "/saziv/nadzorni odbor",
       },
 
       {
         name: "Statutarna komisija",
-        path: "/staff/komisija",
+        path: "/saziv/komisija",
       },
     ];
   } else {
     CategoriesInfo = [
       {
         name: "Извршни одбор",
-        path: "/staff/izvrsniodbor",
+        path: "/saziv/izvrsniodbor",
       },
       {
         name: "Бивши предсједници",
-        path: "/staff/predsjednici",
+        path: "/saziv/predsjednici",
       },
       {
         name: "Надзорни одбор",
-        path: "/staff/nadzorni odbor",
+        path: "/saziv/nadzorniodbor",
       },
       {  
         name: "Статутарна комисија",
-        path: "/staff/komisija",
+        path: "/saziv/komisija",
       },
     ];
   }

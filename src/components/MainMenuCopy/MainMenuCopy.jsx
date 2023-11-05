@@ -64,12 +64,12 @@ const MainMenuCopy = () => {
   let button2Items;
   if (lang === "latin") {
     button1Items = [
-      { name: "Predsjednik", path: "/staff/predsjednik" },
-      { name: "Zamjenik predsjednika", path: "/staff/zamjenikPredsjednika" },
-      { name: "Надзорни одбор", path: "/staff/nadzorniodbor" },
-      { name: "Bivši predsjednici", path: "/staff/predsjednici" },
-      { name: "Izvršni odbor", path: "/staff/izvrsniodbor" },
-      { name: "Statutarna komisija", path: "/staff/komisija" },
+      { name: "Predsjednik", path: "/saziv/predsjednik" },
+      { name: "Zamjenik predsjednika", path: "/saziv/zamjenikPredsjednika" },
+      { name: "Надзорни одбор", path: "/saziv/nadzorniodbor" },
+      { name: "Bivši predsjednici", path: "/saziv/predsjednici" },
+      { name: "Izvršni odbor", path: "/saziv/izvrsniodbor" },
+      { name: "Statutarna komisija", path: "/saziv/komisija" },
     ];
 
     button2Items = [
@@ -78,12 +78,12 @@ const MainMenuCopy = () => {
     ];
   } else {
     button1Items = [
-      { name: "Предсједник", path: "/staff/predsjednik" },
-      { name: "Замјеник предсједника", path: "/staff/zamjenikPredsjednika" },
-      { name: "Nadzorni odbor", path: "/staff/nadzorniodbor" },
-      { name: "Бивши предсједници", path: "/staff/predsjednici" },
-      { name: "Извршни одбор", path: "/staff/izvrsniodbor" },
-      { name: "Статутарна комисија", path: "/staff/komisija" },
+      { name: "Предсједник", path: "/saziv/predsjednik" },
+      { name: "Замјеник предсједника", path: "/saziv/zamjenikPredsjednika" },
+      { name: "Nadzorni odbor", path: "/saziv/nadzorniodbor" },
+      { name: "Бивши предсједници", path: "/saziv/predsjednici" },
+      { name: "Извршни одбор", path: "/saziv/izvrsniodbor" },
+      { name: "Статутарна комисија", path: "/saziv/komisija" },
     ];
 
     button2Items = [

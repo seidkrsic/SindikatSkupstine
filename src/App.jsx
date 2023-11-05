@@ -51,11 +51,11 @@ function App() {
               <Route path="/news/predsjednik" element={<NewsPage />} />
               <Route path="/news/zamjenikPredsjednika" element={<NewsPage />} />
               <Route path="/news/:id" element={<NewsSinglePage />} />
-              <Route path="/staff" element={<StaffPage />} />
-              <Route path="/staff/izvrsniodbor" element={<StaffPage />} />
-              <Route path="/staff/nadzorniodbor" element={<StaffPage />} />
-              <Route path="/staff/komisija" element={<StaffPage />} />
-              <Route path="/staff/predsjednici" element={<StaffPage />} />
+              {/* <Route path="/staff" element={<StaffPage />} /> */}
+              <Route path="/saziv/izvrsniodbor" element={<StaffPage />} />
+              <Route path="/saziv/nadzorniodbor" element={<StaffPage />} />
+              <Route path="/saziv/komisija" element={<StaffPage />} />
+              <Route path="/saziv/predsjednici" element={<StaffPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route element={<PrivateRoutes />}>
                 <Route path="/documents" element={<ListDocumentsPage />} />
@@ -66,16 +66,16 @@ function App() {
               <Route path="/session/izvrsni_odbor" element={<Session />} />
               <Route path="/session/skupstina/:id" element={<Session />} />
               <Route path="/session/izvrsni_odbor/:id" element={<Session />} />
-              <Route path="/staff/:id" element={<StaffSinglePage />} />
-              <Route path="/staff/predsjednik" element={<StaffSinglePage />} />
+              <Route path="/saziv/:id" element={<StaffSinglePage />} />
+              <Route path="/saziv/predsjednik" element={<StaffSinglePage />} />
               <Route
-                path="/staff/zamjenikPredsjednika"
+                path="/saziv/zamjenikPredsjednika"
                 element={<StaffSinglePage />}
               />
-              <Route
-                path="/staff/generalniSekretar"
+              {/* <Route
+                path="/saziv/generalniSekretar"
                 element={<StaffSinglePage />}
-              />
+              /> */}
               <Route path="/*" element={<Navigate to="/" />} />
             </Routes>
 

@@ -15,7 +15,7 @@ const StaffCard = ({ staff, role }) => {
   // style={{overflow: "hidden", border: "1px solid green"}}
   return (
     <div className="Staff__container">
-      <Link to={"/staff/" + staff.id} className="Staff__img-container">
+      <Link to={"/saziv/" + staff.id} className="Staff__img-container">
         <motion.img
           animate={{ scale: IsHoverd ? 1.2 : 1 }}
           src={staff?.profile_image}
