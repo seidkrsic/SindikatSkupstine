@@ -14,7 +14,7 @@ const LawsPage = () => {
 
   const [documents, setDocuments] = useState([]);
   let CategoriesInfo;
-  if (land === "latin") { 
+  if (lang === "latin") { 
     CategoriesInfo = {
         name: "Akti SOSCG", path: "/zakoni/akti_sindikata",
         name: "Zakoni i drugi akti", path: "/zakoni/opsti_akti",
