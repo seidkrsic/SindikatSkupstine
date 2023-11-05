@@ -79,7 +79,7 @@ const MainMenuCopy = () => {
     ];
 
     button3Items = [
-      { name: "Akti SOSCG", path: "/zakoni/akti" },
+      { name: "Akti SOSCG", path: "/zakoni/akti_sindikata" },
       { name: "Zakoni i drugi akti", path: "/zakoni/opsti_akti"},
       { name: "Formulari i obrasci", path: "/zakoni/formulari"},
       
@@ -100,7 +100,7 @@ const MainMenuCopy = () => {
     ];
 
     button3Items = [
-      { name: "Акти СОСЦГ", path: "/zakoni/akti" },
+      { name: "Акти СОСЦГ", path: "/zakoni/akti_sindikata" },
       { name: "Закони и други акти", path: "/zakoni/opsti_akti" },
       { name: "Формулари и обрасци", path: "/zakoni/formulari" },
     ];

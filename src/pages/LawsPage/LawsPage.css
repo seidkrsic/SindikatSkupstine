@@ -1,0 +1,18 @@
+.LawsPage__main-container { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+
+.LawsPage__container { 
+
+}
+
+.LawsPage__left-container { 
+
+}
+
+.LawsPage__right-container { 
+
+}
