@@ -113,7 +113,7 @@ const StaffPage = () => {
         setStaff(data);
       };
       getStaff();
-    } else { 
+    } else if (location_id.includes("nadzorniodbor")) { 
       const getStaff = async () => {
         const response = await fetch(
           `http://apisindikat.skupstina.me/api/getMainBoardMembers/`,
