@@ -47,7 +47,7 @@ const ContactPage = () => {
           <h5>{sector.title}</h5>
           <div>
             <p>
-              {lang === "latin" ? "Telefon:" : "Телефон:"}{" "}
+              {lang === "latin" ? "Telefon:" : "Телефон:"}
               <Link>{sector.phone}</Link>
             </p>
             <p>
