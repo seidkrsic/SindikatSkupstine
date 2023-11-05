@@ -28,9 +28,10 @@
     text-decoration: none !important;
     height: fit-content;
     display: flex;
+    width: 90%;
     flex-direction: row;
     background-color: #f4f2ec;
-    margin: .5rem 0;
+    margin: .5rem auto;
 }
 
 .LawsPage__document-container { 
@@ -42,7 +43,6 @@
     background-color: rgb(244, 242, 236, .3);
     overflow-y: scroll;
     max-height: 50vh;
-    height: 50vh;
     max-height: 80vh;
     overflow-y: scroll;
 }
