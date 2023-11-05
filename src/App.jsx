@@ -21,7 +21,7 @@ import SearchPage from "./pages/SearchPage/SearchPage";
 import Session from "./pages/Session/Session";
 import StaffPage from "./pages/StaffPage/StaffPage";
 import StaffSinglePage from "./pages/StaffSinglePage/StaffSinglePage";
-
+import LawsPage from "./pages/LawsPage/LawsPage"
 
 function App() {
   const [ShowLogo, setShowLogo] = useState(true);
