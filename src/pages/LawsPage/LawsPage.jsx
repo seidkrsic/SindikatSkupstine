@@ -10,6 +10,7 @@ const LawsPage = () => {
   
   const { lang } = useContext(AuthContext);
   const location = useLocation().pathname;
+  let filter;
 
   const [documents, setDocuments] = useState([]);
   let CategoriesInfo;
@@ -51,7 +52,7 @@ const LawsPage = () => {
   }
 
   const getDocuments = async () => { 
-        let filter;
+        
         if (location.includes("akti_sindikata")) { 
             filter = "legislation"
         } else if (location.includes("opsti_akti")) { 
