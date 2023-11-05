@@ -51,6 +51,7 @@ const ListDocumentsPage = () => {
   return (
     <div className="ListDocumentsPage__container-main">
       <HeaderPhoto
+        image_url={null}
         page_name={
           lang === "latin" ? "Izvještaji i dokumenta" : "Извјештаји и Документа"
         }

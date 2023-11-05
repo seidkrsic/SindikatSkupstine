@@ -85,6 +85,7 @@ const LawsPage = () => {
         page_name={
           lang === "latin" ? "Zakoni i propisi" : "Zakoni i propisi"
         }
+        image_url={null}
       />
     <div className='LawsPage__container'>
         <div className='LawsPage__left-container'>

@@ -39,6 +39,7 @@ const NewsPage = () => {
   return (
     <div className="NewsPage__container-main">
       <HeaderPhoto
+        image_url={null}
         page_name={lang === "latin" ? "Aktuelnosti" : "Актуелности"}
       />
       <div className="NewsPage__container">

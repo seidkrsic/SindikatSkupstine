@@ -103,9 +103,9 @@ const Session = () => {
   return (
     <div className="Session__container-main">
       {skupstina ? (
-        <HeaderPhoto page_name={lang === "latin" ? "Skupština" : "Скупштинa"} />
+        <HeaderPhoto image_url={null} page_name={lang === "latin" ? "Skupština" : "Скупштинa"} />
       ) : (
-        <HeaderPhoto
+        <HeaderPhoto image_url={null}
           page_name={lang === "latin" ? "Izvršni Odbor" : "Извршни Одбор"}
         />
       )}

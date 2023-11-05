@@ -137,7 +137,7 @@ const StaffPage = () => {
 
   return (
     <div className="StaffPage__container-Big">
-      <HeaderPhoto page_name={roleHeader} />
+      <HeaderPhoto image_url={null} page_name={roleHeader} />
 
       <div className="StaffPage__container">
         <div className="StaffPage__staff-main">

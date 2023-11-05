@@ -60,7 +60,7 @@ const NewsSinglePage = () => {
 
   return (
     <div className="SingleNewsPage__container-main">
-      <HeaderPhoto page_name={lang === "latin" ? "AKTUELNOSTI" : "АКТУЕЛНОСТИ"} />
+      <HeaderPhoto image_url={null} page_name={lang === "latin" ? "AKTUELNOSTI" : "АКТУЕЛНОСТИ"} />
       {News && (
         <div className="SingleNewsPage__container">
           <div className="SingleNewsPage__container-left">

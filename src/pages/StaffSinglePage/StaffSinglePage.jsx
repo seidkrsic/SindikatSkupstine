@@ -116,7 +116,7 @@ const StaffSinglePage = () => {
 
   return (
     <div className="StaffSinglePage__container-main">
-      <HeaderPhoto
+      <HeaderPhoto image_url={null}
         page_name={lang === "latin" ? staff?.name : staff?.name_cyrillic}
       />
       <div className="StaffSinglePage__container">

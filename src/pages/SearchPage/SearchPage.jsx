@@ -10,7 +10,7 @@ const SearchPage = () => {
 
   return (
     <div className="SearchPage__container-main">
-      <HeaderPhoto page_name={"Rezultati Pretrage"} />
+      <HeaderPhoto image_url={null} page_name={"Rezultati Pretrage"} />
       <div className="SearchPage__container">
         <h1 className="SearchPage__heading">{ lang === "latin" ? "Rezultati:" : "Резултати:" }</h1>
         <div className="SearchPage__container-left">

@@ -13,7 +13,7 @@ const LoginPage = () => {
 
   return (
     <div className="LoginPage__container">
-      <HeaderPhoto page_name={"PRIJAVA KORISNIKA"} />
+      <HeaderPhoto page_name={"PRIJAVA KORISNIKA"} image_url={null} />
       <div className="LoginPage__img-container">
         <img src={logo} alt="" />
       </div>

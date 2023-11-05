@@ -34,6 +34,7 @@ const Company = () => {
         page_name={
           lang === "latin" ? "Ugovori sa Firmama" : "Уговори са Фирмама"
         }
+        image_url={null}
       />
       <table border="1" className="gold-table">
         <thead>

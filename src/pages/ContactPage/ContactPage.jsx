@@ -30,7 +30,7 @@ const ContactPage = () => {
 
   return (
     <div className="Contact__container-main">
-      <HeaderPhoto page_name={lang === "latin" ? "Kontakt" : "Контакт"} />
+      <HeaderPhoto page_name={lang === "latin" ? "Kontakt" : "Контакт"} image_url={null} />
       <div className="Contact__container">
         <div className="Contact__info-container">
           <h1>{lang === "latin" ? "Naša Lokacija" : "Наша Локација"}</h1>
