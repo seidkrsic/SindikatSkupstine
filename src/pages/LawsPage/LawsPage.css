@@ -6,13 +6,26 @@
 }
 
 .LawsPage__container { 
-    
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: flex-start;
+    margin: 1rem auto;
+    height: fit-content;
 }
 
 .LawsPage__left-container { 
-
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: fit-content;
+    
 }
 
 .LawsPage__right-container { 
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 1rem auto;
+    min-height: 40vh;
 }

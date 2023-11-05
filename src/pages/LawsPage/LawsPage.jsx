@@ -4,6 +4,7 @@ import AuthContext from '../../Context/AuthContext';
 import "./LawsPage.css" 
 import { useLocation } from 'react-router-dom';
 import HeaderPhoto from '../../components/HeaderPhoto/HeaderPhoto';
+import pdfdownload from "../../images/pdf.png";
 
 const LawsPage = () => {
   
@@ -67,7 +68,12 @@ const LawsPage = () => {
             }
           );
           let data = await response.json();
-          console.log(data);
+          if (response.ok) { 
+            setDocuments(data)
+          } else { 
+              setDocuments([])
+          }
+     
 
 
   }
@@ -89,8 +95,24 @@ const LawsPage = () => {
       />
     <div className='LawsPage__container'>
         <div className='LawsPage__left-container'>
-            <h1>DOKUMENTA</h1>
-            <div>
+            <h1>{filter}</h1>
+            <div> 
+            {
+                documents.map( (item) => 
+                <a
+                    href={item.download_link}
+                    key={item.id}
+                    className=""
+                    >
+                    <img src={pdfdownload} alt="pdf" />
+                    <div className="">
+                    <p>{lang === "latin" ? item.title : item.title_cyrillic}</p>
+                    <p className="">{item.created_eu_time}</p>
+                    </div>
+                </a>
+                )
+                
+            }
 
             </div>
         </div>
