@@ -14,42 +14,24 @@ const LawsPage = () => {
 
   const [documents, setDocuments] = useState([]);
   let CategoriesInfo;
+  if (land === "latin") { 
+    CategoriesInfo = {
+        name: "Akti SOSCG", path: "/zakoni/akti_sindikata",
+        name: "Zakoni i drugi akti", path: "/zakoni/opsti_akti",
+        name: "Formulari i obrasci", path: "/zakoni/formulari",
+    }
+    } else { 
+        CategoriesInfo = { 
+        name: "Акти СОСЦГ", path: "/zakoni/akti_sindikata", 
+        name: "Закони и други акти", path: "/zakoni/opsti_akti", 
+        name: "Формулари и обрасци", path: "/zakoni/formulari",
+    }
+    }   
 
+  
+ 
 
-
-  if (lang === "latin") {
-    CategoriesInfo = [
-      {
-        name: "",
-        path: "/zakoni/izvrsniodbor",
-      },
-      {
-        name: "",
-        path: "/zakoni/predsjednici",
-      },
-      {
-        name: "",
-        path: "/zakoni/nadzorni odbor",
-      },
-
-    ];
-  } else {
-    CategoriesInfo = [
-      {
-        name: "Извршни одбор",
-        path: "/saziv/izvrsniodbor",
-      },
-      {
-        name: "Бивши предсједници",
-        path: "/saziv/predsjednici",
-      },
-      {
-        name: "Надзорни одбор",
-        path: "/saziv/nadzorniodbor",
-      },
-      
-    ];
-  }
+  
 
   const getDocuments = async () => { 
         
@@ -120,7 +102,10 @@ const LawsPage = () => {
         </div>
 
         <div className='LawsPage__right-container'>
-            {/* <Categories /> */}
+        <Categories
+              categories={CategoriesInfo}
+              title={lang === "latin" ? "Kategorije" : "Категорије"}
+            />
         </div>
     </div>
 
