@@ -14,7 +14,7 @@
     height: 200px;
     filter: blur(0px);
     object-fit: cover;
-    object-position: top center;
+    object-position: bottom center;
 
 }
 
