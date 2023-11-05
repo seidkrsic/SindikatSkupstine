@@ -15,17 +15,17 @@ const LawsPage = () => {
   const [documents, setDocuments] = useState([]);
   let CategoriesInfo;
   if (lang === "latin") { 
-    CategoriesInfo = {
-        name: "Akti SOSCG", path: "/zakoni/akti_sindikata",
-        name: "Zakoni i drugi akti", path: "/zakoni/opsti_akti",
-        name: "Formulari i obrasci", path: "/zakoni/formulari",
-    }
+    CategoriesInfo = [
+        { name: "Akti SOSCG", path: "/zakoni/akti_sindikata"},
+        { name: "Zakoni i drugi akti", path: "/zakoni/opsti_akti"},
+        { name: "Formulari i obrasci", path: "/zakoni/formulari"},
+    ]
     } else { 
-        CategoriesInfo = { 
-        name: "Акти СОСЦГ", path: "/zakoni/akti_sindikata", 
-        name: "Закони и други акти", path: "/zakoni/opsti_akti", 
-        name: "Формулари и обрасци", path: "/zakoni/formulari",
-    }
+        CategoriesInfo = [
+        { name: "Акти СОСЦГ", path: "/zakoni/akti_sindikata"}, 
+        { name: "Закони и други акти", path: "/zakoni/opsti_akti"}, 
+        { name: "Формулари и обрасци", path: "/zakoni/formulari"},
+        ]
     }   
 
   
