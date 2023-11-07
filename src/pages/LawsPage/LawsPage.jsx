@@ -5,6 +5,7 @@ import "./LawsPage.css"
 import { useLocation } from 'react-router-dom';
 import HeaderPhoto from '../../components/HeaderPhoto/HeaderPhoto';
 import pdfdownload from "../../images/pdf.png";
+import salon from "../../images/salon3.jpg"
 
 const LawsPage = () => {
   
@@ -84,7 +85,7 @@ const LawsPage = () => {
         page_name={
           lang === "latin" ? LawsHeader : LawsHeader
         }
-        image_url={null}
+        image_url={salon}
       />
     <div className='LawsPage__container'>
         <div className='LawsPage__left-container'>

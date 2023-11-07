@@ -111,7 +111,7 @@ const NewsGallery = ({ slides }) => {
 
         <img
           className={fullScreen ? "full-screen1" : ""}
-          src={`${slides[currentIndex]?.image_url}`}
+          src={`${slides[currentIndex+1]?.image_url}`}
           alt="slide-img"
         />
 
