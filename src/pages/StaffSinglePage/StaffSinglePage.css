@@ -52,8 +52,9 @@
 }
 
 .StaffSinglePage__container-left li { 
-    text-align: justify;
+    text-align: start;
     line-height: normal;
+    font-weight: normal;
     font-size: 15px;
     margin: .5rem 0;
     text-decoration: none;
