@@ -42,11 +42,6 @@
 }
 
 
-
-
-
-
-
 .StaffSinglePage__container-left h2 { 
     width: 90%;
     margin: 0;
@@ -58,7 +53,7 @@
     width: 90%;
     text-align: justify;
     line-height: 1.5;
-    margin: .3rem 0;
+    margin: .2rem 0;
    
    
 }
@@ -100,9 +95,8 @@
     width: 80% !important;
     margin: 0 auto !important;
     color: black !important;
-    list-style-type: circle !important;
+    list-style-type:disc;
     
-
 }
 
 .StaffSinglePage__container-left  ol { 
