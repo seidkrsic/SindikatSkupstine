@@ -130,7 +130,7 @@
     text-align: justify;
     line-height: 150%;
     font-size: 19px;
-    margin: .3rem 0;
+    margin: .3rem 0 !important;
    
 }
 
@@ -149,7 +149,6 @@
 }
 
 .SingleNewsPage__small-info p { 
-
     display: flex;
     width: fit-content;
     text-align: start;
