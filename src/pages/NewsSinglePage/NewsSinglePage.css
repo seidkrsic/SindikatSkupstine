@@ -44,6 +44,7 @@
     display: flex;
     flex-direction: column;
     width: 80%;
+    max-width: 80%;
     height: fit-content;
     min-height: 100vh;
 }
@@ -73,6 +74,7 @@
     flex-direction: column;
     width: 100%;
     height: fit-content;
+    flex-wrap: wrap;
    
 }
 
@@ -89,16 +91,17 @@
 .SingleNewsPage__info-container ul, .SingleNewsPage__info-container ol { 
     display: flex;
     flex-direction: column;
-    
+
 }
 
-.SingleNewsPage__info-container li { 
+.SingleNewsPage__info-container p li { 
     text-align: justify;
     line-height: 150%;
     font-size: 19px;
     list-style: square;
     margin: .5rem 0;
     position: static;
+    display: flex;
 }
 
 .SingleNewsPage__info-container p { 
