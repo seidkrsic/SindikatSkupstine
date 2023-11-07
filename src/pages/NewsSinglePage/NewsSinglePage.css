@@ -90,8 +90,9 @@
 
 .SingleNewsPage__info-container ul, .SingleNewsPage__info-container ol { 
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 95%;
+    color: black;
     
 
 }
