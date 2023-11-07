@@ -45,7 +45,7 @@
 .StaffSinglePage__container-left  ul, .StaffSinglePage__container-left  ol { 
     display: flex !important;
     flex-direction: column !important;
-    width: 95% !important;
+    width: 100% !important;
     color: black !important;
     
 
