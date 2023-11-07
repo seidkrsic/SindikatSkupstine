@@ -137,6 +137,10 @@
    
 }
 
+.SingleNewsPage__info-container strong { 
+    height: fit-content !important; 
+}
+
 
 .SingleNewsPage__small-info { 
     display: flex;
