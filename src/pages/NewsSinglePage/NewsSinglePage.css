@@ -127,7 +127,7 @@
 }
 
 .SingleNewsPage__info-container p { 
-    text-align: justify;
+    text-align: start;
     display: flex;
     height: fit-content !important;
     align-items: flex-start !important;
