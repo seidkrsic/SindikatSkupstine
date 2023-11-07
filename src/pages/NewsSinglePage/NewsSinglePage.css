@@ -90,7 +90,9 @@
 
 .SingleNewsPage__info-container ul, .SingleNewsPage__info-container ol { 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
 
 }
 
