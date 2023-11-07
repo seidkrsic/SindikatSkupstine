@@ -85,10 +85,19 @@
  
 }
 
+.SingleNewsPage__info-container li { 
+    text-align: justify;
+    line-height: 150%;
+    font-size: 19px;
+    list-style: square;
+    margin: .5rem 0;
+}
+
 .SingleNewsPage__info-container p { 
     text-align: justify;
     line-height: 150%;
     font-size: 19px;
+    margin: .5rem 0;
 }
 
 
