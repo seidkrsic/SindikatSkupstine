@@ -48,7 +48,7 @@
     width: 80% !important;
     margin: 0 auto !important;
     color: black !important;
-    list-style-type: square !important;
+    list-style-type: circle !important;
     
 
 }
@@ -59,6 +59,8 @@
     width: 80% !important;
     margin: 0 auto !important;
     color: black !important;
+    text-transform: none !important;
+    list-style-type: circle !important; 
 
 }
 
