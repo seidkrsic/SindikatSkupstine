@@ -45,7 +45,8 @@
 .StaffSinglePage__container-left  ul, .StaffSinglePage__container-left  ol { 
     display: flex !important;
     flex-direction: column !important;
-    width: 100% !important;
+    width: 90% !important;
+    margin: 0 auto !important;
     color: black !important;
     
 
@@ -53,9 +54,13 @@
 
 .StaffSinglePage__container-left li { 
     text-align: start;
+    display: flex; 
+    justify-content: flex-start;
+    flex-direction: row;
     line-height: normal;
     font-weight: normal;
     font-size: 15px;
+    list-style-type: georgian;
     margin: .5rem 0;
     text-decoration: none;
     text-transform: none !important;
