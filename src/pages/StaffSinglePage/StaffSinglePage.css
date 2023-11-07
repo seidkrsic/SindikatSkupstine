@@ -51,15 +51,13 @@
 
 }
 
-.StaffSinglePage__container-left  ul li, .StaffSinglePage__container-left  ol li { 
+.StaffSinglePage__container-left li { 
     text-align: justify;
-    line-height: 150%;
-    font-size: 19px;
+    line-height: normal;
+    font-size: 15px;
     list-style: square;
-    margin: .5rem 0;
-    position: static;
     width: 100%;
-    display: flex;
+    color: black !important; 
 }
 
 
@@ -73,12 +71,10 @@
 
 .StaffSinglePage__container-left p { 
     height: fit-content;
-    /* min-height: 40vh; */
-    max-height: 90%;
     width: 90%;
     text-align: justify;
-    height: 90%;
     line-height: 1.5;
+    margin: 1rem 0;
    
    
 }
