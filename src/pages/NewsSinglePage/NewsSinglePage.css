@@ -85,12 +85,20 @@
  
 }
 
+
+.SingleNewsPage__info-container ul, .SingleNewsPage__info-container ol { 
+    display: flex;
+    flex-direction: column;
+    
+}
+
 .SingleNewsPage__info-container li { 
     text-align: justify;
     line-height: 150%;
     font-size: 19px;
     list-style: square;
     margin: .5rem 0;
+    position: static;
 }
 
 .SingleNewsPage__info-container p { 
@@ -98,6 +106,7 @@
     line-height: 150%;
     font-size: 19px;
     margin: .5rem 0;
+   
 }
 
 
