@@ -127,13 +127,11 @@
 }
 
 .SingleNewsPage__info-container p { 
-    text-align: start;
-    display: flex;
+    text-align: justify;
     height: fit-content !important;
-    align-items: flex-start !important;
     line-height: 150%;
     font-size: 19px !important;
-    margin: .3rem 0 !important;
+    margin: .35rem 0 !important;
    
 }
 
