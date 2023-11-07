@@ -42,16 +42,26 @@
 }
 
 
-.StaffSinglePage__container-left  ul, .StaffSinglePage__container-left  ol { 
+.StaffSinglePage__container-left  ul { 
     display: flex !important;
     flex-direction: column !important;
     width: 80% !important;
     margin: 0 auto !important;
     color: black !important;
-    list-style-type: circle !important;
+    list-style-type: square !important;
     
 
 }
+
+.StaffSinglePage__container-left  ol { 
+    display: flex !important;
+    flex-direction: column !important;
+    width: 80% !important;
+    margin: 0 auto !important;
+    color: black !important;
+
+}
+
 
 .StaffSinglePage__container-left li { 
     text-align: start;
@@ -59,6 +69,7 @@
     justify-content: flex-start;
     flex-direction: row;
     line-height: normal;
+    height: fit-content;
     font-weight: normal;
     font-size: 15px;
     margin: .5rem 0;
