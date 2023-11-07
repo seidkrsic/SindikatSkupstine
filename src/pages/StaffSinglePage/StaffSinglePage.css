@@ -55,9 +55,12 @@
     text-align: justify;
     line-height: normal;
     font-size: 15px;
-    list-style: square;
+    margin: .5rem 0;
+    text-decoration: none;
+    text-transform: none !important;
     width: 100%;
     color: black !important; 
+
 }
 
 
