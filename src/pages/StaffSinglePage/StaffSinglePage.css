@@ -53,9 +53,13 @@
     width: 90%;
     text-align: justify;
     line-height: 1.5;
-    margin: .2rem 0;
+    margin: .35rem 0;
    
-   
+}
+
+.StaffSinglePage__container-left strong { 
+    height: fit-content;
+    width: fit-content;
 }
 
 .StaffSinglePage__container-left div { 
