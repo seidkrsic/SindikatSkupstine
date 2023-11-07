@@ -89,10 +89,10 @@
 
 
 .SingleNewsPage__info-container ul, .SingleNewsPage__info-container ol { 
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    color: black;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 95% !important;
+    color: black !important;
     
 
 }
