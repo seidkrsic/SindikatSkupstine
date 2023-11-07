@@ -41,6 +41,30 @@
     
 }
 
+
+.StaffSinglePage__container-left  ul, .StaffSinglePage__container-left  ol { 
+    display: flex !important;
+    flex-direction: column !important;
+    width: 95% !important;
+    color: black !important;
+    
+
+}
+
+.StaffSinglePage__container-left  ul li, .StaffSinglePage__container-left  ol li { 
+    text-align: justify;
+    line-height: 150%;
+    font-size: 19px;
+    list-style: square;
+    margin: .5rem 0;
+    position: static;
+    width: 100%;
+    display: flex;
+}
+
+
+
+
 .StaffSinglePage__container-left h2 { 
     width: 90%;
     margin: 0;
