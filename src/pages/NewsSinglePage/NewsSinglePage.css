@@ -129,10 +129,10 @@
 .SingleNewsPage__info-container p { 
     text-align: justify;
     display: flex;
-    height: fit-content;
-    align-items: flex-start;
+    height: fit-content !important;
+    align-items: flex-start !important;
     line-height: 150%;
-    font-size: 19px;
+    font-size: 19px !important;
     margin: .3rem 0 !important;
    
 }
