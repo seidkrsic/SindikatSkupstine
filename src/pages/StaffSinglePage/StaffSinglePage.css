@@ -117,8 +117,8 @@
 
 .StaffSinglePage__container-left li { 
     text-align: start;
-    justify-content: flex-start;
-    flex-direction: row;
+    /* justify-content: flex-start;
+    flex-direction: row; */
     line-height: normal;
     height: fit-content;
     font-weight: normal;
@@ -127,6 +127,7 @@
     width: 100%;
     color: black !important; 
     text-transform: none !important;
+    
 
 }
 
