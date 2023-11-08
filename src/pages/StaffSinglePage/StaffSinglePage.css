@@ -95,8 +95,8 @@
 
 
 .StaffSinglePage__container-left  ul { 
-    /* display: flex !important;
-    flex-direction: column !important; */
+    display: flex !important;
+    flex-direction: column !important;
     width: 80% !important;
     margin: 0 auto !important;
     color: black !important;
@@ -105,8 +105,8 @@
 }
 
 .StaffSinglePage__container-left  ol { 
-    /* display: flex !important;
-    flex-direction: column !important; */
+    display: flex !important;
+    flex-direction: column !important;
     width: 80% !important;
     margin: 0 auto !important;
     color: black !important;
@@ -117,7 +117,6 @@
 
 .StaffSinglePage__container-left li { 
     text-align: start;
-    display: flex; 
     justify-content: flex-start;
     flex-direction: row;
     line-height: normal;
