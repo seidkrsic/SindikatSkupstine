@@ -127,6 +127,11 @@
     width: 100%;
     color: black !important; 
     text-transform: none !important;
+    height: fit-content;
+    text-align: justify;
+    line-height: 1.5;
+    margin: .35rem 0;
+    font-size: 18px;
     
 
 }
