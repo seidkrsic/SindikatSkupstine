@@ -135,12 +135,10 @@ const StaffSinglePage = () => {
         </div>
         <div className="StaffSinglePage__container-right">
           <div className="StaffSinglePage__card-container">
-            {staff?.active_role[0] !== "Bivši predsjednik" && (
+          {staff?.active_role && staff?.active_role[0] !== "Bivši predsjednik" && (
               <StaffCard
                 staff={staff}
-                role={
-                  lang === "latin" ? staff?.active_role[0] : staff?.active_role[1]
-                }
+                role={lang === "latin" ? staff.active_role[0] : staff.active_role[1]}
               />
             )}
           </div>
