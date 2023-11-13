@@ -122,7 +122,6 @@
     line-height: normal;
     height: fit-content;
     font-weight: normal;
-    font-size: 16px;
     width: 90%;
     color: black !important; 
     text-transform: none !important;
@@ -130,7 +129,7 @@
     text-align: justify;
     line-height: 1.5;
     margin: .35rem 0;
-    font-size: 18px;
+    font-size: 16px;
     
 
 }
@@ -178,7 +177,7 @@
 }
 
 .StaffSinglePage__card-info__container p { 
-    width: 260px;
+    width: 256px;
     background-color: #f4f2ec;
     display: flex;
     margin: 0.5rem auto !important;
