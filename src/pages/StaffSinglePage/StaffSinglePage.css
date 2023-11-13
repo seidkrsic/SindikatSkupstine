@@ -54,7 +54,7 @@
     text-align: justify;
     line-height: 1.5;
     margin: .35rem 0;
-    font-size: 18px;
+    font-size: 16px;
    
 }
 
@@ -69,7 +69,7 @@
     flex-direction: row;
     margin: .5rem 0;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
     background-color: #f4f2ec;
@@ -122,7 +122,7 @@
     line-height: normal;
     height: fit-content;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
     width: 90%;
     color: black !important; 
     text-transform: none !important;
@@ -178,7 +178,7 @@
 }
 
 .StaffSinglePage__card-info__container p { 
-    width: 85%;
+    width: 260px;
     background-color: #f4f2ec;
     display: flex;
     margin: 0.5rem auto !important;
