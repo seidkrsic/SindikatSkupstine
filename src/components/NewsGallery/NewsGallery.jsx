@@ -4,7 +4,7 @@ import closeMenu from "../../images/closeMenu.png";
 import "../NewsGallery/NewsGallery.css";
 
 const NewsGallery = ({ slides }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1);
   const [isHovered, setIsHovered] = useState(false);
   const [fullScreen, setfullScreen] = useState(false);
 
