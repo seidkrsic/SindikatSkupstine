@@ -139,7 +139,7 @@ const StaffSinglePage = () => {
               <StaffCard
                 staff={staff}
                 role={
-                  lang === "latin" ? staff.active_role[0] : staff.active_role[1]
+                  lang === "latin" ? staff?.active_role[0] : staff?.active_role[1]
                 }
               />
             )}
