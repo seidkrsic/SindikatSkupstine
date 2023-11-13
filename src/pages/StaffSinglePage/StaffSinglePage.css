@@ -181,8 +181,8 @@
     width: 85%;
     background-color: #f4f2ec;
     display: flex;
-    margin: 0.5rem auto;
-    padding: 1rem 0 !important;
+    margin: 0.5rem auto !important;
+    padding: .5rem !important;
     font-size: 13px;
     
 
