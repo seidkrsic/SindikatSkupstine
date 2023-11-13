@@ -178,7 +178,7 @@
 
 .StaffSinglePage__card-info__container p { 
     width: 80%;
-    color: #f4f2ec;
+    background-color: #f4f2ec;
     display: flex;
     margin: 0 auto;
     padding: 1rem 0;
@@ -209,7 +209,7 @@
     justify-content: flex-end;
     text-decoration: none;
     letter-spacing: 1px;
-    font-size: 12px;
+    font-size: 10px;
     color: rgb(194, 10, 10);
 }
 
