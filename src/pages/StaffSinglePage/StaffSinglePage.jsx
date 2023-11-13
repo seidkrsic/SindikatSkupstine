@@ -135,7 +135,7 @@ const StaffSinglePage = () => {
         </div>
         <div className="StaffSinglePage__container-right">
           <div className="StaffSinglePage__card-container">
-            {staff?.active_role && (
+            {staff?.active_role !== "Bivši predsjednik" && (
               <StaffCard
                 staff={staff}
                 role={
@@ -144,22 +144,7 @@ const StaffSinglePage = () => {
               />
             )}
           </div>
-          {staff?.active_role && (
-            <>
-                {staff.active_role[0] !== "Bivši predsjednik"  || 
-                staff.active_role[1] !== "Бивши предсјednik" ? (
-                  <div className="StaffSinglePage__contact-info">
-                    <div>
-                      {lang === "latin" ? "Telefon:" : "Телефон:"}
-                      <Link>{staff?.phone}</Link>
-                    </div>
-                    <div>
-                      {lang === "latin" ? "Mejl:" : "Мејл:"} <Link>{staff?.email}</Link>
-                    </div>
-                  </div>
-                ) : null}
-            </>
-          )}
+         
         </div>
       </div>
     </div>
