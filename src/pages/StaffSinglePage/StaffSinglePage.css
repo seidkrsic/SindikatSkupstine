@@ -100,6 +100,7 @@
     width: 90% !important;
     margin-left: 0;
     margin-right: auto;
+    height: fit-content;
     color: black !important;
     list-style: circle !important;
     
@@ -107,10 +108,12 @@
 
 .StaffSinglePage__container-left  ol { 
     display: flex !important;
+    margin-left: 0;
+    margin-right: auto;
     flex-direction: column !important;
     width: 85% !important;
-    margin: 0 auto !important;
     color: black !important;
+    height: fit-content;
 
 
 }
@@ -177,7 +180,7 @@
 }
 
 .StaffSinglePage__card-info__container p { 
-    width: 256px;
+    width: 252px;
     background-color: #f4f2ec;
     display: flex;
     margin: 0.5rem auto !important;
