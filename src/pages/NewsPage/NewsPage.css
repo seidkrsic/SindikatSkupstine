@@ -18,7 +18,7 @@
 .NewsPage__container-left { 
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 75%;
     height: fit-content;
     min-height: 50vh;
     align-items: center;
