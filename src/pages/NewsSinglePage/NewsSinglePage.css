@@ -90,9 +90,10 @@
 .SingleNewsPage__info-container  ul { 
     display: flex !important;
     flex-direction: column !important;
-    width: 93% !important;
+    width: 100% !important;
     margin-left: 0;
     margin-right: auto;
+    justify-content: flex-end;
     height: fit-content;
     color: black !important;
     list-style: circle !important;
@@ -105,7 +106,8 @@
     margin-left: 0;
     margin-right: auto;
     flex-direction: column !important;
-    width: 93% !important;
+    width: 100% !important;
+    justify-content: flex-end;
     color: black !important;
     height: fit-content;
 
@@ -113,7 +115,7 @@
 }
 
 
-.SingleNewsPage__info-container ul li { 
+.SingleNewsPage__info-container ul li, .SingleNewsPage__info-container ol li { 
     justify-content: flex-start;
     flex-direction: row;
     line-height: normal;
