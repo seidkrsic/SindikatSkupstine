@@ -100,7 +100,7 @@
     width: 85% !important;
     margin: 0 auto !important;
     color: black !important;
-    list-style-type: disc !important;
+    list-style: circle !important;
     
 }
 
