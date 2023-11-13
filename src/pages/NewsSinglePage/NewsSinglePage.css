@@ -96,6 +96,7 @@
     height: fit-content;
     color: black !important;
     list-style: circle !important;
+    padding: 0 !important;
     
 }
 
