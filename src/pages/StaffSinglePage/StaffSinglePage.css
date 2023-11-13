@@ -167,8 +167,8 @@
 
 .StaffSinglePage__card-info__container { 
     width: fit-content;
-    min-width: 75%;
-    width: 75%;
+    min-width: 78%;
+    width: 78%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -178,7 +178,7 @@
 }
 
 .StaffSinglePage__card-info__container p { 
-    width: 80%;
+    width: 82%;
     background-color: #f4f2ec;
     display: flex;
     margin: 0.5rem auto;
