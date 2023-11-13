@@ -135,7 +135,7 @@ const StaffSinglePage = () => {
         </div>
         <div className="StaffSinglePage__container-right">
           <div className="StaffSinglePage__card-container">
-          {staff !== null || staff !== undefined && (
+          {staff && Object.keys(staff) > 0 && (
               <StaffCard
                 staff={staff}
                 role={lang === "latin" ? staff.active_role[0] : staff.active_role[1]}
