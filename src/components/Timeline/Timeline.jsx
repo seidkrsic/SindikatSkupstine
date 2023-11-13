@@ -98,9 +98,9 @@ const Timeline = () => {
               <h3 className="vertical-timeline-element-title">
                 { lang === "latin" ? element.title : element.title_cyrillic }
               </h3>
-              <h5 className="vertical-timeline-element-subtitle">
+              {/* <h5 className="vertical-timeline-element-subtitle">
                 {lang === "latin" ? element.location : element.location_cyrillic}
-              </h5>
+              </h5> */}
               <p id="description">{ lang === "latin" ? element.description : element.description_cyrillic}</p>
             </VerticalTimelineElement>
           );
