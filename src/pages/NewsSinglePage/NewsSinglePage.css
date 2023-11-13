@@ -93,7 +93,7 @@
     width: 100% !important;
     margin-left: 0;
     margin-right: auto;
-    justify-content: flex-end;
+    align-items: flex-end;
     height: fit-content;
     color: black !important;
     list-style: circle !important;
@@ -107,7 +107,7 @@
     margin-right: auto;
     flex-direction: column !important;
     width: 100% !important;
-    justify-content: flex-end;
+    align-items: flex-end;
     color: black !important;
     height: fit-content;
 
