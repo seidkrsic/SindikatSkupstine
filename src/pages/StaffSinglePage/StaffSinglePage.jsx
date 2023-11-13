@@ -52,7 +52,7 @@ const StaffSinglePage = () => {
     ];
   }
 
-  const [staff, setStaff] = useState();
+  const [staff, setStaff] = useState(null);
   const location = useLocation().pathname;
   const location_id = useParams().id;
 
@@ -135,7 +135,7 @@ const StaffSinglePage = () => {
         </div>
         <div className="StaffSinglePage__container-right">
           <div className="StaffSinglePage__card-container">
-          {staff && Object.keys(staff) > 0 && (
+          {staff !== null && (
               <StaffCard
                 staff={staff}
                 role={lang === "latin" ? staff.active_role[0] : staff.active_role[1]}
@@ -150,8 +150,6 @@ const StaffSinglePage = () => {
               </div>
             )
           }
-         
-         
         </div>
       </div>
     </div>
