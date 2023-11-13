@@ -15,11 +15,11 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
     const screenWidth = window.innerWidth;
 
     if (screenWidth < 768) {
-      return title.slice(0, 90) + "..."; // Slice to 20 characters on mobile screens
+      return title.slice(0, 90); // Slice to 20 characters on mobile screens
     } else if (screenWidth >= 768 && screenWidth < 1024) {
-      return title.slice(0, 30) + "..."; // Slice to 40 characters on tablet screens
+      return title.slice(0, 95); // Slice to 40 characters on tablet screens
     } else {
-      return title.slice(0, 90) + "..."; // Display the full title on desktop screens
+      return title.slice(0, 95); // Display the full title on desktop screens
     }
   };
 
@@ -27,11 +27,11 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
     const screenWidth = window.innerWidth;
 
     if (screenWidth < 768) {
-      return title_cyrillic.slice(0, 90) + "..."; // Slice to 20 characters on mobile screens
+      return title_cyrillic.slice(0, 90); // Slice to 20 characters on mobile screens
     } else if (screenWidth >= 768 && screenWidth < 1024) {
-      return title_cyrillic.slice(0, 30) + "..."; // Slice to 40 characters on tablet screens
+      return title_cyrillic.slice(0, 95); // Slice to 40 characters on tablet screens
     } else {
-      return title_cyrillic.slice(0, 90) + "..."; // Display the full title on desktop screens
+      return title_cyrillic.slice(0, 95); // Display the full title on desktop screens
     }
   };
 
