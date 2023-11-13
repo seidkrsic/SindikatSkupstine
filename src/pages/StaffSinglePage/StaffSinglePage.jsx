@@ -142,6 +142,11 @@ const StaffSinglePage = () => {
               />
             )}
           </div>
+
+          <div className="StaffSinglePage__card-info__container">
+              <p>{"Tel: " + staff.phone}</p>
+              <p>{"Email: " + staff.email}</p>
+          </div>
          
         </div>
       </div>
