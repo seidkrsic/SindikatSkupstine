@@ -2,8 +2,10 @@
 
 .FeaturesNewsCard__container { 
     display: flex;
-    height: 320px;
-    width: 230px;
+    /* height: 320px;
+    width: 230px; */
+    height: 350px;
+    width: 250px;
     max-width: 415px;
     text-decoration: none;
     color: #AB0707;
