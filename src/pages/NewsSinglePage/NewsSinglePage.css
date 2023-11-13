@@ -118,7 +118,7 @@
     line-height: normal;
     height: fit-content;
     font-weight: normal;
-    width: 100%;
+    width: 95%;
     color: black !important; 
     text-transform: none !important;
     height: fit-content;
@@ -139,6 +139,7 @@
     line-height: 150%;
     font-size: 16px !important;
     margin: .35rem 0 !important;
+    width: 100%;
    
 }
 
