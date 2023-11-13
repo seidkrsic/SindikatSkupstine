@@ -144,7 +144,7 @@ const StaffSinglePage = () => {
           </div>
           {
             staff?.active_role && staff?.active_role[0] !== "Bivši predsjednik" && (
-              <div className="StaffSinglePage__contact-info">
+              <div className="StaffSinglePage__card-info__container">
                 <p>Tel: <a>{staff?.phone}</a></p>
                 <p>Email: <a>{staff?.email}</a></p>
               </div>
