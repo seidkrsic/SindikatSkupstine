@@ -177,10 +177,12 @@
 }
 
 .StaffSinglePage__card-info__container p { 
-    width: 90%;
+    width: 80%;
+    color: #f4f2ec;
     display: flex;
     margin: 0 auto;
     padding: 1rem 0;
+    font-size: 13px;
     
 
 }
