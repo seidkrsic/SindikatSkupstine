@@ -97,8 +97,9 @@
 .StaffSinglePage__container-left  ul { 
     display: flex !important;
     flex-direction: column !important;
-    width: 85% !important;
-    margin: 0 auto !important;
+    width: 90% !important;
+    margin-left: 0;
+    margin-right: auto;
     color: black !important;
     list-style: circle !important;
     
@@ -116,15 +117,13 @@
 
 
 .StaffSinglePage__container-left ul li { 
-    text-align: start;
     justify-content: flex-start;
     flex-direction: row;
     line-height: normal;
     height: fit-content;
     font-weight: normal;
     font-size: 18px;
-    margin: .4rem 0;
-    width: 90%;
+    width: 100%;
     color: black !important; 
     text-transform: none !important;
     height: fit-content;
