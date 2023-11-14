@@ -56,6 +56,8 @@
 .SkupstinaPage__doc-container li a:hover { 
     color: #AB0707;
     background-color: #f4f2ec;
+    text-decoration: underline;
+    font-weight: 450;
 }
 
 .SkupstinaPage__doc-container li img { 
