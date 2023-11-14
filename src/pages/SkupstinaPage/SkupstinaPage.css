@@ -52,6 +52,7 @@
 .SkupstinaPage__doc-container li a { 
     display: flex;
     text-decoration: none;
+    text-align: start;
     color: black;
     width: 80%;
     height: 90%;
