@@ -17,6 +17,10 @@
 
 .SkupstinaPage__container h1 { 
     font-size: 20px;
+    text-transform: uppercase;
+    width: 82%;
+    margin: 0.5rem auto;
+    text-align: start;
 }
 
 .SkupstinaPage__doc-container { 
