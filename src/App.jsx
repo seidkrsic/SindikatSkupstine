@@ -22,6 +22,7 @@ import Session from "./pages/Session/Session";
 import StaffPage from "./pages/StaffPage/StaffPage";
 import StaffSinglePage from "./pages/StaffSinglePage/StaffSinglePage";
 import LawsPage from "./pages/LawsPage/LawsPage"
+import SkupstinaPage from "./pages/SkupstinaPage/SkupstinaPage";
 
 function App() {
   const [ShowLogo, setShowLogo] = useState(true);
@@ -63,6 +64,7 @@ function App() {
                 <Route path="/documents" element={<ListDocumentsPage />} />
               </Route>
               <Route path="/pogodnosti" element={<Company />} />
+              <Route path="/skupstina" element={<SkupstinaPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/session/skupstina" element={<Session />} />
               <Route path="/session/izvrsni_odbor" element={<Session />} />
