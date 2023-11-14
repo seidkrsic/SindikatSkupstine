@@ -27,7 +27,7 @@
     height: fit-content;
     min-width: 40vh;
     width: 80%;    
-    background-color: #f4f2ec;
+    background-color: rgb(244, 242, 236, .3);
 }
 
 .SkupstinaPage__doc-container li { 
@@ -39,6 +39,8 @@
     flex-direction: row;
     align-items: center;
     padding: .5rem;
+    background-color: #f4f2ec;
+
 }
 
 .SkupstinaPage__doc-container li a { 
