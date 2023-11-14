@@ -53,6 +53,11 @@
 
 }
 
+.SkupstinaPage__doc-container li a:hover { 
+    color: #AB0707;
+    background-color: #f4f2ec;
+}
+
 .SkupstinaPage__doc-container li img { 
     width: 40px;
     height: 40px;
