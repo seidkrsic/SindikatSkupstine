@@ -23,7 +23,7 @@ const StaffPage = () => {
         path: "/saziv/izvrsniodbor",
       },
       {
-        name: "Bivši predsjednici",
+        name: "Raniji predsjednici",
         path: "/saziv/predsjednici",
       },
       {
@@ -43,7 +43,7 @@ const StaffPage = () => {
         path: "/saziv/izvrsniodbor",
       },
       {
-        name: "Бивши предсједници",
+        name: "Ранији предсједници",
         path: "/saziv/predsjednici",
       },
       {
@@ -109,7 +109,7 @@ const StaffPage = () => {
         let data = await response.json();
         setRole(lang === "latin" ? "Bivši predsjednik" : "Бивши предсједник");
         setRoleHeader(
-          lang === "latin" ? "Bivši predsjednici" : "Бивши предсједници"
+          lang === "latin" ? "Raniji predsjednici" : "Ранији предсједници"
         );
         setStaff(data);
       };
