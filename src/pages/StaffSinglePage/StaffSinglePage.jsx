@@ -138,7 +138,7 @@ const StaffSinglePage = () => {
           {staff !== null && (
               <StaffCard
                 staff={staff}
-                role={lang === "latin" ? staff.active_role[0] : staff.active_role[1]}
+                role={lang === "latin" ? staff?.active_role[0] : staff?.active_role[1]}
               />
             )}
           </div>
