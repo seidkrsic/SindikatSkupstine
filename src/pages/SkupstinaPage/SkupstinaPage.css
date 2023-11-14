@@ -49,7 +49,9 @@
     color: black;
     width: 80%;
     height: 90%;
+    text-decoration: underline;
     margin: auto;
+    font-size: 14px !important;
 
 }
 
@@ -58,7 +60,7 @@
     background-color: #f4f2ec !important;
     text-decoration: underline;
     font-weight: 450;
-    font-size: 13px !important;
+    font-size: 14px !important;
 }
 
 .SkupstinaPage__doc-container li img { 
