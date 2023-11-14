@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import HeaderPhoto from '../../components/HeaderPhoto/HeaderPhoto'
 import "../SkupstinaPage/SkupstinaPage.css"
 import AuthContext from "../../Context/AuthContext";
@@ -8,6 +8,7 @@ import salon from "../../images/salon3.jpg"
 
 const SkupstinaPage = () => {
     const [documents, setDocuments] = useState([]) 
+    const { lang } = useContext(AuthContext);
 
     const getDocuments = async () => { 
         
