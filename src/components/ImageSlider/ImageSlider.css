@@ -67,8 +67,8 @@
 .NewInfo { 
     display: flex;
     width: 80%;
-    min-height: 200px;
-    max-height: 2000px;
+    min-height: 150px;
+    max-height: 150px;
     margin: 0 auto;
     position: absolute;
     bottom: 0;
