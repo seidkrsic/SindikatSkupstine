@@ -65,6 +65,7 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    text-align: start;
     font-size: 14px;
     padding: 0 !important;
     height: 100%;
