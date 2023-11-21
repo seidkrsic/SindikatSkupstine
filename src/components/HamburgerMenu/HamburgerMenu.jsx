@@ -51,10 +51,10 @@ const HamburgerMenu = () => {
           <Link to="/news">Aktuelnosti</Link>
         </motion.li>
         <motion.li
-          onClick={handleisMenuOpen}
+          onClick={handleisSubMenuOpen}
           animate={{ height: isMenuOpen ? "50px" : 0 }}
         >
-          <Link onClick={handleisSubMenuOpen} to="">Sindikat</Link>
+          <Link to="">Sindikat</Link>
           {/* Dodajte novi ul element unutar kojeg će biti podmeni za Sindikat */}
           <ul 
             animate={{
