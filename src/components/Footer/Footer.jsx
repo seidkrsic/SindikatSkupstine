@@ -30,15 +30,18 @@ const Footer = () => {
         <div className="Footer__container-top__bigCol">
           <div className="Footer__container-top__col">
             <h1>{lang === "latin" ? "Dokumenta" : "Документа"}</h1>
-            <Link>
+            <a href="http://apisindikat.skupstina.me/api/importantDocuments/3601629a-7387-4bb5-baa0-3bcf88562529/download/">
               {lang === "latin" ? "Ustav Crne Gore" : "Устав Црне Горе"}
-            </Link>
-            <Link>
+            </a>
+            <a href="http://apisindikat.skupstina.me/api/importantDocuments/3601629a-7387-4bb5-baa0-3bcf88562529/download/">
               {lang === "latin" ? "Poslovnik Skupštine Crne Gore" : "Пословник Скупштине Црне Горе"}
-            </Link>
-            <Link>
+            </a>
+            <a href="http://apisindikat.skupstina.me/api/importantDocuments/3601629a-7387-4bb5-baa0-3bcf88562529/download/">
               {lang === "latin" ? "Statut" : "Статут"}
-            </Link>
+            </a>
+            <a href="http://apisindikat.skupstina.me/api/importantDocuments/3601629a-7387-4bb5-baa0-3bcf88562529/download/">
+              {lang === "latin" ? "Himna Sindikata" : "Химна Синдиката"}
+            </a>
           </div>
           <div className="Footer__container-top__col">
             <h1>{lang === "latin" ? "Materijali" : "Материјали"}</h1>
