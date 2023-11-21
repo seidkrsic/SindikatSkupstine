@@ -88,6 +88,10 @@
 .HamburgerMenu__sub-menu {
     display: flex;
     min-height: fit-content;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
     list-style: none;
     width: 100%;
     margin: 0 auto;

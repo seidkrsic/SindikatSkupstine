@@ -58,7 +58,7 @@ const HamburgerMenu = () => {
           {/* Dodajte novi ul element unutar kojeg će biti podmeni za Sindikat */}
           <ul 
             animate={{
-                height: isSubMenuOpen ? "300px" : 0,
+                height: isSubMenuOpen ? "fit-content" : 0,
                 transition: 1,
                 animationDelay: 5,
             }}
@@ -81,7 +81,7 @@ const HamburgerMenu = () => {
             <li>
               <Link to="/statutarna-komisija">Statutarna komisija</Link>
             </li>
-            {/* Dodajte još li elemenata po potrebi */}
+            
           </ul>
 
 
