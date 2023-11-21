@@ -53,6 +53,33 @@ const HamburgerMenu = () => {
           animate={{ height: isMenuOpen ? "50px" : 0 }}
         >
           <Link to="/staff">Sindikat</Link>
+          {/* Dodajte novi ul element unutar kojeg će biti podmeni za Sindikat */}
+          <ul className="HamburgerMenu__sub-menu">
+            <li>
+              <Link to="/skupstina">Skupstina</Link>
+            </li>
+            <li>
+              <Link to="/predsjednik">Predsjednik</Link>
+            </li>
+            <li>
+              <Link to="/zamjenik-predsjednika">Zamjenik predsjednika</Link>
+            </li>
+            <li>
+              <Link to="/izvrsni-odbor">Izvrsni odbor</Link>
+            </li>
+            <li>
+              <Link to="/nadzorni-odbor">Nadzorni odbor</Link>
+            </li>
+            <li>
+              <Link to="/statutarna-komisija">Statutarna komisija</Link>
+            </li>
+            {/* Dodajte još li elemenata po potrebi */}
+          </ul>
+
+
+
+
+
         </motion.li>
         <motion.li
           onClick={handleisMenuOpen}

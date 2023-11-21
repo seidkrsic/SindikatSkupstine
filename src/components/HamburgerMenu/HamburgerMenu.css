@@ -81,6 +81,24 @@
     background-color: white;
 }
 
+
+.HamburgerMenu__sub-menu {
+    list-style: none;
+    padding-left: 20px; /* Dodajte razmak od lijeve ivice */
+  }
+  
+  .HamburgerMenu__sub-menu li {
+    margin: 0;
+    padding: 8px 0; /* Dodajte razmak između podmeni elemenata */
+  }
+  
+  .HamburgerMenu__sub-menu a {
+    color: #666; /* Dodajte boju linkova u podmeniju */
+  }
+
+
+
+
 @media screen and (min-width: 991px) {
 
     .HamburgerMenu__container { 
