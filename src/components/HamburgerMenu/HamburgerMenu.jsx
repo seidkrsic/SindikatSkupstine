@@ -9,7 +9,9 @@ import "../HamburgerMenu/HamburgerMenu.css";
 
 const HamburgerMenu = () => {
   const [isMenuOpen, setisMenuOpen] = useState(false);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const handleisMenuOpen = () => setisMenuOpen(!isMenuOpen);
+  const handleisSubMenuOpen = () => setIsSubMenuOpen(!isSubMenuOpen);
   const { lang } = useContext(AuthContext);
   const { user } = useContext(AuthContext);
   const { userLogout } = useContext(AuthContext); 
@@ -52,9 +54,15 @@ const HamburgerMenu = () => {
           onClick={handleisMenuOpen}
           animate={{ height: isMenuOpen ? "50px" : 0 }}
         >
-          <Link to="/staff">Sindikat</Link>
+          <Link onClick={handleisSubMenuOpen} to="">Sindikat</Link>
           {/* Dodajte novi ul element unutar kojeg će biti podmeni za Sindikat */}
-          <ul className="HamburgerMenu__sub-menu">
+          <ul 
+            animate={{
+                height: isSubMenuOpen ? "300px" : 0,
+                transition: 1,
+                animationDelay: 5,
+            }}
+            className="HamburgerMenu__sub-menu">
             <li>
               <Link to="/skupstina">Skupstina</Link>
             </li>
