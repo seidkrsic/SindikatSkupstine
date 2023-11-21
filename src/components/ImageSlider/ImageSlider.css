@@ -1,7 +1,7 @@
 
 .ImageSlider__container { 
     display: flex;
-    height: 75vh;
+    height: 73vh;
     width: 80%;
     margin: 2rem auto;
     justify-content: center;
@@ -67,8 +67,8 @@
 .NewInfo { 
     display: flex;
     width: 80%;
-    min-height: 120px;
-    max-height: 120px;
+    min-height: 100px;
+    max-height: 100px;
     margin: 0 auto;
     position: absolute;
     bottom: 0;
@@ -84,7 +84,7 @@
 
 .NewInfo h1  { 
     margin: 1rem;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .NewInfo p { 
