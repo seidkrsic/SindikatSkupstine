@@ -20,14 +20,14 @@ const ImageSlider = ({ slides }) => {
 
     } else if (screenWidth >= 768 && screenWidth < 1024) {
       if (title?.length > 50) { 
-        return title?.slice(0, 50) + "..."; // Slice to 40 characters on tablet screens
+        return title?.slice(0, 80) + "..."; // Slice to 40 characters on tablet screens
 
       } else {  
         return title 
       }
     } else {
       if(title?.length > 60) { 
-        return title?.slice(0, 60) + "..."; // Display the full title on desktop screens
+        return title?.slice(0, 80) + "..."; // Display the full title on desktop screens
 
       } else { 
         return title 
