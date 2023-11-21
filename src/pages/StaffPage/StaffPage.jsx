@@ -18,42 +18,27 @@ const StaffPage = () => {
 
   if (lang === "latin") {
     CategoriesInfo = [
-      {
-        name: "Izvršni odbor",
-        path: "/saziv/izvrsniodbor",
-      },
-      {
-        name: "Raniji predsjednici",
-        path: "/saziv/predsjednici",
-      },
-      {
-        name: "Nadzorni odbor",
-        path: "/saziv/nadzorniodbor",
-      },
-
-      {
-        name: "Statutarna komisija",
-        path: "/saziv/komisija",
-      },
+      { name: "Skupština", path: "/skupstina" },
+      { name: "Predsjednik", path: "/saziv/predsjednik" },
+      { name: "Zamjenik predsjednika", path: "/saziv/zamjenikPredsjednika" },
+      { name: "Izvršni odbor", path: "/saziv/izvrsniodbor" },
+      { name: "Nadzorni odbor", path: "/saziv/nadzorniodbor" },
+      { name: "Statutarna komisija", path: "/saziv/komisija" },
+      { name: "Raniji predsjednici", path: "/saziv/predsjednici" },
     ];
+
+
+
+    
   } else {
     CategoriesInfo = [
-      {
-        name: "Извршни одбор",
-        path: "/saziv/izvrsniodbor",
-      },
-      {
-        name: "Ранији предсједници",
-        path: "/saziv/predsjednici",
-      },
-      {
-        name: "Надзорни одбор",
-        path: "/saziv/nadzorniodbor",
-      },
-      {  
-        name: "Статутарна комисија",
-        path: "/saziv/komisija",
-      },
+      { name: "Skupština", path: "/skupstina" },
+      { name: "Predsjednik", path: "/saziv/predsjednik" },
+      { name: "Zamjenik predsjednika", path: "/saziv/zamjenikPredsjednika" },
+      { name: "Izvršni odbor", path: "/saziv/izvrsniodbor" },
+      { name: "Nadzorni odbor", path: "/saziv/nadzorniodbor" },
+      { name: "Statutarna komisija", path: "/saziv/komisija" },
+      { name: "Raniji predsjednici", path: "/saziv/predsjednici" },
     ];
   }
 

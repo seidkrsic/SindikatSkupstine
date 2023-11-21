@@ -71,7 +71,7 @@ const MainMenuCopy = () => {
       { name: "Izvršni odbor", path: "/saziv/izvrsniodbor" },
       { name: "Nadzorni odbor", path: "/saziv/nadzorniodbor" },
       { name: "Statutarna komisija", path: "/saziv/komisija" },
-      { name: "Raniji predsjednici", path: "/saziv/predsjednici" },
+      // { name: "Raniji predsjednici", path: "/saziv/predsjednici" },
   
     ];
 
@@ -94,7 +94,7 @@ const MainMenuCopy = () => {
       { name: "Извршни одбор", path: "/saziv/izvrsniodbor" },
       { name: "Надзорни одбор", path: "/saziv/nadzorniodbor" },
       { name: "Статутарна комисија", path: "/saziv/komisija" },
-      { name: "Ранији предсједници", path: "/saziv/predsjednici" },
+      // { name: "Ранији предсједници", path: "/saziv/predsjednici" },
 
 
     ];
