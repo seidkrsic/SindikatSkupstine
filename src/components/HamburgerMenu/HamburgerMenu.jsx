@@ -115,7 +115,7 @@ const HamburgerMenu = () => {
           onClick={handleisMenuOpen}
           animate={{ height: isMenuOpen ? "50px" : 0 }}
         >
-          <Link className="">
+          <Link className="HamburgerMenu__container-bg__color">
             <img src={userIcon} alt="user" />
 
             <p id="userLogin-name">{user?.username} </p>
