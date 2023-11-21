@@ -62,7 +62,7 @@ const HamburgerMenu = () => {
                 transition: 1,
                 animationDelay: 5,
             }}
-            className="HamburgerMenu__sub-menu">
+            className={ isSubMenuOpen ? "HamburgerMenu__sub-menu" : "HamburgerMenu__sub-menu hidden" }>
             <li>
               <Link to="/skupstina">Skupstina</Link>
             </li>
