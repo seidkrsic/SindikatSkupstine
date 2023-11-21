@@ -63,9 +63,8 @@
     color: #AB0707;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-decoration: none;
-    text-align: start;
     font-size: 14px;
     padding: 0 !important;
     height: 100%;
