@@ -56,7 +56,7 @@
     justify-content: flex-start;
     align-items: center;
     color: black;
-    font-weight: 450;
+    font-weight: 400 !important;
     width: 80%;
     height: 90%;
     text-decoration: underline;
