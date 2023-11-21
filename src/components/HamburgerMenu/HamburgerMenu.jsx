@@ -12,7 +12,18 @@ const HamburgerMenu = () => {
   const handleisMenuOpen = () => setisMenuOpen(!isMenuOpen);
   const { lang } = useContext(AuthContext);
   const { user } = useContext(AuthContext);
-  const { userLogout } = useContext(AuthContext);
+  const { userLogout } = useContext(AuthContext); 
+  const { updateLang } = useContext(AuthContext);
+
+  const setLatin = () => {
+    updateLang("latin");
+    localStorage.setItem("lang", "latin");
+  };
+
+  const setCyrillic = () => {
+    updateLang("cyrillic");
+    localStorage.setItem("lang", "cyrillic");
+  };
 
   return (
     <div className={"HamburgerMenu__container transparent"}>
