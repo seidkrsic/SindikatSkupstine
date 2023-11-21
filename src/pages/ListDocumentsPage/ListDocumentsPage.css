@@ -29,6 +29,7 @@
         flex-direction: row; 
         min-height: fit-content;
         height: fit-content;
+        padding: 1rem 0;
         width: 70%;
         margin: 0.5rem auto;
         align-items: center;
