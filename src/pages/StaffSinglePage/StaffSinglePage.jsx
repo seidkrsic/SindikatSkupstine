@@ -14,17 +14,17 @@ const StaffSinglePage = () => {
 
   if (lang === "latin") {
     CategoriesInfo = [
-      { name: "Skupština", path: "/skupstina" },
+      
       { name: "Predsjednik", path: "/saziv/predsjednik" },
       { name: "Zamjenik predsjednika", path: "/saziv/zamjenikPredsjednika" },
       { name: "Izvršni odbor", path: "/saziv/izvrsniodbor" },
       { name: "Nadzorni odbor", path: "/saziv/nadzorniodbor" },
       { name: "Statutarna komisija", path: "/saziv/komisija" },
-      // { name: "Raniji predsjednici", path: "/saziv/predsjednici" },
+      { name: "Raniji predsjednici", path: "/saziv/predsjednici" },
     ];
   } else {
     CategoriesInfo = [
-      { name: "Скупштина", path: "/skupstina" },
+
       { name: "Предсједник", path: "/saziv/predsjednik" },
       { name: "Замјеник предсједника", path: "/saziv/zamjenikPredsjednika" },
       { name: "Извршни одбор", path: "/saziv/izvrsniodbor" },
