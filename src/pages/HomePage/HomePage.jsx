@@ -104,8 +104,8 @@ const HomePage = () => {
         <div className="PageBreakerDoubleLine"></div>
         <h1 className="Section__heading">
           {lang === "latin"
-            ? "Istorijat Sindikata Skupštine Crne Gore"
-            : "Историјат Синдиката Скупштине Црне Горе"}
+            ? "Istorijat i djelovanje  Sindikalne organizacije Skupštine Crne Gore"
+            : "Историјат и дјеловање  Синдикалне организације Скупштине Црне Горе"}
         </h1>
 
         {/* NEXT SECTION IN HOMEPAGE  */}
