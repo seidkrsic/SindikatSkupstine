@@ -66,9 +66,9 @@
 
 .NewInfo { 
     display: flex;
-    width: 80%;
+    width: 100%;
     height: fit-content;
-    /* min-height: 100px; */
+    min-height: 60px;
     max-height: 100px;
     margin: 0 auto;
     position: absolute;
