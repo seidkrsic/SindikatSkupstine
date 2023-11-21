@@ -6,68 +6,34 @@ import AuthContext from "../../Context/AuthContext";
 import "./ImageSlider.css";
 
 const ImageSlider = ({ slides }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const { lang } = useContext(AuthContext);
 
   const sliceTitle = (title) => {
     const screenWidth = window.innerWidth;
 
     if (screenWidth < 768) {
-      if (title?.length > 45) { 
-        return title?.slice(0, 45) + "..."; // Slice to 20 characters on mobile screens
-
-      } else { 
-        return title 
-      }
-
+      return title?.length > 70 ? title?.slice(0, 70) + "..." : title;
     } else if (screenWidth >= 768 && screenWidth < 1024) {
-      if (title?.length > 100) { 
-        return title?.slice(0, 100) + "..."; // Slice to 40 characters on tablet screens
-
-      } else {  
-        return title 
-      }
+      return title?.length > 100 ? title?.slice(0, 100) + "..." : title;
     } else {
-      if(title?.length > 100) { 
-        return title?.slice(0, 100) + "..."; // Display the full title on desktop screens
-
-      } else { 
-        return title 
-      }
+      return title?.length > 100 ? title?.slice(0, 100) + "..." : title;
     }
   };
 
-  const sliceContent = (title) => {
+  const sliceContent = (content) => {
     const screenWidth = window.innerWidth;
 
     if (screenWidth < 768) {
-      if (title?.length > 65) { 
-        return title?.slice(0, 65) + "..."; // Slice to 20 characters on mobile screens
-      }
-      else { 
-        return title 
-      }
-
+      return content?.length > 65 ? content?.slice(0, 65) + "..." : content;
     } else if (screenWidth >= 768 && screenWidth < 1024) {
-      if (title?.length > 200) { 
-        return title?.slice(0, 200) + "..."; // Slice to 40 characters on tablet screens
-      } 
-      else { 
-        return title 
-      }
-
+      return content?.length > 200 ? content?.slice(0, 200) + "..." : content;
     } else {
-      if (title?.length > 180) { 
-        return title?.slice(0, 180) + "..."; // Display the full title on desktop screens
-      }
-      else { 
-        return title // Display the full title on desktop screens
-
-      }
+      return content?.length > 180 ? content?.slice(0, 180) + "..." : content;
     }
   };
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-  const { lang } = useContext(AuthContext);
 
   const showArrows = () => {
     setIsHovered(true);
@@ -114,28 +80,12 @@ const ImageSlider = ({ slides }) => {
         animate={{ x: 0, opacity: 1, animationDuration: 2 }}
         transition={{ duration: 3 }}
       >
-        {/* <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : -20 }}
-          style={{ opacity: isHovered ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
-          onClick={onToPrevious}
-          className="leftArrow"
-        >
-          ❮
-        </motion.div> */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : -20 }}
-          style={{ opacity: isHovered ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
-          onClick={onToNext}
-          className="rightArrow"
-        >
-          ❯
-        </motion.div> */}
-
-        <img src={`${slides[currentIndex]?.image_url}`} alt="" />
+        <img
+          src={`${slides[currentIndex]?.image_url}`}
+          alt=""
+          style={{ display: imageLoaded ? "block" : "none" }}
+          onLoad={() => setImageLoaded(true)}
+        />
 
         <Link to={"/news/" + slides[currentIndex]?.id} className="NewInfo">
           <h1>
@@ -143,11 +93,11 @@ const ImageSlider = ({ slides }) => {
               ? sliceTitle(slides[currentIndex]?.nice_title)
               : sliceTitle(slides[currentIndex]?.title_cyrillic)}
           </h1>
-          {/* {lang === "latin"
+          {lang === "latin"
             ? parse(String(sliceContent(slides[currentIndex]?.nice_content)))
             : parse(
                 String(sliceContent(slides[currentIndex]?.content_cyrillic))
-              )} */}
+              )}
         </Link>
       </motion.div>
     </motion.div>
