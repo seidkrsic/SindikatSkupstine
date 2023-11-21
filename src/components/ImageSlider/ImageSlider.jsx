@@ -93,11 +93,11 @@ const ImageSlider = ({ slides }) => {
               ? sliceTitle(slides[currentIndex]?.nice_title)
               : sliceTitle(slides[currentIndex]?.title_cyrillic)}
           </h1>
-          {lang === "latin"
+          {/* {lang === "latin"
             ? parse(String(sliceContent(slides[currentIndex]?.nice_content)))
             : parse(
                 String(sliceContent(slides[currentIndex]?.content_cyrillic))
-              )}
+              )} */}
         </Link>
       </motion.div>
     </motion.div>
