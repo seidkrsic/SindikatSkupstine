@@ -33,10 +33,10 @@ const Footer = () => {
             <a href="http://apisindikat.skupstina.me/api/importantDocuments/3601629a-7387-4bb5-baa0-3bcf88562529/download/">
               {lang === "latin" ? "Ustav Crne Gore" : "Устав Црне Горе"}
             </a>
-            <a href="http://apisindikat.skupstina.me/api/importantDocuments/3601629a-7387-4bb5-baa0-3bcf88562529/download/">
+            <a href="http://apisindikat.skupstina.me/api/importantDocuments/5e1e6da4-16d4-492b-b881-797f6e342e11/download/">
               {lang === "latin" ? "Poslovnik Skupštine Crne Gore" : "Пословник Скупштине Црне Горе"}
             </a>
-            <a href="http://apisindikat.skupstina.me/api/importantDocuments/3601629a-7387-4bb5-baa0-3bcf88562529/download/">
+            <a href="http://apisindikat.skupstina.me/api/importantDocuments/5e1e6da4-16d4-492b-b881-797f6e342e11/download/">
               {lang === "latin" ? "Statut" : "Статут"}
             </a>
             <a href="http://apisindikat.skupstina.me/api/importantDocuments/3601629a-7387-4bb5-baa0-3bcf88562529/download/">
@@ -53,13 +53,13 @@ const Footer = () => {
       <div className="Footer__container-bottom">
         <p>
           {lang === "latin"
-            ? "Sindikat Skupštine Crne Gore, Bulevar Svetog Petra Cetinjskog broj 10, 81000 Podgorica"
-            : "Синдикат Скупштине Црне Горе, Булевар Светог Петра Цетињског број 10, 81000 Подгорица"}
+            ? "Sindikalna organizacija Crne Gore, Bulevar Svetog Petra Cetinjskog broj 10, 81000 Podgorica"
+            : "Синдикална организација Црне Горе, Булевар Светог Петра Цетињског број 10, 81000 Подгорица"}
         </p>
         <p>
           {lang === "latin"
-            ? "e-mail: sindikat@skupstina.me"
-            : "е-маил: sindikat@skupstina.me"}
+            ? "mejl: sindikat@skupstina.me"
+            : "mejl: sindikat@skupstina.me"}
         </p>
       </div>
     </div>

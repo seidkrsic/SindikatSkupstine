@@ -72,7 +72,7 @@ const ListDocumentsPage = () => {
             <img src={pdfdownload} alt="pdf" />
             <div className="ListDocumentsPage__text-container">
               <p>{lang === "latin" ? item.title : item.title_cyrillic}</p>
-              <p className="dateFont">{item.created_eu_time}</p>
+              {/* <p className="dateFont">{item.created_eu_time}</p> */}
             </div>
           </a>
         ))}
