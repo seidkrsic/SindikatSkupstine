@@ -152,6 +152,7 @@
     margin: 0 auto;
     flex-direction: row; 
     justify-content: flex-start;
+    margin-left: 4rem;
 }
 
 
