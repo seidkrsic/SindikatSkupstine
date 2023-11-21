@@ -58,7 +58,7 @@ const HomePage = () => {
           <div className="PageContainerGrid__bigger">
             <div className="flex-col">
               <div className="HomePage__special-doc">
-                <a href="http://apisindikat.skupstina.me/api/importantDocuments/6207c607-c5fa-4e97-8d45-48776d031c4a/download/">
+                <a href="http://apisindikat.skupstina.me/api/importantDocuments/31c8511a-670b-4494-a397-a1dfb4056248/download/">
                   {lang === "latin" ? "Pristupnica" : "Приступница"}
                 </a>
               </div>
