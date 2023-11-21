@@ -81,6 +81,25 @@ const HamburgerMenu = () => {
             </Link>
           )}
         </motion.li>
+
+        <motion.li 
+          onClick={handleisMenuOpen}
+          animate={{ height: isMenuOpen ? "50px" : 0 }}>
+        <Link
+            onClick={
+              lang === "latin"
+                ? () => {
+                    setCyrillic();
+                  }
+                : () => {
+                    setLatin();
+                  }
+            }
+          >
+            {lang == "latin" ? "Ћирилица" : "Latinica"}
+          </Link>
+        </motion.li>
+
         <motion.li
           onClick={handleisMenuOpen}
           animate={{ height: isMenuOpen ? "50px" : 0 }}
