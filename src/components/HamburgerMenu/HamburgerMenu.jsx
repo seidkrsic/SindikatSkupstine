@@ -34,7 +34,7 @@ const HamburgerMenu = () => {
       </div>
       <motion.ul
         animate={{
-          height: isMenuOpen ? "400px" : 0,
+          height: isMenuOpen ? "fit-content" : 0,
           transition: 1,
           animationDelay: 5,
         }}
