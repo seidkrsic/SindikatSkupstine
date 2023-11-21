@@ -184,6 +184,7 @@
     background-color: #f4f2ec;
     display: flex;
     margin: 0.5rem auto !important;
+    margin-right: 1rem !important;
     padding: .5rem !important;
     font-size: 13px;
     border: 1px solid #F1E5AC;
