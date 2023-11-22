@@ -46,6 +46,8 @@
     text-transform: uppercase;
     font-size: 13px;
     height: fit-content;
+    padding: 1rem 0;
+    text-decoration: none;
     color: black !important;
 }
 
