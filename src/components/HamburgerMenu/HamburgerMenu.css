@@ -96,6 +96,7 @@
 
 .no_content { 
     height: 0 !important;
+    display: none !important;
 }
 
 
