@@ -29,6 +29,11 @@ const HamburgerMenu = () => {
     };
 
     const menuItems = [ 
+
+      { 
+        title: "Sindikat", 
+        
+      },
         { 
           title: "Sindikat", 
           items: [ 
@@ -39,7 +44,38 @@ const HamburgerMenu = () => {
             { name: "Nadzorni odbor", path: "/saziv/nadzorniodbor" },
             { name: "Statutarna komisija", path: "/saziv/komisija" },
           ]
-        }
+        }, 
+        { 
+          title: "Sjednice", 
+          items: [ 
+            { name: "Sjednice Skupštine", path: "/session/skupstina" },
+            { name: "Sjednice Izvršnog odbora", path: "/session/izvrsni_odbor" },
+          
+          ]
+        }, 
+        { 
+          title: "Zakoni i Akti", 
+          items: [ 
+            { name: "Akti SOSCG", path: "/zakoni/akti_sindikata" },
+            { name: "Zakoni i drugi akti", path: "/zakoni/opsti_akti"},
+            { name: "Formulari i obrasci", path: "/zakoni/formulari"},
+          
+          ]
+        }, 
+
+        { 
+          title: "Pogodnosti", 
+          
+        },
+
+        { 
+          title: "Kontakt", 
+          
+        },
+
+
+
+        
 
     ];
 
