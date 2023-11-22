@@ -48,7 +48,7 @@ const HamburgerMenu = () => {
         <div className="HamburgerMenu__img-container" onClick={handleisMenuOpen}>
           <img src={!isMenuOpen ? openMenu : closeMenu} alt="" />
         </div>
-        <div className={isMenuOpen ? "HamburgerMenu__item-container" : "HamburgerMenu__item-container .no_content"}>
+        <div className={isMenuOpen ? "HamburgerMenu__item-container" : "HamburgerMenu__item-container no_content"}>
           {
             menuItems.map((element, index)=> ( 
               <HamburgerMenuItem title={element.title} items={element.items} key={index} />
