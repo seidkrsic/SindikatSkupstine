@@ -20,6 +20,7 @@
     text-transform: uppercase;
     font-size: 15px;
     height: fit-content;
+    min-height: 50px;
     text-decoration: none;
     color: black;
 }
