@@ -350,8 +350,8 @@
         width: 100%;
     }
     .StaffSinglePage__card-info__container p { 
-        width: 86% !important;
-        padding: .6rem 0;
+        width: 85.5% !important;
+        padding: 1rem 0 !important;
     }
 
     .StaffSinglePage__container-main .Categories__container { 
