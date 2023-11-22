@@ -334,7 +334,8 @@
         display: flex;
         flex-direction: column;
         margin: 1rem auto;
-        min-height: none;
+        min-height: none !important;
+        height: fit-content !important;
     }
 
     .StaffSinglePage__container-left { 
