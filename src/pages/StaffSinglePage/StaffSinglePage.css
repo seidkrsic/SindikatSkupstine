@@ -325,7 +325,7 @@
 
     .StaffSinglePage__container { 
         flex-direction: column-reverse;
-        width: 90%;
+        width: 85%;
         margin: 0 auto;
     }
 
@@ -352,7 +352,7 @@
     }
     .StaffSinglePage__card-info__container p { 
         width: 85.5% !important;
-        padding: 1rem 1% !important;
+        padding: 1rem 2% !important;
         margin: 0 auto;
     }
 
