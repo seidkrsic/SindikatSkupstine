@@ -158,6 +158,15 @@
     .Contact__info-container-right div { 
         width: 90%;
         margin: 0.5rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Contact__info-container-right p { 
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
     }
 
 
