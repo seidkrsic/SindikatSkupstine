@@ -100,8 +100,9 @@
     }
 
     .SkupstinaPage__doc-container li { 
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
+        padding: 0.5rem 0 !important;
     }
 
 }
