@@ -103,3 +103,24 @@
 .LawsPage__text-container p:hover { 
     color: #AB0707;
 }
+
+
+@media screen and (max-width: 767px) { 
+    
+    .LawsPage__main-container { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .LawsPage__container { 
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .LawsPage__left-container { 
+        width: 90%;
+        margin: 0 auto;
+    }
+}
