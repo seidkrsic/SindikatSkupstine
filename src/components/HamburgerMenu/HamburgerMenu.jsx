@@ -31,6 +31,11 @@ const HamburgerMenu = () => {
     };
 
     const menuItems = [ 
+      { 
+        title: "Aktuelnosti", 
+        path: "/news"
+        
+      },
 
       { 
         title: "Skupština", 
