@@ -90,10 +90,11 @@
     }
 
     .SkupstinaPage__container { 
-        margin: 0 auto !important;
+        margin: 2rem auto !important;
         display: flex !important;
         padding: 0 !important;
         width: 90% !important;
+
     }
 
     .SkupstinaPage__doc-container { 
