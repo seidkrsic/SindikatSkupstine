@@ -334,13 +334,14 @@
         display: flex;
         flex-direction: column;
         margin: 1rem auto;
-        min-height: none !important;
+        min-height: fit-content !important;
         height: fit-content !important;
+        max-height: fit-content !important;
     }
 
     .StaffSinglePage__container-left { 
         width: 100%;
-        min-height: none;
+        min-height: none !important;
     } 
     .StaffSinglePage__card-info__container { 
         width: 100%;
