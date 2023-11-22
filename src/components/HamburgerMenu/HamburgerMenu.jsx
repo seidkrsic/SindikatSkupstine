@@ -5,7 +5,7 @@ import AuthContext from "../../Context/AuthContext";
 import closeMenu from "../../images/closeMenu.png";
 import openMenu from "../../images/openMenu.png";
 import userIcon from "../../images/user.png";
-import "./HamburgerMenu/HamburgerMenu.css";
+import "../HamburgerMenu/HamburgerMenu.css";
 import HamburgerMenuItem from "../HamburgerMenuItem/HamburgerMenuItem";
 
 const HamburgerMenu = () => {
