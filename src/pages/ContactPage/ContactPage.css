@@ -94,6 +94,8 @@
     text-transform: uppercase;
     margin-bottom: 1rem;
     width: 80%;
+    text-align: center !important;
+    
 }
 
 .Contact__info-container h1 { 
