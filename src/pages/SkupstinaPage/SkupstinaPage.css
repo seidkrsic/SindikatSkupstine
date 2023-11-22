@@ -99,6 +99,7 @@
 
     .SkupstinaPage__doc-container { 
         width: 90%;
+        min-width: none !important;
         margin: 0 auto;
     }
 
