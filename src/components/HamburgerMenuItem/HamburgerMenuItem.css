@@ -22,9 +22,9 @@
 
 .HamburgerMenuItem__content { 
     height: 0px;
-    display: none;
+    /* display: none; */
     width: 90%;
-    background-color: gainsboro;
+    background-color: rgb(220, 220, 220, .7);
     transition: height ease-in-out .5s;
 }
 
