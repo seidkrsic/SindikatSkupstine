@@ -311,7 +311,7 @@
 
     .StaffSinglePage__container-left  p { 
         width: 95% !important;
-        margin: 1rem auto;
+        /* margin: 1rem auto; */
 
     }
 
@@ -337,6 +337,7 @@
 
     .StaffSinglePage__container-left { 
         width: 100%;
+        min-height: none;
     } 
     .StaffSinglePage__card-info__container { 
         width: 100%;
@@ -346,7 +347,7 @@
     }
 
     .StaffSinglePage__container-main .Categories__container { 
-        width: 100% !important;
+        width: 90% !important;
     }
     .StaffSinglePage__container-main .Categories__container a { 
         width: 100% !important;
