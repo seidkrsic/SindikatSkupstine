@@ -15,15 +15,17 @@
     text-align: center;
     width: 100%;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 20px;
     height: fit-content;
+    text-decoration: none;
 }
 
 .HamburgerMenuItem__content { 
     height: 0px;
     display: none;
     width: 90%;
-    background-color: bisque;
+    background-color: gainsboro;
+    transition: height ease-in-out .5s;
 }
 
 .openMenu { 
