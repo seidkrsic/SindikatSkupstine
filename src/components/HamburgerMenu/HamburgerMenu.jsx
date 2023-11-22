@@ -8,175 +8,33 @@ import userIcon from "../../images/user.png";
 import "../HamburgerMenu/HamburgerMenu.css";
 
 const HamburgerMenu = () => {
-  const [isMenuOpen, setisMenuOpen] = useState(false);
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
-  const handleisMenuOpen = () => setisMenuOpen(!isMenuOpen);
-  const handleisSubMenuOpen = () => setIsSubMenuOpen(!isSubMenuOpen);
-  const { lang } = useContext(AuthContext);
-  const { user } = useContext(AuthContext);
-  const { userLogout } = useContext(AuthContext); 
-  const { updateLang } = useContext(AuthContext);
+    const [isMenuOpen, setisMenuOpen] = useState(false);
+    const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+    const handleisMenuOpen = () => setisMenuOpen(!isMenuOpen);
+    const handleisSubMenuOpen = () => setIsSubMenuOpen(!isSubMenuOpen);
+    const { lang } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
+    const { userLogout } = useContext(AuthContext); 
+    const { updateLang } = useContext(AuthContext);
 
-  const setLatin = () => {
-    updateLang("latin");
-    localStorage.setItem("lang", "latin");
-  };
+    const setLatin = () => {
+      updateLang("latin");
+      localStorage.setItem("lang", "latin");
+    };
 
-  const setCyrillic = () => {
-    updateLang("cyrillic");
-    localStorage.setItem("lang", "cyrillic");
-  };
+    const setCyrillic = () => {
+      updateLang("cyrillic");
+      localStorage.setItem("lang", "cyrillic");
+    };
 
-  return (
-    <div className={"HamburgerMenu__container transparent"}>
-      <div className="HamburgerMenu__img-container" onClick={handleisMenuOpen}>
-        <img src={!isMenuOpen ? openMenu : closeMenu} alt="" />
+    return (
+      <div className={"HamburgerMenu__container transparent"}>
+        <div className="HamburgerMenu__img-container" onClick={handleisMenuOpen}>
+          <img src={!isMenuOpen ? openMenu : closeMenu} alt="" />
+        </div>
+        
       </div>
-      <motion.ul
-        animate={{
-          height: isMenuOpen ? "400px" : 0,
-          transition: 1,
-          animationDelay: 5,
-        }}
-        className={
-          isMenuOpen
-            ? "HamburgerMenu__links-container HamburgerMenu__container-bg__color"
-            : "HamburgerMenu__links-container hidden"
-        }
-      >
-        <motion.li
-          onClick={handleisMenuOpen}
-          animate={{ height: isMenuOpen ? "50px" : 0 }}
-        >
-          <Link to="/news">Aktuelnosti</Link>
-        </motion.li>
-        <motion.li
-          onClick={handleisSubMenuOpen}
-          animate={{ height: isMenuOpen ? "50px" : 0 }}
-        >
-          <Link to="">Sindikat</Link>
-          {/* Dodajte novi ul element unutar kojeg će biti podmeni za Sindikat */}
-          <ul 
-            animate={{
-                height: isSubMenuOpen ? "300px" : 0,
-                transition: 1,
-                animationDelay: 5,
-            }}
-            className={ isSubMenuOpen ? "HamburgerMenu__sub-menu" : "HamburgerMenu__sub-menu hidden" }>
-            <motion.li 
-                onClick={handleisMenuOpen}
-                animate={{ height: isSubMenuOpen ? "50px" : 0 }}
-            >
-              <Link to="/skupstina">Skupstina</Link>
-            </motion.li>
-            <motion.li
-                onClick={handleisMenuOpen}
-                animate={{ height: isSubMenuOpen ? "50px" : 0 }}
-            >
-              <Link to="/predsjednik">Predsjednik</Link>
-            </motion.li>
-            <motion.li
-                onClick={handleisMenuOpen}
-                animate={{ height: isSubMenuOpen ? "50px" : 0 }}
-            >
-              <Link to="/zamjenik-predsjednika">Zamjenik predsjednika</Link>
-            </motion.li>
-            <motion.li 
-                onClick={handleisMenuOpen}
-                animate={{ height: isSubMenuOpen ? "50px" : 0 }}
-            >
-              <Link to="/izvrsni-odbor">Izvrsni odbor</Link>
-            </motion.li>
-            <motion.li
-                onClick={handleisMenuOpen}
-                animate={{ height: isSubMenuOpen ? "50px" : 0 }}
-            >
-              <Link to="/nadzorni-odbor">Nadzorni odbor</Link>
-            </motion.li>
-            <motion.li 
-                onClick={handleisMenuOpen}
-                animate={{ height: isSubMenuOpen ? "50px" : 0 }}
-            >
-              <Link to="/statutarna-komisija">Statutarna komisija</Link>
-            </motion.li>
-            
-          </ul>
-
-
-
-
-
-        </motion.li>
-        <motion.li
-          onClick={handleisMenuOpen}
-          animate={{ height: isMenuOpen ? "50px" : 0 }}
-        >
-          <Link to="/session/skupstina">Sjednice</Link>
-        </motion.li>
-        <motion.li
-          onClick={handleisMenuOpen}
-          animate={{ height: isMenuOpen ? "50px" : 0 }}
-        >
-          <Link to="/documents">Zakoni</Link>
-        </motion.li>
-        <motion.li
-          onClick={handleisMenuOpen}
-          animate={{ height: isMenuOpen ? "50px" : 0 }}
-        >
-          <Link to="/pogodnosti">Pogodnosti</Link>
-        </motion.li>
-        <motion.li
-          onClick={handleisMenuOpen}
-          animate={{ height: isMenuOpen ? "50px" : 0 }}
-        >
-          <Link to="/contact">Kontakt</Link>
-        </motion.li>
-        <motion.li
-          onClick={handleisMenuOpen}
-          animate={{ height: isMenuOpen ? "50px" : 0 }}
-        >
-          {user ? (
-            <Link onClick={userLogout}>
-              {lang === "latin" ? "Izloguj se" : "Излогуј се"}
-            </Link>
-          ) : (
-            <Link to={"/login"}>
-              {lang === "latin" ? "Uloguj se" : "Улогуј се"}
-            </Link>
-          )}
-        </motion.li>
-
-        <motion.li 
-          onClick={handleisMenuOpen}
-          animate={{ height: isMenuOpen ? "50px" : 0 }}>
-        <Link
-            onClick={
-              lang === "latin"
-                ? () => {
-                    setCyrillic();
-                  }
-                : () => {
-                    setLatin();
-                  }
-            }
-          >
-            {lang == "latin" ? "Ћирилица" : "Latinica"}
-          </Link>
-        </motion.li>
-
-        <motion.li
-          onClick={handleisMenuOpen}
-          animate={{ height: isMenuOpen ? "50px" : 0 }}
-        >
-          <Link className="HamburgerMenu__container-bg__color">
-            <img src={userIcon} alt="user" />
-
-            <p id="userLogin-name">{user?.username} </p>
-          </Link>
-        </motion.li>
-      </motion.ul>
-    </div>
-  );
+    );
 };
 
 export default HamburgerMenu;
