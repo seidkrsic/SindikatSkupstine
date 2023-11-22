@@ -2,7 +2,12 @@
 
 .HamburgerMenuItem__content-container { 
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: .5rem 0;
     width: 100%;
+    border: 1px solid gainsboro;
 }
 
 

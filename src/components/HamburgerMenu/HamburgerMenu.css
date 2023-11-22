@@ -87,11 +87,12 @@
 .HamburgerMenu__item-container { 
     position: absolute;
     left: 0;
-    top: 50px;
+    top: 100px;
     height: fit-content;
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 
 .no_content { 
