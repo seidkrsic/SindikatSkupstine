@@ -16,9 +16,10 @@
     text-align: center;
     width: 100%;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 18px;
     height: fit-content;
     text-decoration: none;
+    color: black;
 }
 
 .HamburgerMenuItem__content { 
@@ -35,6 +36,7 @@
     flex-direction: column;
     width: 100%;
     padding: .5rem 0;
+    background-color: rgb(220, 220, 220, .7);
 }
 
 .HamburgerMenuItem__content a { 
@@ -42,9 +44,9 @@
     height: 0;
     width: 100%;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 15px;
     height: fit-content;
-    color: black;
+    color: black !important;
 }
 
 .yes-height { 
