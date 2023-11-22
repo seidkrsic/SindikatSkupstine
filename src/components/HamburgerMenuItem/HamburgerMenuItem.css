@@ -8,6 +8,7 @@
     padding: .5rem 0;
     width: 100%;
     border: 1px solid gainsboro;
+    color: black;
 }
 
 
@@ -22,7 +23,7 @@
 
 .HamburgerMenuItem__content { 
     height: 0px;
-    /* display: none; */
+    display: none;
     width: 90%;
     background-color: rgb(220, 220, 220, .7);
     transition: height ease-in-out .5s;
@@ -38,12 +39,13 @@
 
 .HamburgerMenuItem__content a { 
     text-align: center;
+    height: 0;
     width: 100%;
     text-transform: uppercase;
     font-size: 14px;
     height: fit-content;
 }
 
-.no-height { 
-    height: 0!important;
+.yes-height { 
+    height: fit-content!important;
 }
