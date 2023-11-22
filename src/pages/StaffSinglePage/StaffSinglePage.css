@@ -325,12 +325,12 @@
 
     .StaffSinglePage__container { 
         flex-direction: column-reverse;
-        width: 85%;
+        width: 90%;
         margin: 0 auto;
     }
 
     .StaffSinglePage__container-right { 
-        width: 100% !important;
+        width: 95% !important;
         display: flex;
         flex-direction: column;
         margin: 1rem auto;
@@ -341,7 +341,7 @@
     }
 
     .StaffSinglePage__container-left { 
-        width: 100%;
+        width: 95%;
         min-height: fit-content !important;
         height: fit-content !important;
         max-height: fit-content !important;
