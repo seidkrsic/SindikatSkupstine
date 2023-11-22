@@ -311,7 +311,7 @@
 
     .StaffSinglePage__container-left  p { 
         width: 95% !important;
-        /* margin: 1rem auto; */
+        margin: 0.5rem auto;
 
     }
 
