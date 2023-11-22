@@ -96,6 +96,7 @@
         flex-direction: column !important;
         justify-content: flex-start !important;
         align-items: center !important;
+        padding: 0 !important;
     }
 
     .SkupstinaPage__doc-container { 
