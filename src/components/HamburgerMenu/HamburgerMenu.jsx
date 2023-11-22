@@ -90,7 +90,7 @@ const HamburgerMenu = () => {
         <div className={isMenuOpen ? "HamburgerMenu__item-container" : "HamburgerMenu__item-container no_content"}>
           {
             menuItems.map((element, index)=> ( 
-              <HamburgerMenuItem title={element.title} items={element.items} key={index} />
+              <HamburgerMenuItem path={element.path} title={element.title} items={element.items} key={index} />
             ))
           } 
         
