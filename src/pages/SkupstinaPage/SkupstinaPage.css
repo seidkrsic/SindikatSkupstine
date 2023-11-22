@@ -92,6 +92,9 @@
     .SkupstinaPage__container { 
         width: 90% !important;
         margin: 0 auto !important;
+        display: flex;
+        justify-content: flex-start !important;
+        align-items: center !important;
     }
 
     .SkupstinaPage__doc-container { 
