@@ -213,7 +213,7 @@
         z-index: 1998;
         justify-content: center;
         align-items: center;
-        backdrop-filter: blur(8px);
+        /* backdrop-filter: blur(8px); */
         background-color: rgba(34, 33, 33, 0.8);
     }
 
