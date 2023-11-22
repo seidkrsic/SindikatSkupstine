@@ -31,17 +31,12 @@ const HamburgerMenu = () => {
     };
 
     const menuItems = [ 
-      { 
-        title: "Aktuelnosti", 
-        path: "/news"
-        
-      },
-
-      { 
-        title: "Skupština", 
-        path: "/skupstina"
-        
-      },
+        { 
+          title: "Aktuelnosti", 
+          path: "/news"
+          
+        },
+  
         { 
           title: "Sindikat", 
           items: [ 
