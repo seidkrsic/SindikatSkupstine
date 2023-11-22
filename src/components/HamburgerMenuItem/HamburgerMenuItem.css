@@ -43,3 +43,7 @@
     font-size: 14px;
     height: fit-content;
 }
+
+.no-height { 
+    height: 0!important;
+}
