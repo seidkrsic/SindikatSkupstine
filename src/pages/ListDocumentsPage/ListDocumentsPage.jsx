@@ -16,7 +16,7 @@ const ListDocumentsPage = () => {
   const getDocs = async () => {
     try {
       console.log(`Bearer ${authToken?.access}`)
-      let response = await fetch("http://apisindikat.skupstina.me/api/important/", {
+      let response = await fetch("https://apisindikat.skupstina.me/api/important/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

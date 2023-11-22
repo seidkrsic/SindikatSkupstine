@@ -13,7 +13,7 @@ const SkupstinaPage = () => {
     const getDocuments = async () => { 
         
         const response = await fetch(
-            `http://apisindikat.skupstina.me/api/allDocuments/?name=other`,
+            `https://apisindikat.skupstina.me/api/allDocuments/?name=other`,
             {
               method: "GET",
               headers: { "Content-Type": "application/json" },

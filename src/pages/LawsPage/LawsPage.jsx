@@ -55,7 +55,7 @@ const LawsPage = () => {
         }
 
         const response = await fetch(
-            `http://apisindikat.skupstina.me/api/allDocuments/?name=${filter}`,
+            `https://apisindikat.skupstina.me/api/allDocuments/?name=${filter}`,
             {
               method: "GET",
               headers: { "Content-Type": "application/json" },

@@ -50,7 +50,7 @@ const NewsSinglePage = () => {
 
   const getSingleNews = async () => {
     const response = await fetch(
-      `http://apisindikat.skupstina.me/api/news/${location_id}/`
+      `https://apisindikat.skupstina.me/api/news/${location_id}/`
     );
     let data = await response.json();
     data.created = data.created.slice(0, 10);

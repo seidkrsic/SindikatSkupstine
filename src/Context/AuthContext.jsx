@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
 
   const userLogin = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://apisindikat.skupstina.me/api/token/", {
+    const response = await fetch("https://apisindikat.skupstina.me/api/token/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -67,7 +67,7 @@ export const AuthProvider = ({ children }) => {
   const updateToken = async () => { 
     if(authToken !== null) { 
 
-      const response = await fetch("http://apisindikat.skupstina.me/api/token/refresh/", {
+      const response = await fetch("https://apisindikat.skupstina.me/api/token/refresh/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -98,7 +98,7 @@ export const AuthProvider = ({ children }) => {
     if (input_value !== "") {
       try {
         const response = await fetch(
-          "http://apisindikat.skupstina.me/api/filteredNews/",
+          "https://apisindikat.skupstina.me/api/filteredNews/",
           {
             method: "POST",
             headers: {

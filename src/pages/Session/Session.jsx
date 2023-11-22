@@ -45,7 +45,7 @@ const Session = () => {
 
   const getSession = async () => {
     let response = await fetch(
-      `http://apisindikat.skupstina.me/api/sessions/${location_id}/`
+      `https://apisindikat.skupstina.me/api/sessions/${location_id}/`
     );
     let data = await response.json();
 
@@ -62,11 +62,11 @@ const Session = () => {
     let fetch_url;
     let category;
     if (skupstina) {
-      fetch_url = "http://apisindikat.skupstina.me/api/categorySessions/?name=skupstina";
+      fetch_url = "https://apisindikat.skupstina.me/api/categorySessions/?name=skupstina";
       category = "skupstina";
     } else {
       fetch_url =
-        "http://apisindikat.skupstina.me/api/categorySessions/?name=izvrsni_odbor";
+        "https://apisindikat.skupstina.me/api/categorySessions/?name=izvrsni_odbor";
       category = "izvrsni_odbor";
     }
     let response = await fetch(fetch_url, {
