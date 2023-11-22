@@ -90,12 +90,18 @@
     }
 
     .SkupstinaPage__container { 
-        width: 90%;
-        margin: 0 auto;
+        width: 90% !important;
+        margin: 0 auto !important;
     }
 
     .SkupstinaPage__doc-container { 
         width: 100%;
+        margin: 0 auto;
+    }
+
+    .SkupstinaPage__doc-container li { 
+        width: 100%;
+        margin: 0 auto;
     }
 
 }
