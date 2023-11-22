@@ -170,6 +170,12 @@ export const AuthProvider = ({ children }) => {
 
   const debouncedFetchData = debounce(searchNews, 300); // Adjust the delay as needed
 
+  const [isMenuOpen, setisMenuOpen] = useState(false);
+
+  const handleisMenuOpen = () => setisMenuOpen(!isMenuOpen);
+
+
+
   const contextData = {
     userLogin: userLogin,
     userLogout: userLogout,
@@ -180,6 +186,8 @@ export const AuthProvider = ({ children }) => {
     authToken: authToken,
     boardMember: user ? user.boardMember : false,
     lang: lang,
+    isMenuOpen: isMenuOpen, 
+    handleisMenuOpen, handleisMenuOpen,
   };
 
   useEffect(() => {
