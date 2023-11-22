@@ -119,10 +119,9 @@
     .NewInfo { 
         width: 90%;
         left: 5%;
-        min-height: 35% !important;
-        height: fit-content;
-        max-height: 40px;
-        height: 50% !important;
+        min-height: 30% !important;
+        height: fit-content !important;
+        max-height: 40%;
     }
 
     .NewInfo p { 
