@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 
 
 
-const HamburgerMenuItem = ({title, items}) => {
+const HamburgerMenuItem = ({path, title, items}) => {
     const [menuOpen, setMenuOpen] = useState(false);
   
     return (
         <div onClick={()=>{setMenuOpen(!menuOpen)}} 
             className='HamburgerMenuItem__content-container'>
 
-            <Link className="HamburgerMenuItem__content-container__link">{items ? title + "▼" : title}</Link>
+            <Link to={path ? path : ""} className="HamburgerMenuItem__content-container__link">{items ? title + "▼" : title}</Link>
            
            { items &&
                 <div className={ menuOpen ? 'HamburgerMenuItem__content openMenu' : 'HamburgerMenuItem__content' }>

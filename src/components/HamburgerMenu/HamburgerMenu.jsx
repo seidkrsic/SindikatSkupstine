@@ -31,7 +31,8 @@ const HamburgerMenu = () => {
     const menuItems = [ 
 
       { 
-        title: "Sindikat", 
+        title: "Skupština", 
+        path: "/skupstina"
         
       },
         { 
@@ -65,11 +66,13 @@ const HamburgerMenu = () => {
 
         { 
           title: "Pogodnosti", 
+          path: "/pogodnosti"
           
         },
 
         { 
           title: "Kontakt", 
+          path: "/contact"
           
         },
 

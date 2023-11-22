@@ -177,7 +177,7 @@ const MainMenuCopy = () => {
             menuItems={button1Items}
             // path="/staff"
             path=""
-          />
+          /> 
           <MenuDropdown
             buttonName={lang === "latin" ? "Sjednice" : "Сједнице"}
             menuItems={button2Items}
