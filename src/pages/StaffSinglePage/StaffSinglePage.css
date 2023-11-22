@@ -325,7 +325,8 @@
 
     .StaffSinglePage__container { 
         flex-direction: column-reverse;
-        width: 95%;
+        width: 90%;
+        margin: 0 auto;
     }
 
     .StaffSinglePage__container-right { 
@@ -348,6 +349,7 @@
 
     .StaffSinglePage__container-main .Categories__container { 
         width: 90% !important;
+        margin-bottom: 2rem;
     }
     .StaffSinglePage__container-main .Categories__container a { 
         width: 100% !important;
