@@ -16,7 +16,7 @@
     text-align: center;
     width: 100%;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 15px;
     height: fit-content;
     text-decoration: none;
     color: black;
@@ -44,7 +44,7 @@
     height: 0;
     width: 100%;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 13px;
     height: fit-content;
     color: black !important;
 }
