@@ -12,10 +12,10 @@ const HamburgerMenuItem = ({path, title, items}) => {
     const {handleisMenuOpen} = useContext(AuthContext);
   
     return (
-        <div onClick={()=>{setMenuOpen(!menuOpen)}} 
+        <div onClick={ path ? () => {handleisMenuOpen} : ()=>{setMenuOpen(!menuOpen)}} 
             className='HamburgerMenuItem__content-container'>
 
-            <Link onClick={path? "" :handleisMenuOpen} to={path ? path : ""} className="HamburgerMenuItem__content-container__link">{items ? title + "↴" : title}</Link>
+            <Link to={path ? path : ""} className="HamburgerMenuItem__content-container__link">{items ? title + "↴" : title}</Link>
            
            { items &&
                 <div className={ menuOpen ? 'HamburgerMenuItem__content openMenu' : 'HamburgerMenuItem__content' }>
