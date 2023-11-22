@@ -34,7 +34,7 @@ const HamburgerMenu = () => {
       </div>
       <motion.ul
         animate={{
-          height: isMenuOpen ? "fit-content" : 0,
+          height: isMenuOpen ? "400px" : 0,
           transition: 1,
           animationDelay: 5,
         }}
@@ -58,29 +58,47 @@ const HamburgerMenu = () => {
           {/* Dodajte novi ul element unutar kojeg će biti podmeni za Sindikat */}
           <ul 
             animate={{
-                height: isSubMenuOpen ? "fit-content" : 0,
+                height: isSubMenuOpen ? "300px" : 0,
                 transition: 1,
                 animationDelay: 5,
             }}
             className={ isSubMenuOpen ? "HamburgerMenu__sub-menu" : "HamburgerMenu__sub-menu hidden" }>
-            <li>
+            <motion.li 
+                onClick={handleisMenuOpen}
+                animate={{ height: isSubMenuOpen ? "50px" : 0 }}
+            >
               <Link to="/skupstina">Skupstina</Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li
+                onClick={handleisMenuOpen}
+                animate={{ height: isSubMenuOpen ? "50px" : 0 }}
+            >
               <Link to="/predsjednik">Predsjednik</Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li
+                onClick={handleisMenuOpen}
+                animate={{ height: isSubMenuOpen ? "50px" : 0 }}
+            >
               <Link to="/zamjenik-predsjednika">Zamjenik predsjednika</Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li 
+                onClick={handleisMenuOpen}
+                animate={{ height: isSubMenuOpen ? "50px" : 0 }}
+            >
               <Link to="/izvrsni-odbor">Izvrsni odbor</Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li
+                onClick={handleisMenuOpen}
+                animate={{ height: isSubMenuOpen ? "50px" : 0 }}
+            >
               <Link to="/nadzorni-odbor">Nadzorni odbor</Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li 
+                onClick={handleisMenuOpen}
+                animate={{ height: isSubMenuOpen ? "50px" : 0 }}
+            >
               <Link to="/statutarna-komisija">Statutarna komisija</Link>
-            </li>
+            </motion.li>
             
           </ul>
 
