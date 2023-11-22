@@ -169,9 +169,7 @@
         
     }
 
-    .NewsGallery__container-Image { 
-        /* backdrop-filter: blur(8px); */
-    }
+    
 
     .NewsGallery__rightArrow { 
         right: 15px;
