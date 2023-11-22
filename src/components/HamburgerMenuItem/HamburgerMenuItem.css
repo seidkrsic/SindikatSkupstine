@@ -21,12 +21,14 @@
 
 .HamburgerMenuItem__content { 
     height: 0px;
+    display: flex;
     width: 90%;
     background-color: bisque;
 }
 
 .openMenu { 
     height: fit-content;
+    display: none;
 }
 
 .HamburgerMenuItem__content a { 
