@@ -28,6 +28,7 @@
     margin-top: 0;
     font-size: 25px;
     width: 90%;
+    text-transform: uppercase;
 
 }
 
@@ -137,4 +138,9 @@
         width: 90%;
         margin: 0 auto;
     }
+
+    .LawsPage__left-container h1 { 
+        font-size: 20px;
+    }
+
 }
