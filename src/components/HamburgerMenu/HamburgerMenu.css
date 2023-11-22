@@ -84,31 +84,19 @@
     background-color: white;
 }
 
-
-.HamburgerMenu__sub-menu {
-    display: flex;
-    min-height: fit-content;
-    flex-direction: column;
-    position: relative;
+.HamburgerMenu__item-container { 
+    position: absolute;
     left: 0;
-    list-style: none;
-    width: 100%;
-    margin: 0 auto;
     top: 50px;
-    padding: 0;
-  }
-  
-  .HamburgerMenu__sub-menu li {
-    margin: 0;
-    min-height: 50px;
     height: fit-content;
-    padding: 8px 0; /* Dodajte razmak između podmeni elemenata */
-  }
-  
-  .HamburgerMenu__sub-menu a {
-    color: #666; /* Dodajte boju linkova u podmeniju */
-  }
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
+.no_content { 
+    height: 0 !important;
+}
 
 
 

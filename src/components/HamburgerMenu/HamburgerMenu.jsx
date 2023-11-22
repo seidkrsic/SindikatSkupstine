@@ -6,6 +6,7 @@ import closeMenu from "../../images/closeMenu.png";
 import openMenu from "../../images/openMenu.png";
 import userIcon from "../../images/user.png";
 import "../HamburgerMenu/HamburgerMenu.css";
+import HamburgerMenuItem from "../HamburgerMenuItem/HamburgerMenuItem";
 
 const HamburgerMenu = () => {
     const [isMenuOpen, setisMenuOpen] = useState(false);
@@ -27,12 +28,34 @@ const HamburgerMenu = () => {
       localStorage.setItem("lang", "cyrillic");
     };
 
+    const menuItems = [ 
+        { 
+          title: "Sindikat", 
+          items: [ 
+            { name: "Skupština", path: "/skupstina" },
+            { name: "Predsjednik", path: "/saziv/predsjednik" },
+            { name: "Zamjenik predsjednika", path: "/saziv/zamjenikPredsjednika" },
+            { name: "Izvršni odbor", path: "/saziv/izvrsniodbor" },
+            { name: "Nadzorni odbor", path: "/saziv/nadzorniodbor" },
+            { name: "Statutarna komisija", path: "/saziv/komisija" },
+          ]
+        }
+
+    ];
+
     return (
       <div className={"HamburgerMenu__container transparent"}>
         <div className="HamburgerMenu__img-container" onClick={handleisMenuOpen}>
           <img src={!isMenuOpen ? openMenu : closeMenu} alt="" />
         </div>
+        <div className={isMenuOpen ? "HamburgerMenu__item-container" : "HamburgerMenu__item-container .no_content"}>
+          {
+            menuItems.map((element, index)=> ( 
+              <HamburgerMenuItem title={element.title} items={element.items} key={index} />
+            ))
+          } 
         
+        </div>
       </div>
     );
 };
