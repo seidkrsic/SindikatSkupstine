@@ -348,10 +348,12 @@
     } 
     .StaffSinglePage__card-info__container { 
         width: 100%;
+       
     }
     .StaffSinglePage__card-info__container p { 
         width: 85.5% !important;
-        padding: 1rem 0 !important;
+        padding: 1rem 1% !important;
+        margin: 0 auto;
     }
 
     .StaffSinglePage__container-main .Categories__container { 
