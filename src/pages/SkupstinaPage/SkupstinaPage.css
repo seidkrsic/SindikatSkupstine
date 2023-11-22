@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
 }
 
 .SkupstinaPage__container { 
@@ -76,4 +77,25 @@
     width: 40px;
     height: 40px;
     margin: auto;
+}
+
+
+
+@media screen and (max-width: 767px) { 
+
+    .SkupstinaPage__main-container { 
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 81px;
+    }
+
+    .SkupstinaPage__container { 
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .SkupstinaPage__doc-container { 
+        width: 100%;
+    }
+
 }
