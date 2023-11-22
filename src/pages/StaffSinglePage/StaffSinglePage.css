@@ -344,11 +344,11 @@
         width: 100%;
     }
     .StaffSinglePage__card-info__container p { 
-        width: 80% !important;
+        width: 90% !important;
     }
 
     .StaffSinglePage__container-main .Categories__container { 
-        width: 90% !important;
+        width: 95% !important;
         margin-bottom: 2rem;
     }
     .StaffSinglePage__container-main .Categories__container a { 
