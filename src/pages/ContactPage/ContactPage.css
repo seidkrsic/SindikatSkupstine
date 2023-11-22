@@ -136,6 +136,8 @@
 
     .Contact__info-container-right img { 
         width: 80%;
+        scale: .7;
+        margin: 0 auto;
         
     }
 
@@ -151,6 +153,11 @@
         margin-bottom: 1rem;
         width: 90%;
         margin: 2rem auto;
+    }
+
+    .Contact__info-container-right div { 
+        width: 90%;
+        margin: 0.5rem auto;
     }
 
 
