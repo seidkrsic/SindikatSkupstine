@@ -129,4 +129,7 @@
     .LawsPage__document-container { 
         width: 100%;
     }
+    .LawsPage__document-container a { 
+        width: 100%;
+    }
 }
