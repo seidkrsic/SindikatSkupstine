@@ -21,8 +21,8 @@
 .HeaderPhoto__view-name__container {
    display: flex;
    position: absolute;
-   height: 60px;
-   top: 321.5px;
+   height: 70px;
+   top: 311.5px;
    width: 74%;
    margin: 0 auto;
    background-color: rgba(0, 0, 0, 0.7);
@@ -45,7 +45,7 @@
 @media  screen and (max-width: 767px) {
 
     .HeaderPhoto__view-name__container { 
-        top: 220px;
+        top: 210px;
         width: 90%;
     }
     .HeaderPhoto__view-name__container h1 { 
