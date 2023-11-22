@@ -68,7 +68,7 @@
     font-size: 14px;
     padding: 0 !important;
     height: 100%;
-    width: 100% !important;
+    width: fit-content !important;
     cursor: auto;
     margin: 0 !important;
     margin-left: .5rem !important;
@@ -77,6 +77,9 @@
 .Contact__info-container-right div { 
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Contact__info-container-right img { 
