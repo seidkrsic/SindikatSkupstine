@@ -8,6 +8,8 @@
     width: 100%;
     border: 1px solid gainsboro;
     color: black;
+    height: fit-content;
+    min-height: 30px;
 }
 
 
