@@ -125,6 +125,7 @@
     .LawsPage__left-container { 
         width: 90%;
         margin: 0 auto;
+        margin-top: 2rem;
     }
 
     .LawsPage__document-container { 
@@ -137,6 +138,10 @@
     .LawsPage__right-container { 
         width: 90%;
         margin: 0 auto;
+        min-height: fit-content;
+        max-height: fit-content;
+        height: fit-content;
+        margin-bottom: 2rem;
     }
 
     .LawsPage__right-container a { 
