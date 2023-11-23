@@ -16,11 +16,13 @@ const HamburgerMenuItem = ({path, title, items}) => {
     const setLatin = () => {
         updateLang("latin");
         localStorage.setItem("lang", "latin");
+        handleisMenuOpen(!isMenuOpen)
       };
   
     const setCyrillic = () => {
         updateLang("cyrillic");
         localStorage.setItem("lang", "cyrillic");
+        handleisMenuOpen(!isMenuOpen)
     };
 
 
@@ -34,12 +36,11 @@ const HamburgerMenuItem = ({path, title, items}) => {
             specialLogoutHandle();
         } else if (path === "/latin") { 
             setCyrillic()
-            handleisMenuOpen(!isMenuOpen)
+            
         } else if (path === "/cyrillic") { 
             setLatin()
-            handleisMenuOpen(!isMenuOpen)
+            
         } 
-        
         else {
             handleisMenuOpen()
         }
