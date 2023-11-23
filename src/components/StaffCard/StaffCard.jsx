@@ -6,23 +6,29 @@ import "./StaffCard.css";
 
 const StaffCard = ({ staff, role }) => {
   const { lang } = useContext(AuthContext);
-
   const [IsHoverd, setIsHovered] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   const ToggleHovered = (boolean) => {
     setIsHovered(boolean);
   };
 
-  // style={{overflow: "hidden", border: "1px solid green"}}
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   return (
     <div className="Staff__container">
       <Link to={"/saziv/" + staff.id} className="Staff__img-container">
-        <motion.img
-          animate={{ scale: IsHoverd ? 1.2 : 1 }}
-          src={staff?.profile_image}
-          alt="staff_img"
-          onMouseEnter={() => ToggleHovered(true)}
-          onMouseLeave={() => ToggleHovered(false)}
-        />
+        {imageLoaded && (
+          <motion.img
+            animate={{ scale: IsHoverd ? 1.2 : 1 }}
+            src={staff?.profile_image}
+            onLoad={handleImageLoad}
+            onMouseEnter={() => ToggleHovered(true)}
+            onMouseLeave={() => ToggleHovered(false)}
+          />
+        )}
       </Link>
 
       <div className="Staff__info-container">
