@@ -53,13 +53,13 @@ const Footer = () => {
       <div className="Footer__container-bottom">
         <p>
           {lang === "latin"
-            ? "Sindikalna organizacija Crne Gore, Bulevar Svetog Petra Cetinjskog broj 10, 81000 Podgorica"
-            : "Синдикална организација Црне Горе, Булевар Светог Петра Цетињског број 10, 81000 Подгорица"}
+            ? "Sindikalna organizacija Skupštine Crne Gore, Bulevar Svetog Petra Cetinjskog broj 10, 81000 Podgorica"
+            : "Синдикална организација Скупштине Црне Горе, Булевар Светог Петра Цетињског број 10, 81000 Подгорица"}
         </p>
         <p>
           {lang === "latin"
-            ? "mejl: sindikat@skupstina.me"
-            : "mejl: sindikat@skupstina.me"}
+            ? "Mejl: sindikat@skupstina.me"
+            : "Mejl: sindikat@skupstina.me"}
         </p>
       </div>
     </div>
