@@ -10,9 +10,22 @@ const HamburgerMenuItem = ({path, title, items}) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const {isMenuOpen} = useContext(AuthContext);
     const {handleisMenuOpen} = useContext(AuthContext);
-  
+    const {logout} = useContext(AuthContext);
+    const specialLogoutHandle = () => { 
+        handleisMenuOpen()
+        logout()
+    }
+
+    const handleClick = () => {
+        if (path === "/logout") {
+            specialLogoutHandle();
+        } else {
+            setMenuOpen(!menuOpen);
+        }
+    };
+   
     return (
-        <div onClick={ path ? handleisMenuOpen : ()=>{setMenuOpen(!menuOpen)}} 
+        <div onClick={ path ? handleClick : ()=>{setMenuOpen(!menuOpen)}} 
             className='HamburgerMenuItem__content-container'>
 
             <Link to={path ? path : ""} className="HamburgerMenuItem__content-container__link">{items ? title + " ⥕ " : title}</Link>
