@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
 import closeMenu from "../../images/closeMenu.png";
@@ -96,6 +96,10 @@ const HamburgerMenu = () => {
 
     ];
 
+    useEffect(()=> { 
+
+    }, [user])
+
     return (
       <div className={"HamburgerMenu__container transparent"}>
         <div className="HamburgerMenu__img-container" onClick={handleisMenuOpen}>
@@ -112,7 +116,8 @@ const HamburgerMenu = () => {
 
               } else if (element.path === "/login")
               if (user) { 
-                return <HamburgerMenu onClick={handleisMenuOpen} path={"/login"} title={"Izloguj se"} />
+                return <HamburgerMenu onClick={handleisMenuOpen} path={user ? "/login" : "/logout"} title={user ? "Izloguj se" : "Uloguj se"} />;
+
 
               } else { 
                 return <HamburgerMenu onClick={handleisMenuOpen} path={"/logout"} title={"Uloguj se"} />
