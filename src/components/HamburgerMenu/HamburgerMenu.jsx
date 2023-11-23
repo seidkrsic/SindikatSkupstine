@@ -96,14 +96,13 @@ const HamburgerMenu = () => {
               
               <HamburgerMenuItem onClick={handleisMenuOpen} path={element.path} title={element.title} items={element.items} key={index} />
             ))
+            
           } 
-          {/* { 
-              user && boardMember && ( 
-                  <HamburgerMenu onClick={handleisMenuOpen} path={"/documents"} title={"Dokumenta"}  />
-              )
-          } */}
-          
-          {/* <HamburgerMenu onClick={handleisMenuOpen} path={"/login"} title={"Uloguj se"} /> */}
+          {user && boardMember ? (
+              <HamburgerMenu onClick={handleisMenuOpen} path={"/documents"} title={"Dokumenta"} />
+            ) : null}
+                    
+          <HamburgerMenu onClick={handleisMenuOpen} path={"/login"} title={"Uloguj se"} />
 
           
          
