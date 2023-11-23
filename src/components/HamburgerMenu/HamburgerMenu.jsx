@@ -71,7 +71,7 @@ const HamburgerMenu = () => {
           
         },
         { 
-          title: lang === "latin" ? "/cyrillic" : "/latin", 
+          title: lang === "latin" ? "cyrillic" : "latin", 
           path:  lang == "latin" ?  "/latin" : "/cyrillic",
           
         },
