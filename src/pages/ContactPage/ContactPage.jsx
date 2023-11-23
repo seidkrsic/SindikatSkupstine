@@ -17,13 +17,13 @@ const ContactPage = () => {
     sector = {
       phone: "+382 68 111-222",
       email: "sindikat@skupstina.me",
-      title: "Sindikalna organizacija Crne Gore",
+      title: "Sindikalna organizacija Skupštine Crne Gore",
     };
   } else {
     sector = {
       phone: "+382 68 111-222",
       email: "sindikat@skupstina.me",
-      title: "Синдикална организација Црне Горе",
+      title: "Синдикална организација Скупштине Црне Горе",
     };
   }
 

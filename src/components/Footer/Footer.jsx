@@ -16,13 +16,13 @@ const Footer = () => {
             <div className="Footer__info-container">
               <p>
                 {lang === "latin"
-                  ? "©2023 Sindikalna organizacija Crne Gore"
-                  : "©2023 Синдикална организација Црне Горе"}
+                  ? "©2023 Sindikalna organizacija Skupštine Crne Gore"
+                  : "©2023 Синдикална организација Скупштине Црне Горе"}
               </p>
               <p>
                 {lang === "latin"
-                  ? "Sva prava zadržana."
-                  : "Сва права задржана."}
+                  ? "Sva prava zadržava."
+                  : "Сва права задржава."}
               </p>
             </div>
           </div>
