@@ -131,12 +131,16 @@
         width: 100%;
     }
     .LawsPage__document-container a { 
-        width: 100%;
+        width: 90%;
     }
 
     .LawsPage__right-container { 
         width: 90%;
         margin: 0 auto;
+    }
+
+    .LawsPage__right-container a { 
+        width: 95% !important;
     }
 
     .LawsPage__left-container h1 { 
