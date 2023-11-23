@@ -11,6 +11,19 @@ const HamburgerMenuItem = ({path, title, items}) => {
     const {isMenuOpen} = useContext(AuthContext);
     const {handleisMenuOpen} = useContext(AuthContext);
     const {userLogout} = useContext(AuthContext);
+    const { updateLang } = useContext(AuthContext);
+
+    const setLatin = () => {
+        updateLang("latin");
+        localStorage.setItem("lang", "latin");
+      };
+  
+    const setCyrillic = () => {
+        updateLang("cyrillic");
+        localStorage.setItem("lang", "cyrillic");
+    };
+
+
     const specialLogoutHandle = () => { 
         handleisMenuOpen(!isMenuOpen)
         userLogout()
@@ -19,7 +32,13 @@ const HamburgerMenuItem = ({path, title, items}) => {
     const handleClick = () => {
         if (path === "/logout") {
             specialLogoutHandle();
-        } else {
+        } else if (path === "/latin") { 
+            setCyrillic()
+        } else if (path === "/cyrillic") { 
+            setLatin()
+        } 
+        
+        else {
             handleisMenuOpen()
         }
     };

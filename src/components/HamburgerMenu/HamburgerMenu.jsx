@@ -21,15 +21,7 @@ const HamburgerMenu = () => {
     const {isMenuOpen} = useContext(AuthContext);
     const {handleisMenuOpen} = useContext(AuthContext);
 
-    const setLatin = () => {
-      updateLang("latin");
-      localStorage.setItem("lang", "latin");
-    };
-
-    const setCyrillic = () => {
-      updateLang("cyrillic");
-      localStorage.setItem("lang", "cyrillic");
-    };
+    
 
     const menuItems1 = [ 
         { 
@@ -76,6 +68,11 @@ const HamburgerMenu = () => {
         { 
           title: "Kontakt", 
           path: "/contact"
+          
+        },
+        { 
+          title: lang === "latin" ? "/cyrillic" : "/latin", 
+          path:  lang == "latin" ?  "/latin" : "/cyrillic",
           
         },
 
