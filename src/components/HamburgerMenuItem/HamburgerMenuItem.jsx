@@ -20,7 +20,7 @@ const HamburgerMenuItem = ({path, title, items}) => {
         if (path === "/logout") {
             specialLogoutHandle();
         } else {
-            setMenuOpen(!menuOpen);
+            handleisMenuOpen()
         }
     };
    
