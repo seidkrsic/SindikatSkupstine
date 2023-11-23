@@ -19,8 +19,8 @@ const HamburgerMenuItem = ({path, title, items}) => {
            
            { items &&
                 <div className={ menuOpen ? 'HamburgerMenuItem__content openMenu' : 'HamburgerMenuItem__content' }>
-                    {items.map((item, index) => (
-                        <Link onClick={handleisMenuOpen}  className={menuOpen ? "" : "yes-height "} to={item.path} key={index}>{item.name}</Link>
+                    {items?.map((item, index) => (
+                        <Link onClick={handleisMenuOpen}  className={menuOpen ? "" : "yes-height "} to={item?.path} key={index}>{item.name}</Link>
                     )
 
                 )}
