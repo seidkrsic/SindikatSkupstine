@@ -300,6 +300,11 @@
         width: 20% !important;
     }
 
+    .StaffSinglePage__categories-container .Categories__main-container a { 
+        width: 90% !important;
+        margin: 0 auto !important;
+    }
+
     .StaffSinglePage__container-left { 
         width: 100% !important;
     }
