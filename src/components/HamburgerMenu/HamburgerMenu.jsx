@@ -81,7 +81,7 @@ const HamburgerMenu = () => {
 
         { 
           title: user ?  "Izloguj se" : "Uloguj se", 
-          path: user ? "/login" : "/logout"
+          path: user ? "/logout" : "/login"
           
         },
         { 
