@@ -31,7 +31,7 @@ const HamburgerMenu = () => {
       localStorage.setItem("lang", "cyrillic");
     };
 
-    const menuItems = [ 
+    const menuItems1 = [ 
         { 
           title: "Aktuelnosti", 
           path: "/news"
@@ -95,6 +95,59 @@ const HamburgerMenu = () => {
         
 
     ];
+
+    const menuItems2 = [ 
+      { 
+        title: "Актуелности", 
+        path: "/news"
+      },
+      { 
+        title: "Синдикат", 
+        items: [ 
+          { name: "Скупштина", path: "/skupstina" },
+          { name: "Предсједник", path: "/saziv/predsjednik" },
+          { name: "Замјеник предсједника", path: "/saziv/zamjenikPredsjednika" },
+          { name: "Извршни одбор", path: "/saziv/izvrsniodbor" },
+          { name: "Надзорни одбор", path: "/saziv/nadzorniodbor" },
+          { name: "Статутарна комисија", path: "/saziv/komisija" },
+        ]
+      }, 
+      { 
+        title: "Сједнице", 
+        items: [ 
+          { name: "Сједнице Скупштине", path: "/session/skupstina" },
+          { name: "Сједнице Извршног одбора", path: "/session/izvrsni_odbor" },
+        ]
+      }, 
+      { 
+        title: "Закони и Акти", 
+        items: [ 
+          { name: "Акти SOSCG", path: "/zakoni/akti_sindikata" },
+          { name: "Закони и други акти", path: "/zakoni/opsti_akti"},
+          { name: "Формулари и обрасци", path: "/zakoni/formulari"},
+        ]
+      }, 
+      { 
+        title: "Погодности", 
+        path: "/pogodnosti"
+      },
+      { 
+        title: "Контакт", 
+        path: "/contact"
+      },
+      { 
+        title: user ? "Излогуј се" : "Улогуј се", 
+        path: user ? "/logout" : "/login"
+      },
+      { 
+        title: user && boardMember ? "Документа" : "", 
+        path: user && boardMember ? "/documents" : ""
+      },
+    ];
+    
+    let menuItems = lang === "latin" ? menuItems1 : menuItems2;
+
+
 
     useEffect(()=> { 
 
