@@ -11,6 +11,7 @@ import salon from "../../images/header2.jpg"
 const NewsSinglePage = () => {
   let [News, setNews] = useState({});
   let [noGallery, setNoGallery] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const { lang } = useContext(AuthContext);
 
   const location_id = useParams().id;
@@ -27,14 +28,7 @@ const NewsSinglePage = () => {
     ];
   } else {
     CategoriesInfo = [
-      // {
-      //     name: "Предсједник",
-      //     path: "/news/predsjednik"
-      // },
-      // {
-      //     name: "Замјеник Предсједника",
-      //     path: "/news/zamjenikPredsjednika"
-      // },
+   
      
       {
         name: "Све актуелности",
@@ -67,7 +61,12 @@ const NewsSinglePage = () => {
           <div className="SingleNewsPage__container-left">
             <div className="SingleNewsPage__news-container">
               <div className="SingleNewsPage__img-container">
-                <img src={News.image_url} alt="img" />
+                <img 
+                    src={News.image_url}
+                    alt="" 
+                    style={{ display: imageLoaded ? "block" : "none" }}
+                    onLoad={() => setImageLoaded(true)}
+                />
                 <div className="SingleNewsPage__small-info">
                   <p>{News.created_eu_time}</p>
                   <h3>{News.category}</h3>
