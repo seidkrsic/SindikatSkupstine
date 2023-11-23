@@ -20,16 +20,17 @@ const StaffCard = ({ staff, role }) => {
   return (
     <div className="Staff__container">
       <Link to={"/saziv/" + staff.id} className="Staff__img-container">
-        {imageLoaded ? (
-          <motion.img
+        <motion.img
             animate={{ scale: IsHoverd ? 1.2 : 1 }}
             src={staff?.profile_image}
             alt=""
             onLoad={handleImageLoad}
             onMouseEnter={() => ToggleHovered(true)}
             onMouseLeave={() => ToggleHovered(false)}
+            style={{ display: imageLoaded ? "block" : "none" }}
+            
           />
-        ) : null}
+        
       </Link>
 
       <div className="Staff__info-container">
