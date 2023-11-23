@@ -7,6 +7,7 @@ import "./FeaturedNewsCard.css";
 const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
   const { lang } = useContext(AuthContext);
   const [IsHovered, setIsHovered] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const ToggleHover = (boolean) => {
     setIsHovered(boolean);
   };
@@ -35,6 +36,15 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
     }
   };
 
+
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
+
+
+
   return (
     <Link
       onMouseEnter={() => ToggleHover(true)}
@@ -46,7 +56,9 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
         <motion.img
           animate={{ scale: IsHovered ? 1.008 : 1 }}
           src={url}
-          alt="img"
+          alt=""
+          onLoad={handleImageLoad}
+          style={{ display: imageLoaded ? "block" : "none" }}
         />
       </div>
       <div id="title" className="FeaturesNewsCard__info-container">

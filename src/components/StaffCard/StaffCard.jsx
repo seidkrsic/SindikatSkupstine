@@ -25,9 +25,10 @@ const StaffCard = ({ staff, role }) => {
             src={staff?.profile_image}
             alt=""
             onLoad={handleImageLoad}
+            style={{ display: imageLoaded ? "block" : "none" }}
             onMouseEnter={() => ToggleHovered(true)}
             onMouseLeave={() => ToggleHovered(false)}
-            style={{ display: imageLoaded ? "block" : "none" }}
+            
             
           />
         
