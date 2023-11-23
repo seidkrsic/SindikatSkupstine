@@ -98,13 +98,14 @@ const HamburgerMenu = () => {
             ))
           } 
           { 
-              user && boardMember &&
-               <HamburgerMenu onClick={handleisMenuOpen} path={"/documents"} title={"Dokumenta"}  />
+              user && boardMember && ( 
+                  <HamburgerMenu onClick={handleisMenuOpen} path={"/documents"} title={"Dokumenta"}  />
+              )
           }
-          { 
-              <HamburgerMenu onClick={handleisMenuOpen} path={"/login"} title={"Uloguj se"} />
+          
+          <HamburgerMenu onClick={handleisMenuOpen} path={"/login"} title={"Uloguj se"} />
 
-          }
+          
          
         
         </div>
