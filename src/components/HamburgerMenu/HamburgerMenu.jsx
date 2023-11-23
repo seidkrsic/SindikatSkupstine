@@ -92,17 +92,26 @@ const HamburgerMenu = () => {
         </div>
         <div className={isMenuOpen ? "HamburgerMenu__item-container" : "HamburgerMenu__item-container no_content"}>
           {
-            menuItems?.map((element, index)=> ( 
-              
-              <HamburgerMenuItem onClick={handleisMenuOpen} path={element.path} title={element.title} items={element.items} key={index} />
-            ))
+            menuItems?.map((element, index)=> {
+              if (element.path !== "/documents") { 
+                <HamburgerMenuItem onClick={handleisMenuOpen} path={element.path} title={element.title} items={element.items} key={index} />
+                
+              } else if (element.path === "/documents" && user && boardMember) { 
+                <HamburgerMenuItem onClick={handleisMenuOpen} path={element.path} title={element.title} items={element.items} key={index} />
+
+              }
+              if (user) { 
+                <HamburgerMenu onClick={handleisMenuOpen} path={"/login"} title={"Izloguj se"} />
+
+              } else { 
+                <HamburgerMenu onClick={handleisMenuOpen} path={"/logout"} title={"Uloguj se"} />
+
+              } 
+            })
             
           } 
-          {user && boardMember ? (
-              <HamburgerMenu onClick={handleisMenuOpen} path={"/documents"} title={"Dokumenta"} />
-            ) : null}
+      
                     
-          <HamburgerMenu onClick={handleisMenuOpen} path={"/login"} title={"Uloguj se"} />
 
           
          
