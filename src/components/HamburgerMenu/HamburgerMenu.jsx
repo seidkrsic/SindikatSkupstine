@@ -15,6 +15,7 @@ const HamburgerMenu = () => {
 
     const { lang } = useContext(AuthContext);
     const { user } = useContext(AuthContext);
+    const {boardMember} = useContext(AuthContext);
     const { userLogout } = useContext(AuthContext); 
     const { updateLang } = useContext(AuthContext);
     const {isMenuOpen} = useContext(AuthContext);
@@ -96,6 +97,11 @@ const HamburgerMenu = () => {
               <HamburgerMenuItem onClick={handleisMenuOpen} path={element.path} title={element.title} items={element.items} key={index} />
             ))
           } 
+          { 
+          user && boardMember &&
+               <HamburgerMenu onClick={handleisMenuOpen} path={"/documents"} title={}  />
+          }
+         
         
         </div>
       </div>
