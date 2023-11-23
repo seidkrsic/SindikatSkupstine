@@ -301,7 +301,7 @@
     }
 
     .StaffSinglePage__container-left { 
-        width: 95%;
+        width: 100% !important;
     }
 
     .StaffSinglePage__container-left h2  { 
