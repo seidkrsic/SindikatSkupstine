@@ -94,17 +94,17 @@ const HamburgerMenu = () => {
           {
             menuItems?.map((element, index)=> {
               if (element.path !== "/documents") { 
-                <HamburgerMenuItem onClick={handleisMenuOpen} path={element.path} title={element.title} items={element.items} key={index} />
+                return <HamburgerMenuItem onClick={handleisMenuOpen} path={element.path} title={element.title} items={element.items} key={index} />
                 
               } else if (element.path === "/documents" && user && boardMember) { 
-                <HamburgerMenuItem onClick={handleisMenuOpen} path={element.path} title={element.title} items={element.items} key={index} />
+                return <HamburgerMenuItem onClick={handleisMenuOpen} path={element.path} title={element.title} items={element.items} key={index} />
 
               }
               if (user) { 
-                <HamburgerMenu onClick={handleisMenuOpen} path={"/login"} title={"Izloguj se"} />
+                return <HamburgerMenu onClick={handleisMenuOpen} path={"/login"} title={"Izloguj se"} />
 
               } else { 
-                <HamburgerMenu onClick={handleisMenuOpen} path={"/logout"} title={"Uloguj se"} />
+                return <HamburgerMenu onClick={handleisMenuOpen} path={"/logout"} title={"Uloguj se"} />
 
               } 
             })
