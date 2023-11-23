@@ -99,7 +99,7 @@ const HamburgerMenu = () => {
           } 
           { 
           user && boardMember &&
-               <HamburgerMenu onClick={handleisMenuOpen} path={"/documents"} title={}  />
+               <HamburgerMenu onClick={handleisMenuOpen} path={"/documents"} title={"Dokumenta"}  />
           }
          
         
