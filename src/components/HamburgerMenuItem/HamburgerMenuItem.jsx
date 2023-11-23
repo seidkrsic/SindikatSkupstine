@@ -12,7 +12,7 @@ const HamburgerMenuItem = ({path, title, items}) => {
     const {handleisMenuOpen} = useContext(AuthContext);
     const {userLogout} = useContext(AuthContext);
     const specialLogoutHandle = () => { 
-        handleisMenuOpen()
+        handleisMenuOpen(!isMenuOpen)
         userLogout()
     }
 
