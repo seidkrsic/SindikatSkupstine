@@ -79,6 +79,17 @@ const HamburgerMenu = () => {
           
         },
 
+        { 
+          title: "Uloguj se", 
+          path: "/login"
+          
+        },
+        { 
+          title: "Dokumenta", 
+          path: "/documents"
+          
+        },
+
 
 
         
@@ -99,7 +110,7 @@ const HamburgerMenu = () => {
               } else if (element.path === "/documents" && user && boardMember) { 
                 return <HamburgerMenuItem onClick={handleisMenuOpen} path={element.path} title={element.title} items={element.items} key={index} />
 
-              }
+              } else if (element.path === "/login")
               if (user) { 
                 return <HamburgerMenu onClick={handleisMenuOpen} path={"/login"} title={"Izloguj se"} />
 
