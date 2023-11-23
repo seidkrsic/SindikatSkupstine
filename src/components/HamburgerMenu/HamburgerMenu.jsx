@@ -71,7 +71,7 @@ const HamburgerMenu = () => {
           
         },
         { 
-          title: lang === "latin" ? "cyrillic" : "latin", 
+          title: lang == "latin" ? "Ćirilica" : "Latinica", 
           path:  lang == "latin" ?  "/latin" : "/cyrillic",
           
         },
@@ -132,6 +132,13 @@ const HamburgerMenu = () => {
         title: "Контакт", 
         path: "/contact"
       },
+
+      { 
+        title: lang == "latin" ? "Ćirilica" : "Latinica", 
+        path:  lang == "latin" ?  "/latin" : "/cyrillic",
+        
+      },
+
       { 
         title: user ? "Излогуј се" : "Улогуј се", 
         path: user ? "/logout" : "/login"
