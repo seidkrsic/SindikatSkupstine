@@ -39,7 +39,7 @@
 
 .SkupstinaPage__doc-container li { 
     width: 90%;
-    margin: 1rem auto !important;
+    margin: .5rem auto !important;
     display: flex;
     height: fit-content;
     min-height: 3rem;
@@ -110,7 +110,7 @@
 
     .SkupstinaPage__doc-container li { 
         width: 90%;
-        margin: 1rem auto;
+        margin: .5rem auto;
         padding: 0.5rem 0 !important;
       
       
