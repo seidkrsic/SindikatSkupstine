@@ -34,8 +34,10 @@ const HamburgerMenuItem = ({path, title, items}) => {
             specialLogoutHandle();
         } else if (path === "/latin") { 
             setCyrillic()
+            handleisMenuOpen(!isMenuOpen)
         } else if (path === "/cyrillic") { 
             setLatin()
+            handleisMenuOpen(!isMenuOpen)
         } 
         
         else {
