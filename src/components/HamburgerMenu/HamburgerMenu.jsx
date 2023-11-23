@@ -85,8 +85,8 @@ const HamburgerMenu = () => {
           
         },
         { 
-          title: "Dokumenta", 
-          path: "/documents"
+          title: user && boardMember ? "Dokumenta" : "", 
+          path: user && boardMember ? "/documents" : ""
           
         },
 
@@ -108,13 +108,10 @@ const HamburgerMenu = () => {
         <div className={isMenuOpen ? "HamburgerMenu__item-container" : "HamburgerMenu__item-container no_content"}>
           {
             menuItems?.map((element, index)=> {
-              if (element.path !== "/documents") { 
+              if (element.path !== "") { 
                 return <HamburgerMenuItem onClick={handleisMenuOpen} path={element.path} title={element.title} items={element.items} key={index} />
                 
-              } else if (element.path === "/documents" && user && boardMember) { 
-                return <HamburgerMenuItem onClick={handleisMenuOpen} path={element.path} title={element.title} items={element.items} key={index} />
-
-              } 
+              }
 
               
             })
