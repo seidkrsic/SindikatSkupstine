@@ -357,8 +357,10 @@
     }
 
     .StaffSinglePage__container-main .Categories__container { 
-        width: 95% !important;
+        width: 90% !important;
+        margin: 0 auto;
         margin-bottom: 2rem;
+
     }
     .StaffSinglePage__container-main .Categories__container a { 
         width: 100% !important;
