@@ -4,7 +4,7 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import logo from "../../images/Artboard.png";
 import "./ContactPage.css";
-import salon from "../../images/salon3.jpg"
+import salon from "../../images/header2.jpg"
 
 
 

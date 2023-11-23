@@ -3,7 +3,7 @@ import FeaturedNewsCard from "../../components/FeaturedNewsCard/FeaturedNewsCard
 import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import "./SearchPage.css";
-import salon from "../../images/salon3.jpg"
+import salon from "../../images/header2.jpg"
 
 const SearchPage = () => {
   const { searchResults } = useContext(AuthContext);

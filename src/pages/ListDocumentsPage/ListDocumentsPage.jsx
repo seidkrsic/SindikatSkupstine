@@ -3,7 +3,7 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import pdfdownload from "../../images/pdf.png";
 import "./ListDocumentsPage.css";
-import salon from "../../images/salon3.jpg"
+import salon from "../../images/header2.jpg"
 
 
 
