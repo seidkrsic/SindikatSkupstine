@@ -10,10 +10,10 @@ const HamburgerMenuItem = ({path, title, items}) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const {isMenuOpen} = useContext(AuthContext);
     const {handleisMenuOpen} = useContext(AuthContext);
-    const {logout} = useContext(AuthContext);
+    const {userLogout} = useContext(AuthContext);
     const specialLogoutHandle = () => { 
         handleisMenuOpen()
-        logout()
+        userLogout()
     }
 
     const handleClick = () => {
