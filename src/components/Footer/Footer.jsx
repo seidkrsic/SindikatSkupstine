@@ -39,7 +39,7 @@ const Footer = () => {
             <a href="https://apisindikat.skupstina.me/api/importantDocuments/5e1e6da4-16d4-492b-b881-797f6e342e11/download/">
               {lang === "latin" ? "Statut" : "Статут"}
             </a>
-            <a href="https://apisindikat.skupstina.me/api/importantDocuments/3601629a-7387-4bb5-baa0-3bcf88562529/download/">
+            <a href="https://apisindikat.skupstina.me/api/importantDocuments/0bcfcb1f-d0f8-4c0c-a0f4-17f567a7cb3c/download/">
               {lang === "latin" ? "Tekst himne SOSCG" : "Текст химне СОСЦГ"}
             </a>
           </div>
