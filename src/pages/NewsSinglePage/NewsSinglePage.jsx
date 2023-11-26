@@ -6,7 +6,7 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import NewsGallery from "../../components/NewsGallery/NewsGallery";
 import AuthContext from "../../Context/AuthContext";
 import "../NewsSinglePage/NewsSinglePage.css";
-import salon from "../../images/plava_sala.jpg"
+import salon from "../../images/zelena_sala.jpg"
 
 const NewsSinglePage = () => {
   let [News, setNews] = useState({});
