@@ -5,7 +5,7 @@ import "./LawsPage.css"
 import { useLocation } from 'react-router-dom';
 import HeaderPhoto from '../../components/HeaderPhoto/HeaderPhoto';
 import pdfdownload from "../../images/pdf.png";
-import salon from "../../images/header2.jpg"
+import salon from "../../images/zeleni_salon.jpg"
 
 const LawsPage = () => {
   

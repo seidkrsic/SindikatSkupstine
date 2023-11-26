@@ -6,7 +6,7 @@ import StaffCard from "../../components/StaffCard/StaffCard";
 import AuthContext from "../../Context/AuthContext";
 import "../StaffSinglePage/StaffSinglePage.css";
 import parse from "html-react-parser";
-import salon from "../../images/header1.jpg"
+import salon from "../../images/plavi_salon.jpg"
 
 const StaffSinglePage = () => {
   let CategoriesInfo;
