@@ -5,7 +5,7 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import StaffCard from "../../components/StaffCard/StaffCard";
 import AuthContext from "../../Context/AuthContext";
 import "../StaffPage/StaffPage.css";
-import salon from "../../images/crveni_salon.jpg"
+import salon from "../../images/Plavi_salon.jpg"
 
 const StaffPage = () => {
   const [staff, setStaff] = useState([]);

@@ -3,7 +3,7 @@ import HeaderPhoto from '../../components/HeaderPhoto/HeaderPhoto'
 import "../SkupstinaPage/SkupstinaPage.css"
 import AuthContext from "../../Context/AuthContext";
 import pdfdownload from "../../images/pdf.png";
-import salon from "../../images/plava_sala.jpg"
+import salon from "../../images/Plenarna_sala.jpg"
 
 
 const SkupstinaPage = () => {
