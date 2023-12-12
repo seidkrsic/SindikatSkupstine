@@ -80,6 +80,7 @@
 
     .Staff__img-container img { 
         width: 100% !important;
+        object-fit: cover;
     }
 
     .Staff__img-container { 
