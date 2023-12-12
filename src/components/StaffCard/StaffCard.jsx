@@ -5,41 +5,38 @@ import AuthContext from "../../Context/AuthContext";
 import "./StaffCard.css";
 
 const StaffCard = ({ staff, role }) => {
-  const { lang } = useContext(AuthContext);
-  const [IsHoverd, setIsHovered] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
+    const { lang } = useContext(AuthContext);
+    const [IsHoverd, setIsHovered] = useState(false);
+    const [imageLoaded, setImageLoaded] = useState(false);
 
-  const ToggleHovered = (boolean) => {
-    setIsHovered(boolean);
-  };
+    const ToggleHovered = (boolean) => {
+        setIsHovered(boolean);
+    };
 
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };
+    const handleImageLoad = () => {
+        setImageLoaded(true);
+    };
 
-  return (
-    <div className="Staff__container">
-      <Link to={"/saziv/" + staff.id} className="Staff__img-container">
-        <motion.img
-            animate={{ scale: IsHoverd ? 1.2 : 1 }}
-            src={staff?.profile_image}
-            alt=""
-            onLoad={handleImageLoad}
-            style={{ display: imageLoaded ? "block" : "none" }}
-            onMouseEnter={() => ToggleHovered(true)}
-            onMouseLeave={() => ToggleHovered(false)}
-            
-            
-          />
-        
-      </Link>
+    return (
+        <div className="Staff__container">
+            <Link to={"/saziv/" + staff.id} className="Staff__img-container">
+                <motion.img
+                    animate={{ scale: IsHoverd ? 1.2 : 1 }}
+                    src={staff?.profile_image}
+                    alt=""
+                    onLoad={handleImageLoad}
+                    style={{ display: imageLoaded ? "block" : "none" }}
+                    onMouseEnter={() => ToggleHovered(true)}
+                    onMouseLeave={() => ToggleHovered(false)}
+                />
+            </Link>
 
-      <div className="Staff__info-container">
-        <h1>{lang === "latin" ? staff?.name : staff?.name_cyrillic}</h1>
-        <p>{role}</p>
-      </div>
-    </div>
-  );
+            <div className="Staff__info-container">
+                <h1>{lang === "latin" ? staff?.name : staff?.name_cyrillic}</h1>
+                <p>{role}</p>
+            </div>
+        </div>
+    );
 };
 
 export default StaffCard;
