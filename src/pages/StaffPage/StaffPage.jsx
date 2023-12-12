@@ -92,7 +92,7 @@ const StaffPage = () => {
           }
         );
         let data = await response.json();
-        setRole(lang === "latin" ? "Bivši predsjednik" : "Бивши предсједник");
+        setRole(lang === "latin" ? "Raniji predsjednici" : "Ранији предсједници");
         setRoleHeader(
           lang === "latin" ? "Raniji predsjednici" : "Ранији предсједници"
         );
