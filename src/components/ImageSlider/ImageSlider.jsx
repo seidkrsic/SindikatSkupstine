@@ -119,7 +119,7 @@ const ImageSlider = ({ slides }) => {
           onClick={onToPrevious}
           className="rightArrow"
         >
-          ❮
+          ❯
         </motion.div>
 
 
