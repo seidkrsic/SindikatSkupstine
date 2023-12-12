@@ -99,6 +99,31 @@ const ImageSlider = ({ slides }) => {
                 String(sliceContent(slides[currentIndex]?.content_cyrillic))
               )} */}
         </Link>
+
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : -20 }}
+          style={{ opacity: isHovered ? 1 : 0 }}
+          transition={{ duration: 0.5 }}
+          onClick={onToPrevious}
+          className="leftArrow"
+        >
+          ❮
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : -20 }}
+          style={{ opacity: isHovered ? 1 : 0 }}
+          transition={{ duration: 0.5 }}
+          onClick={onToPrevious}
+          className="rightArrow"
+        >
+          ❮
+        </motion.div>
+
+
+
       </motion.div>
     </motion.div>
   );
