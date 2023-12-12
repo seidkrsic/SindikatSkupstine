@@ -80,9 +80,8 @@
 
     .Staff__img-container img { 
         width: 100% !important;
-        scale: .9;
         object-fit: cover;
-        object-position: bottom center;
+        object-position: top center;
     }
 
     .Staff__img-container { 
