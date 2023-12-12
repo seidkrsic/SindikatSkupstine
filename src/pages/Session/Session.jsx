@@ -5,7 +5,7 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import pdfdownload from "../../images/pdf.png";
 import "./Session.css";
-import salon from "../../images/Plava_sala.jpg"
+import salon from "../../images/PlavaSala.jpg"
 
 const Session = () => {
   const location_id = useParams().id;
