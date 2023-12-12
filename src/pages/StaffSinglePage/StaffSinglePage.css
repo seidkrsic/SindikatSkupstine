@@ -302,7 +302,7 @@
 
     .StaffSinglePage__categories-container .Categories__main-container h1 { 
         width: 90% !important;
-        margin: 0 auto !important;
+        margin: 1rem auto !important;
     }
 
     .StaffSinglePage__container-left { 
