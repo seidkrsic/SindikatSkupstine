@@ -40,7 +40,7 @@ const Footer = () => {
                                 ? "Poslovnik Skupštine Crne Gore"
                                 : "Пословник Скупштине Црне Горе"}
                         </a>
-                        <a href="https://apisindikat.skupstina.me/api/importantDocuments/5e1e6da4-16d4-492b-b881-797f6e342e11/download/">
+                        <a href="https://apisindikat.skupstina.me/api/importantDocuments/3d16f967-40ac-40da-8231-108b28ff51a3/download/">
                             {lang === "latin" ? "Statut" : "Статут"}
                         </a>
                         <a href="https://apisindikat.skupstina.me/api/importantDocuments/0bcfcb1f-d0f8-4c0c-a0f4-17f567a7cb3c/download/">
