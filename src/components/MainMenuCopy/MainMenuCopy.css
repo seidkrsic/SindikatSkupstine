@@ -221,8 +221,9 @@ input[type="text"]::placeholder {
     }
 
     .menuCopy__img-container img { 
-        scale: 1.5;
+        scale: 1.4;
         width: 150px;
+        margin-left: 12%;
     }
 
     
