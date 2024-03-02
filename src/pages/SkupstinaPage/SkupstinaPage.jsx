@@ -42,7 +42,7 @@ const SkupstinaPage = () => {
                     {documents?.map((item) => (
                         <li>
                             <img src={pdfdownload} alt="" />
-                            <a href={item.download_link}>{item?.title}</a>
+                            <a href={item.download_link}>{lang === "latin" ? item?.title : item?.title_cyrillic}</a>
                         </li>
                     ))}
                 </ul>
