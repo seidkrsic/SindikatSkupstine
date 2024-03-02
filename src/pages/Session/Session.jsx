@@ -99,6 +99,7 @@ const Session = () => {
     useEffect(() => {
         if (location_id) {
             getSession();
+            window.scrollTo(0, 0);
         }
     }, [location_id]);
 
