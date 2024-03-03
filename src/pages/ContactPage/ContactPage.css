@@ -24,7 +24,7 @@
 
 .Contact__container img { 
     width: 200px;
-    height: 100px;
+    height: 80px;
 }
 
 .Contact__info-container { 
@@ -140,7 +140,7 @@
     }
 
     .Contact__info-container-right img { 
-        width: 75%;
+        width: 80%;
         scale: .8;
         margin: 0 auto;
         
