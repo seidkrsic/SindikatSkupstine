@@ -99,21 +99,21 @@ function App() {
                                 path="/skupstina"
                                 element={<SkupstinaPage />}
                             />
-                            <Route path="/contact" element={<ContactPage />} />
+                            <Route path="/kontakt" element={<ContactPage />} />
                             <Route
-                                path="/session/skupstina"
+                                path="/sjednice/skupstina"
                                 element={<Session />}
                             />
                             <Route
-                                path="/session/izvrsni_odbor"
+                                path="/sjednice/izvrsni_odbor"
                                 element={<Session />}
                             />
                             <Route
-                                path="/session/skupstina/:id"
+                                path="/sjednice/skupstina/:id"
                                 element={<Session />}
                             />
                             <Route
-                                path="/session/izvrsni_odbor/:id"
+                                path="/sjednice/izvrsni_odbor/:id"
                                 element={<Session />}
                             />
                             <Route

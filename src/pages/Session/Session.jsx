@@ -23,22 +23,22 @@ const Session = () => {
         CategoriesInfo = [
             {
                 name: "Sjednice Skupštine",
-                path: "/session/skupstina",
+                path: "/sjednice/skupstina",
             },
             {
                 name: "Sjednice Izvršnog odbora",
-                path: "/session/izvrsni_odbor",
+                path: "/sjednice/izvrsni_odbor",
             },
         ];
     } else {
         CategoriesInfo = [
             {
                 name: "Сједнице Скупштине",
-                path: "/session/skupstina",
+                path: "/sjednice/skupstina",
             },
             {
                 name: "Сједнице Извршног oдбора",
-                path: "/session/izvrsni_odbor",
+                path: "/sjednice/izvrsni_odbor",
             },
         ];
     }
@@ -198,8 +198,8 @@ const Session = () => {
                             <Link
                                 to={
                                     skupstina
-                                        ? "/session/skupstina/" + item.id
-                                        : "/session/izvrsni_odbor/" + item.id
+                                        ? "/sjednice/skupstina/" + item.id
+                                        : "/sjednice/izvrsni_odbor/" + item.id
                                 }
                                 key={item.id}
                             >

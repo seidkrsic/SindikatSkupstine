@@ -78,10 +78,10 @@ const MainMenuCopy = () => {
         ];
 
         button2Items = [
-            { name: "Sjednice Skupštine", path: "/session/skupstina" },
+            { name: "Sjednice Skupštine", path: "/sjednice/skupstina" },
             {
                 name: "Sjednice Izvršnog odbora",
-                path: "/session/izvrsni_odbor",
+                path: "/sjednice/izvrsni_odbor",
             },
         ];
 
@@ -105,10 +105,10 @@ const MainMenuCopy = () => {
         ];
 
         button2Items = [
-            { name: "Сједнице Скупштине", path: "/session/skupstina" },
+            { name: "Сједнице Скупштине", path: "/sjednice/skupstina" },
             {
                 name: "Сједнице Извршног oдбора",
-                path: "/session/izvrsni_odbor",
+                path: "/sjednice/izvrsni_odbor",
             },
         ];
 
@@ -220,7 +220,7 @@ const MainMenuCopy = () => {
                     />
                     <MenuDropdown
                         buttonName={lang === "latin" ? "Kontakt" : "Контакт"}
-                        path="/contact"
+                        path="/kontakt"
                     />
                     <div className="search-relative__container">
                         <form>

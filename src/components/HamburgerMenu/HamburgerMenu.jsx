@@ -44,10 +44,10 @@ const HamburgerMenu = () => {
         {
             title: "Sjednice",
             items: [
-                { name: "Sjednice Skupštine", path: "/session/skupstina" },
+                { name: "Sjednice Skupštine", path: "/sjednice/skupstina" },
                 {
                     name: "Sjednice Izvršnog odbora",
-                    path: "/session/izvrsni_odbor",
+                    path: "/sjednice/izvrsni_odbor",
                 },
             ],
         },
@@ -67,7 +67,7 @@ const HamburgerMenu = () => {
 
         {
             title: "Kontakt",
-            path: "/contact",
+            path: "/kontakt",
         },
         {
             title: lang == "latin" ? "Ћирилица" : "Latinica",
@@ -106,10 +106,10 @@ const HamburgerMenu = () => {
         {
             title: "Сједнице",
             items: [
-                { name: "Сједнице Скупштине", path: "/session/skupstina" },
+                { name: "Сједнице Скупштине", path: "/sjednice/skupstina" },
                 {
                     name: "Сједнице Извршног одбора",
-                    path: "/session/izvrsni_odbor",
+                    path: "/sjednice/izvrsni_odbor",
                 },
             ],
         },
@@ -127,7 +127,7 @@ const HamburgerMenu = () => {
         },
         {
             title: "Контакт",
-            path: "/contact",
+            path: "/kontakt",
         },
 
         {
