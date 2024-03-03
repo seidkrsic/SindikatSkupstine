@@ -45,7 +45,7 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
             onMouseEnter={() => ToggleHover(true)}
             onMouseLeave={() => ToggleHover(false)}
             className="FeaturesNewsCard__container"
-            to={"/news/" + id}
+            to={"/aktuelnosti/" + id}
         >
             <div className="FeaturesNewsCard__img-container">
                 <motion.img

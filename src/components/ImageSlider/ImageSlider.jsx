@@ -97,7 +97,7 @@ const ImageSlider = ({ slides }) => {
                 />
 
                 <Link
-                    to={"/news/" + slides[currentIndex]?.id}
+                    to={"/aktuelnosti/" + slides[currentIndex]?.id}
                     className="NewInfo"
                 >
                     <h1>

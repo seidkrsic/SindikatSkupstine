@@ -22,14 +22,14 @@ const NewsSinglePage = () => {
         CategoriesInfo = [
             {
                 name: "Sve aktuelnosti",
-                path: "/news/",
+                path: "/aktuelnosti/",
             },
         ];
     } else {
         CategoriesInfo = [
             {
                 name: "Све актуелности",
-                path: "/news/",
+                path: "/aktuelnosti/",
             },
         ];
     }

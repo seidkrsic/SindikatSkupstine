@@ -46,17 +46,17 @@ function App() {
                         <Routes>
                             <Route path="/" exact element={<HomePage />} />
                             <Route path="/search" element={<SearchPage />} />
-                            <Route path="/news" element={<NewsPage />} />
+                            <Route path="/aktuelnosti" element={<NewsPage />} />
                             <Route
-                                path="/news/predsjednik"
+                                path="/aktuelnosti/predsjednik"
                                 element={<NewsPage />}
                             />
                             <Route
-                                path="/news/zamjenikPredsjednika"
+                                path="/aktuelnosti/zamjenikPredsjednika"
                                 element={<NewsPage />}
                             />
                             <Route
-                                path="/news/:id"
+                                path="/aktuelnosti/:id"
                                 element={<NewsSinglePage />}
                             />
                             <Route
