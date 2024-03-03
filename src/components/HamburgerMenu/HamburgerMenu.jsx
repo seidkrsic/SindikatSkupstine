@@ -24,7 +24,7 @@ const HamburgerMenu = () => {
     const menuItems1 = [
         {
             title: "Aktuelnosti",
-            path: "/news",
+            path: "/aktuelnosti",
         },
 
         {
@@ -87,7 +87,7 @@ const HamburgerMenu = () => {
     const menuItems2 = [
         {
             title: "Актуелности",
-            path: "/news",
+            path: "/aktuelnosti",
         },
         {
             title: "Синдикат",

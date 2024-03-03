@@ -179,7 +179,7 @@ const MainMenuCopy = () => {
                         buttonName={
                             lang === "latin" ? "Aktuelnosti" : "Актуелности"
                         }
-                        path="/news"
+                        path="/aktuelnosti"
                     />
                     <MenuDropdown
                         buttonName={lang === "latin" ? "Sindikat" : "Синдикат"}
