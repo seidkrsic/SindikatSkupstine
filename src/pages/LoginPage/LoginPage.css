@@ -17,8 +17,11 @@
 }
 
 .LoginPage__img-container img { 
-    height: 80%;
+    height: 40%;
     width: 100%;
+    scale: 2.1;
+    top: 20%;
+    position: relative;
 }
 
 .LoginPage__container form { 
