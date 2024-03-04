@@ -52,7 +52,7 @@ function App() {
                                 element={<NewsPage />}
                             />
                             <Route
-                                path="/aktuelnosti/zamjenikPredsjednika"
+                                path="/aktuelnosti/generalni_sekretar"
                                 element={<NewsPage />}
                             />
                             <Route
@@ -125,7 +125,7 @@ function App() {
                                 element={<StaffSinglePage />}
                             />
                             <Route
-                                path="/saziv/zamjenikPredsjednika"
+                                path="/saziv/generalni_sekretar"
                                 element={<StaffSinglePage />}
                             />
                             {/* <Route
