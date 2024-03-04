@@ -67,11 +67,11 @@ const MainMenuCopy = () => {
         button1Items = [
             { name: "Skupština", path: "/skupstina" },
             { name: "Predsjednik", path: "/saziv/predsjednik" },
+            { name: "Izvršni odbor", path: "/saziv/izvrsniodbor" },
             {
                 name: "Generalni sekretar",
                 path: "/saziv/generalni_sekretar",
             },
-            { name: "Izvršni odbor", path: "/saziv/izvrsniodbor" },
             { name: "Nadzorni odbor", path: "/saziv/nadzorniodbor" },
             { name: "Statutarna komisija", path: "/saziv/komisija" },
             // { name: "Raniji predsjednici", path: "/saziv/predsjednici" },
@@ -94,11 +94,11 @@ const MainMenuCopy = () => {
         button1Items = [
             { name: "Скупштина", path: "/skupstina" },
             { name: "Предсједник", path: "/saziv/predsjednik" },
+            { name: "Извршни одбор", path: "/saziv/izvrsniodbor" },
             {
                 name: "Генерални секретар",
                 path: "/saziv/generalni_sekretar",
             },
-            { name: "Извршни одбор", path: "/saziv/izvrsniodbor" },
             { name: "Надзорни одбор", path: "/saziv/nadzorniodbor" },
             { name: "Статутарна комисија", path: "/saziv/komisija" },
             // { name: "Ранији предсједници", path: "/saziv/predsjednici" },
@@ -118,6 +118,7 @@ const MainMenuCopy = () => {
             { name: "Формулари и обрасци", path: "/zakoni/formulari" },
         ];
     }
+    
     
 
     const setLatin = () => {
