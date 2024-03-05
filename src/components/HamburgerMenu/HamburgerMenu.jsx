@@ -26,17 +26,17 @@ const HamburgerMenu = () => {
             title: "Aktuelnosti",
             path: "/aktuelnosti",
         },
-
+    
         {
             title: "Sindikat",
             items: [
                 { name: "Skupština", path: "/skupstina" },
                 { name: "Predsjednik", path: "/saziv/predsjednik" },
-                {
-                    name: "Zamjenik predsjednika",
-                    path: "/saziv/zamjenikPredsjednika",
-                },
                 { name: "Izvršni odbor", path: "/saziv/izvrsniodbor" },
+                {
+                    name: "Generalni sekretar",
+                    path: "/generalni_sekretar",
+                },
                 { name: "Nadzorni odbor", path: "/saziv/nadzorniodbor" },
                 { name: "Statutarna komisija", path: "/saziv/komisija" },
             ],
@@ -59,12 +59,12 @@ const HamburgerMenu = () => {
                 { name: "Formulari i obrasci", path: "/zakoni/formulari" },
             ],
         },
-
+    
         {
             title: "Pogodnosti",
             path: "/pogodnosti",
         },
-
+    
         {
             title: "Kontakt",
             path: "/kontakt",
@@ -73,7 +73,7 @@ const HamburgerMenu = () => {
             title: lang == "latin" ? "Ћирилица" : "Latinica",
             path: lang == "latin" ? "/latin" : "/cyrillic",
         },
-
+    
         {
             title: user ? "Izloguj se" : "Uloguj se",
             path: user ? "/logout" : "/login",
@@ -83,7 +83,7 @@ const HamburgerMenu = () => {
             path: user && boardMember ? "/documents" : "",
         },
     ];
-
+    
     const menuItems2 = [
         {
             title: "Актуелности",
@@ -94,11 +94,11 @@ const HamburgerMenu = () => {
             items: [
                 { name: "Скупштина", path: "/skupstina" },
                 { name: "Предсједник", path: "/saziv/predsjednik" },
-                {
-                    name: "Замјеник предсједника",
-                    path: "/saziv/zamjenikPredsjednika",
-                },
                 { name: "Извршни одбор", path: "/saziv/izvrsniodbor" },
+                {
+                    name: "Generalni sekretar",
+                    path: "/generalni_sekretar",
+                },
                 { name: "Надзорни одбор", path: "/saziv/nadzorniodbor" },
                 { name: "Статутарна комисија", path: "/saziv/komisija" },
             ],
@@ -129,12 +129,12 @@ const HamburgerMenu = () => {
             title: "Контакт",
             path: "/kontakt",
         },
-
+    
         {
             title: lang == "latin" ? "Ћирилица" : "Latinica",
             path: lang == "latin" ? "/latin" : "/cyrillic",
         },
-
+    
         {
             title: user ? "Излогуј се" : "Улогуј се",
             path: user ? "/logout" : "/login",
@@ -144,6 +144,7 @@ const HamburgerMenu = () => {
             path: user && boardMember ? "/documents" : "",
         },
     ];
+    
 
     let menuItems = lang === "latin" ? menuItems1 : menuItems2;
 

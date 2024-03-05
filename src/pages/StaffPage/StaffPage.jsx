@@ -19,11 +19,11 @@ const StaffPage = () => {
     if (lang === "latin") {
         CategoriesInfo = [
             { name: "Predsjednik", path: "/saziv/predsjednik" },
-            {
-                name: "Zamjenik predsjednika",
-                path: "/saziv/zamjenikPredsjednika",
-            },
             { name: "Izvršni odbor", path: "/saziv/izvrsniodbor" },
+            {
+                name: "Generalni sekretar",
+                path: "/saziv/generalni_sekretar",
+            },
             { name: "Nadzorni odbor", path: "/saziv/nadzorniodbor" },
             { name: "Statutarna komisija", path: "/saziv/komisija" },
             { name: "Raniji predsjednici", path: "/saziv/predsjednici" },
@@ -31,16 +31,17 @@ const StaffPage = () => {
     } else {
         CategoriesInfo = [
             { name: "Предсједник", path: "/saziv/predsjednik" },
-            {
-                name: "Замјеник предсједника",
-                path: "/saziv/zamjenikPredsjednika",
-            },
             { name: "Извршни одбор", path: "/saziv/izvrsniodbor" },
+            {
+                name: "Generalni sekretar",
+                path: "/saziv/generalni_sekretar",
+            },
             { name: "Надзорни одбор", path: "/saziv/nadzorniodbor" },
             { name: "Статутарна комисија", path: "/saziv/komisija" },
             { name: "Ранији предсједници", path: "/saziv/predsjednici" },
         ];
     }
+    
 
     const location_id = useLocation().pathname;
     const [role, setRole] = useState("");

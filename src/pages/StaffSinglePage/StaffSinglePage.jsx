@@ -15,11 +15,11 @@ const StaffSinglePage = () => {
     if (lang === "latin") {
         CategoriesInfo = [
             { name: "Predsjednik", path: "/saziv/predsjednik" },
-            {
-                name: "Zamjenik predsjednika",
-                path: "/saziv/zamjenikPredsjednika",
-            },
             { name: "Izvršni odbor", path: "/saziv/izvrsniodbor" },
+            {
+                name: "Generalni sekretar",
+                path: "/saziv/generalni_sekretar",
+            },
             { name: "Nadzorni odbor", path: "/saziv/nadzorniodbor" },
             { name: "Statutarna komisija", path: "/saziv/komisija" },
             { name: "Raniji predsjednici", path: "/saziv/predsjednici" },
@@ -27,16 +27,17 @@ const StaffSinglePage = () => {
     } else {
         CategoriesInfo = [
             { name: "Предсједник", path: "/saziv/predsjednik" },
-            {
-                name: "Замјеник предсједника",
-                path: "/saziv/zamjenikPredsjednika",
-            },
             { name: "Извршни одбор", path: "/saziv/izvrsniodbor" },
+            {
+                name: "Generalni sekretar",
+                path: "/saziv/generalni_sekretar",
+            },
             { name: "Надзорни одбор", path: "/saziv/nadzorniodbor" },
             { name: "Статутарна комисија", path: "/saziv/komisija" },
             { name: "Ранији предсједници", path: "/saziv/predsjednici" },
         ];
     }
+    
 
     const [staff, setStaff] = useState(null);
     const location = useLocation().pathname;
@@ -58,8 +59,12 @@ const StaffSinglePage = () => {
                 setStaff(data);
             };
             getProfile();
-        } else if (location.includes("zamjenik")) {
-            const getProfile = async () => {
+        } else if (location.includes("sekretar")) {
+            const getProfile = async () => { 
+
+                // ovaj fetch radi... na bekendu getVicePresident ipak trazi sekretara... nisam promijenio, 
+                // bilo mi je muka... 
+                
                 const response = await fetch(
                     `https://apisindikat.skupstina.me/api/getVicePresident/`,
                     {
