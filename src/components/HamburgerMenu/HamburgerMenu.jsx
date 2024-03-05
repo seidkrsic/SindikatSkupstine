@@ -35,7 +35,7 @@ const HamburgerMenu = () => {
                 { name: "Izvršni odbor", path: "/saziv/izvrsniodbor" },
                 {
                     name: "Generalni sekretar",
-                    path: "/generalni_sekretar",
+                    path: "/saziv/generalni_sekretar/",
                 },
                 { name: "Nadzorni odbor", path: "/saziv/nadzorniodbor" },
                 { name: "Statutarna komisija", path: "/saziv/komisija" },
@@ -97,7 +97,7 @@ const HamburgerMenu = () => {
                 { name: "Извршни одбор", path: "/saziv/izvrsniodbor" },
                 {
                     name: "Generalni sekretar",
-                    path: "/generalni_sekretar",
+                    path: "/saziv/generalni_sekretar",
                 },
                 { name: "Надзорни одбор", path: "/saziv/nadzorniodbor" },
                 { name: "Статутарна комисија", path: "/saziv/komisija" },
