@@ -27,7 +27,7 @@
     align-items: center;
     position: relative; 
     top: -55px;
-    left: 100%;
+    left: 90%;
     height: 50px;
     width: 200px;
     cursor: pointer;
@@ -214,6 +214,13 @@
 
 .Section__heading { 
     margin: 4rem auto !important;
+}
+
+@media screen and (min-width: 1280px) {
+    
+    .HomePage__special-doc { 
+        left: 100% !important;
+    }
 }
 
 @media screen and  (max-width: 767px) { 
