@@ -145,7 +145,8 @@
     .Contact__info-container-right img { 
         width: 80%;
         scale: .8;
-        margin: 0 auto;
+        margin: 2rem auto;
+        margin-top: 0;
         
     }
 
