@@ -18,9 +18,9 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
         if (screenWidth < 768) {
             return title.slice(0, 90); // Slice to 20 characters on mobile screens
         } else if (screenWidth >= 768 && screenWidth < 1024) {
-            return title.slice(0, 110); // Slice to 40 characters on tablet screens
+            return title.slice(0, 100); // Slice to 40 characters on tablet screens
         } else {
-            return title.slice(0, 110); // Display the full title on desktop screens
+            return title.slice(0, 100); // Display the full title on desktop screens
         }
     };
 
