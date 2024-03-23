@@ -24,9 +24,9 @@ const Timeline = () => {
             location: "Podgorica, Crna Gora",
             location_cyrillic: "Подгорица, Црна Гора",
             description:
-                "Sindikalna organizacija Skupštine Crne Gore, sa preko 30 godina svog kontinuiranog rada, predstavlja jedan od najstarijih sindikalnih organizacija u Crnoj Gori.",
+                "Sindikalna organizacija Skupštine Crne Gore, sa preko 30 godina svog kontinuiranog rada, predstavlja jednu od najstarijih sindikalnih organizacija u Crnoj Gori.",
             description_cyrillic:
-                "Синдикална организација Скупштине Црне Горе, са преко 30 година свог континуираног рада, представља један од најстаријих синдикалних организација у Црној Гори.",
+                "Синдикална организација Скупштине Црне Горе, са преко 30 година свог континуираног рада, представља једну од најстаријих синдикалних организација у Црној Гори.",
             date: "",
             icon: "work",
         },
@@ -37,9 +37,9 @@ const Timeline = () => {
             location: "Podgorica, Crna Gora",
             location_cyrillic: "Подгорица, Црна Гора",
             description:
-                "Karatkeristično za rad Sindikata jeste da je 2011. godine zalagajući se za bolja prava zaposlenih, organizovao štrajk u Parlamentu, koji je na kraju rezultirao uvećanjem zarada zaposlenih u Službi Skupštine.",
+                "Karakteristično za rad Sindikata jeste da je 2011. godine zalagajući se za bolja prava zaposlenih, organizovao štrajk u Parlamentu, koji je na kraju rezultirao uvećanjem zarada zaposlenih u Službi Skupštine.",
             description_cyrillic:
-                "Караткеристично за рад Синдиката јесте да је 2011. године залагајући се за боља права запослених, организовао штрајк у Парламенту, који је на крају резултирао увећањем зарада запослених у Служби Скупштине.",
+                "Карактеристично за рад Синдиката јесте да је 2011. године залагајући се за боља права запослених, организовао штрајк у Парламенту, који је на крају резултирао увећањем зарада запослених у Служби Скупштине.",
             date: "",
             icon: "not",
         },
@@ -50,9 +50,9 @@ const Timeline = () => {
             location: "Podgorica, Crna Gora",
             location_cyrillic: "Подгорица, Црна Гора",
             description:
-                "Zahvaljujući požrtvovanosti i incijativnosti rukovodstva Sindikata obezbijeđene su redovni sistematski pregledi, kako bi se podigla svijest zaposlenih o značaju preventivnih pregleda.",
+                "Zahvaljujući požrtvovanosti i inicijativnosti rukovodstva Sindikata obezbijeđene su redovni sistematski pregledi, kako bi se podigla svijest zaposlenih o značaju preventivnih pregleda.",
             description_cyrillic:
-                "Захваљујући пожртвованости и инцијативности руководства Синдиката обезбијеђене су редовни систематски прегледи, како би се подигла свијест запослених о значају превентивних прегледа.",
+                "Захваљујући пожртвованости и иницијативности руководства Синдиката обезбијеђене су редовни систематски прегледи, како би се подигла свијест запослених о значају превентивних прегледа.",
             date: "",
             icon: "work",
         },
