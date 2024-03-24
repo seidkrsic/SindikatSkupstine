@@ -38,7 +38,9 @@
 }
 
 .menuCopy__img-container img { 
-    height: 100%;
+    /* height: 100%; */
+    position: relative;
+    top: 10%;
     width: 300px;
     scale: 1.1;
 }
