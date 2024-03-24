@@ -24,7 +24,7 @@
 
 .Contact__container img { 
     width: 200px;
-    height: 80px;
+    /* height: 80px; */
     scale: 1.2;
     position: relative;
     top: 5%;
