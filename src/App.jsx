@@ -129,7 +129,7 @@ function App() {
                                 element={<StaffSinglePage />}
                             /> 
                             <Route
-                                path="/saziv/zamjenik_predsjednika"
+                                path="/saziv/zamjenik"
                                 element={<StaffSinglePage />}
                             />
                           

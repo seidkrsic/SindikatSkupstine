@@ -19,7 +19,7 @@ const StaffPage = () => {
     if (lang === "latin") {
         CategoriesInfo = [
             { name: "Predsjednik", path: "/saziv/predsjednik" },
-            { name: "Zamjenik predsjednika", path: "/saziv/zamjenik_predsjednika" },
+            { name: "Zamjenik predsjednika", path: "/saziv/zamjenik" },
             { name: "Izvršni odbor", path: "/saziv/izvrsniodbor" },
             {
                 name: "Generalni sekretar",
@@ -32,7 +32,7 @@ const StaffPage = () => {
     } else {
         CategoriesInfo = [
             { name: "Предсједник", path: "/saziv/predsjednik" },
-            { name: "Замјеник предсједника", path: "/saziv/zamjenik_predsjednika" },
+            { name: "Замјеник предсједника", path: "/saziv/zamjenik" },
             { name: "Извршни одбор", path: "/saziv/izvrsniodbor" },
             {
                 name: "Generalni sekretar",
