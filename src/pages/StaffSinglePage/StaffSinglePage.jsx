@@ -91,7 +91,7 @@ const StaffSinglePage = () => {
                 setStaff(data);
             };
             getProfile();
-        } else if (location.includes("zamjenik_predsjednika")) { 
+        } else if (location.includes("zamjenik")) { 
             const getProfile = async () => {
                 const response = await fetch(
                     `https://apisindikat.skupstina.me/api/get_vice_president/`,
