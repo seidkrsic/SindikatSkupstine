@@ -127,11 +127,12 @@ function App() {
                             <Route
                                 path="/saziv/generalni_sekretar"
                                 element={<StaffSinglePage />}
+                            /> 
+                            <Route
+                                path="/saziv/zamjenik_predsjednika"
+                                element={<StaffSinglePage />}
                             />
-                            {/* <Route
-                path="/saziv/generalniSekretar"
-                element={<StaffSinglePage />}
-              /> */}
+                          
                             <Route path="/*" element={<Navigate to="/" />} />
                         </Routes>
 

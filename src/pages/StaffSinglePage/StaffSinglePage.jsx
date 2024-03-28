@@ -15,6 +15,7 @@ const StaffSinglePage = () => {
     if (lang === "latin") {
         CategoriesInfo = [
             { name: "Predsjednik", path: "/saziv/predsjednik" },
+            { name: "Zamjenik predsjednika", path: "/saziv/zamjenik_predsjednika" },
             { name: "Izvršni odbor", path: "/saziv/izvrsniodbor" },
             {
                 name: "Generalni sekretar",
@@ -27,6 +28,7 @@ const StaffSinglePage = () => {
     } else {
         CategoriesInfo = [
             { name: "Предсједник", path: "/saziv/predsjednik" },
+            { name: "Замјеник предсједника", path: "/saziv/zamjenik_predsjednika" },
             { name: "Извршни одбор", path: "/saziv/izvrsniodbor" },
             {
                 name: "Generalni sekretar",
@@ -89,7 +91,22 @@ const StaffSinglePage = () => {
                 setStaff(data);
             };
             getProfile();
-        } else {
+        } else if (location.includes("zamjenik_sekretara")) { 
+            const getProfile = async () => {
+                const response = await fetch(
+                    `https://apisindikat.skupstina.me/api/get_vice_president/`,
+                    {
+                        method: "GET",
+                        headers: { "Content-Type": "application/json" },
+                    }
+                );
+                let data = await response.json();
+                setStaff(data);
+            };
+            getProfile();
+
+        } 
+        else {
             const getProfile = async () => {
                 const response = await fetch(
                     `https://apisindikat.skupstina.me/api/getProfile/${location_id}/`,
