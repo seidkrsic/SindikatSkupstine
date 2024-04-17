@@ -16,6 +16,7 @@ const Session = () => {
     let [sessionsInfo, setSessionsInfo] = useState([]);
     const { user } = useContext(AuthContext);
     const { lang } = useContext(AuthContext);
+    const { domain_url } = useContext(AuthContext);
 
     let CategoriesInfo;
 
@@ -45,7 +46,7 @@ const Session = () => {
 
     const getSession = async () => {
         let response = await fetch(
-            `https://apisindikat.skupstina.me/api/sessions/${location_id}/`
+            `${domain_url}api/sessions/${location_id}/`
         );
         let data = await response.json();
 
@@ -63,11 +64,11 @@ const Session = () => {
         let category;
         if (skupstina) {
             fetch_url =
-                "https://apisindikat.skupstina.me/api/categorySessions/?name=skupstina";
+                domain_url + "api/categorySessions/?name=skupstina";
             category = "skupstina";
         } else {
             fetch_url =
-                "https://apisindikat.skupstina.me/api/categorySessions/?name=izvrsni_odbor";
+                domain_url + "api/categorySessions/?name=izvrsni_odbor";
             category = "izvrsni_odbor";
         }
         let response = await fetch(fetch_url, {

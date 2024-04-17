@@ -11,10 +11,11 @@ const HomePage = () => {
     let [slides, setSlides] = useState([]);
     let [docs, setDocs] = useState([]);
     const { lang } = useContext(AuthContext);
+    const { domain_url } = useContext(AuthContext);
 
     const getNews = async () => {
         const response = await fetch(
-            "https://apisindikat.skupstina.me/api/news/",
+            domain_url + "api/news/",
             {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },
@@ -26,7 +27,7 @@ const HomePage = () => {
 
     const getDocs = async () => {
         const response = await fetch(
-            "https://apisindikat.skupstina.me/api/documents/",
+            domain_url + "api/documents/",
             {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },
@@ -42,7 +43,7 @@ const HomePage = () => {
 
     const getNewsForSlides = async () => {
         const response = await fetch(
-            "https://apisindikat.skupstina.me/api/slides/",
+            domain_url + "api/slides/",
             {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },
@@ -67,7 +68,7 @@ const HomePage = () => {
                     <div className="PageContainerGrid__bigger">
                         <div className="flex-col">
                             <div className="HomePage__special-doc">
-                                <a href="https://apisindikat.skupstina.me/api/importantDocuments/31c8511a-670b-4494-a397-a1dfb4056248/download/">
+                                <a href={domain_url + "api/importantDocuments/31c8511a-670b-4494-a397-a1dfb4056248/download/"}>
                                     {lang === "latin"
                                         ? "Pristupnica"
                                         : "Приступница"}

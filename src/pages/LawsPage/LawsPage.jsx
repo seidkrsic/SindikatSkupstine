@@ -10,6 +10,8 @@ import salon from "../../images/Plenarna_sala.jpg";
 const LawsPage = () => {
     const { lang } = useContext(AuthContext);
     const location = useLocation().pathname;
+    const { domain_url } = useContext(AuthContext);
+
     let filter;
     let LawsHeader;
     if (location.includes("akti_sindikata")) {
@@ -48,7 +50,7 @@ const LawsPage = () => {
         }
 
         const response = await fetch(
-            `https://apisindikat.skupstina.me/api/allDocuments/?name=${filter}`,
+            domain_url + `api/allDocuments/?name=${filter}`,
             {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },

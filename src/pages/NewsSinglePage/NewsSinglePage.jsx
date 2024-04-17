@@ -13,6 +13,7 @@ const NewsSinglePage = () => {
     let [noGallery, setNoGallery] = useState(false);
     const [imageLoaded, setImageLoaded] = useState(false);
     const { lang } = useContext(AuthContext);
+    const { domain_url } = useContext(AuthContext);
 
     const location_id = useParams().id;
     const mobileScreen = window.innerWidth < 768;
@@ -41,7 +42,7 @@ const NewsSinglePage = () => {
 
     const getSingleNews = async () => {
         const response = await fetch(
-            `https://apisindikat.skupstina.me/api/news/${location_id}/`
+            `${domain_url}api/news/${location_id}/`
         );
         let data = await response.json();
         data.created = data.created.slice(0, 10);

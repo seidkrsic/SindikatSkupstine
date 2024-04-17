@@ -11,6 +11,7 @@ import salon from "../../images/Bijeli_salon.jpg";
 const StaffSinglePage = () => {
     let CategoriesInfo;
     const { lang } = useContext(AuthContext);
+    const { domain_url } = useContext(AuthContext);
 
     if (lang === "latin") {
         CategoriesInfo = [
@@ -51,7 +52,7 @@ const StaffSinglePage = () => {
         if (location.includes("predsjednik")) {
             const getProfile = async () => {
                 const response = await fetch(
-                    `https://apisindikat.skupstina.me/api/getPresident/`,
+                    `${domain_url}api/getPresident/`,
                     {
                         method: "GET",
                         headers: { "Content-Type": "application/json" },
@@ -68,7 +69,7 @@ const StaffSinglePage = () => {
                 // bilo mi je muka... 
                 
                 const response = await fetch(
-                    `https://apisindikat.skupstina.me/api/getVicePresident/`,
+                    `${domain_url}api/getVicePresident/`,
                     {
                         method: "GET",
                         headers: { "Content-Type": "application/json" },
@@ -81,7 +82,7 @@ const StaffSinglePage = () => {
         } else if (location.includes("Sekretar")) {
             const getProfile = async () => {
                 const response = await fetch(
-                    `https://apisindikat.skupstina.me/api/getSecretary/`,
+                    `${domain_url}api/getSecretary/`,
                     {
                         method: "GET",
                         headers: { "Content-Type": "application/json" },
@@ -94,7 +95,7 @@ const StaffSinglePage = () => {
         } else if (location.includes("zamjenik")) { 
             const getProfile = async () => {
                 const response = await fetch(
-                    `https://apisindikat.skupstina.me/api/get_vice_president/`,
+                    `${domain_url}api/get_vice_president/`,
                     {
                         method: "GET",
                         headers: { "Content-Type": "application/json" },
@@ -109,7 +110,7 @@ const StaffSinglePage = () => {
         else {
             const getProfile = async () => {
                 const response = await fetch(
-                    `https://apisindikat.skupstina.me/api/getProfile/${location_id}/`,
+                    `${domain_url}api/getProfile/${location_id}/`,
                     {
                         method: "GET",
                         headers: { "Content-Type": "application/json" },

@@ -8,6 +8,7 @@ import salon from "../../images/Plenarna_sala.jpg";
 const ListDocumentsPage = () => {
     const { authToken } = useContext(AuthContext);
     const { lang } = useContext(AuthContext);
+    const { domain_url } = useContext(AuthContext);
 
     const [documents, setDocuments] = useState([]);
 
@@ -15,7 +16,7 @@ const ListDocumentsPage = () => {
         try {
             // console.log(`Bearer ${authToken?.access}`)
             let response = await fetch(
-                "https://apisindikat.skupstina.me/api/important/",
+                domain_url + "api/important/",
                 {
                     method: "POST",
                     headers: {

@@ -10,6 +10,8 @@ import salon from "../../images/PlavaSala.jpg";
 const StaffPage = () => {
     const [staff, setStaff] = useState([]);
     const { lang } = useContext(AuthContext);
+    const { domain_url } = useContext(AuthContext);
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -53,7 +55,7 @@ const StaffPage = () => {
         if (location_id.includes("izvrsniodbor")) {
             const getStaff = async () => {
                 const response = await fetch(
-                    `https://apisindikat.skupstina.me/api/getBoardMembers/`,
+                    `${domain_url}api/getBoardMembers/`,
                     {
                         method: "GET",
                         headers: { "Content-Type": "application/json" },
@@ -71,7 +73,7 @@ const StaffPage = () => {
         } else if (location_id.includes("komisija")) {
             const getStaff = async () => {
                 const response = await fetch(
-                    `https://apisindikat.skupstina.me/api/getCommission/`,
+                    `${domain_url}api/getCommission/`,
                     {
                         method: "GET",
                         headers: { "Content-Type": "application/json" },
@@ -94,7 +96,7 @@ const StaffPage = () => {
         } else if (location_id.includes("predsjednici")) {
             const getStaff = async () => {
                 const response = await fetch(
-                    `https://apisindikat.skupstina.me/api/getPresidents/`,
+                    `${domain_url}api/getPresidents/`,
                     {
                         method: "GET",
                         headers: { "Content-Type": "application/json" },
@@ -117,7 +119,7 @@ const StaffPage = () => {
         } else if (location_id.includes("nadzorniodbor")) {
             const getStaff = async () => {
                 const response = await fetch(
-                    `https://apisindikat.skupstina.me/api/getMainBoardMembers/`,
+                    `${domain_url}api/getMainBoardMembers/`,
                     {
                         method: "GET",
                         headers: { "Content-Type": "application/json" },

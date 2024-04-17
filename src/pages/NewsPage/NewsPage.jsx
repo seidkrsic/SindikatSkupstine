@@ -8,6 +8,7 @@ import salon from "../../images/Zgrada_skupstine.jpg";
 
 const NewsPage = () => {
     const { lang } = useContext(AuthContext);
+    const { domain_url } = useContext(AuthContext);
     const [cards, setCards] = useState([]);
     const [totalPages, setTotalPages] = useState(1);
     const [currentPage, setCurrentPage] = useState(1);
@@ -15,7 +16,7 @@ const NewsPage = () => {
 
     const getNews = async () => {
         const response = await fetch(
-            `https://apisindikat.skupstina.me/api/paginationNews/?page=${currentPage}`,
+            domain_url + `api/paginationNews/?page=${currentPage}`,
             {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },

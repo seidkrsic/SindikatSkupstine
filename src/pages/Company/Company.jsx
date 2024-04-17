@@ -8,6 +8,7 @@ import salon from "../../images/Zgrada_skupstine.jpg";
 const Company = () => {
     const { user } = useContext(AuthContext);
     const { lang } = useContext(AuthContext);
+    const { domain_url } = useContext(AuthContext);
     const [companies, setCompanies] = useState([]);
 
     useEffect(() => {
@@ -15,7 +16,7 @@ const Company = () => {
         const fetchData = async () => {
             try {
                 const response = await fetch(
-                    "https://apisindikat.skupstina.me/api/companies/"
+                    domain_url + "api/companies/"
                 );
                 if (!response.ok) {
                     throw new Error("Network response was not ok");

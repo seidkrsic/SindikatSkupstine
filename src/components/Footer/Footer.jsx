@@ -6,7 +6,7 @@ import "./Footer.css";
 
 const Footer = () => {
     const { lang } = useContext(AuthContext);
-
+    const {domain_url} = useContext(AuthContext);
     return (
         <div className="Footer__container">
             <div className="Footer__container-top">
@@ -30,20 +30,20 @@ const Footer = () => {
                 <div className="Footer__container-top__bigCol">
                     <div className="Footer__container-top__col">
                         <h1>{lang === "latin" ? "Dokumenta" : "Документа"}</h1>
-                        <a href="https://apisindikat.skupstina.me/api/importantDocuments/3601629a-7387-4bb5-baa0-3bcf88562529/download/">
+                        <a href={domain_url + "api/importantDocuments/3601629a-7387-4bb5-baa0-3bcf88562529/download/"}>
                             {lang === "latin"
                                 ? "Ustav Crne Gore"
                                 : "Устав Црне Горе"}
                         </a>
-                        <a href="https://apisindikat.skupstina.me/api/importantDocuments/4e5ca817-4955-4419-b84a-e074d61c0d3b/download/">
+                        <a href={domain_url + "api/importantDocuments/4e5ca817-4955-4419-b84a-e074d61c0d3b/download/"}>
                             {lang === "latin"
                                 ? "Poslovnik Skupštine Crne Gore"
                                 : "Пословник Скупштине Црне Горе"}
                         </a>
-                        <a href="https://apisindikat.skupstina.me/api/importantDocuments/3d16f967-40ac-40da-8231-108b28ff51a3/download/">
+                        <a href={domain_url + "api/importantDocuments/3d16f967-40ac-40da-8231-108b28ff51a3/download/"}>
                             {lang === "latin" ? "Statut" : "Статут"}
                         </a>
-                        <a href="https://apisindikat.skupstina.me/api/importantDocuments/0bcfcb1f-d0f8-4c0c-a0f4-17f567a7cb3c/download/">
+                        <a href={domain_url + "api/importantDocuments/0bcfcb1f-d0f8-4c0c-a0f4-17f567a7cb3c/download/"}>
                             {lang === "latin"
                                 ? "Tekst himne SOSCG"
                                 : "Текст химне СОСЦГ"}

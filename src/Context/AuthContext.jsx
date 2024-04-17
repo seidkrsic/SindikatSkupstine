@@ -8,7 +8,7 @@ export default AuthContext;
 
 export const AuthProvider = ({ children }) => {
     let navigate = useNavigate();
-
+    const domain_url = "https://apisindikat.skupstina.me/"
     let [loading, setLoading] = useState(true);
     let [user, setUser] = useState(() =>
         localStorage?.getItem("authToken")
@@ -36,7 +36,7 @@ export const AuthProvider = ({ children }) => {
     const userLogin = async (e) => {
         e.preventDefault();
         const response = await fetch(
-            "https://apisindikat.skupstina.me/api/token/",
+            domain_url + "api/token/",
             {
                 method: "POST",
                 headers: {
@@ -70,7 +70,7 @@ export const AuthProvider = ({ children }) => {
     const updateToken = async () => {
         if (authToken !== null) {
             const response = await fetch(
-                "https://apisindikat.skupstina.me/api/token/refresh/",
+                domain_url + "api/token/refresh/",
                 {
                     method: "POST",
                     headers: {
@@ -102,7 +102,7 @@ export const AuthProvider = ({ children }) => {
         if (input_value !== "") {
             try {
                 const response = await fetch(
-                    "https://apisindikat.skupstina.me/api/filteredNews/",
+                    domain_url + "api/filteredNews/",
                     {
                         method: "POST",
                         headers: {
@@ -194,6 +194,8 @@ export const AuthProvider = ({ children }) => {
         isMenuOpen: isMenuOpen,
         handleisMenuOpen,
         handleisMenuOpen,
+        domain_url: domain_url,
+
     };
 
     useEffect(() => {

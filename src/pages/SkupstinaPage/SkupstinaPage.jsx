@@ -8,10 +8,11 @@ import salon from "../../images/Plenarna_sala.jpg";
 const SkupstinaPage = () => {
     const [documents, setDocuments] = useState([]);
     const { lang } = useContext(AuthContext);
+    const { domain_url } = useContext(AuthContext);
 
     const getDocuments = async () => {
         const response = await fetch(
-            `https://apisindikat.skupstina.me/api/allDocuments/?name=other`,
+            `${domain_url}api/allDocuments/?name=other`,
             {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },
