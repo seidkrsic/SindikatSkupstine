@@ -11,6 +11,14 @@ const ImageSlider = ({ slides }) => {
     const [imageLoaded, setImageLoaded] = useState(false);
     const { lang } = useContext(AuthContext);
 
+    const SendInfoOnClick = () => { 
+        localStorage.setItem("NewsInfo", id);
+        localStorage.setItem("NewsTitle", title);
+        setNewsInfo(id);
+        setNewsTitle(title);
+        
+    }
+
     const sliceTitle = (title) => {
         const screenWidth = window.innerWidth;
 
@@ -97,8 +105,9 @@ const ImageSlider = ({ slides }) => {
                 />
 
                 <Link
-                    to={"/aktuelnosti/" + slides[currentIndex]?.id}
+                    to={"/aktuelnosti/" + slides[currentIndex]?.title}
                     className="NewInfo"
+                    onClick={SendInfoOnClick}
                 >
                     <h1>
                         {lang === "latin"
