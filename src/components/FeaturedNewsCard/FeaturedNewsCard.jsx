@@ -13,6 +13,9 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
     const { lang } = useContext(AuthContext);
     const [IsHovered, setIsHovered] = useState(false);
     const [imageLoaded, setImageLoaded] = useState(false);
+
+    const link_title = title.replace(/ /g, "")
+
     const ToggleHover = (boolean) => {
         setIsHovered(boolean);
     };
@@ -59,7 +62,7 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
             onMouseEnter={() => ToggleHover(true)}
             onMouseLeave={() => ToggleHover(false)}
             className="FeaturesNewsCard__container"
-            to={"/aktuelnosti/" + title}
+            to={"/aktuelnosti/" + link_title}
             onClick={SendInfoOnClick}
         >
             <div className="FeaturesNewsCard__img-container">
