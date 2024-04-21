@@ -72,10 +72,8 @@ const NewsSinglePage = () => {
             } 
 
             let data = await response.json();
-            console.log(response);
             data.created = data.created.slice(0, 10);
             setNews(data);
-            // console.log(data);
             setNoGallery(data.gallery.length > 0);
    
           
@@ -84,7 +82,6 @@ const NewsSinglePage = () => {
               
             } 
             catch(error) { 
-                console.log(error);
                 navigate("/");
             } 
         
