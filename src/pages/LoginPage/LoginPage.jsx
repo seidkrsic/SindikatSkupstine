@@ -11,30 +11,31 @@ const LoginPage = () => {
     }, []);
 
     const { userLogin } = useContext(AuthContext);
+    const { lang } = useContext(AuthContext);
 
     return (
         <div className="LoginPage__container">
-            <HeaderPhoto page_name={"PRIJAVA KORISNIKA"} image_url={salon} />
+            <HeaderPhoto page_name={ lang === "latin" ? "PRIJAVA KORISNIKA" : "ПРИЈАВА КОРИСНИКА"} image_url={salon} />
             <div className="LoginPage__img-container">
                 <img src={logo} alt="" />
             </div>
             <form onSubmit={userLogin}>
-                <p>Username</p>
+                <p>{ lang == "latin" ? "Korisničko ime" : "Корисничко име"}</p>
                 <input
                     autoFocus
                     id="LoginPage-input"
                     type="text"
                     name="username"
-                    placeholder="unesi svoje korisničko ime"
+                    placeholder={ lang == "latin" ? "Korisničko ime" : "Корисничко име"}
                 />
-                <p>Password</p>
+                <p>{lang == "latin" ? "Lozinka" : "Лозинка"}</p>
                 <input
                     id="LoginPage-input2"
                     type="password"
                     name="password"
-                    placeholder="unesi lozinku"
+                    placeholder={lang == "latin" ? "Lozinka" : "Лозинка"}
                 />
-                <button id="LoginPage-input_button">Uloguj se</button>
+                <button id="LoginPage-input_button">{lang == "latin" ? "Uloguj se" : "Улогуј се"}</button>
             </form>
         </div>
     );

@@ -7,6 +7,11 @@ import "./Footer.css";
 const Footer = () => {
     const { lang } = useContext(AuthContext);
     const {domain_url} = useContext(AuthContext);
+
+    const today = new Date();
+    const year = today.getFullYear();
+
+
     return (
         <div className="Footer__container">
             <div className="Footer__container-top">
@@ -16,8 +21,8 @@ const Footer = () => {
                         <div className="Footer__info-container">
                             <p>
                                 {lang === "latin"
-                                    ? "©2023 Sindikalna organizacija Skupštine Crne Gore"
-                                    : "©2023 Синдикална организација Скупштине Црне Горе"}
+                                    ? "©" + year + " Sindikalna organizacija Skupštine Crne Gore"
+                                    : "©" + year + " Синдикална организација Скупштине Црне Горе"}
                             </p>
                             <p>
                                 {lang === "latin"
@@ -71,7 +76,7 @@ const Footer = () => {
                 <p>
                     {lang === "latin"
                         ? "Mejl: sindikat@skupstina.me"
-                        : "Mejl: sindikat@skupstina.me"}
+                        : "Мејл: sindikat@skupstina.me"} 
                 </p>
             </div>
         </div>

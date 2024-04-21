@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import Categories from "../../components/Categories/Categories";
 import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
@@ -8,12 +8,17 @@ import "./Session.css";
 import salon from "../../images/PlavaSala.jpg";
 
 const Session = () => {
+    const navigate = useNavigate();
     const location_id = useParams().id;
     const location = useLocation().pathname;
     const skupstina = location.includes("skupstina");
-
+    
+    // let [itemInfo, setIteminfo] = useState({});
     let [sessionInfo, setSessionInfo] = useState({});
     let [sessionsInfo, setSessionsInfo] = useState([]);
+
+    const {sessionId} = useContext(AuthContext);
+    const {setSessionId} = useContext(AuthContext);
     const { user } = useContext(AuthContext);
     const { lang } = useContext(AuthContext);
     const { domain_url } = useContext(AuthContext);
@@ -45,8 +50,9 @@ const Session = () => {
     }
 
     const getSession = async () => {
+        
         let response = await fetch(
-            `${domain_url}api/sessions/${location_id}/`
+            `${domain_url}api/sessions/${sessionId}/`
         );
         let data = await response.json();
 
@@ -57,6 +63,7 @@ const Session = () => {
         }
 
         setSessionInfo(data);
+        
     };
 
     const getSessions = async () => {
@@ -98,11 +105,22 @@ const Session = () => {
     }, [skupstina]);
 
     useEffect(() => {
-        if (location_id) {
+        if (sessionId !== undefined) {
             getSession();
             window.scrollTo(0, 0);
+        } else { 
+            navigate("/sjednice/skupstina")
+            getSessions()
         }
-    }, [location_id]);
+    }, [location_id]); 
+
+
+
+    const setUpSessionId = (id) => { 
+        setSessionId(id)
+        localStorage.setItem("SessionInfo", id) 
+    }
+    
 
     return (
         <div className="Session__container-main">
@@ -199,10 +217,11 @@ const Session = () => {
                             <Link
                                 to={
                                     skupstina
-                                        ? "/sjednice/skupstina/" + item.id
-                                        : "/sjednice/izvrsni_odbor/" + item.id
+                                        ? "/sjednice/skupstina/" + encodeURIComponent(item.title)
+                                        : "/sjednice/izvrsni_odbor/" + encodeURIComponent(item.title)
                                 }
                                 key={item.id}
+                                onClick={() => setUpSessionId(item.id)}
                             >
                                 {lang === "latin"
                                     ? item.title

@@ -20,7 +20,7 @@ const Timeline = () => {
         {
             id: 1,
             title: "OSNOVAN 1992. GODINE",
-            title_cyrillic: "",
+            title_cyrillic: "ОСНОВАН 1992. ГОДИНЕ",
             location: "Podgorica, Crna Gora",
             location_cyrillic: "Подгорица, Црна Гора",
             description:

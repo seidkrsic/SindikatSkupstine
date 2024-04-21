@@ -5,6 +5,11 @@ import AuthContext from "../../Context/AuthContext";
 import "./FeaturedNewsCard.css";
 
 const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
+
+    const { setNewsInfo } = useContext(AuthContext);
+    const { NewsInfo } = useContext(AuthContext);
+    const { NewsTitle } = useContext(AuthContext);
+    const { setNewsTitle } = useContext(AuthContext);
     const { lang } = useContext(AuthContext);
     const [IsHovered, setIsHovered] = useState(false);
     const [imageLoaded, setImageLoaded] = useState(false);
@@ -40,12 +45,22 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
         setImageLoaded(true);
     };
 
+
+    const SendInfoOnClick = () => { 
+        localStorage.setItem("NewsInfo", id);
+        localStorage.setItem("NewsTitle", title);
+        setNewsInfo(id);
+        setNewsTitle(title);
+        
+    }
+
     return (
         <Link
             onMouseEnter={() => ToggleHover(true)}
             onMouseLeave={() => ToggleHover(false)}
             className="FeaturesNewsCard__container"
-            to={"/aktuelnosti/" + id}
+            to={"/aktuelnosti/" + title}
+            onClick={SendInfoOnClick}
         >
             <div className="FeaturesNewsCard__img-container">
                 <motion.img

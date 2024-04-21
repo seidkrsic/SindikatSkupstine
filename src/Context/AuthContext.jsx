@@ -8,8 +8,17 @@ export default AuthContext;
 
 export const AuthProvider = ({ children }) => {
     let navigate = useNavigate();
-    const domain_url = "https://apisindikat.skupstina.me/"
+    // const domain_url = "https://apisindikat.skupstina.me/" 
+    const domain_url = "http://127.0.0.1:8000/" 
     let [loading, setLoading] = useState(true);
+
+    let [NewsInfo, setNewsInfo] = useState(localStorage?.getItem("NewsInfo")? localStorage?.getItem("NewsInfo") : "");
+    let [NewsTitle, setNewsTitle] = useState(localStorage?.getItem("NewsTitle")? localStorage?.getItem("NewsTitle") : "");
+    let [sessionId, setSessionId] = useState(localStorage?.getItem("SessionInfo")? localStorage?.getItem("SessionInfo") : "");
+    let [sessionTitle, setSessionTitle] = useState(localStorage?.getItem("SessionTitle")? localStorage?.getItem("SessionTitle") : "");
+
+
+
     let [user, setUser] = useState(() =>
         localStorage?.getItem("authToken")
             ? jwt_decode(localStorage?.getItem("authToken"))
@@ -195,6 +204,14 @@ export const AuthProvider = ({ children }) => {
         handleisMenuOpen,
         handleisMenuOpen,
         domain_url: domain_url,
+        NewsInfo: NewsInfo,
+        setNewsInfo: setNewsInfo,
+        NewsTitle: NewsTitle, 
+        setNewsTitle: setNewsTitle,
+        sessionId: sessionId,
+        setSessionId: setSessionId, 
+        sessionTitle: sessionTitle, 
+        setSessionTitle: setSessionTitle,
 
     };
 
