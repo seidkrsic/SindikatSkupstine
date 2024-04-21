@@ -11,7 +11,7 @@ const ImageSlider = ({ slides }) => {
     const [imageLoaded, setImageLoaded] = useState(false);
     const { lang } = useContext(AuthContext);
 
-    const SendInfoOnClick = () => { 
+    const SendInfoOnClick = (id, title) => { 
         localStorage.setItem("NewsInfo", id);
         localStorage.setItem("NewsTitle", title);
         setNewsInfo(id);
@@ -107,7 +107,7 @@ const ImageSlider = ({ slides }) => {
                 <Link
                     to={"/aktuelnosti/" + slides[currentIndex]?.title}
                     className="NewInfo"
-                    onClick={SendInfoOnClick}
+                    onClick={SendInfoOnClick(slides[currentIndex]?.id, slides[currentIndex]?.title)}
                 >
                     <h1>
                         {lang === "latin"
