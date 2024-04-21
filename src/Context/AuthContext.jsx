@@ -8,8 +8,8 @@ export default AuthContext;
 
 export const AuthProvider = ({ children }) => {
     let navigate = useNavigate();
-    // const domain_url = "https://apisindikat.skupstina.me/" 
-    const domain_url = "http://127.0.0.1:8000/" 
+    const domain_url = "https://apisindikat.skupstina.me/" 
+    // const domain_url = "http://127.0.0.1:8000/" 
     let [loading, setLoading] = useState(true);
 
     let [NewsInfo, setNewsInfo] = useState(localStorage?.getItem("NewsInfo")? localStorage?.getItem("NewsInfo") : "");
