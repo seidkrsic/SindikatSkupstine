@@ -10,6 +10,9 @@ const ImageSlider = ({ slides }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [imageLoaded, setImageLoaded] = useState(false);
     const { lang } = useContext(AuthContext);
+    const { setNewsInfo } = useContext(AuthContext);
+    const { setNewsTitle } = useContext(AuthContext);
+
 
     const SendInfoOnClick = (id, title) => { 
         localStorage.setItem("NewsInfo", id);
