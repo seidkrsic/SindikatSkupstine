@@ -64,7 +64,7 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
             onMouseEnter={() => ToggleHover(true)}
             onMouseLeave={() => ToggleHover(false)}
             className="FeaturesNewsCard__container"
-            to={"/aktuelnosti/" + title.replace(/\s+/g, "-")}
+            to={"/aktuelnosti/" + title.replaceAll(" ", "-")}
             onClick={SendInfoOnClick}
         >
             <div className="FeaturesNewsCard__img-container">
