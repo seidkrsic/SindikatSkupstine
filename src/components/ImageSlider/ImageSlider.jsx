@@ -12,13 +12,14 @@ const ImageSlider = ({ slides }) => {
     const { lang } = useContext(AuthContext);
     const { setNewsInfo } = useContext(AuthContext);
     const { setNewsTitle } = useContext(AuthContext);
+    const specialTitle = title.replaceAll(" ", "-")
 
 
     const SendInfoOnClick = (id, title) => { 
         localStorage.setItem("NewsInfo", id);
-        localStorage.setItem("NewsTitle", title);
+        localStorage.setItem("NewsTitle", specialTitle);
         setNewsInfo(id);
-        setNewsTitle(title);
+        setNewsTitle(specialTitle);
         
     }
 
