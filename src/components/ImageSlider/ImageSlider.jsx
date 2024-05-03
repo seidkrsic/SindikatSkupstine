@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import parse from "html-react-parser";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
 import "./ImageSlider.css";
