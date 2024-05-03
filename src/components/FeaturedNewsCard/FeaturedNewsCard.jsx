@@ -52,9 +52,9 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
 
     const SendInfoOnClick = () => { 
         localStorage.setItem("NewsInfo", id);
-        localStorage.setItem("NewsTitle", title);
+        localStorage.setItem("NewsTitle", specialTitle);
         setNewsInfo(id);
-        setNewsTitle(title);
+        setNewsTitle(specialTitle);
         
     }
 

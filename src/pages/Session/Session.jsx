@@ -217,8 +217,8 @@ const Session = () => {
                             <Link
                                 to={
                                     skupstina
-                                        ? "/sjednice/skupstina/" + encodeURIComponent(item.title)
-                                        : "/sjednice/izvrsni_odbor/" + encodeURIComponent(item.title)
+                                        ? "/sjednice/skupstina/" + item.title
+                                        : "/sjednice/izvrsni_odbor/" + item.title
                                 }
                                 key={item.id}
                                 onClick={() => setUpSessionId(item.id)}
