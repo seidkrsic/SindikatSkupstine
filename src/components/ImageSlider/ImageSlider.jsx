@@ -13,16 +13,16 @@ const ImageSlider = ({ slides }) => {
     const { setNewsInfo } = useContext(AuthContext);
     const { setNewsTitle } = useContext(AuthContext);
     
-
-
-    const SendInfoOnClick = (id, title) => { 
     
+    const SendInfoOnClick = (id, title) => { 
         localStorage.setItem("NewsInfo", id);
         localStorage.setItem("NewsTitle", title);
         setNewsInfo(id);
         setNewsTitle(title);
-        
-    }
+    };
+
+
+    
 
     const sliceTitle = (title) => {
         const screenWidth = window.innerWidth;
@@ -112,7 +112,9 @@ const ImageSlider = ({ slides }) => {
                 <Link
                     to={"/aktuelnosti/" + slides[currentIndex]?.url_title}
                     className="NewInfo"
-                    onClick={()=> {SendInfoOnClick(slides[currentIndex]?.id, slides[currentIndex]?.url_title)}}
+                    onClick={(event)=> { 
+                        event.preventDefault();
+                        SendInfoOnClick(slides[currentIndex]?.id, slides[currentIndex]?.url_title)}}
                 >
                     <h1>
                         {lang === "latin"
