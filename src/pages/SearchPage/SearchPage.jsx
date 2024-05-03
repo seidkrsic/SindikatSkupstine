@@ -30,6 +30,7 @@ const SearchPage = () => {
                                 key={result?.id}
                                 url={result?.image_url}
                                 title={result?.nice_title}
+                                url_title={result?.url_title}
                                 title_cyrillic={result?.title_cyrillic}
                                 date={result?.created_eu_time}
                                 id={result?.id}

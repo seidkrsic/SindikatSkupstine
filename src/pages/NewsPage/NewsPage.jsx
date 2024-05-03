@@ -54,6 +54,7 @@ const NewsPage = () => {
                                 key={card?.id}
                                 url={card?.image_url}
                                 title={card?.nice_title}
+                                url_title={card?.url_title}
                                 title_cyrillic={card?.title_cyrillic}
                                 date={card?.created_eu_time}
                                 id={card?.id}

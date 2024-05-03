@@ -110,9 +110,9 @@ const ImageSlider = ({ slides }) => {
                 />
 
                 <Link
-                    to={"/aktuelnosti/" + slides[currentIndex]?.title}
+                    to={"/aktuelnosti/" + slides[currentIndex]?.url_title}
                     className="NewInfo"
-                    onClick={SendInfoOnClick(slides[currentIndex]?.id, slides[currentIndex]?.title)}
+                    onClick={SendInfoOnClick(slides[currentIndex]?.id, slides[currentIndex]?.url_title)}
                 >
                     <h1>
                         {lang === "latin"
