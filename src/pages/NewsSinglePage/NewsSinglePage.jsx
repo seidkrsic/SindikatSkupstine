@@ -41,10 +41,11 @@ const NewsSinglePage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
         let NewsTitle1 = NewsTitle.trim() 
-        console.log(location_id, "LOCATION ID") 
+        console.log(location_id, "LOCATION ID")  
+        // location_id === NewsTitle1
         console.log(NewsTitle1, "NEWSTITLEE") 
         
-        if (NewsInfo !== null && NewsInfo !== undefined && location_id === NewsTitle1) { 
+        if (NewsInfo !== null && NewsInfo !== undefined) { 
             getSingleNews();
         }     
         else { 
@@ -55,7 +56,7 @@ const NewsSinglePage = () => {
         
       
         
-    , [location_id]);
+    , [location_id, NewsInfo, NewsTitle]);
 
     const getSingleNews = async () => {
  
