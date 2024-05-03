@@ -55,12 +55,7 @@ const NewsSinglePage = () => {
         
       
         
-     
-      
-   
-        
-        
-    , [location_id, NewsInfo, NewsTitle]);
+    , [location_id]);
 
     const getSingleNews = async () => {
  
