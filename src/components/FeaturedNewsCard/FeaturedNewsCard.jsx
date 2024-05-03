@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
 import "./FeaturedNewsCard.css";
 
-const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
+const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) => {
 
     const { setNewsInfo } = useContext(AuthContext);
     const { NewsInfo } = useContext(AuthContext);
@@ -55,9 +55,9 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
     const SendInfoOnClick = () => { 
   
         localStorage.setItem("NewsInfo", id);
-        localStorage.setItem("NewsTitle", title);
+        localStorage.setItem("NewsTitle", url_title);
         setNewsInfo(id);
-        setNewsTitle(title); 
+        setNewsTitle(url_title); 
         
     }
 
@@ -66,7 +66,7 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
             onMouseEnter={() => ToggleHover(true)}
             onMouseLeave={() => ToggleHover(false)}
             className="FeaturesNewsCard__container"
-            to={"/aktuelnosti/" + title} 
+            to={"/aktuelnosti/" + url_title} 
             onClick={SendInfoOnClick}
         >
             <div className="FeaturesNewsCard__img-container">
