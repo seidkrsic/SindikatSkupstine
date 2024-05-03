@@ -40,6 +40,7 @@ const NewsSinglePage = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        debugger
         let NewsTitle1 = NewsTitle.trim() 
         console.log(location_id, "LOCATION ID")  
         // location_id === NewsTitle1
