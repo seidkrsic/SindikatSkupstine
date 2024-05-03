@@ -59,7 +59,7 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
         setNewsInfo(id);
         setNewsTitle(url_title); 
         
-    }
+    } 
 
     return (
         <Link
@@ -67,7 +67,7 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
             onMouseLeave={() => ToggleHover(false)}
             className="FeaturesNewsCard__container"
             to={"/aktuelnosti/" + url_title} 
-            onClick={SendInfoOnClick}
+            onClick={()=> {SendInfoOnClick}}
         >
             <div className="FeaturesNewsCard__img-container">
                 <motion.img
