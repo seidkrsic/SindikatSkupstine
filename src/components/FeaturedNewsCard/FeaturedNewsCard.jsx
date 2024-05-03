@@ -13,8 +13,11 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
     const { lang } = useContext(AuthContext);
     const [IsHovered, setIsHovered] = useState(false);
     const [imageLoaded, setImageLoaded] = useState(false);
+    
+    const [specialTitle, setspecialTitle] = useState(localStorage.getItem("specialTitle"? localStorage.getItem("specialTitle"): title.replaceAll(" ", "-")  ))
+  
 
-    const specialTitle = title.replaceAll(" ", "-")
+
 
     
     const ToggleHover = (boolean) => {
@@ -51,6 +54,7 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
 
 
     const SendInfoOnClick = () => { 
+  
         localStorage.setItem("NewsInfo", id);
         localStorage.setItem("NewsTitle", specialTitle);
         setNewsInfo(id);
