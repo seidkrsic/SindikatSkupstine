@@ -14,8 +14,7 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
     const [IsHovered, setIsHovered] = useState(false);
     const [imageLoaded, setImageLoaded] = useState(false);
     
-    const [specialTitle, setspecialTitle] = useState(localStorage.getItem("specialTitle"? localStorage.getItem("specialTitle"): title.replaceAll(" ", "-")  ))
-  
+    
 
 
 
@@ -56,9 +55,9 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
     const SendInfoOnClick = () => { 
   
         localStorage.setItem("NewsInfo", id);
-        localStorage.setItem("NewsTitle", specialTitle);
+        localStorage.setItem("NewsTitle", title);
         setNewsInfo(id);
-        setNewsTitle(specialTitle);
+        setNewsTitle(title); 
         
     }
 
@@ -67,7 +66,7 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic }) => {
             onMouseEnter={() => ToggleHover(true)}
             onMouseLeave={() => ToggleHover(false)}
             className="FeaturesNewsCard__container"
-            to={"/aktuelnosti/" + specialTitle}
+            to={"/aktuelnosti/" + title} 
             onClick={SendInfoOnClick}
         >
             <div className="FeaturesNewsCard__img-container">
