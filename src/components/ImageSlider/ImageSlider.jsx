@@ -16,11 +16,11 @@ const ImageSlider = ({ slides }) => {
 
 
     const SendInfoOnClick = (id, title) => { 
-        const specialTitle = title.replaceAll(" ", "-")
+    
         localStorage.setItem("NewsInfo", id);
-        localStorage.setItem("NewsTitle", specialTitle);
+        localStorage.setItem("NewsTitle", title);
         setNewsInfo(id);
-        setNewsTitle(specialTitle);
+        setNewsTitle(title);
         
     }
 
