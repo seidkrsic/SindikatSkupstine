@@ -41,7 +41,7 @@ const NewsSinglePage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
         let NewsTitle1 = NewsTitle.trim() 
-        if (NewsInfo !== null && NewsInfo !== undefined && location_id === NewsTitle1) { 
+        if (NewsInfo !== null && NewsInfo !== undefined && location_id === NewsTitle) { 
             getSingleNews();
         }     
         else { 
