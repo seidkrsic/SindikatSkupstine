@@ -14,12 +14,12 @@ const ImageSlider = ({ slides }) => {
     const { setNewsTitle } = useContext(AuthContext);
     
     
-    const SendInfoOnClick = (id, title) => { 
+    const SendInfoOnClick = useCallback((id, title) => { 
         localStorage.setItem("NewsInfo", id);
         localStorage.setItem("NewsTitle", title);
         setNewsInfo(id);
         setNewsTitle(title);
-    };
+    }, [setNewsInfo, setNewsTitle]);
 
 
     
@@ -112,7 +112,7 @@ const ImageSlider = ({ slides }) => {
                 <Link
                     to={"/aktuelnosti/" + slides[currentIndex]?.url_title}
                     className="NewInfo"
-                    onClick={SendInfoOnClick(slides[currentIndex]?.id, slides[currentIndex]?.url_title)} 
+                    onClick={() => {SendInfoOnClick(slides[currentIndex]?.id, slides[currentIndex]?.url_title)}}
                 >
                     <h1>
                         {lang === "latin"
