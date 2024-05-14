@@ -15,6 +15,14 @@ const NewsPage = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const location_id = useLocation().pathname;
 
+
+
+    const handlePageChange = (newPage) => {
+        setCurrentPage(newPage);
+        setTotalPages(totalPages);
+    }; 
+
+
     const getNews = async () => {
         const response = await fetch(
             domain_url + `api/paginationNews/?page=${currentPage}`,
@@ -62,7 +70,7 @@ const NewsPage = () => {
                             />
                         ))}
                     </div>
-                    <Paginator totalPages={totalPages} currentPage={currentPage} />
+                    <Paginator onPageChange={handlePageChange} totalPages={totalPages} currentPage={currentPage} />
                     {/* <div className="NewsPage__pagination">
                         <button
                             className={`NewsPage__page-number ${
