@@ -12,7 +12,7 @@ const DocumentCard = ({title, title_cyrillic,document_number, file_link}) => {
             <img className='DocumentCard__img' src={pdfdownload} alt="" />
             <div className='DocumentCard__text-container'>
                 <h2>{lang === "latin" ? title : title_cyrillic}</h2>
-                <p>{document_number}</p>
+                <p>{lang == "latin" ? "Broj odluke: " : "Број одлуке: " + document_number}</p>
             </div>
 
         </a>
