@@ -6,14 +6,14 @@
     width: 230px; */
     height: 360px;
     width: 250px;
-    max-width: 415px;
+    max-width: 455px;
     text-decoration: none;
     color: #AB0707;
     /* border: 1px solid gainsboro;                            */
     border: 1px solid #F1E5AC;
     background-color: rgb(241, 229, 172, .1);
     /* background-color: rgb(244, 242, 236, .5); */
-    margin: 1rem 1rem;
+    margin: 1rem .5rem;
     flex-direction: column;
     cursor: pointer;
 }
