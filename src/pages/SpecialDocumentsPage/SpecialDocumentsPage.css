@@ -11,7 +11,7 @@
 .SpecialDocumentsPage__container { 
     display: flex; 
     width: 70%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     height: fit-content;
     flex-direction: column;
     justify-content: flex-start;
