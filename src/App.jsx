@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import "./App.css";
@@ -7,7 +7,7 @@ import Layout from "./components/Layout/Layout";
 import LogoOnly from "./components/LogoOnly/LogoOnly";
 import MainMenuCopy from "./components/MainMenuCopy/MainMenuCopy";
 import PrivateRoutes from "./components/PrivateRoutes/PrivateRoutes";
-import { AuthProvider } from "./Context/AuthContext";
+import AuthContext, { AuthProvider } from "./Context/AuthContext";
 import Company from "./pages/Company/Company";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import HomePage from "./pages/HomePage/HomePage";
@@ -21,9 +21,11 @@ import StaffPage from "./pages/StaffPage/StaffPage";
 import StaffSinglePage from "./pages/StaffSinglePage/StaffSinglePage";
 import LawsPage from "./pages/LawsPage/LawsPage";
 import SkupstinaPage from "./pages/SkupstinaPage/SkupstinaPage";
+import SpecialDocumentsPage from "./pages/SpecialDocumentsPage/SpecialDocumentsPage";
 
 function App() {
     const [ShowLogo, setShowLogo] = useState(true);
+
 
     useEffect(() => {
         // After 3 seconds, switch to showing the actual site content
@@ -93,6 +95,10 @@ function App() {
                                     path="/documents"
                                     element={<ListDocumentsPage />}
                                 />
+                                <Route path="/racunovodstvo_odluke" 
+                                       element={<SpecialDocumentsPage />} 
+                                />
+
                             </Route>
                             <Route path="/pogodnosti" element={<Company />} />
                             <Route

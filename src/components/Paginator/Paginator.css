@@ -1,0 +1,28 @@
+.Paginator__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.Paginator__page-number {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid gainsboro;
+    cursor: pointer;
+    color: black;
+    background-color: #f4f2ec;
+}
+
+.Paginator__page-number.active {
+    background-color: #AB0707;
+    color: white;
+    border: 1px solid transparent;
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .Paginator__pagination { 
+        margin: 1rem 0;
+    }
+}

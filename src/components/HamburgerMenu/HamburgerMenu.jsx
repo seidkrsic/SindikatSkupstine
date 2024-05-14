@@ -58,6 +58,7 @@ const HamburgerMenu = () => {
                 { name: "Akti SOSCG", path: "/zakoni/akti_sindikata" },
                 { name: "Zakoni i drugi akti", path: "/zakoni/opsti_akti" },
                 { name: "Formulari i obrasci", path: "/zakoni/formulari" },
+                {name: "Finansijske odluke", path: "/racunovodstvo_odluke"}
             ],
         },
     
@@ -122,6 +123,7 @@ const HamburgerMenu = () => {
                 { name: "Акти SOSCG", path: "/zakoni/akti_sindikata" },
                 { name: "Закони и други акти", path: "/zakoni/opsti_akti" },
                 { name: "Формулари и обрасци", path: "/zakoni/formulari" },
+                {name: "Финансијске одлуке", path: "/racunovodstvo_odluke"}
             ],
         },
         {

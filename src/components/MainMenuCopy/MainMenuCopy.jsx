@@ -77,20 +77,33 @@ const MainMenuCopy = () => {
             { name: "Statutarna komisija", path: "/saziv/komisija" },
             // { name: "Raniji predsjednici", path: "/saziv/predsjednici" },
         ];
-    
+        
+        
         button2Items = [
             { name: "Sjednice Skupštine", path: "/sjednice/skupstina" },
             {
                 name: "Sjednice Izvršnog odbora",
                 path: "/sjednice/izvrsni_odbor",
             },
-        ];
-    
-        button3Items = [
-            { name: "Akti SOSCG", path: "/zakoni/akti_sindikata" },
-            { name: "Zakoni i drugi akti", path: "/zakoni/opsti_akti" },
-            { name: "Formulari i obrasci", path: "/zakoni/formulari" },
-        ];
+        ]; 
+
+        if (user){ 
+            button3Items = [
+                { name: "Akti SOSCG", path: "/zakoni/akti_sindikata" },
+                { name: "Zakoni i drugi akti", path: "/zakoni/opsti_akti" },
+                { name: "Formulari i obrasci", path: "/zakoni/formulari" },
+                {name: "Finansijske odluke", path: "/racunovodstvo_odluke"}
+            ];
+            
+        } else { 
+            button3Items = [
+                { name: "Akti SOSCG", path: "/zakoni/akti_sindikata" },
+                { name: "Zakoni i drugi akti", path: "/zakoni/opsti_akti" },
+                { name: "Formulari i obrasci", path: "/zakoni/formulari" },
+            ];
+        }
+
+        
     } else {
         button1Items = [
             { name: "Скупштина", path: "/skupstina" },
@@ -113,11 +126,21 @@ const MainMenuCopy = () => {
                 path: "/sjednice/izvrsni_odbor",
             },
         ];
-    
+        
+        if (user) { 
+            button3Items = [
+                { name: "Акти СОСЦГ", path: "/zakoni/akti_sindikata" },
+                { name: "Закони и други акти", path: "/zakoni/opsti_akti" },
+                { name: "Формулари и обрасци", path: "/zakoni/formulari" },
+                {name: "Финансијске одлуке", path: "/racunovodstvo_odluke"}
+                
+            ];
+        }
         button3Items = [
             { name: "Акти СОСЦГ", path: "/zakoni/akti_sindikata" },
             { name: "Закони и други акти", path: "/zakoni/opsti_akti" },
             { name: "Формулари и обрасци", path: "/zakoni/formulari" },
+            
         ];
     }
     

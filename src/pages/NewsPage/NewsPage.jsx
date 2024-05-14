@@ -5,6 +5,7 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import "../NewsPage/NewsPage.css";
 import salon from "../../images/Zgrada_skupstine.jpg";
+import Paginator from "../../components/Paginator/Paginator";
 
 const NewsPage = () => {
     const { lang } = useContext(AuthContext);
@@ -36,9 +37,9 @@ const NewsPage = () => {
         getNews();
     }, [currentPage]);
 
-    const handlePageChange = (newPage) => {
-        setCurrentPage(newPage);
-    };
+    // const handlePageChange = (newPage) => {
+    //     setCurrentPage(newPage);
+    // };
 
     return (
         <div className="NewsPage__container-main">
@@ -61,7 +62,8 @@ const NewsPage = () => {
                             />
                         ))}
                     </div>
-                    <div className="NewsPage__pagination">
+                    <Paginator totalPages={totalPages} currentPage={currentPage} />
+                    {/* <div className="NewsPage__pagination">
                         <button
                             className={`NewsPage__page-number ${
                                 currentPage === 1 ? "disabled" : ""
@@ -96,7 +98,7 @@ const NewsPage = () => {
                         >
                             {lang === "latin" ? "Sljedeća" : "Сљедећа"}
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

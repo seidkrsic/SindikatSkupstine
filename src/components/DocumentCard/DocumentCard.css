@@ -1,0 +1,62 @@
+
+.DocumentCard__container { 
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f2ec;
+    margin: .5rem;
+    border-radius: 10px;
+}
+
+.DocumentCard__container a { 
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    font-size: 9px;
+    text-align: center;
+
+}
+
+.DocumentCard__img { 
+    width: 70px !important;
+    /* height: 50% !important;  */
+    margin: 0 !important;
+}
+
+.DocumentCard__text-container { 
+    width: 90% !important;
+    height: 50% !important; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.DocumentCard__img:hover { 
+    scale: 1 !important;
+}
+
+.DocumentCard__container h2 { 
+    margin: 0.1rem 0;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.DocumentCard__container p { 
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    height: 20%;
+}   
