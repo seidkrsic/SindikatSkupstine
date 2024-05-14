@@ -1,8 +1,9 @@
 .Paginator__pagination {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin: 2rem 0;
 }
+
 
 .Paginator__page-number {
     padding: 5px 10px;

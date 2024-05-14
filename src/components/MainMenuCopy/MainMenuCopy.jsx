@@ -135,13 +135,16 @@ const MainMenuCopy = () => {
                 {name: "Финансијске одлуке", path: "/racunovodstvo_odluke"}
                 
             ];
+        } else { 
+            button3Items = [
+                { name: "Акти СОСЦГ", path: "/zakoni/akti_sindikata" },
+                { name: "Закони и други акти", path: "/zakoni/opsti_akti" },
+                { name: "Формулари и обрасци", path: "/zakoni/formulari" },
+                
+                
+            ];
         }
-        button3Items = [
-            { name: "Акти СОСЦГ", path: "/zakoni/akti_sindikata" },
-            { name: "Закони и други акти", path: "/zakoni/opsti_akti" },
-            { name: "Формулари и обрасци", path: "/zakoni/formulari" },
-            
-        ];
+       
     }
     
     
