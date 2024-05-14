@@ -8,7 +8,8 @@
     justify-content: center;
     background-color: #f4f2ec;
     margin: .5rem;
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    border: 1px solid #F1E5AC;
 }
 
 .DocumentCard__container a { 
