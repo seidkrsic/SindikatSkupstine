@@ -159,7 +159,7 @@
 
 @media screen and (min-width: 1600px) { 
     .FeaturesNewsCard__container { 
-        width: 30%; 
+        width: 32%; 
         margin: .5rem !important;
     }
 }
