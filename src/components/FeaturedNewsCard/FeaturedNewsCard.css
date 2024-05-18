@@ -155,3 +155,11 @@
         margin-bottom: 1rem !important;
     }
 }
+
+
+@media screen and (min-width: 1600px) { 
+    .FeaturesNewsCard__container { 
+        width: 30%; 
+        margin: .5rem !important;
+    }
+}
