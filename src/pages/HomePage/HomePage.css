@@ -587,4 +587,16 @@
    
 
 
+} 
+
+@media screen and (min-width: 1600px) { 
+    
+    .PageContainerGrid__bigger  { 
+        max-width: none;
+    }
+    .PageContainerGrid__bigger .flex-col { 
+        max-width: none;
+    }
+
+
 }
