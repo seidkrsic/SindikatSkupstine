@@ -52,17 +52,16 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
 
     const SendInfoOnClick = (event) => { 
         event.preventDefault();
-        const encodedUrlTitle = encodeURIComponent(url_title);
-        const fullUrl = window.location.origin + "/aktuelnosti/" + encodedUrlTitle;
+        const fullUrl = window.location.origin + "/aktuelnosti/" + url_title;
         const decodedUrl = decodeURIComponent(fullUrl); // Decode the URL before copying
-        const textToCopy = `${decodedUrl}`;
+        const textToCopy = `${decodedUrl} Read more at www.sindikat.skupstina.me`;
 
         localStorage.setItem("NewsInfo", id);
         localStorage.setItem("NewsTitle", url_title);
         setNewsInfo(id);
         setNewsTitle(url_title);
         
-        copyToClipboard(textToCopy);
+        copyToClipboard(decodedUrl); // Copy the decoded URL to clipboard
         navigate("/aktuelnosti/" + url_title);
     };
 
@@ -71,7 +70,7 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
             onMouseEnter={() => ToggleHover(true)}
             onMouseLeave={() => ToggleHover(false)}
             className="FeaturesNewsCard__container"
-            to={""}
+            to={"/aktuelnosti/" + url_title}
             onClick={SendInfoOnClick}
             onTouchStart={SendInfoOnClick}
         >
