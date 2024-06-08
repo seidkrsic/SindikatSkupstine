@@ -58,7 +58,6 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
             onMouseLeave={() => ToggleHover(false)}
             className="FeaturesNewsCard__container"
             onClick={SendInfoOnClick}
-            onTouchStart={SendInfoOnClick}
         >
             <div className="FeaturesNewsCard__img-container">
                 <motion.img
