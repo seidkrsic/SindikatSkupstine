@@ -15,7 +15,7 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
     const [imageLoaded, setImageLoaded] = useState(false);
     
     
-
+    const location = useLocation();
 
 
     
