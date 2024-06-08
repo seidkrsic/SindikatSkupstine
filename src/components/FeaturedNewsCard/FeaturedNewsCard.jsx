@@ -62,14 +62,6 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
     } 
 
 
-    useEffect(() => {
-        if (location.pathname.includes(title)) {
-            window.history.replaceState(null, "", `/aktuelnosti/${url_title}`);
-        }
-    }, [location.pathname, title, url_title]);
-
-
-
     return (
         <Link
             onMouseEnter={() => ToggleHover(true)}
