@@ -40,7 +40,7 @@ function App() {
 
     return (
         <div className="App">
-            <Router>
+            <Router basename="">
                 <AuthProvider>
                     <MainMenuCopy />
                     {ShowLogo ? <LogoOnly /> : <> </>}
