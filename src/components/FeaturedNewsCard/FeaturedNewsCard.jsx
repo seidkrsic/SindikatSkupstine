@@ -53,7 +53,8 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
     const SendInfoOnClick = (event) => { 
         event.preventDefault();
         const fullUrl = window.location.origin + "/aktuelnosti/" + url_title;
-        const textToCopy = `${fullUrl}`;
+        const decodedUrl = decodeURIComponent(fullUrl); // Decode the URL before copying
+        const textToCopy = `${decodedUrl}`;
 
         localStorage.setItem("NewsInfo", id);
         localStorage.setItem("NewsTitle", url_title);
