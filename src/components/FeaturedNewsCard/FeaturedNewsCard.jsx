@@ -55,9 +55,9 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
     const SendInfoOnClick = () => { 
   
         localStorage.setItem("NewsInfo", id);
-        localStorage.setItem("NewsTitle", encodeURIComponent(url_title));
+        localStorage.setItem("NewsTitle", url_title);
         setNewsInfo(id);
-        setNewsTitle(encodeURIComponent(url_title)); 
+        setNewsTitle(url_title); 
         
     } 
 
@@ -67,7 +67,7 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
             onMouseEnter={() => ToggleHover(true)}
             onMouseLeave={() => ToggleHover(false)}
             className="FeaturesNewsCard__container"
-            to={"/aktuelnosti/" + encodeURIComponent(url_title)} 
+            to={$`/aktuelnosti/${url_title}`} 
             onClick={SendInfoOnClick} 
             onTouchStart={SendInfoOnClick}
         >
