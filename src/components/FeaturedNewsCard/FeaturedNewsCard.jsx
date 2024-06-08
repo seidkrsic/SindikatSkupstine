@@ -71,7 +71,7 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
             className="FeaturesNewsCard__container"
             to={"/aktuelnosti/" + encodeURIComponent(url_title)}
             onClick={SendInfoOnClick}
-            onTouchStart={SendInfoOnClick}
+        
         >
             <div className="FeaturesNewsCard__img-container">
                 <motion.img
