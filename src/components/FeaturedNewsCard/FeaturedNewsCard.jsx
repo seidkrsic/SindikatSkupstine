@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import React, { useContext, useState, useEffect, useLocation} from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState, useEffect, } from "react";
+import { Link, useLocation } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
 import "./FeaturedNewsCard.css";
 
