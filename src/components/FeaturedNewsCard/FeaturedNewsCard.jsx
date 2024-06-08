@@ -52,7 +52,8 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
 
     const SendInfoOnClick = (event) => { 
         event.preventDefault();
-        const fullUrl = window.location.origin + "/aktuelnosti/" + url_title;
+        const encodedUrlTitle = encodeURIComponent(url_title);
+        const fullUrl = window.location.origin + "/aktuelnosti/" + encodedUrlTitle;
         const decodedUrl = decodeURIComponent(fullUrl); // Decode the URL before copying
         const textToCopy = `${decodedUrl}`;
 
