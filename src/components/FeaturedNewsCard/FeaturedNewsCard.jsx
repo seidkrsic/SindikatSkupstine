@@ -67,7 +67,7 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
             onMouseEnter={() => ToggleHover(true)}
             onMouseLeave={() => ToggleHover(false)}
             className="FeaturesNewsCard__container"
-            to={$`/aktuelnosti/${url_title}`} 
+            to={`/aktuelnosti/${url_title}`} 
             onClick={SendInfoOnClick} 
             onTouchStart={SendInfoOnClick}
         >
