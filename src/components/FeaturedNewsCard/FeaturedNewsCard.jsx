@@ -52,11 +52,16 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
 
     const SendInfoOnClick = (event) => { 
         event.preventDefault();
+        const fullUrl = window.location.origin + "/aktuelnosti/" + url_title;
+        const decodedUrl = decodeURIComponent(fullUrl); // Decode the URL before copying
+        const textToCopy = `${decodedUrl} Read more at www.sindikat.skupstina.me`;
+
         localStorage.setItem("NewsInfo", id);
         localStorage.setItem("NewsTitle", url_title);
         setNewsInfo(id);
         setNewsTitle(url_title);
         
+        navigate("/aktuelnosti/" + url_title);
     };
 
     return (
