@@ -1,15 +1,24 @@
 import { motion } from "framer-motion";
-import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useContext, useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
 import "./FeaturedNewsCard.css";
 
 const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) => {
-    const { setNewsInfo, setNewsTitle, lang } = useContext(AuthContext);
+
+    const { setNewsInfo } = useContext(AuthContext);
+    const { NewsInfo } = useContext(AuthContext);
+    const { NewsTitle } = useContext(AuthContext);
+    const { setNewsTitle } = useContext(AuthContext);
+    const { lang } = useContext(AuthContext);
     const [IsHovered, setIsHovered] = useState(false);
     const [imageLoaded, setImageLoaded] = useState(false);
-    const navigate = useNavigate();
+    
+    
+    const location = useLocation();
 
+
+    
     const ToggleHover = (boolean) => {
         setIsHovered(boolean);
     };
@@ -18,11 +27,11 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
         const screenWidth = window.innerWidth;
 
         if (screenWidth < 768) {
-            return title.slice(0, 90);
+            return title.slice(0, 90); // Slice to 20 characters on mobile screens
         } else if (screenWidth >= 768 && screenWidth < 1024) {
-            return title.slice(0, 90);
+            return title.slice(0, 90); // Slice to 40 characters on tablet screens
         } else {
-            return title.slice(0, 90);
+            return title.slice(0, 90); // Display the full title on desktop screens
         }
     };
 
@@ -30,11 +39,11 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
         const screenWidth = window.innerWidth;
 
         if (screenWidth < 768) {
-            return title_cyrillic.slice(0, 90);
+            return title_cyrillic.slice(0, 90); // Slice to 20 characters on mobile screens
         } else if (screenWidth >= 768 && screenWidth < 1024) {
-            return title_cyrillic.slice(0, 80);
+            return title_cyrillic.slice(0, 80); // Slice to 40 characters on tablet screens
         } else {
-            return title_cyrillic.slice(0, 80);
+            return title_cyrillic.slice(0, 80); // Display the full title on desktop screens
         }
     };
 
@@ -42,36 +51,24 @@ const FeaturedNewsCard = ({ url, title, date, id, title_cyrillic, url_title }) =
         setImageLoaded(true);
     };
 
-    const copyToClipboard = (text) => {
-        navigator.clipboard.writeText(text).then(() => {
-            console.log('Text copied to clipboard');
-        }).catch(err => {
-            console.error('Could not copy text: ', err);
-        });
-    };
 
-    const SendInfoOnClick = (event) => { 
-        event.preventDefault();
-        const encodedUrlTitle = encodeURIComponent(url_title);
-        const fullUrl = window.location.origin + "/aktuelnosti/" + encodedUrlTitle;
-        const textToCopy = `${fullUrl} Read more at www.sindikat.skupstina.me`;
-        
+    const SendInfoOnClick = () => { 
+  
         localStorage.setItem("NewsInfo", id);
-        localStorage.setItem("NewsTitle", encodedUrlTitle);
+        localStorage.setItem("NewsTitle", encodeURIComponent(url_title));
         setNewsInfo(id);
-        setNewsTitle(encodedUrlTitle);
+        setNewsTitle(encodeURIComponent(url_title)); 
         
-        copyToClipboard(textToCopy);
-        navigate("/aktuelnosti/" + encodedUrlTitle);
-    };
+    } 
+
 
     return (
         <Link
             onMouseEnter={() => ToggleHover(true)}
             onMouseLeave={() => ToggleHover(false)}
             className="FeaturesNewsCard__container"
-            to="#"
-            onClick={SendInfoOnClick}
+            to={"/aktuelnosti/" + encodeURIComponent(url_title)} 
+            onClick={SendInfoOnClick} 
             onTouchStart={SendInfoOnClick}
         >
             <div className="FeaturesNewsCard__img-container">
