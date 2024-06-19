@@ -4,6 +4,8 @@ import "../SkupstinaPage/SkupstinaPage.css";
 import AuthContext from "../../Context/AuthContext";
 import pdfdownload from "../../images/pdf.png";
 import salon from "../../images/Plenarna_sala.jpg";
+import { Helmet } from "react-helmet";
+
 
 const SkupstinaPage = () => {
     const [documents, setDocuments] = useState([]);
@@ -33,6 +35,9 @@ const SkupstinaPage = () => {
 
     return (
         <div className="SkupstinaPage__main-container">
+            <Helmet>
+                <link rel="canonical" href="https://sindikat.skupstina.me/skupstina" />
+            </Helmet>
             <HeaderPhoto
                 image_url={salon}
                 page_name={lang === "latin" ? "Skupština" : "Скупштинa"}

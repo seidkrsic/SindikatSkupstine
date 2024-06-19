@@ -7,6 +7,7 @@ import NewsGallery from "../../components/NewsGallery/NewsGallery";
 import AuthContext from "../../Context/AuthContext";
 import "../NewsSinglePage/NewsSinglePage.css";
 import salon from "../../images/Zgrada_skupstine.jpg";
+import { Helmet } from "react-helmet";
 
 const NewsSinglePage = () => {
     const navigate = useNavigate();
@@ -92,6 +93,9 @@ const NewsSinglePage = () => {
 
     return (
         <div className="SingleNewsPage__container-main">
+            <Helmet>
+                <link rel="canonical" href={`https://sindikat.skupstina.me/aktuelnosti/${id}`} />
+            </Helmet>
             <HeaderPhoto
                 image_url={salon}
                 page_name={lang === "latin" ? "AKTUELNOSTI" : "АКТУЕЛНОСТИ"}

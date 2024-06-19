@@ -4,6 +4,7 @@ import AuthContext from "../../Context/AuthContext";
 import pdfdownload from "../../images/pdf.png";
 import "../Company/Company.css";
 import salon from "../../images/Zgrada_skupstine.jpg";
+import { Helmet } from "react-helmet";
 
 const Company = () => {
     const { user } = useContext(AuthContext);
@@ -33,6 +34,9 @@ const Company = () => {
 
     return (
         <div className="Company__container">
+            <Helmet>
+                <link rel="canonical" href="https://sindikat.skupstina.me/pogodnosti" />
+            </Helmet>
             <HeaderPhoto
                 page_name={
                     lang === "latin"

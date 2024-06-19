@@ -5,6 +5,7 @@ import AuthContext from "../../Context/AuthContext";
 import logo from "../../images/Artboard.png";
 import "./ContactPage.css";
 import salon from "../../images/Zgrada_skupstine.jpg";
+import { Helmet } from "react-helmet";
 
 const ContactPage = () => {
     const { lang } = useContext(AuthContext);
@@ -31,6 +32,9 @@ const ContactPage = () => {
 
     return (
         <div className="Contact__container-main">
+            <Helmet>
+                <link rel="canonical" href="https://sindikat.skupstina.me/kontakt" />
+            </Helmet>
             <HeaderPhoto
                 page_name={lang === "latin" ? "Kontakt" : "Контакт"}
                 image_url={salon}

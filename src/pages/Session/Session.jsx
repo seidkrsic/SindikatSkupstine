@@ -6,6 +6,7 @@ import AuthContext from "../../Context/AuthContext";
 import pdfdownload from "../../images/pdf.png";
 import "./Session.css";
 import salon from "../../images/PlavaSala.jpg";
+import { Helmet } from "react-helmet";
 
 const Session = () => {
     const navigate = useNavigate();
@@ -124,6 +125,9 @@ const Session = () => {
 
     return (
         <div className="Session__container-main">
+            <Helmet>
+                <link rel="canonical" href={`https://sindikat.skupstina.me/sjednice/${id}`} />
+            </Helmet>
             {skupstina ? (
                 <HeaderPhoto
                     image_url={salon}

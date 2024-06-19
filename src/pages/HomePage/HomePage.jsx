@@ -5,6 +5,8 @@ import ImageSlider from "../../components/ImageSlider/ImageSlider";
 import Timeline from "../../components/Timeline/Timeline";
 import AuthContext from "../../Context/AuthContext";
 import "./HomePage.css";
+import { Helmet } from 'react-helmet'; 
+
 
 const HomePage = () => {
     let [cards, setCards] = useState([]);
@@ -62,6 +64,9 @@ const HomePage = () => {
 
     return (
         <div className="HomePage__container">
+            <Helmet>
+                <link rel="canonical" href="https://sindikat.skupstina.me/" />
+            </Helmet>
             <ImageSlider slides={slides} />
             <div className="PageContainerGrid-main">
                 <div className="PageContainerGrid">

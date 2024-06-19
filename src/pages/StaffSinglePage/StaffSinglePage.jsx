@@ -7,6 +7,7 @@ import AuthContext from "../../Context/AuthContext";
 import "../StaffSinglePage/StaffSinglePage.css";
 import parse from "html-react-parser";
 import salon from "../../images/Bijeli_salon.jpg";
+import { Helmet } from "react-helmet";
 
 const StaffSinglePage = () => {
     let CategoriesInfo;
@@ -125,6 +126,9 @@ const StaffSinglePage = () => {
 
     return (
         <div className="StaffSinglePage__container-main">
+            <Helmet>
+                <link rel="canonical" href={`https://sindikat.skupstina.me/saziv/${id}`} />
+            </Helmet>
             <HeaderPhoto image_url={salon} page_name={""} />
             <div className="StaffSinglePage__container">
                 <div className="StaffSinglePage__categories-container">

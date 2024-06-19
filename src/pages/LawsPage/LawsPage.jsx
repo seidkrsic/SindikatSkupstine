@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import pdfdownload from "../../images/pdf.png";
 import salon from "../../images/Plenarna_sala.jpg";
+import { Helmet } from "react-helmet";
 
 const LawsPage = () => {
     const { lang } = useContext(AuthContext);
@@ -71,6 +72,9 @@ const LawsPage = () => {
 
     return (
         <div className="LawsPage__main-container">
+                <Helmet>
+                    <link rel="canonical" href="https://sindikat.skupstina.me/zakoni" />
+                </Helmet>
             <HeaderPhoto
                 page_name={lang === "latin" ? LawsHeader : LawsHeader}
                 image_url={salon}

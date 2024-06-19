@@ -6,6 +6,7 @@ import StaffCard from "../../components/StaffCard/StaffCard";
 import AuthContext from "../../Context/AuthContext";
 import "../StaffPage/StaffPage.css";
 import salon from "../../images/PlavaSala.jpg";
+import { Helmet } from "react-helmet";
 
 const StaffPage = () => {
     const [staff, setStaff] = useState([]);
@@ -140,6 +141,9 @@ const StaffPage = () => {
 
     return (
         <div className="StaffPage__container-Big">
+                <Helmet>
+                    <link rel="canonical" href="https://sindikat.skupstina.me/saziv" />
+                </Helmet>
             <HeaderPhoto image_url={salon} page_name={roleHeader} />
 
             <div className="StaffPage__container">

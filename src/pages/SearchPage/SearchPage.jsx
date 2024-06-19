@@ -4,6 +4,7 @@ import HeaderPhoto from "../../components/HeaderPhoto/HeaderPhoto";
 import AuthContext from "../../Context/AuthContext";
 import "./SearchPage.css";
 import salon from "../../images/Zgrada_skupstine.jpg";
+import { Helmet } from "react-helmet";
 
 const SearchPage = () => {
     const { searchResults } = useContext(AuthContext);
@@ -11,6 +12,9 @@ const SearchPage = () => {
 
     return (
         <div className="SearchPage__container-main">
+            <Helmet>
+                <link rel="canonical" href="https://sindikat.skupstina.me/search" />
+            </Helmet>
             <HeaderPhoto
                 image_url={salon}
                 page_name={

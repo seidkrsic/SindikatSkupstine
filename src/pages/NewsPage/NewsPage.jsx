@@ -6,6 +6,9 @@ import AuthContext from "../../Context/AuthContext";
 import "../NewsPage/NewsPage.css";
 import salon from "../../images/Zgrada_skupstine.jpg";
 import Paginator from "../../components/Paginator/Paginator";
+import { Helmet } from "react-helmet";
+
+
 
 const NewsPage = () => {
     const { lang } = useContext(AuthContext);
@@ -51,6 +54,9 @@ const NewsPage = () => {
 
     return (
         <div className="NewsPage__container-main">
+            <Helmet>
+                <link rel="canonical" href="https://sindikat.skupstina.me/aktuelnosti" />
+            </Helmet>
             <HeaderPhoto
                 image_url={salon}
                 page_name={lang === "latin" ? "Aktuelnosti" : "Актуелности"}
