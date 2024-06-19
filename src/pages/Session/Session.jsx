@@ -126,7 +126,7 @@ const Session = () => {
     return (
         <div className="Session__container-main">
             <Helmet>
-                <link rel="canonical" href={`https://sindikat.skupstina.me/sjednice/${id}`} />
+                <link rel="canonical" href={`https://sindikat.skupstina.me/sjednice/`} />
             </Helmet>
             {skupstina ? (
                 <HeaderPhoto

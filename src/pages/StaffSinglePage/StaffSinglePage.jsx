@@ -127,14 +127,14 @@ const StaffSinglePage = () => {
     return (
         <div className="StaffSinglePage__container-main">
             <Helmet>
-                <link rel="canonical" href={`https://sindikat.skupstina.me/saziv/${id}`} />
+                <link rel="canonical" href={`https://sindikat.skupstina.me/saziv/`} />
             </Helmet>
             <HeaderPhoto image_url={salon} page_name={""} />
             <div className="StaffSinglePage__container">
                 <div className="StaffSinglePage__categories-container">
                     <Categories
                         categories={CategoriesInfo}
-                        title={"KATEGORIJE"}
+                        title={"KATEGORIJE"} 
                     />
                 </div>
 

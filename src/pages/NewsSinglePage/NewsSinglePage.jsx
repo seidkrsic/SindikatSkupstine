@@ -94,7 +94,7 @@ const NewsSinglePage = () => {
     return (
         <div className="SingleNewsPage__container-main">
             <Helmet>
-                <link rel="canonical" href={`https://sindikat.skupstina.me/aktuelnosti/${id}`} />
+                <link rel="canonical" href={`https://sindikat.skupstina.me/aktuelnosti/`} />
             </Helmet>
             <HeaderPhoto
                 image_url={salon}
